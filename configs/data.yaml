@@ -1,0 +1,71 @@
+# Data preparation settings (smartbite_cv.prepare). Paths are relative to the repo root.
+seed: 20261031
+image_exts: [.jpg, .jpeg, .png, .webp, .jfif, .bmp]
+min_side: 96               # px; smaller images are dropped as unusable
+
+dedupe:
+  max_hamming: 6           # 64-bit pHash distance counted as a near-duplicate (also vs mirror image)
+  embedding:               # second pass: catches re-cropped copies that pHash misses
+    enabled: true
+    model: efficientnet_b0.ra_in1k   # ImageNet features only (no food training)
+    min_cosine: 0.85       # visual audit (tools/audit_embedding_pairs.py): >=0.90 almost all re-crops of one photo;
+                           # 0.85-0.90 still has some; below 0.85 mostly distinct photos. False merges only cost an image.
+    audit_min_cosine: 0.85 # pairs above this are saved for the audit
+    cache_file: data/cache/embeddings_effb0.npz
+
+split: {train: 0.70, val: 0.15, test: 0.15}   # applied per class, after dedupe, before any augmentation
+cap_per_class: 600         # random (seeded) subset of de-duplicated images when a class has more
+min_per_class: 80          # classes below this after dedupe are dropped with a warning
+
+manifest: data/splits/manifest.csv
+report_dir: reports/data
+cache:                     # resized copies used for training (speed); originals stay untouched
+  dir: data/cache/s288
+  short_side: 288
+  quality: 92
+
+# Where each source dataset lives. `local` is the path on this machine; on Kaggle the
+# directory under /kaggle/input that contains `marker` is used.
+datasets:
+  food101:
+    title: Food-101
+    kaggle_ref: kmader/food41
+    url: https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
+    local: data/raw/food101
+    marker: images/samosa
+  sourav80:
+    title: Indian Food Images Dataset (80 classes)
+    kaggle_ref: iamsouravbanerjee/indian-food-images-dataset
+    local: data/raw/iamsouravbanerjee_indian-food-images-dataset
+    marker: Indian Food Images/Indian Food Images/biryani
+  anshul:
+    title: The-massive-Indian-Food-Dataset
+    kaggle_ref: anshulmehtakaggl/themassiveindianfooddataset
+    local: data/raw/anshulmehtakaggl_themassiveindianfooddataset
+    marker: Biryani-resize/resize
+  pkdishes:
+    title: Pakistani Dishes Dataset (original 100/class folder only)
+    kaggle_ref: useractivated/dataset
+    local: data/raw/useractivated_dataset
+    marker: dataset/dataset/haleem
+  l33t20:
+    title: Indian Food Classification (20 classes)
+    kaggle_ref: l33tc0d3r/indian-food-classification
+    local: data/raw/l33tc0d3r_indian-food-classification
+    marker: Food Classification/chai
+  food20:
+    title: food20 dataset (Indian food)
+    kaggle_ref: cdart99/food20dataset
+    local: data/raw/cdart99_food20dataset
+    marker: food20dataset/train_set/halwa
+  fastfood:
+    title: Fast Food Classification Dataset - V2
+    kaggle_ref: utkarshsaxenadn/fast-food-classification-dataset
+    local: data/raw/utkarshsaxenadn__fast-food-classification-dataset
+    marker: "Fast Food Classification V2/Train/Crispy Chicken"
+  food5k:
+    title: Food-5K (non-food images only)
+    kaggle_ref: trolukovich/food5k-image-dataset
+    url: https://www.epfl.ch/labs/mmspg/downloads/food-image-datasets/
+    local: data/raw/trolukovich__food5k
+    marker: training/non_food

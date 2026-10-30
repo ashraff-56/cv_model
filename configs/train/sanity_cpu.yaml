@@ -1,0 +1,12 @@
+# Pipeline smoke test on CPU: 5 classes, few images, tiny resolution, 1+1 epochs.
+# Its numbers say nothing about real accuracy; they only prove the pipeline runs end to end.
+run_name: sanity_cpu
+data:
+  only_classes: [biryani, samosa, jalebi, pizza, not_food]
+  limit_per_class: {train: 40, val: 12, test: 12}
+  num_workers: 0
+img_size: 128
+batch_size: 16
+eval_batch_size: 32
+stage1: {epochs: 1, lr: 1.0e-3, weight_decay: 1.0e-4, warmup_epochs: 0, min_lr: 1.0e-4}
+stage2: {epochs: 1, lr: 3.0e-4, weight_decay: 0.05, warmup_epochs: 0, min_lr: 1.0e-5}

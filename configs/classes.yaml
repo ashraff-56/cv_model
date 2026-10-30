@@ -1,0 +1,218 @@
+# Visual classes the model predicts. List order = label index; do not reorder after training.
+# `slug` is the stable ID used everywhere (Phase 2 maps slug -> Firestore foodID).
+# `variants` are the foods the user can pick after a match (look-alikes merged into one visual class).
+# `sources`: one-key maps {dataset_id: folder glob relative to that dataset's root} (see data.yaml).
+classes:
+  # ---------------- South Asian ----------------
+  - slug: biryani
+    display: Biryani
+    variants: [Chicken biryani, Beef/mutton biryani, Vegetable biryani]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/biryani
+      - anshul: Biryani-resize/resize
+      - pkdishes: dataset/dataset/biryani
+      - food20: food20dataset/*/biriyani
+  - slug: samosa
+    display: Samosa
+    variants: [Aloo samosa, Chicken/keema samosa]
+    sources:
+      - food101: images/samosa
+      - pkdishes: dataset/dataset/samosa
+      - l33t20: Food Classification/samosa
+      - food20: food20dataset/*/samosa
+  - slug: naan
+    display: Naan
+    variants: [Plain naan, Butter naan, Garlic naan]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/naan
+      - anshul: Naan-Resized/Naan-Resized
+      - l33t20: Food Classification/butter_naan
+      - food20: food20dataset/*/butternaan
+  - slug: roti_chapati
+    display: Roti / chapati
+    variants: [Chapati, Tandoori roti]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/chapati
+      - pkdishes: dataset/dataset/chapati
+      - l33t20: Food Classification/chapati
+      - food20: food20dataset/*/chappati
+  - slug: paratha
+    display: Paratha
+    variants: [Plain paratha, Aloo paratha]
+    sources:
+      - pkdishes: dataset/dataset/paratha
+  - slug: daal
+    display: Daal
+    variants: [Daal chana, Daal masoor, Daal mash, Daal makhani]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/dal_makhani
+      - sourav80: Indian Food Images/Indian Food Images/dal_tadka
+      - anshul: dal_resized/dal_resized
+      - l33t20: Food Classification/dal_makhani
+  - slug: curry_karahi
+    display: Curry / karahi
+    variants: [Chicken karahi, Mutton karahi, Chicken curry (salan), Butter chicken, Paneer karahi]
+    sources:
+      - food101: images/chicken_curry
+      - sourav80: Indian Food Images/Indian Food Images/butter_chicken
+      - sourav80: Indian Food Images/Indian Food Images/chicken_tikka_masala
+      - sourav80: Indian Food Images/Indian Food Images/kadai_paneer
+      - pkdishes: dataset/dataset/butter_chicken
+      - l33t20: Food Classification/kadai_paneer
+  - slug: haleem
+    display: Haleem
+    variants: [Beef haleem, Chicken haleem]
+    sources:
+      - pkdishes: dataset/dataset/haleem
+  - slug: chicken_tikka
+    display: Chicken tikka / tandoori
+    variants: [Chicken tikka, Tandoori chicken, Chicken boti]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/chicken_tikka
+      - pkdishes: dataset/dataset/chicken_tikka
+      - food20: food20dataset/*/tandoori chicken
+  - slug: pakora
+    display: Pakora
+    variants: [Vegetable pakora, Onion pakora]
+    sources:
+      - anshul: pakora-resize/pakora-resize
+      - l33t20: Food Classification/pakode
+  - slug: chana_chole
+    display: Chanay / chole
+    variants: [Chana masala, Chole with puri/bhatura]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/chana_masala
+      - anshul: Chole-Bhature-Resized/Chole-Bhature-Resized
+      - l33t20: Food Classification/chole_bhature
+  - slug: jalebi
+    display: Jalebi
+    variants: [Jalebi]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/jalebi
+      - anshul: Jalebi-Resize/Jalebi-Resize
+      - l33t20: Food Classification/jalebi
+  - slug: gulab_jamun
+    display: Gulab jamun
+    variants: [Gulab jamun]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/gulab_jamun
+      - food20: food20dataset/*/gulab jamun
+  - slug: chai
+    display: Chai (milk tea)
+    variants: [Doodh patti chai, Chai with sugar]
+    sources:
+      - pkdishes: dataset/dataset/chai
+      - l33t20: Food Classification/chai
+  - slug: paratha_roll
+    display: Paratha roll / kathi roll
+    variants: [Chicken paratha roll, Seekh kabab roll]
+    sources:
+      - pkdishes: dataset/dataset/paratha_roll
+      - anshul: kathi-resize/kathi-resize
+      - l33t20: Food Classification/kaathi_rolls
+      - food20: food20dataset/*/kathi roll
+  - slug: gol_gappay
+    display: Gol gappay / pani puri
+    variants: [Gol gappay]
+    sources:
+      - anshul: Pani-Puri-resize/resize
+      - l33t20: Food Classification/paani_puri
+  - slug: halwa
+    display: Halwa
+    variants: [Suji halwa, Gajar halwa]
+    sources:
+      - food20: food20dataset/*/halwa
+      - sourav80: Indian Food Images/Indian Food Images/gajar_ka_halwa
+      - sourav80: Indian Food Images/Indian Food Images/sheera
+  - slug: kulfi
+    display: Kulfi
+    variants: [Kulfi]
+    sources:
+      - l33t20: Food Classification/kulfi
+  # ---------------- International ----------------
+  - slug: pizza
+    display: Pizza
+    variants: [Chicken pizza, Cheese pizza]
+    sources:
+      - food101: images/pizza
+      - l33t20: Food Classification/pizza
+      - fastfood: Fast Food Classification V2/Train/Pizza
+  - slug: burger
+    display: Burger
+    variants: [Beef burger, Chicken burger]
+    sources:
+      - food101: images/hamburger
+      - l33t20: Food Classification/burger
+      - fastfood: Fast Food Classification V2/Train/Burger
+  - slug: french_fries
+    display: French fries
+    variants: [French fries]
+    sources:
+      - food101: images/french_fries
+      - pkdishes: dataset/dataset/french_fries
+      - fastfood: Fast Food Classification V2/Train/Fries
+  - slug: fried_rice
+    display: Fried rice
+    variants: [Chicken fried rice, Egg fried rice]
+    sources:
+      - food101: images/fried_rice
+      - pkdishes: dataset/dataset/fried_rice
+      - l33t20: Food Classification/fried_rice
+  - slug: omelette
+    display: Omelette
+    variants: [Plain omelette, Masala omelette]
+    sources:
+      - food101: images/omelette
+      - pkdishes: dataset/dataset/omelette
+  - slug: fried_chicken
+    display: Fried chicken / wings
+    variants: [Broast / fried chicken, Chicken wings]
+    sources:
+      - food101: images/chicken_wings
+      - fastfood: Fast Food Classification V2/Train/Crispy Chicken
+  - slug: sandwich
+    display: Sandwich
+    variants: [Club sandwich, Chicken sandwich]
+    sources:
+      - food101: images/club_sandwich
+      - fastfood: Fast Food Classification V2/Train/Sandwich
+  - slug: hot_dog
+    display: Hot dog
+    variants: [Hot dog]
+    sources:
+      - food101: images/hot_dog
+      - fastfood: Fast Food Classification V2/Train/Hot Dog
+  - slug: donut
+    display: Donut
+    variants: [Glazed donut, Chocolate donut]
+    sources:
+      - food101: images/donuts
+      - fastfood: Fast Food Classification V2/Train/Donut
+  - slug: ice_cream
+    display: Ice cream
+    variants: [Ice cream]
+    sources:
+      - food101: images/ice_cream
+  - slug: chocolate_cake
+    display: Chocolate cake
+    variants: [Chocolate cake]
+    sources:
+      - food101: images/chocolate_cake
+  - slug: spaghetti
+    display: Spaghetti / pasta
+    variants: [Spaghetti bolognese, Spaghetti carbonara]
+    sources:
+      - food101: images/spaghetti_bolognese
+      - food101: images/spaghetti_carbonara
+  - slug: salad
+    display: Salad
+    variants: [Greek salad, Caesar salad]
+    sources:
+      - food101: images/greek_salad
+      - food101: images/caesar_salad
+  # ---------------- Rejection class ----------------
+  - slug: not_food
+    display: Not food
+    variants: []
+    sources:
+      - food5k: "*/non_food"

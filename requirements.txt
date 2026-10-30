@@ -1,0 +1,17 @@
+# Inference + data prep + tests (CPU). Tested with Python 3.12 on Windows 11.
+torch>=2.4
+torchvision>=0.19
+timm>=1.0.9
+onnx>=1.16
+onnxruntime>=1.18
+numpy>=1.26
+scipy>=1.11
+pillow>=10.0
+pillow-heif>=0.16      # optional: HEIC photos from iPhones
+pyyaml>=6.0
+matplotlib>=3.8
+pandas>=2.0            # tools/build_nutrition.py only
+openpyxl>=3.1          # tools/build_nutrition.py only
+pyarrow>=15            # tools/extract_food101_parquet.py only
+nbformat>=5.9          # tools/build_kaggle.py only
+pytest>=8.0

@@ -1,0 +1,26 @@
+# environments / caches
+.venv/
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# data and run outputs (large, re-creatable)
+data/raw/
+data/cache/
+data/inspect/
+data/meta/
+data/nutrition_src/
+runs/
+artifacts/*/checkpoints/
+*.pt
+*.onnx
+kaggle_out/
+
+# phone-photo test set (team photos; add explicitly only if consented)
+eval_phone_photos/*/
+!eval_phone_photos/README.md
+
+# local smoke-test bundle
+artifacts/sanity_cpu/
+data/*.log

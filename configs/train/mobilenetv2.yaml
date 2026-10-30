@@ -1,0 +1,7 @@
+# Baseline named in the original spec (MobileNetV2). ImageNet-1k weights from timm.
+run_name: mobilenetv2
+model:
+  name: mobilenetv2_100.ra_in1k
+  pretrained: true
+  drop_rate: 0.2
+  drop_path_rate: 0.0

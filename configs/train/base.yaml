@@ -1,0 +1,38 @@
+# Shared training settings. Model files override `model`, `run_name` and learning rates.
+seed: 20261031
+data:
+  config: configs/data.yaml
+  classes: configs/classes.yaml
+  cache_dir: null            # null -> data.yaml cache.dir (resized copies); originals used if missing
+  only_classes: null         # list of slugs to train on a subset (sanity runs)
+  limit_per_class: null      # e.g. {train: 40, val: 10, test: 10}
+  num_workers: 4
+
+img_size: 224
+crop_pct: 0.875              # eval: resize short side to 256, centre-crop 224
+batch_size: 64
+eval_batch_size: 128
+balance: sqrt                # sample class c with weight 1/sqrt(n_c) (classes have 85-600 images)
+label_smoothing: 0.1
+amp: true                    # mixed precision on GPU only
+grad_clip: 1.0
+aug:
+  scale_min: 0.35            # RandomResizedCrop lower bound
+  color_jitter: [0.2, 0.2, 0.15, 0.02]
+  rotate_deg: 15
+  rotate_p: 0.3
+  erasing_p: 0.15
+
+stage1:                      # frozen backbone, new head only
+  epochs: 3
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  warmup_epochs: 0
+  min_lr: 1.0e-4
+stage2:                      # everything unfrozen
+  epochs: 25
+  lr: 3.0e-4
+  weight_decay: 0.05
+  warmup_epochs: 1
+  min_lr: 1.0e-6
+early_stop_patience: 6       # stage-2 epochs without val macro-F1 improvement

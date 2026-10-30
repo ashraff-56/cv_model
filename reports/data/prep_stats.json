@@ -1,0 +1,957 @@
+{
+  "collected": {
+    "biryani": 479,
+    "samosa": 1462,
+    "naan": 832,
+    "roti_chapati": 663,
+    "paratha": 100,
+    "daal": 682,
+    "curry_karahi": 1662,
+    "haleem": 100,
+    "chicken_tikka": 250,
+    "pakora": 655,
+    "chana_chole": 787,
+    "jalebi": 653,
+    "gulab_jamun": 150,
+    "chai": 481,
+    "paratha_roll": 833,
+    "gol_gappay": 307,
+    "halwa": 200,
+    "kulfi": 236,
+    "pizza": 2761,
+    "burger": 2809,
+    "french_fries": 2600,
+    "fried_rice": 1455,
+    "omelette": 1100,
+    "fried_chicken": 2500,
+    "sandwich": 2500,
+    "hot_dog": 2500,
+    "donut": 2500,
+    "ice_cream": 1000,
+    "chocolate_cake": 1000,
+    "spaghetti": 2000,
+    "salad": 2000,
+    "not_food": 2500
+  },
+  "unreadable_or_small": {
+    "french_fries": 1,
+    "fried_chicken": 1,
+    "sandwich": 1
+  },
+  "phash_duplicates_removed": {
+    "biryani": 66,
+    "samosa": 106,
+    "naan": 46,
+    "roti_chapati": 140,
+    "paratha": 15,
+    "daal": 73,
+    "curry_karahi": 71,
+    "haleem": 17,
+    "chicken_tikka": 73,
+    "pakora": 35,
+    "chana_chole": 92,
+    "jalebi": 93,
+    "gulab_jamun": 23,
+    "chai": 35,
+    "paratha_roll": 195,
+    "gol_gappay": 31,
+    "halwa": 42,
+    "kulfi": 13,
+    "pizza": 81,
+    "burger": 47,
+    "french_fries": 321,
+    "fried_rice": 38,
+    "omelette": 15,
+    "fried_chicken": 53,
+    "sandwich": 49,
+    "hot_dog": 225,
+    "donut": 42,
+    "ice_cream": 0,
+    "chocolate_cake": 2,
+    "spaghetti": 5,
+    "salad": 2,
+    "not_food": 10
+  },
+  "embedding_duplicates_removed": {
+    "biryani": 18,
+    "samosa": 15,
+    "naan": 37,
+    "roti_chapati": 19,
+    "paratha": 0,
+    "daal": 23,
+    "curry_karahi": 26,
+    "haleem": 1,
+    "chicken_tikka": 4,
+    "pakora": 17,
+    "chana_chole": 37,
+    "jalebi": 68,
+    "gulab_jamun": 3,
+    "chai": 12,
+    "paratha_roll": 33,
+    "gol_gappay": 15,
+    "halwa": 3,
+    "kulfi": 5,
+    "pizza": 73,
+    "burger": 87,
+    "french_fries": 166,
+    "fried_rice": 18,
+    "omelette": 3,
+    "fried_chicken": 37,
+    "sandwich": 42,
+    "hot_dog": 136,
+    "donut": 62,
+    "ice_cream": 0,
+    "chocolate_cake": 0,
+    "spaghetti": 343,
+    "salad": 2,
+    "not_food": 15
+  },
+  "duplicates_removed": {
+    "biryani": 84,
+    "samosa": 121,
+    "naan": 83,
+    "roti_chapati": 159,
+    "paratha": 15,
+    "daal": 96,
+    "curry_karahi": 97,
+    "haleem": 18,
+    "chicken_tikka": 77,
+    "pakora": 52,
+    "chana_chole": 129,
+    "jalebi": 161,
+    "gulab_jamun": 26,
+    "chai": 47,
+    "paratha_roll": 228,
+    "gol_gappay": 46,
+    "halwa": 45,
+    "kulfi": 18,
+    "pizza": 154,
+    "burger": 134,
+    "french_fries": 487,
+    "fried_rice": 56,
+    "omelette": 18,
+    "fried_chicken": 90,
+    "sandwich": 91,
+    "hot_dog": 361,
+    "donut": 104,
+    "chocolate_cake": 2,
+    "spaghetti": 348,
+    "salad": 4,
+    "not_food": 25
+  },
+  "label_conflict_clusters": 38,
+  "label_conflict_images": {
+    "naan": 3,
+    "curry_karahi": 19,
+    "chicken_tikka": 18,
+    "pakora": 3,
+    "fried_chicken": 6,
+    "halwa": 1,
+    "pizza": 1,
+    "sandwich": 10,
+    "burger": 18,
+    "not_food": 1,
+    "french_fries": 5,
+    "hot_dog": 2,
+    "donut": 1
+  },
+  "dropped_classes": {},
+  "by_source_raw": {
+    "biryani|anshul": 229,
+    "biryani|food20": 100,
+    "biryani|pkdishes": 100,
+    "biryani|sourav80": 50,
+    "burger|fastfood": 1500,
+    "burger|food101": 1000,
+    "burger|l33t20": 309,
+    "chai|l33t20": 381,
+    "chai|pkdishes": 100,
+    "chana_chole|anshul": 326,
+    "chana_chole|l33t20": 411,
+    "chana_chole|sourav80": 50,
+    "chicken_tikka|food20": 100,
+    "chicken_tikka|pkdishes": 100,
+    "chicken_tikka|sourav80": 50,
+    "chocolate_cake|food101": 1000,
+    "curry_karahi|food101": 1000,
+    "curry_karahi|l33t20": 412,
+    "curry_karahi|pkdishes": 100,
+    "curry_karahi|sourav80": 150,
+    "daal|anshul": 261,
+    "daal|l33t20": 321,
+    "daal|sourav80": 100,
+    "donut|fastfood": 1500,
+    "donut|food101": 1000,
+    "french_fries|fastfood": 1500,
+    "french_fries|food101": 1000,
+    "french_fries|pkdishes": 100,
+    "fried_chicken|fastfood": 1500,
+    "fried_chicken|food101": 1000,
+    "fried_rice|food101": 1000,
+    "fried_rice|l33t20": 355,
+    "fried_rice|pkdishes": 100,
+    "gol_gappay|anshul": 177,
+    "gol_gappay|l33t20": 130,
+    "gulab_jamun|food20": 100,
+    "gulab_jamun|sourav80": 50,
+    "haleem|pkdishes": 100,
+    "halwa|food20": 100,
+    "halwa|sourav80": 100,
+    "hot_dog|fastfood": 1500,
+    "hot_dog|food101": 1000,
+    "ice_cream|food101": 1000,
+    "jalebi|anshul": 306,
+    "jalebi|l33t20": 297,
+    "jalebi|sourav80": 50,
+    "kulfi|l33t20": 236,
+    "naan|anshul": 353,
+    "naan|food20": 100,
+    "naan|l33t20": 329,
+    "naan|sourav80": 50,
+    "not_food|food5k": 2500,
+    "omelette|food101": 1000,
+    "omelette|pkdishes": 100,
+    "pakora|anshul": 377,
+    "pakora|l33t20": 278,
+    "paratha|pkdishes": 100,
+    "paratha_roll|anshul": 340,
+    "paratha_roll|food20": 100,
+    "paratha_roll|l33t20": 293,
+    "paratha_roll|pkdishes": 100,
+    "pizza|fastfood": 1500,
+    "pizza|food101": 1000,
+    "pizza|l33t20": 261,
+    "roti_chapati|food20": 100,
+    "roti_chapati|l33t20": 413,
+    "roti_chapati|pkdishes": 100,
+    "roti_chapati|sourav80": 50,
+    "salad|food101": 2000,
+    "samosa|food101": 1000,
+    "samosa|food20": 100,
+    "samosa|l33t20": 262,
+    "samosa|pkdishes": 100,
+    "sandwich|fastfood": 1500,
+    "sandwich|food101": 1000,
+    "spaghetti|food101": 2000
+  },
+  "kept_by_source": {
+    "biryani|anshul": 195,
+    "biryani|food20": 97,
+    "biryani|pkdishes": 65,
+    "biryani|sourav80": 38,
+    "burger|fastfood": 328,
+    "burger|food101": 211,
+    "burger|l33t20": 61,
+    "chai|l33t20": 364,
+    "chai|pkdishes": 70,
+    "chana_chole|anshul": 202,
+    "chana_chole|l33t20": 354,
+    "chana_chole|sourav80": 44,
+    "chicken_tikka|food20": 60,
+    "chicken_tikka|pkdishes": 74,
+    "chicken_tikka|sourav80": 21,
+    "chocolate_cake|food101": 600,
+    "curry_karahi|food101": 398,
+    "curry_karahi|l33t20": 136,
+    "curry_karahi|pkdishes": 27,
+    "curry_karahi|sourav80": 39,
+    "daal|anshul": 229,
+    "daal|l33t20": 288,
+    "daal|sourav80": 69,
+    "donut|fastfood": 354,
+    "donut|food101": 246,
+    "french_fries|fastfood": 310,
+    "french_fries|food101": 272,
+    "french_fries|pkdishes": 18,
+    "fried_chicken|fastfood": 355,
+    "fried_chicken|food101": 245,
+    "fried_rice|food101": 425,
+    "fried_rice|l33t20": 147,
+    "fried_rice|pkdishes": 28,
+    "gol_gappay|anshul": 134,
+    "gol_gappay|l33t20": 127,
+    "gulab_jamun|food20": 85,
+    "gulab_jamun|sourav80": 39,
+    "haleem|pkdishes": 82,
+    "halwa|food20": 69,
+    "halwa|sourav80": 85,
+    "hot_dog|fastfood": 339,
+    "hot_dog|food101": 261,
+    "ice_cream|food101": 600,
+    "jalebi|anshul": 198,
+    "jalebi|l33t20": 272,
+    "jalebi|sourav80": 22,
+    "kulfi|l33t20": 218,
+    "naan|anshul": 247,
+    "naan|food20": 84,
+    "naan|l33t20": 251,
+    "naan|sourav80": 18,
+    "not_food|food5k": 600,
+    "omelette|food101": 548,
+    "omelette|pkdishes": 52,
+    "pakora|anshul": 335,
+    "pakora|l33t20": 265,
+    "paratha|pkdishes": 85,
+    "paratha_roll|anshul": 226,
+    "paratha_roll|food20": 25,
+    "paratha_roll|l33t20": 265,
+    "paratha_roll|pkdishes": 84,
+    "pizza|fastfood": 335,
+    "pizza|food101": 217,
+    "pizza|l33t20": 48,
+    "roti_chapati|food20": 47,
+    "roti_chapati|l33t20": 387,
+    "roti_chapati|pkdishes": 52,
+    "roti_chapati|sourav80": 18,
+    "salad|food101": 600,
+    "samosa|food101": 440,
+    "samosa|food20": 15,
+    "samosa|l33t20": 108,
+    "samosa|pkdishes": 37,
+    "sandwich|fastfood": 357,
+    "sandwich|food101": 243,
+    "spaghetti|food101": 600
+  },
+  "final": {
+    "train": {
+      "biryani": 276,
+      "samosa": 420,
+      "naan": 420,
+      "roti_chapati": 353,
+      "paratha": 59,
+      "daal": 410,
+      "curry_karahi": 420,
+      "haleem": 57,
+      "chicken_tikka": 108,
+      "pakora": 420,
+      "chana_chole": 420,
+      "jalebi": 344,
+      "gulab_jamun": 87,
+      "chai": 304,
+      "paratha_roll": 420,
+      "gol_gappay": 183,
+      "halwa": 108,
+      "kulfi": 153,
+      "pizza": 420,
+      "burger": 420,
+      "french_fries": 420,
+      "fried_rice": 420,
+      "omelette": 420,
+      "fried_chicken": 420,
+      "sandwich": 420,
+      "hot_dog": 420,
+      "donut": 420,
+      "ice_cream": 420,
+      "chocolate_cake": 420,
+      "spaghetti": 420,
+      "salad": 420,
+      "not_food": 420
+    },
+    "val": {
+      "biryani": 59,
+      "samosa": 90,
+      "naan": 90,
+      "roti_chapati": 76,
+      "paratha": 13,
+      "daal": 88,
+      "curry_karahi": 90,
+      "haleem": 12,
+      "chicken_tikka": 23,
+      "pakora": 90,
+      "chana_chole": 90,
+      "jalebi": 74,
+      "gulab_jamun": 19,
+      "chai": 65,
+      "paratha_roll": 90,
+      "gol_gappay": 39,
+      "halwa": 23,
+      "kulfi": 33,
+      "pizza": 90,
+      "burger": 90,
+      "french_fries": 90,
+      "fried_rice": 90,
+      "omelette": 90,
+      "fried_chicken": 90,
+      "sandwich": 90,
+      "hot_dog": 90,
+      "donut": 90,
+      "ice_cream": 90,
+      "chocolate_cake": 90,
+      "spaghetti": 90,
+      "salad": 90,
+      "not_food": 90
+    },
+    "test": {
+      "biryani": 60,
+      "samosa": 90,
+      "naan": 90,
+      "roti_chapati": 75,
+      "paratha": 13,
+      "daal": 88,
+      "curry_karahi": 90,
+      "haleem": 13,
+      "chicken_tikka": 24,
+      "pakora": 90,
+      "chana_chole": 90,
+      "jalebi": 74,
+      "gulab_jamun": 18,
+      "chai": 65,
+      "paratha_roll": 90,
+      "gol_gappay": 39,
+      "halwa": 23,
+      "kulfi": 32,
+      "pizza": 90,
+      "burger": 90,
+      "french_fries": 90,
+      "fried_rice": 90,
+      "omelette": 90,
+      "fried_chicken": 90,
+      "sandwich": 90,
+      "hot_dog": 90,
+      "donut": 90,
+      "ice_cream": 90,
+      "chocolate_cake": 90,
+      "spaghetti": 90,
+      "salad": 90,
+      "not_food": 90
+    }
+  },
+  "errors_sample": [
+    {
+      "label": "french_fries",
+      "dataset": "fastfood",
+      "relpath": "Fast Food Classification V2/Train/Fries/Fries-Train (849).jpeg",
+      "error": "too small (168x94)"
+    },
+    {
+      "label": "fried_chicken",
+      "dataset": "fastfood",
+      "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (30).jpeg",
+      "error": "too small (168x94)"
+    },
+    {
+      "label": "sandwich",
+      "dataset": "fastfood",
+      "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (831).jpeg",
+      "error": "too small (168x94)"
+    }
+  ],
+  "conflicts_sample": [
+    [
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/067.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/095.jpg"
+      },
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/butter_chicken/1d5733d73e.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/187.jpg"
+      },
+      {
+        "label": "curry_karahi",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/kadai_paneer/094.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/0d9cd4df8b.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/0d9cd4df8b.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/1e1beaab95.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/1e1beaab95.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/2c1a215ee1.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/2c1a215ee1.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/2e5943ad78.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/2e5943ad78.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/2f49789828.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/2f49789828.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/31d89bc9b5.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/31d89bc9b5.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/3a47674d70.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/3a47674d70.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/3a6fa8e35b.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/3a6fa8e35b.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/3d0b64911d.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/3d0b64911d.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/3d9d724bad.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/3d9d724bad.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/3e263c335a.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/8ffcaef63a.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/4b4ac3572e.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/4b4ac3572e.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/4c57149d9a.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/4c57149d9a.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/4fdd63a5ac.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/4fdd63a5ac.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/6f21f722a4.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/6f21f722a4.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/7c9a3293e3.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/7c9a3293e3.jpg"
+      }
+    ],
+    [
+      {
+        "label": "curry_karahi",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka_masala/8bdd4faf47.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/chicken_tikka/8bdd4faf47.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/chicken_tikka/chickentikka38.jpg"
+      }
+    ],
+    [
+      {
+        "label": "pakora",
+        "dataset": "anshul",
+        "relpath": "pakora-resize/pakora-resize/00000027_resized.png"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (789).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "pakora",
+        "dataset": "anshul",
+        "relpath": "pakora-resize/pakora-resize/00000592_resized.png"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (1334).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "pakora",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/pakode/190.jpg"
+      },
+      {
+        "label": "halwa",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/gajar_ka_halwa/8e11968802.jpg"
+      }
+    ],
+    [
+      {
+        "label": "pizza",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Pizza/Pizza-Train (319).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (501).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "food101",
+        "relpath": "images/hamburger/100719.jpg"
+      },
+      {
+        "label": "not_food",
+        "dataset": "food5k",
+        "relpath": "training/non_food/1428.jpg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "food101",
+        "relpath": "images/hamburger/2214528.jpg"
+      },
+      {
+        "label": "french_fries",
+        "dataset": "food101",
+        "relpath": "images/french_fries/2214535.jpg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/burger/155.jpg"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (358).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (10).jpeg"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (520).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1195).jpeg"
+      },
+      {
+        "label": "hot_dog",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Hot Dog/Hot Dog - Train (944).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1319).jpeg"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (1187).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1350).jpeg"
+      },
+      {
+        "label": "french_fries",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Fries/Fries-Train (44).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1356).jpeg"
+      },
+      {
+        "label": "french_fries",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Fries/Fries-Train (154).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (151).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (1393).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (517).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (939).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (296).jpeg"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Crispy Chicken/Crispy Chicken-Train (39).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (376).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (622).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (66).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (968).jpeg"
+      },
+      {
+        "label": "hot_dog",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Hot Dog/Hot Dog - Train (107).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (518).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (969).jpeg"
+      },
+      {
+        "label": "donut",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Donut/Donut (1354).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1312).jpeg"
+      },
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1326).jpeg"
+      },
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1370).jpeg"
+      },
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1378).jpeg"
+      },
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (282).jpeg"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Sandwich/Sandwich-Train (1135).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (1421).jpeg"
+      },
+      {
+        "label": "french_fries",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Fries/Fries-Train (204).jpeg"
+      }
+    ],
+    [
+      {
+        "label": "burger",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Burger/Burger-Train (716).jpeg"
+      },
+      {
+        "label": "french_fries",
+        "dataset": "fastfood",
+        "relpath": "Fast Food Classification V2/Train/Fries/Fries-Train (5).jpeg"
+      }
+    ]
+  ]
+}
