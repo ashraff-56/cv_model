@@ -26,6 +26,11 @@ INCLUDE = ["smartbite_cv", "configs", "nutrition", "tools", "tests", "data/split
 CODE_SLUG = "smartbite-cv-code"
 KERNEL_SLUG = "smartbite-food-train"
 MODELS = ["efficientnet_b0", "mobilenetv2"]
+# Kaggle notebooks may run without internet (accounts without phone verification), so the ImageNet
+# weights and a timm wheel travel inside the private code dataset: kaggle_out/offline/ -> offline/.
+OFFLINE = ROOT / "kaggle_out" / "offline"
+WEIGHTS = {"efficientnet_b0": "offline/efficientnet_b0.ra_in1k.safetensors",
+           "mobilenetv2": "offline/mobilenetv2_100.ra_in1k.safetensors"}
 
 SETUP = r'''# SmartBite food recognition - training run (Kaggle GPU or Colab)
 import os, sys, glob, json, shutil, subprocess, zipfile, time
@@ -56,9 +61,19 @@ if ON_KAGGLE and not os.path.exists(f"{WORK}/smartbite_cv"):
 # /content/SmartBite/data/raw/<same folder names as configs/data.yaml>, then set PROFILE = "local".
 PROFILE = "kaggle" if ON_KAGGLE else "local"
 os.makedirs(OUT, exist_ok=True)
-run("pip install -q onnx onnxruntime 'timm>=1.0.9'")
+# No internet needed: timm comes from the bundled wheel, ImageNet weights from offline/*.safetensors.
+whl = glob.glob(f"{WORK}/offline/timm-*.whl")
+run(f"pip install -q --no-index --no-deps {whl[0]}" if whl else "pip install -q timm onnx onnxruntime")
 run("nvidia-smi || true")
-run("python -c \"import torch, timm; print('torch', torch.__version__, 'timm', timm.__version__, 'cuda', torch.cuda.is_available())\"")
+run("python -c \"import torch, timm; print('torch', torch.__version__, 'timm', timm.__version__)\"")
+import torch
+assert torch.cuda.is_available(), "No GPU attached: enable the GPU accelerator (Kaggle needs a phone-verified account)"
+try:
+    import onnxruntime  # noqa: F401
+    HAVE_ORT = True
+except ImportError:
+    HAVE_ORT = False  # ONNX export + latency are then done locally from best.pt
+print("onnxruntime available:", HAVE_ORT)
 '''
 
 VERIFY = r'''# 1. Check every manifest file exists with the same bytes (MD5) and build resized copies.
@@ -73,18 +88,22 @@ print(f"data step: {time.time() - t0:.0f}s")
 
 TRAIN = r'''# 2. Train, evaluate (test split used once), export to ONNX, CPU latency.
 MODELS = {models}
+WEIGHTS = {weights}
 COMMON = f"--profile {{PROFILE}} --set data.cache_dir={{CACHE}} --set data.manifest=data/splits/manifest_verified.csv"
 sample = sorted(glob.glob(f"{{CACHE}}/*.jpg"))[0]
 for m in MODELS:
     t0 = time.time()
-    run(f"python -m smartbite_cv.train --config configs/train/base.yaml --config configs/train/{{m}}.yaml {{COMMON}} --out runs/{{m}}")
+    weights = f"--set model.pretrained_file={{WEIGHTS[m]}}" if os.path.exists(f"{{WORK}}/{{WEIGHTS[m]}}") else ""
+    run(f"python -m smartbite_cv.train --config configs/train/base.yaml --config configs/train/{{m}}.yaml {{COMMON}} "
+        f"{{weights}} --out runs/{{m}}")
     run(f"python -m smartbite_cv.evaluate --run runs/{{m}} --profile {{PROFILE}}")
-    run(f"python -m smartbite_cv.export --run runs/{{m}} --out artifacts/{{m}}")
-    run(f"python -m smartbite_cv.latency --model-dir artifacts/{{m}} --image {{sample}} --out runs/{{m}}/latency_colab_or_kaggle_cpu.json")
+    if HAVE_ORT:
+        run(f"python -m smartbite_cv.export --run runs/{{m}} --out artifacts/{{m}}")
+        run(f"python -m smartbite_cv.latency --model-dir artifacts/{{m}} --image {{sample}} --out runs/{{m}}/latency_colab_or_kaggle_cpu.json")
     print(f"{{m}}: {{(time.time() - t0) / 60:.1f}} min")
+lat = [f"runs/{{m}}/latency_colab_or_kaggle_cpu.json" for m in MODELS if os.path.exists(f"{{WORK}}/runs/{{m}}/latency_colab_or_kaggle_cpu.json")]
 run("python -m smartbite_cv.compare " + " ".join(f"--run runs/{{m}}" for m in MODELS)
-    + " " + " ".join(f"--latency runs/{{m}}/latency_colab_or_kaggle_cpu.json" for m in MODELS)
-    + " --out runs/comparison.md")
+    + "".join(f" --latency {{p}}" for p in lat) + " --out runs/comparison.md")
 '''
 
 PACKAGE = r'''# 3. Collect outputs (small files + best checkpoints + ONNX bundles).
@@ -95,7 +114,8 @@ for m in MODELS:
         if os.path.exists(f"{WORK}/runs/{m}/{f}"):
             shutil.copy(f"{WORK}/runs/{m}/{f}", dst)
     shutil.copytree(f"{WORK}/runs/{m}/eval", f"{dst}/eval", dirs_exist_ok=True)
-    shutil.copytree(f"{WORK}/artifacts/{m}", f"{OUT}/artifacts/{m}", dirs_exist_ok=True)
+    if os.path.exists(f"{WORK}/artifacts/{m}"):
+        shutil.copytree(f"{WORK}/artifacts/{m}", f"{OUT}/artifacts/{m}", dirs_exist_ok=True)
 for f in ["runs/comparison.md", "runs/comparison.png", "data/splits/manifest_verified.csv"]:
     if os.path.exists(f"{WORK}/{f}"):
         shutil.copy(f"{WORK}/{f}", OUT)
@@ -114,10 +134,10 @@ def build_notebook() -> nbformat.NotebookNode:
             "`data/splits/manifest.csv`, then evaluates on the untouched test split, calibrates (temperature "
             "scaling), chooses confidence bands on the validation split, exports ONNX and measures CPU latency.\n\n"
             "**Kaggle:** attach the source datasets listed in `configs/data.yaml` and the private code dataset; "
-            "GPU on, internet on. **Colab:** see the comment in the first cell."),
+            "GPU on; internet is not required (weights and timm are bundled). **Colab:** see the comment in the first cell."),
         nbformat.v4.new_code_cell(SETUP),
         nbformat.v4.new_code_cell(VERIFY),
-        nbformat.v4.new_code_cell(TRAIN.format(models=json.dumps(MODELS))),
+        nbformat.v4.new_code_cell(TRAIN.format(models=json.dumps(MODELS), weights=json.dumps(WEIGHTS))),
         nbformat.v4.new_code_cell(PACKAGE),
     ]
     nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
@@ -140,6 +160,8 @@ def main() -> None:
             files = [p] if p.is_file() else [f for f in p.rglob("*") if f.is_file() and "__pycache__" not in f.parts]
             for f in files:
                 z.write(f, f.relative_to(ROOT).as_posix())
+        for f in sorted(OFFLINE.glob("*")):
+            z.write(f, f"offline/{f.name}")
     (code_dir / "dataset-metadata.json").write_text(json.dumps({
         "title": CODE_SLUG, "id": f"{args.user}/{CODE_SLUG}", "licenses": [{"name": "other"}]}, indent=2))
 

@@ -84,6 +84,12 @@ kaggle kernels push -p kaggle_out/bundle/kernel           # private GPU notebook
 kaggle kernels status <kaggle-username>/smartbite-food-train
 kaggle kernels output <kaggle-username>/smartbite-food-train -p kaggle_out/results
 
+# 4b. Colab instead of Kaggle: Runtime > Change runtime type > GPU, upload the repo to /content/SmartBite
+#     (with data/splits/manifest.csv), download the raw datasets into /content/SmartBite/data/raw/<same
+#     folder names as configs/data.yaml> with the Kaggle CLI (upload your kaggle.json) and the Food-101
+#     extraction step above, then open notebooks/smartbite_food_train.ipynb and run all cells
+#     (PROFILE becomes "local" automatically off Kaggle).
+
 # 5. on a GPU machine the same commands run directly:
 python -m smartbite_cv.train --config configs/train/base.yaml --config configs/train/efficientnet_b0.yaml
 python -m smartbite_cv.evaluate --run runs/efficientnet_b0

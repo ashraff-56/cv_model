@@ -15,12 +15,17 @@ from .prepare import dataset_roots, read_manifest
 
 def build_model(model_cfg: dict, num_classes: int, pretrained: bool | None = None) -> torch.nn.Module:
     pretrained = model_cfg.get("pretrained", True) if pretrained is None else pretrained
+    extra = {}
+    if pretrained and model_cfg.get("pretrained_file"):
+        # offline machines (Kaggle without internet): load the same timm weights from a local file
+        extra["pretrained_cfg_overlay"] = {"file": str(resolve_path(model_cfg["pretrained_file"]))}
     model = timm.create_model(
         model_cfg["name"],
         pretrained=pretrained,
         num_classes=num_classes,
         drop_rate=model_cfg.get("drop_rate", 0.0),
         drop_path_rate=model_cfg.get("drop_path_rate", 0.0),
+        **extra,
     )
     if pretrained:
         # timm's default head init (uniform +-1/sqrt(num_classes)) gives very large initial logits on
