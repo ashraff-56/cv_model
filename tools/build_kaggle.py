@@ -63,6 +63,8 @@ PROFILE = "kaggle" if ON_KAGGLE else "local"
 os.makedirs(OUT, exist_ok=True)
 # No internet needed: timm comes from the bundled wheel, ImageNet weights from offline/*.safetensors.
 whl = glob.glob(f"{WORK}/offline/timm-*.whl")
+if ON_KAGGLE and not whl:
+    raise RuntimeError("offline/ missing: the attached smartbite-cv-code dataset version is stale; re-run")
 run(f"pip install -q --no-index --no-deps {whl[0]}" if whl else "pip install -q timm onnx onnxruntime")
 run("nvidia-smi || true")
 run("python -c \"import torch, timm; print('torch', torch.__version__, 'timm', timm.__version__)\"")
