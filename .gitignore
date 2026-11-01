@@ -15,6 +15,8 @@ runs/
 artifacts/*/checkpoints/
 *.pt
 *.onnx
+# exported ONNX models are shared through the repo (each ~10-16 MB)
+!artifacts/*/model.onnx
 kaggle_out/
 
 # phone-photo test set (team photos; add explicitly only if consented)
