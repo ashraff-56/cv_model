@@ -17,6 +17,8 @@ artifacts/*/checkpoints/
 *.onnx
 # exported ONNX models are shared through the repo (each ~10-16 MB)
 !artifacts/*/model.onnx
+# saved plate detector for offline servers (~740 MB, see INTEGRATION.md)
+artifacts/plate_detector/
 kaggle_out/
 
 # phone-photo test set (team photos; add explicitly only if consented)

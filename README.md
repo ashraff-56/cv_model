@@ -5,6 +5,8 @@ FR-SCAN-01..07). A photo goes in. Out come the **top-3 calibrated dish suggestio
 band** for the verification screen, plus **calories for the portion the user chooses**.
 Nothing is ever logged automatically (`autoLogged: false`); the Phase 2 API will enforce that.
 
+> **Connecting the models to the app's backend? Start with [`INTEGRATION.md`](INTEGRATION.md).**
+
 > Not medical advice. Calorie values are estimates from food-composition databases; portion size is
 > estimated from the photo and must be confirmed or edited by the user.
 
