@@ -30,6 +30,16 @@ class _Files(Dataset):
             return torch.zeros(3, 224, 224), i
 
 
+def _save(cache_file: Path | None, cached: dict[str, np.ndarray]) -> None:
+    if cache_file is None or not cached:
+        return
+    Path(cache_file).parent.mkdir(parents=True, exist_ok=True)
+    all_keys = list(cached)
+    tmp = Path(cache_file).with_suffix(".tmp.npz")
+    np.savez(tmp, keys=np.array(all_keys), emb=np.stack([cached[k] for k in all_keys]))
+    tmp.replace(cache_file)
+
+
 def embed(paths: list[Path], model_name: str = "efficientnet_b0.ra_in1k", batch_size: int = 64,
           workers: int = 8, cache_file: Path | None = None, keys: list[str] | None = None) -> np.ndarray:
     """L2-normalised embeddings, optionally cached on disk by `keys` (e.g. MD5)."""
@@ -38,8 +48,8 @@ def embed(paths: list[Path], model_name: str = "efficientnet_b0.ra_in1k", batch_
 
     cached: dict[str, np.ndarray] = {}
     if cache_file is not None and Path(cache_file).exists():
-        data = np.load(cache_file, allow_pickle=False)
-        cached = dict(zip(data["keys"].tolist(), data["emb"]))
+        with np.load(cache_file, allow_pickle=False) as data:   # closed again: Windows can't replace an open file
+            cached = dict(zip(data["keys"].tolist(), data["emb"]))
     keys = keys or [str(p) for p in paths]
     todo = [i for i, k in enumerate(keys) if k not in cached]
     if todo:
@@ -57,10 +67,8 @@ def embed(paths: list[Path], model_name: str = "efficientnet_b0.ra_in1k", batch_
                 done += len(idx)
                 if done % (batch_size * 40) < batch_size:
                     print(f"  embedded {done}/{len(todo)}", flush=True)
-        if cache_file is not None:
-            Path(cache_file).parent.mkdir(parents=True, exist_ok=True)
-            all_keys = list(cached)
-            np.savez(cache_file, keys=np.array(all_keys), emb=np.stack([cached[k] for k in all_keys]))
+                    _save(cache_file, cached)   # checkpoint: a crash (e.g. out of memory) keeps finished work
+        _save(cache_file, cached)
     return np.stack([cached[k] for k in keys])
 
 

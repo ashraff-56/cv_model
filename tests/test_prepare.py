@@ -79,3 +79,37 @@ def test_real_manifest_has_no_cross_split_duplicates():
         for r in rows:
             splits_by_key.setdefault(r[key], set()).add(r["split"])
         assert all(len(s) == 1 for s in splits_by_key.values()), key
+
+
+def test_augmented_copies_are_grouped_and_original_kept():
+    from smartbite_cv.prepare import _reduce_clusters, annotate_copies
+    from smartbite_cv.phash import cluster
+
+    spec = {"smf": {"group_strip": [r"^(?:aug_blur_)+", r"^aug_d+_", r"_aug\d+(?:_[0-9a-f]{4})?$"],
+                    "tier_rules": [[r"_aug\d+", 2], [r"^aug_", 1]]}, "other": {}}
+    def item(rel, ds="smf", w=100):
+        return {"label": "nihari", "dataset": ds, "relpath": rel, "width": w, "height": w, "md5": rel,
+                "cluster_size": 1}
+    items = [item("x/nihari/000005.jpg", w=100), item("x/nihari/000005_aug1_cfc6.jpg", w=400),
+             item("x/nihari/aug_blur_000005.jpg", w=300), item("x/nihari/aug_blur_aug_0_77.jpg"),
+             item("x/nihari/aug_0_77.jpg"), item("x/korma/000005.jpg"), item("y/000005.jpg", ds="other")]
+    edges = annotate_copies(items, spec)
+    assert sorted(edges) == [(0, 1), (0, 2), (3, 4)]     # same stem + same folder only; other datasets untouched
+    assert [it["tier"] for it in items] == [0, 2, 1, 1, 1, 0, 0]
+    kept, conflicts, removed = _reduce_clusters(items, cluster(len(items), edges))
+    assert not conflicts and len(kept) == 4
+    assert any(k["relpath"] == "x/nihari/000005.jpg" for k in kept)   # untouched original wins although smaller
+    assert not any("000005_aug" in k["relpath"] or "aug_blur_000005" in k["relpath"] for k in kept)
+
+
+def test_assign_splits_keeps_altered_photos_out_of_test():
+    from smartbite_cv.prepare import assign_splits
+
+    rows = [{"md5": f"{i:032x}", "tier": t} for i, t in enumerate([0] * 6 + [1] * 4 + [2] * 30)]
+    out, missing = assign_splits(rows, seed=7, fractions={"train": 0.7, "val": 0.15, "test": 0.15}, cap=600)
+    evals = [r for r in out if r["split"] != "train"]
+    assert len(out) == 40 and missing == 2                # 12 eval places, only 10 tier-0/1 photos
+    assert all(r["tier"] < 2 for r in evals)
+    assert sum(r["split"] == "test" for r in evals) == 5 and sum(r["split"] == "val" for r in evals) == 5
+    again, _ = assign_splits(list(reversed(rows)), seed=7, fractions={"train": 0.7, "val": 0.15, "test": 0.15}, cap=600)
+    assert {r["md5"]: r["split"] for r in out} == {r["md5"]: r["split"] for r in again}

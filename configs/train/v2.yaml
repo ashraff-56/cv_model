@@ -1,0 +1,4 @@
+# v2 data: Pakistani dishes (SMF) + Khana added; 80 classes. Layer after base.yaml and the model file.
+data:
+  config: configs/data_v2.yaml
+  classes: configs/classes_v2.yaml

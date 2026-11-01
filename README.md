@@ -5,8 +5,8 @@ FR-SCAN-01..07). A photo goes in. Out come the **top-3 calibrated dish suggestio
 band** for the verification screen, plus **calories for the portion the user chooses**.
 Nothing is ever logged automatically (`autoLogged: false`); the Phase 2 API will enforce that.
 
-> Not medical advice. Calorie values are estimates from food-composition databases; portion size
-> comes from the user, not from the photo.
+> Not medical advice. Calorie values are estimates from food-composition databases; portion size is
+> estimated from the photo and must be confirmed or edited by the user.
 
 ## What is in Phase 1
 
@@ -23,6 +23,49 @@ Nothing is ever logged automatically (`autoLogged: false`); the Phase 2 API will
 
 Models: **EfficientNet-B0** (primary) and **MobileNetV2** (baseline named in the original spec), one
 dish per photo, 32 classes (31 foods + `not_food`). Results: `reports/phase1_report.md`.
+
+## v2: Pakistani dishes + grams from the photo
+
+v2 (`configs/*_v2.yaml`) adds the Pakistani SmartFoodAnalyzer dataset and Khana. It has 76 classes and 28,556 deduplicated photos. It also adds a **portion model** trained on Nutrition5k (grams from an overhead photo) and a 79-food nutrition table (`nutrition/nutrition_v2.csv`).
+
+| | v2 EfficientNet-B0 |
+|---|---|
+| internal test top-1 / top-3 | 82.6% / 92.9% |
+| real-world (Wikipedia photos) top-1 / top-3 | 56.9% / 74.4% |
+| grams error (Nutrition5k test, fixed camera) | 27.3 g (13.7%) |
+
+**Grams are not reliable on close-up phone photos.** The app must keep the confirm step.
+
+Full results, the integrity audit (overfitting, leakage, robustness) and limitations are in `reports/v2_results.md`.
+
+### Grams from the plate (plate as the ruler)
+
+OWLv2 + SAM 2.1 find the plate or bowl. Its shape gives the camera tilt and scale, and a plate-relative portion model
+(`artifacts/plate_portion`) reads grams from a top-down, plate-only view. The test set is weighed Nutrition5k dishes:
+
+| Photo | First portion model | Plate model |
+|---|---|---|
+| Overhead (training camera) | 27 g (14%) | 28 g (14%) |
+| Camera farther (0.6x) | 101 g (51%) | 29 g (15%) |
+| Side angle, other camera, all stills | 139 g (70%) | 55 g (27%) |
+| Side angle, plate mostly in frame | 107 g (56%) | 41 g (22%) |
+
+The test dishes come from the same cafeterias and plates as the training dishes, and no Pakistani dish was weighed.
+On web photos the grams are not stable yet. A plate partly out of frame returns a retake warning. Details and
+limitations are in `reports/plate_results.md`.
+
+```powershell
+python -m smartbite_cv.predict meal.jpg --model-dir artifacts/efficientnet_b0_v2 --plate-portion-dir artifacts/plate_portion --portion-dir artifacts/portion --nutrition-csv nutrition/nutrition_v2.csv
+python tools/build_kaggle.py --user <kaggle-user> --version plate   # benchmark + plate model training (Kaggle, 2 GPUs)
+```
+
+```powershell
+python -m smartbite_cv.predict meal.jpg --model-dir artifacts/efficientnet_b0_v2 --portion-dir artifacts/portion --nutrition-csv nutrition/nutrition_v2.csv
+python -m smartbite_cv.prepare --config configs/data_v2.yaml --classes configs/classes_v2.yaml --cache   # rebuild data
+python tools/build_kaggle.py --user <kaggle-user> --version v2        # GPU notebook; --version portion for grams
+python -m smartbite_cv.audit --run runs/efficientnet_b0_v2 --compare runs/mobilenetv2_v2
+python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0_v2 --folder data/external/wikipedia --exclude data/external/wikipedia/excluded.csv
+```
 
 ## Quick start (inference)
 
@@ -109,7 +152,7 @@ nutrition=provider)` / `calories(label, grams, provider)`. Nothing else changes.
 ## Known limits (details in the report)
 
 * One dominant dish per photo. Mixed plates return the main dish; the app adds the rest via search.
-* No portion estimation from the image; grams come from the Portion Selector.
+* Grams from the photo are estimates (see `reports/plate_results.md`); the user confirms or edits them.
 * Trained and tested on web images only, which overstates real-world accuracy. Use `eval_phone_photos/`.
 * Several Pakistani staples have no usable public data (nihari, karahi-specific photos, plain rice,
   eggs, fruit, shawarma) and are not in the model; they fall back to manual search.

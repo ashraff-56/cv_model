@@ -1,0 +1,210 @@
+[
+  {
+    "photo": "Bombay_Biryani.jpg",
+    "dish": "biryani",
+    "band": "medium",
+    "confidence": 0.7716,
+    "plate": {
+      "kind": "plate",
+      "tiltDeg": 17,
+      "inFrame": true
+    },
+    "warning": null,
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 410.6,
+    "grams": 353.5,
+    "rangeG": [
+      243.4,
+      513.5
+    ],
+    "oldPhotoEstimateG": 330.1,
+    "typicalServingG": 196.0,
+    "kcal": 367.6,
+    "proteinG": 25.3,
+    "carbsG": 47.9,
+    "fatG": 8.4,
+    "quantitySeconds": 5.29
+  },
+  {
+    "photo": "Biryani.jpg",
+    "dish": "biryani",
+    "band": "high",
+    "confidence": 0.9833,
+    "plate": {
+      "kind": "plate",
+      "tiltDeg": 36,
+      "inFrame": false
+    },
+    "warning": "Part of the plate is outside the photo. Retake it with the whole plate in view for a better estimate.",
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 531.6,
+    "grams": 484.1,
+    "rangeG": [
+      375.4,
+      624.2
+    ],
+    "oldPhotoEstimateG": 668.4,
+    "typicalServingG": 196.0,
+    "kcal": 503.5,
+    "proteinG": 34.6,
+    "carbsG": 65.6,
+    "fatG": 11.5,
+    "quantitySeconds": 5.06
+  },
+  {
+    "photo": "Bowl_of_Gulab_Jamun.jpg",
+    "dish": "gulab_jamun",
+    "band": "high",
+    "confidence": 0.969,
+    "plate": {
+      "kind": "bowl",
+      "tiltDeg": 45,
+      "inFrame": true
+    },
+    "warning": null,
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 319.1,
+    "grams": 308.0,
+    "rangeG": [
+      255.8,
+      370.8
+    ],
+    "oldPhotoEstimateG": 488.8,
+    "typicalServingG": 156.7,
+    "kcal": 840.8,
+    "proteinG": 20.0,
+    "carbsG": 153.7,
+    "fatG": 20.3,
+    "quantitySeconds": 5.09
+  },
+  {
+    "photo": "Gulaab_Jamun__homemade_.jpg",
+    "dish": "gulab_jamun",
+    "band": "high",
+    "confidence": 0.9792,
+    "plate": {
+      "kind": "plate",
+      "tiltDeg": 54,
+      "inFrame": false
+    },
+    "warning": "Part of the plate is outside the photo. Retake it with the whole plate in view for a better estimate.",
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 447.5,
+    "grams": 433.4,
+    "rangeG": [
+      374.9,
+      501.1
+    ],
+    "oldPhotoEstimateG": 504.6,
+    "typicalServingG": 156.7,
+    "kcal": 1183.2,
+    "proteinG": 28.2,
+    "carbsG": 216.3,
+    "fatG": 28.6,
+    "quantitySeconds": 5.11
+  },
+  {
+    "photo": "Nihari.jpg",
+    "dish": "fried_fish",
+    "band": "low",
+    "confidence": 0.1779,
+    "plate": {
+      "kind": "bowl",
+      "tiltDeg": 7,
+      "inFrame": true
+    },
+    "warning": null,
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 336.8,
+    "grams": 243.2,
+    "rangeG": [
+      161.0,
+      367.3
+    ],
+    "oldPhotoEstimateG": 471.8,
+    "typicalServingG": 90.0,
+    "kcal": 654.2,
+    "proteinG": 39.0,
+    "carbsG": 28.5,
+    "fatG": 41.9,
+    "quantitySeconds": 4.92
+  },
+  {
+    "photo": "Haleem.jpg",
+    "dish": "haleem",
+    "band": "high",
+    "confidence": 0.9961,
+    "plate": {
+      "kind": "bowl",
+      "tiltDeg": 6,
+      "inFrame": true
+    },
+    "warning": null,
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 219.3,
+    "grams": 228.7,
+    "rangeG": [
+      147.5,
+      354.6
+    ],
+    "oldPhotoEstimateG": 236.6,
+    "typicalServingG": 255.0,
+    "kcal": 178.4,
+    "proteinG": 13.6,
+    "carbsG": 20.0,
+    "fatG": 5.3,
+    "quantitySeconds": 5.13
+  },
+  {
+    "photo": "Evening_Snacks_Samosa.jpg",
+    "dish": "samosa",
+    "band": "high",
+    "confidence": 0.985,
+    "plate": {
+      "kind": "plate",
+      "tiltDeg": 50,
+      "inFrame": false
+    },
+    "warning": "Part of the plate is outside the photo. Retake it with the whole plate in view for a better estimate.",
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 448.6,
+    "grams": 301.6,
+    "rangeG": [
+      204.0,
+      445.9
+    ],
+    "oldPhotoEstimateG": 603.8,
+    "typicalServingG": 75.0,
+    "kcal": 935.0,
+    "proteinG": 15.5,
+    "carbsG": 100.0,
+    "fatG": 52.7,
+    "quantitySeconds": 4.98
+  },
+  {
+    "photo": "Firni_Or_Phirni.jpg",
+    "dish": "kheer",
+    "band": "high",
+    "confidence": 0.9419,
+    "plate": {
+      "kind": "plate",
+      "tiltDeg": 57,
+      "inFrame": false
+    },
+    "warning": "Part of the plate is outside the photo. Retake it with the whole plate in view for a better estimate.",
+    "method": "plate-relative photo estimate combined with typical serving",
+    "photoEstimateG": 171.9,
+    "grams": 183.6,
+    "rangeG": [
+      131.8,
+      255.8
+    ],
+    "oldPhotoEstimateG": 110.5,
+    "typicalServingG": 260.0,
+    "kcal": 198.3,
+    "proteinG": 5.9,
+    "carbsG": 33.8,
+    "fatG": 3.9,
+    "quantitySeconds": 5.11
+  }
+]

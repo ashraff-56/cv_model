@@ -1,0 +1,29 @@
+{
+  "imgHW": [
+    320,
+    320
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "interpolation": "bicubic",
+  "sigmaScale": 1.7381616830825806,
+  "priorSigmaLog": 0.829714877672668,
+  "trainedOn": "Nutrition5k overhead + side-angle stills as plate-only views (official train split)",
+  "testMassMAE": {
+    "mae_g": 28.089215334556688,
+    "mae_pct_of_mean": 14.134811934294417,
+    "median_ape_pct": 11.682991027832031
+  },
+  "onnxParityMaxAbsDiff": 8.106231689453125e-06,
+  "input": "plate_only_view",
+  "viewSize": 320,
+  "viewSigma": 64.0
+}

@@ -1,0 +1,717 @@
+# Curated nutrition source per model class. tools/build_nutrition.py reads the numbers from the
+# downloaded databases (never typed by hand) and writes nutrition/nutrition.csv.
+#
+# Source priority: (1) USDA FoodData Central FNDDS 2021-2023 (survey foods, release 2024-10-31);
+# (2) UK CoFID 2021 (McCance & Widdowson's integrated dataset); (3) INDB (Indian Nutrient Databank,
+# recipe-calculated). approximate: true whenever the row is not a direct USDA match for the dish
+# (other database, or a stand-in food). Merged visual classes use their most common Pakistani
+# variant; the user can pick a different variant in Phase 2.
+#
+# serving: FNDDS portion description to use as defaultServingGrams (exact text), or for non-FNDDS
+# rows a portion from another documented source.
+# crosscheck: the same dish in a second database. Its value is recorded next to the primary one,
+# and a row is flagged approximate automatically when the two differ by more than 30%.
+#
+# v2 (80-class model, configs/classes_v2.yaml): v1 rows carried over unchanged; new Pakistani dishes added.
+# INDB recipes for deep-fried items with implausible values (e.g. Poori 738 kcal/77.6 g fat per 100 g) are
+# never used. `composite` = plated dish built from database rows and database portions.
+foods:
+  biryani:
+    db: fndds
+    id: 2706538
+    serving: 1 cup
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 19-454
+  naan:
+    db: fndds
+    id: 2707613
+    serving: 1 Naan (10" dia)
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 11-973
+  roti_chapati:
+    db: fndds
+    id: 2707713
+    serving: 1 medium chappatti or roti (7")
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 11-987
+  paratha:
+    db: fndds
+    id: 2707715
+    serving: 1 paratha
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 11-1104
+  aloo_paratha:
+    db: indb
+    id: ASC098
+    serving_indb:
+      code: ASC098
+    approximate: true
+    crosscheck:
+      db: fndds
+      id: 2707715
+    note: INDB 'Potato parantha/paratha (Aloo ka parantha)'; cross-check FNDDS plain paratha. Ghee/butter on top is extra.
+  anda_paratha:
+    composite:
+    - db: fndds
+      id: 2707715
+      serving: 1 paratha
+      count: 1
+    - db: fndds
+      id: 2707200
+      serving: 1 egg
+      count: 1
+    approximate: true
+    note: 'No anda paratha entry. Composite: 1 FNDDS paratha + 1 egg as FNDDS omelette made with oil.'
+  sheermal:
+    db: cofid
+    id: 11-1091
+    serving_fndds:
+      id: 2707682
+      portion: 1 piece
+    approximate: true
+    crosscheck:
+      db: fndds
+      id: 2707682
+    note: 'No sheermal entry. Stand-in: UK CoFID ''Milk bread, homemade''; cross-check FNDDS brioche (sheermal is a saffron
+      milk bread with ghee, between the two). Serving = 1 piece (FNDDS brioche).'
+  puri:
+    db: fndds
+    id: 2707714
+    serving: 1 puri (approx 4-4/5" dia)
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 11-911
+  halwa_puri:
+    composite:
+    - db: fndds
+      id: 2707714
+      serving: 1 puri (approx 4-4/5" dia)
+      count: 2
+    - db: cofid
+      id: 17-799
+      serving_indb:
+        code: ASC293
+      count: 1
+    - db: cofid
+      id: 15-108
+      serving_fndds:
+        id: 2707427
+        portion: 1 cup
+      count: 1
+    approximate: true
+    note: 'No halwa puri entry. Composite plate: 2 FNDDS puris + 1 bowl suji halwa (CoFID semolina halva, INDB bowl) + 1 cup
+      chanay (CoFID Punjabi chickpea curry, FNDDS cup).'
+  paratha_roll:
+    db: indb
+    id: ASC149
+    serving_indb:
+      code: ASC149
+    approximate: true
+    note: INDB 'Paneer kaathi roll' (recipe-calculated); chicken paratha rolls differ in filling.
+  samosa:
+    db: fndds
+    id: 2708730
+    serving: Quantity not specified
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 15-305
+  pakora:
+    db: fndds
+    id: 2710066
+    serving: Quantity not specified
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 15-620
+  gol_gappay:
+    db: cofid
+    id: 11-911
+    serving_fndds:
+      id: 2707714
+      portion: Quantity not specified
+    approximate: true
+    note: 'No pani puri entry found. Stand-in: UK CoFID ''Puri, homemade'' (the fried shell only); a served plate with filling
+      and water has lower energy density.'
+  chana_chaat:
+    db: fndds
+    id: 2707416
+    serving: 1 cup
+    approximate: true
+    note: 'No chana chaat entry. Stand-in: FNDDS boiled chickpeas (no added fat); onion, tomato, tamarind chutney and potatoes
+      are not counted.'
+  karahi:
+    db: fndds
+    id: 2706437
+    serving: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC240
+    note: 'No karahi entry in FNDDS, CoFID or INDB. Stand-in: FNDDS ''Chicken curry''. Restaurant karahi (more oil/ghee, less
+      gravy) is likely higher in fat; mutton/beef karahi differ further.'
+  korma:
+    db: cofid
+    id: 19-565
+    serving_fndds:
+      id: 2706437
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: BFP222
+    note: 'UK CoFID ''Curry, chicken korma, homemade''. Mutton/beef korma: INDB BFP194 is similar per 100 g. Serving = 1 cup
+      of curry (FNDDS chicken curry portion).'
+  chicken_curry:
+    db: fndds
+    id: 2706437
+    serving: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC240
+    note: FNDDS 'Chicken curry' for chicken curry / butter chicken / tikka masala / paneer masala variants; butter chicken
+      and restaurant curries are usually richer.
+  nihari:
+    db: cofid
+    id: 19-549
+    serving_fndds:
+      id: 2706388
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: fndds
+      id: 2706388
+    note: 'No nihari entry. Stand-in: UK CoFID ''Curry, beef, homemade''. Nihari''s layer of ghee on top makes it likely higher
+      in fat.'
+  kunna:
+    db: fndds
+    id: 2706413
+    serving: 1 cup
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 19-595
+    note: 'No kunna entry. Stand-in: FNDDS ''Lamb or mutton with gravy''; cross-check CoFID lamb rogan josh.'
+  paye:
+    db: indb
+    id: ASC232
+    serving_indb:
+      code: ASC232
+    approximate: true
+    crosscheck:
+      db: fndds
+      id: 2706085
+    note: 'No paye (trotters) entry. Stand-in: INDB ''Mutton yakhni'' (meat broth); cross-check FNDDS chicken feet. Values
+      depend heavily on how much bone/gelatin and fat is eaten.'
+  haleem:
+    db: fndds
+    id: 2707463
+    serving: 1 cup
+    approximate: true
+    note: 'No haleem entry in FNDDS, SR Legacy, UK CoFID 2021 or INDB. Stand-in: lentil soup with meat. Haleem is thicker
+      (wheat, lentils, meat, ghee), so this likely UNDER-estimates calories.'
+  aloo_gosht:
+    db: fndds
+    id: 2706522
+    serving: 1 cup
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 19-522
+  palak_gosht:
+    db: indb
+    id: ASC228
+    serving_fndds:
+      id: 2706413
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 19-547
+    note: INDB 'Spinach mutton (Palak mutton)'; cross-check CoFID beef and spinach curry. Serving = 1 cup of curry (FNDDS
+      lamb with gravy portion; INDB's 486 g bowl is large).
+  keema:
+    db: cofid
+    id: 19-587
+    serving_fndds:
+      id: 2706388
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC229
+    note: UK CoFID 'Kheema, beef, homemade' (lamb kheema 19-480 is higher in fat).
+  kofta:
+    db: indb
+    id: ASC230
+    serving_fndds:
+      id: 2706388
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 19-642
+    note: INDB 'Keema kofta curry' (koftas in gravy). CoFID 'Kofta, beef' is the meatballs alone (much denser). Serving =
+      1 cup of curry.
+  fish_curry:
+    db: fndds
+    id: 2706460
+    serving: 1 cup
+    approximate: false
+    crosscheck:
+      db: indb
+      id: ASC246
+  fried_fish:
+    db: fndds
+    id: 2706227
+    serving: 1 small/regular fillet
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 16-134
+    note: FNDDS 'Fish, NS as to type, fried'. Pakistani fried fish (besan-coated, deep fried) and grilled fish differ; grilled
+      is lower in fat.
+  chicken_tikka:
+    db: cofid
+    id: 19-540
+    serving_fndds:
+      id: 2705949
+      portion: 1 piece
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC241
+    note: UK CoFID 'Curry, chicken tandoori, retail, reheated'; no tikka/tandoori dish in FNDDS.
+  malai_boti:
+    db: cofid
+    id: 19-540
+    serving_fndds:
+      id: 2705949
+      portion: 1 piece
+    approximate: true
+    note: 'No malai boti entry. Stand-in: the chicken tikka row (UK CoFID chicken tandoori). The cream/cheese marinade adds
+      fat.'
+  seekh_kebab:
+    db: indb
+    id: BFP199
+    serving_indb:
+      code: BFP199
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 19-150
+    note: INDB 'Mutton seekh kebab'; serving = 1 kebab (INDB). Beef/chicken seekh kebabs differ; cross-check CoFID shish kebab
+      (meat only).
+  chapli_kebab:
+    db: cofid
+    id: 19-553
+    serving_fndds:
+      id: 2706502
+      portion: 1 patty
+    approximate: true
+    note: 'No chapli kebab entry (INDB ''Shammi kebab'' is implausible, 686 kcal). Stand-in: UK CoFID ''Burger, beef, fried
+      in rapeseed oil, homemade'' (fried beef patty). Serving = 1 patty (FNDDS).'
+  lamb_chops:
+    db: fndds
+    id: 2705906
+    serving: 1 chop, any size
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 18-109
+    note: FNDDS 'Lamb, chop' (meat only). Marinated, pan-fried chops absorb extra oil.
+  chicken_roast:
+    db: fndds
+    id: 2705933
+    serving: Quantity not specified
+    approximate: true
+    crosscheck:
+      db: indb
+      id: BFP212
+    note: 'FNDDS roasted chicken, skin eaten. Chargha is steamed then deep-fried: likely higher in fat.'
+  daal:
+    db: fndds
+    id: 2707427
+    serving: 1 cup
+    approximate: false
+  chana_chole:
+    db: cofid
+    id: 15-108
+    serving_fndds:
+      id: 2707427
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC162
+    note: UK CoFID Punjabi chickpea curry (vegetable oil). Puri/bhatura served with it is NOT included.
+  kadhi_pakora:
+    db: cofid
+    id: 12-595
+    serving_fndds:
+      id: 2706437
+      portion: 1 cup
+    approximate: true
+    note: 'No usable kadhi entry (INDB ''Besan kadhi with pakodies'' is implausible, 403 kcal / 42.6 g fat). Stand-in: UK
+      CoFID ''Raita, yogurt and gram flour'' (the kadhi base); fried pakoras in it add energy and fat.'
+  aloo_baingan:
+    db: cofid
+    id: 15-669
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC177
+    note: 'UK CoFID ''Bhaji, aubergine and potato, homemade''. Vegetable dishes use one serving reference: 1 cup of cooked
+      mixed vegetables (FNDDS, 185 g).'
+  aloo_gobi:
+    db: cofid
+    id: 15-679
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC171
+    note: UK CoFID 'Bhaji, cauliflower and potato, homemade'.
+  aloo_methi:
+    db: cofid
+    id: 15-628
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC175
+    note: UK CoFID 'Methi aloo, homemade'.
+  aloo_palak:
+    db: cofid
+    id: 15-787
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: BFP257
+    note: UK CoFID 'Curry, spinach and potato, masala, homemade'.
+  aloo_shimla_mirch:
+    db: indb
+    id: ASC172
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    note: INDB 'Potato capsicum (Shimla mirch aloo)'; no second database entry.
+  bhindi:
+    db: cofid
+    id: 15-627
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: BFP269
+    note: UK CoFID 'Curry, bhindi subji, homemade'. Fried bhindi is much higher in fat.
+  ghiya:
+    db: indb
+    id: ASC153
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 15-774
+    note: 'No plain ghiya/lauki sabzi entry. Stand-in: INDB ''Channa dal with ghiya/lauki'' (a common Pakistani way to cook
+      it).'
+  karela:
+    db: cofid
+    id: 15-756
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 15-026
+    note: UK CoFID 'Curry, karela, homemade'.
+  mixed_sabzi:
+    db: cofid
+    id: 15-789
+    serving_fndds:
+      id: 2710015
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: fndds
+      id: 2710015
+    note: UK CoFID 'Curry, vegetable, frozen mixed vegetables, homemade'.
+  saag:
+    db: cofid
+    id: 15-629
+    serving_indb:
+      code: ASC217
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC217
+    note: UK CoFID 'Saag, homemade'; serving = INDB sarson ka saag bowl. Butter/makhan on top is extra.
+  raita:
+    db: cofid
+    id: 17-832
+    serving_indb:
+      code: ASC273
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC273
+    note: UK CoFID 'Raita, homemade'; serving = INDB cucumber raita bowl.
+  kachumber_salad:
+    db: fndds
+    id: 2709756
+    serving: 1 cup
+    approximate: true
+    note: FNDDS tomato and cucumber salad WITH oil and vinegar; kachumber usually has little or no oil, so this likely OVER-estimates
+      fat.
+  achar:
+    db: indb
+    id: ASC507
+    serving_fndds:
+      id: 2710080
+      portion: 1 pickle, any size
+    approximate: true
+    note: INDB 'Mango pickle (Aam ka achaar)', oil-based. Serving = 30 g (FNDDS pickle portion); usually eaten in small amounts.
+  pudina_chutney:
+    db: indb
+    id: ASC387
+    serving_indb:
+      code: ASC387
+    approximate: true
+    note: INDB 'Mint and coriander chutney'; serving = 1 tablespoon (INDB). Yogurt-based versions differ.
+  gulab_jamun:
+    db: cofid
+    id: 11-1081
+    serving_indb:
+      code: ASC348
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC348
+    note: UK CoFID 'Gulab jamen/jambu, homemade'. Default serving = INDB '2 gulab jamun' (with syrup).
+  jalebi:
+    db: fndds
+    id: 2708349
+    serving: Quantity not specified
+    approximate: true
+    note: 'No jalebi entry in FNDDS, SR Legacy, UK CoFID 2021 or INDB. Stand-in: funnel cake with sugar (fried batter + sugar).
+      Syrup-soaked jalebi is likely denser; treat as rough.'
+  gajar_halwa:
+    db: cofid
+    id: 17-798
+    serving_indb:
+      code: ASC295
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC295
+    note: UK CoFID 'Halva, carrot, homemade'; serving = INDB gajar ka halwa bowl. INDB per-100 g is much lower (disagreement
+      flagged).
+  suji_halwa:
+    db: cofid
+    id: 17-799
+    serving_indb:
+      code: ASC293
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC293
+    note: UK CoFID 'Halva, semolina, homemade'; serving = INDB suji halwa bowl.
+  barfi:
+    db: fndds
+    id: 2705700
+    serving: 1 piece
+    approximate: false
+    crosscheck:
+      db: indb
+      id: ASC335
+  rabri:
+    db: indb
+    id: OSR025
+    serving_indb:
+      code: OSR025
+    approximate: true
+    note: INDB 'Thickened sweetened milk (Rabri)'; no second database entry. Traditional rabri reduced for hours is likely
+      denser.
+  ras_malai:
+    db: indb
+    id: BFP393
+    serving_fndds:
+      id: 2705685
+      portion: 1 snack size container
+    approximate: true
+    note: INDB 'Rasmalai' (per 100 g incl. milk). INDB's 317 g 'piece' is implausible; serving = 110 g dessert cup (FNDDS
+      rice pudding snack container).
+  kheer:
+    db: fndds
+    id: 2705685
+    serving: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC282
+    note: FNDDS 'Pudding, rice' for kheer/phirni; cross-check INDB rice kheer.
+  kulfi:
+    db: cofid
+    id: 12-606
+    serving_fndds:
+      id: 2705638
+      portion: 1 bar
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC321
+    note: UK CoFID 'Kulfi, homemade'. Sources disagree strongly with INDB. Serving = FNDDS ice cream bar (INDB's 266 g serving
+      is implausible for one kulfi). Verify before production.
+  falooda:
+    db: fndds
+    id: 2705504
+    serving: 1 milkshake (10 fl oz)
+    approximate: true
+    note: 'No falooda entry. Stand-in: FNDDS homemade milkshake (non-chocolate); vermicelli, basil seeds, rose syrup and ice
+      cream make falooda denser.'
+  chai:
+    db: fndds
+    id: 2710506
+    serving: 1 cup
+    approximate: true
+    note: FNDDS 'Tea, hot, with milk' has no sugar; Pakistani doodh patti with sugar is higher.
+  coffee:
+    db: fndds
+    id: 2710386
+    serving: 1 cup (8 fl oz)
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 17-632
+    note: FNDDS 'Coffee, Latte'. Black coffee is near zero; sugar is extra.
+  lassi:
+    db: cofid
+    id: 12-373
+    serving_fndds:
+      id: 2705393
+      portion: 1 cup
+    approximate: true
+    crosscheck:
+      db: indb
+      id: ASC021
+    note: 'UK CoFID ''Lassi, sweetened''. Salty lassi / chaas are lower (INDB ASC022: 19 kcal).'
+  lemonade:
+    db: fndds
+    id: 2710570
+    serving: Quantity not specified
+    approximate: true
+    crosscheck:
+      db: cofid
+      id: 17-807
+    note: FNDDS 'Lemonade, fruit juice drink'; sugar in homemade nimbu pani varies.
+  milk_soda:
+    db: fndds
+    id: 2705385
+    serving: 1 cup
+    approximate: true
+    note: 'No doodh soda entry. Stand-in: FNDDS whole milk (the class photos are mostly milk). Doodh soda is roughly half
+      milk, half lemon-lime soda.'
+  sattu:
+    db: indb
+    id: OSR002
+    serving_indb:
+      code: OSR002
+    approximate: true
+    note: INDB 'Sattu drink'; sweetened versions are higher.
+  pizza:
+    db: fndds
+    id: 2708614
+    serving: 1 piece, medium pizza
+    approximate: false
+  burger:
+    db: fndds
+    id: 2706920
+    serving: 1 hamburger
+    approximate: false
+  french_fries:
+    db: fndds
+    id: 2709461
+    serving: 1 medium fast food order
+    approximate: false
+  fried_rice:
+    db: fndds
+    id: 2708953
+    serving: 1 cup
+    approximate: false
+    crosscheck:
+      db: cofid
+      id: 11-444
+  omelette:
+    db: fndds
+    id: 2707200
+    serving: Quantity not specified
+    approximate: false
+  fried_chicken:
+    db: fndds
+    id: 2705949
+    serving: 1 piece
+    approximate: false
+  sandwich:
+    db: fndds
+    id: 2706993
+    serving: 1 sandwich, any size
+    approximate: false
+  hot_dog:
+    db: fndds
+    id: 2707056
+    serving: 1 sandwich
+    approximate: false
+  donut:
+    db: fndds
+    id: 2708062
+    serving: 1 doughnut
+    approximate: false
+  ice_cream:
+    db: fndds
+    id: 2705629
+    serving: 1 scoop
+    approximate: false
+  chocolate_cake:
+    db: fndds
+    id: 2707866
+    serving: 1 regular or small piece/slice, 1 layer cake
+    approximate: false
+  spaghetti:
+    db: fndds
+    id: 2708837
+    serving: 1 cup
+    approximate: true
+    note: FNDDS 'Pasta with tomato-based sauce and meat, restaurant' (bolognese-type); carbonara (cream sauce) is higher in
+      fat.
+  salad:
+    db: fndds
+    id: 2709830
+    serving: 1 cup
+    approximate: true
+    note: Greek salad WITHOUT dressing; dressing adds substantial fat/calories.

@@ -1,0 +1,26 @@
+# Plate-relative portion model (smartbite_cv.plate_portion): grams from a top-down, plate-only view.
+# Same dishes, split rule and seed as configs/train/portion.yaml, so val/test dishes match the first model.
+seed: 20261031
+data:
+  metadata_dir: data/raw/nutrition5k
+  train_ids: depth_train_ids.txt
+  test_ids: depth_test_ids.txt
+  val_fraction: 0.10
+model:
+  name: efficientnet_b0.ra_in1k
+  drop_rate: 0.2
+  drop_path_rate: 0.1
+img_hw: [320, 320]          # plate_only_view size: the plate is always drawn at the same size
+batch_size: 32
+num_workers: 4
+epochs: 30
+lr: 3.0e-4
+min_lr: 1.0e-6
+weight_decay: 0.05
+warmup_epochs: 1
+grad_clip: 1.0
+early_stop_patience: 6      # epochs without val MAE (grams) improvement
+aug:
+  rotate: 180               # a top-down plate has no "up"
+  scale: [0.95, 1.05]       # plate measurement noise; small, because size relative to the plate is the signal
+  color_jitter: [0.2, 0.2, 0.15, 0.02]   # two camera types (RealSense overhead, Raspberry Pi side)

@@ -1,0 +1,713 @@
+idx,label,file,decision,reason
+378,achar,achar/Aavakaya.jpg,keep,
+379,achar,achar/Indian_Mango_Pickles.jpg,keep,
+380,achar,achar/CARROT_PICKLE.jpg,keep,
+381,achar,achar/Mango_pickle_in_plate_4.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+382,achar,achar/Lemon_pickle_in_a_plate1.jpg,keep,
+383,achar,achar/Mango-achar.jpg,keep,
+384,achar,achar/গ_ড__আম.jpg,keep,
+385,achar,achar/আম_র_আ_চ_র.jpg,keep,
+386,achar,achar/Various_kinds_of_pickles_for_sale_at_a_shop_in_Dakshineswar__Kolkata__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+387,achar,achar/Sweet_pickle_made_out_of_mango__in_West_Bengal__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+388,achar,achar/Preparation_of_red_chilli_Indian_pickle__2_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+389,achar,achar/Mula_Ko_Aachar.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+390,achar,achar/Mangopickle.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+391,achar,achar/Lasoora_Pickle.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+392,achar,achar/Jhol_Momo.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+284,aloo_baingan,aloo_baingan/Aloo_Mattar.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+285,aloo_gobi,aloo_gobi/Aloo_gobi.jpg,keep,
+286,aloo_gobi,aloo_gobi/Aloo_gobi__cauliflower_and_potato___3170159574_.jpg,keep,
+287,aloo_gobi,aloo_gobi/Aloo_Ghobi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+200,aloo_gosht,aloo_gosht/Aaloo_Gosht.jpg,keep,
+201,aloo_gosht,aloo_gosht/Saloonay_Chawal_With_Aloo_Gosht.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+202,aloo_gosht,aloo_gosht/Aaloo_Gosht__cropped_.jpg,keep,
+288,aloo_methi,aloo_methi/Fenugreek_02.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+289,aloo_methi,aloo_methi/Foeniculum_vulgare_MHNT.BOT.2005.0.1058.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+290,aloo_methi,aloo_methi/Methi_leaves.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+291,aloo_methi,aloo_methi/Methi_bunch.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+292,aloo_methi,aloo_methi/Methi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+293,aloo_methi,aloo_methi/Spices_in_an_Indian_market.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+294,aloo_methi,aloo_methi/Methi_by_ashish2_closeup.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+295,aloo_methi,aloo_methi/Methi_by_ashish1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+296,aloo_methi,aloo_methi/Fenugreek-methi-seeds.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+297,aloo_methi,aloo_methi/Illustration_Trigonella_foenum-graecum0.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+298,aloo_methi,aloo_methi/Fenugreek_seeds_ম_থ_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+299,aloo_methi,aloo_methi/Illustration_Trigonella_foenum-graecum0_clean.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+300,aloo_methi,aloo_methi/Aesthetic_bunch_of_fenugreek_greens.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+301,aloo_methi,aloo_methi/2017_0102_fenugreek_seeds.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+53,aloo_paratha,aloo_paratha/Parotta.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+54,aloo_paratha,aloo_paratha/Palatha__Myanmar.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+55,aloo_paratha,aloo_paratha/Kothu_Parotta__Chicken__as_served_in_Tamil_Nadu__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+56,aloo_paratha,aloo_paratha/Aloo_Paratha_with_Butter_from_India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+57,aloo_paratha,aloo_paratha/Methi_Paratha_by_Fatima.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+58,aloo_paratha,aloo_paratha/Cheese_Paratha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+59,aloo_paratha,aloo_paratha/Vegthali.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+60,aloo_paratha,aloo_paratha/Tandoorroti.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+61,aloo_paratha,aloo_paratha/Veechu_Rotti.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+62,aloo_paratha,aloo_paratha/Triangle_paratha__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+63,aloo_paratha,aloo_paratha/Teaparatha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+64,aloo_paratha,aloo_paratha/Spring_onion_pancake_2013.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+65,aloo_paratha,aloo_paratha/Smash_Paratha_-_Howrah_2014-04-14_0217.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+66,aloo_paratha,aloo_paratha/Roti_chanai_at_Lepak_Victoria_Park__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+67,aloo_paratha,aloo_paratha/Paratharoti.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+302,aloo_shimla_mirch,aloo_shimla_mirch/Curd_rice_and_hummus.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+303,aloo_shimla_mirch,aloo_shimla_mirch/Coconut_holige.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+304,aloo_shimla_mirch,aloo_shimla_mirch/Chingri_Malai_Curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+305,aloo_shimla_mirch,aloo_shimla_mirch/Chinese_rice_congee.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+306,aloo_shimla_mirch,aloo_shimla_mirch/Chicken_tikka_by_fatima.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+307,aloo_shimla_mirch,aloo_shimla_mirch/Chicken_makhani.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+308,aloo_shimla_mirch,aloo_shimla_mirch/Chicken_baida_roti.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+309,aloo_shimla_mirch,aloo_shimla_mirch/Chicken_Rezala_-_Kolkata_2011-08-02_4546.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+310,aloo_shimla_mirch,aloo_shimla_mirch/Chicken_65.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+311,aloo_shimla_mirch,aloo_shimla_mirch/Chettinad_Chicken_Fry-Home-AndhraPradesh-005.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+312,aloo_shimla_mirch,aloo_shimla_mirch/Chennapoda.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+313,aloo_shimla_mirch,aloo_shimla_mirch/Chena_gaja_Odia_cuisine.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+314,aloo_shimla_mirch,aloo_shimla_mirch/Chapatiroll.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+315,aloo_shimla_mirch,aloo_shimla_mirch/Chakali.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+316,aloo_shimla_mirch,aloo_shimla_mirch/Chahao_kheer.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+68,anda_paratha,anda_paratha/Paratha_and_Lassi-Chennai-Tamilnadu-IMG_1796__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+69,anda_paratha,anda_paratha/Paneer_Parantha__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+70,anda_paratha,anda_paratha/Palatha__Myanmar__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+71,anda_paratha,anda_paratha/Mughlai_Kheema_Paratha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+72,anda_paratha,anda_paratha/Moong_dal_stuffed_inside_wheat_flour_dough_for_Paratha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+73,anda_paratha,anda_paratha/Mooli_Paratha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+74,anda_paratha,anda_paratha/Methi_Parathas.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+75,anda_paratha,anda_paratha/Malabar_Porotta__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+76,anda_paratha,anda_paratha/Lachha_parantha_in_making.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+77,anda_paratha,anda_paratha/Laccha_Paratha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+78,anda_paratha,anda_paratha/Keema_Paratha_by_Preeti_Tamilarasan__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+79,anda_paratha,anda_paratha/Gobhi_Parantha__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+80,anda_paratha,anda_paratha/Dhakai_Paratha_with_Bengal_Gram.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+81,anda_paratha,anda_paratha/Cooking_paratha_in_old_Dhaka__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+82,anda_paratha,anda_paratha/Cooking_paratha_in_ghee_at_a_shop_in_parathe_wali_gali__Delhi__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+439,barfi,barfi/Barfi-Diwali_sweet.jpg,keep,
+440,barfi,barfi/Barfi.jpg,keep,
+441,barfi,barfi/Two_Layered_Coconut_Barfi.jpg,keep,
+442,barfi,barfi/Tri_-_colour_Kaju_Barfi.jpg,keep,
+443,barfi,barfi/Suji_Barfi-Odisha.jpg,keep,
+444,barfi,barfi/Naral_Vadi__Coconut_Burfi___50287135156_.jpg,keep,
+445,barfi,barfi/Moong_Daal_Barfi.jpg,keep,
+446,barfi,barfi/Chocalate_barfi.jpg,keep,
+447,barfi,barfi/Besan_Ki_Barfi.jpg,keep,
+448,barfi,barfi/Badam_Barfi.jpg,keep,
+449,barfi,barfi/Almond_Khoa_based_burfi_Mumbai_India__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+317,bhindi,bhindi/Thaligoa.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+318,bhindi,bhindi/Tourment.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+319,bhindi,bhindi/Plateful_of_Momo_in_Nepal.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+320,bhindi,bhindi/Bhindi_Masala.jpg,keep,
+0,biryani,biryani/Naan_shiva.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+1,biryani,biryani/Misc_Indian_cuisine.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+2,biryani,biryani/Iraqi_Biryani.jpg,keep,
+3,biryani,biryani/Bombay_Biryani.jpg,keep,
+4,biryani,biryani/Biryani.jpg,keep,
+5,biryani,biryani/Bangladeshi_Home-made_Beef_Biryani.jpg,keep,
+6,biryani,biryani/Biryani_of_Hyderabad.jpg,keep,
+7,biryani,biryani/Sindhi_Biryani.jpg,keep,
+8,biryani,biryani/Nasi_Kebuli_Jakarta.jpg,keep,
+9,biryani,biryani/Mutton_briyani_from_Little_India__Singapore_-_20130719.jpg,keep,
+10,biryani,biryani/Kolkata_mutton_biryani.jpg,keep,
+11,biryani,biryani/Khaomhokkhai.jpg,keep,
+12,biryani,biryani/Food-Beef-Biryani-2.jpg,keep,
+566,burger,burger/NCI_Visuals_Food_Hamburger.jpg,keep,
+567,burger,burger/Jumbo_Vada_Pav__dodged_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+568,burger,burger/Rye_hamburger_in_Jätkäsaari.jpg,keep,
+569,burger,burger/Hamburger__black_bg_.jpg,keep,
+570,burger,burger/Binnenalster_Panorama.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+571,burger,burger/Hamburg_Rathaus.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+572,burger,burger/Burger_c_minor_cafe.jpg,keep,
+573,burger,burger/Vada_pav__bombay__maharastra-_DSC_0025.jpg,keep,
+574,burger,burger/Taiwan_McDonald_s_chicken_rice_burger_20050218.jpg,keep,
+575,burger,burger/Roujiamo__La_Taverne_de_Zhao__Paris_17_September_2016.jpg,keep,
+576,burger,burger/RedDot_Burger.jpg,keep,
+577,burger,burger/Oberhafenkantine__Hamburger_Rundstück_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+578,burger,burger/NYC-Diner-Bacon-Cheeseburger.jpg,keep,
+579,burger,burger/McD_Big_Mac.jpg,keep,
+494,chai,chai/Sirup_vom_Sirupier_de_Berne.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+495,chai,chai/Roses_Boutons_FR_2012.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+496,chai,chai/Masala_Tea_and_South_Indian_Filter_Coffee.jpg,keep,
+497,chai,chai/Kaziranga_Rhinoceros_unicornis.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+498,chai,chai/Kamakhya_Temple__Guwahati.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+499,chai,chai/Jaggery_cubes.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+500,chai,chai/Ingwer_2__fcm_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+501,chai,chai/Honey-miel.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+502,chai,chai/Gula_kelapa.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+503,chai,chai/Grüner_Tee_Gunpowder.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+504,chai,chai/Academic_complex_iitg.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+505,chai,chai/Masala_Chai.jpg,keep,
+506,chai,chai/Masala_Chai.jpg,keep,
+507,chai,chai/Teamaking.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+508,chai,chai/Soy_Vanilla_Chai_Latte_at_G.S.T._Bean.jpg,keep,
+148,chana_chaat,chana_chaat/Masala_Poori_made_by_street_vendors_in_Bangalore__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+149,chana_chaat,chana_chaat/Delhi_Chaat_with_saunth_chutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+150,chana_chaat,chana_chaat/Bhalla_Papri_Chaat_with_saunth_chutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+151,chana_chaat,chana_chaat/Aloo_chaat_vendor__Connaught_Place__New_Delhi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+152,chana_chaat,chana_chaat/Aloo_Tikki_served_with_chutneys.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+153,chana_chaat,chana_chaat/Aloo_Chaat.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+154,chana_chaat,chana_chaat/Raj_Kachori_Street_Food.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+155,chana_chaat,chana_chaat/Masala_puri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+156,chana_chaat,chana_chaat/IndianFood_Bhelpuri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+157,chana_chaat,chana_chaat/Dahi_vada_or_dahi_bhalla.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+158,chana_chaat,chana_chaat/Dahi_puri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+159,chana_chaat,chana_chaat/Dahi_puri__Doi_phuchka.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+160,chana_chaat,chana_chaat/Chaatmasala.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+161,chana_chaat,chana_chaat/Basket_Chat.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+273,chana_chole,chana_chole/Choleindia.jpg,keep,
+274,chana_chole,chana_chole/Kulchachole.jpg,keep,
+275,chana_chole,chana_chole/Ingredients_chole.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+276,chana_chole,chana_chole/Chana_masala.jpg,keep,
+256,chapli_kebab,chapli_kebab/Chapli_Kabab.jpg,keep,
+257,chapli_kebab,chapli_kebab/Chapli_Kebab.jpg,keep,
+167,chicken_curry,chicken_curry/Chicken_preparation_in_Malvani_style.jpg,keep,
+168,chicken_curry,chicken_curry/Philippine_Food.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+169,chicken_curry,chicken_curry/Philippine_Chicken_curry.jpg,keep,
+170,chicken_curry,chicken_curry/North_Korea_-_Chicken__6146530155_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+171,chicken_curry,chicken_curry/IndianChickenCurry.jpg,keep,
+172,chicken_curry,chicken_curry/Curry_chicken_in_a_big_bread.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+173,chicken_curry,chicken_curry/Chicken_Dry_Curry_-_Howrah_2015-04-26_8515.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+174,chicken_curry,chicken_curry/Aesthetic_Chicken_Curry.jpg,keep,
+258,chicken_roast,chicken_roast/Marinated_whole_Chicken.jpg,keep,
+243,chicken_tikka,chicken_tikka/Chicken_Tikka_with_some_salad.jpg,keep,
+244,chicken_tikka,chicken_tikka/Chicken_Tikka_Marriott.jpg,keep,
+245,chicken_tikka,chicken_tikka/Zeera-chicken-tikka.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+246,chicken_tikka,chicken_tikka/Chicken_tikka_masala__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+247,chicken_tikka,chicken_tikka/Chicken_tikka_biryani.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+248,chicken_tikka,chicken_tikka/Chicken_Tikka_Kebab.jpg,keep,
+249,chicken_tikka,chicken_tikka/Chicken_Tikka__Delhi_style__14023948639_.jpg,keep,
+684,chocolate_cake,chocolate_cake/Chocolate_Cake_with_almonds.jpg,keep,
+685,chocolate_cake,chocolate_cake/ChocolateTruffleCakeIdeal01.jpg,keep,
+686,chocolate_cake,chocolate_cake/Brown_Chocolate_Cake.jpg,keep,
+687,chocolate_cake,chocolate_cake/Black_Forest_gateau.jpg,keep,
+509,coffee,coffee/Koeh-189.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+510,coffee,coffee/Espresso-roasted_coffee_beans.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+511,coffee,coffee/Coffee_berries_1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+512,coffee,coffee/Coffee_beans2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+513,coffee,coffee/Coffea_arabica_-_Köhler_s_Medizinal-Pflanzen-189.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+514,coffee,coffee/A_small_cup_of_coffee.jpg,keep,
+515,coffee,coffee/Latte.jpg,keep,
+516,coffee,coffee/Indian_filter_coffee_in_Dabarah.jpg,keep,
+517,coffee,coffee/Cup_of_coffee__Serbian_cuisine__Grand_kava_.jpg,keep,
+518,coffee,coffee/Cappuccino_hand.jpg,keep,
+519,coffee,coffee/Wien_Cafe_Central_2004.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+520,coffee,coffee/Washington_Coffee_New_York_Tribune.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+521,coffee,coffee/The_Vertue_of_the_COFFEE_Drink.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+522,coffee,coffee/Shade_grown_coffee_in_Guatemala.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+523,coffee,coffee/Mocha1692.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+259,daal,daal/3_types_of_lentil.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+260,daal,daal/Masoor_dal.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+261,daal,daal/CholarDal.jpg,keep,
+262,daal,daal/Vada__gare_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+263,daal,daal/Tur_Dal.jpg,keep,
+264,daal,daal/Split_Red_Lentil.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+265,daal,daal/Roasted_Papad_-_Howrah_2013-11-02_4068.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+266,daal,daal/Dhokla_on_Gujrart.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+267,daal,daal/Dal_tadka_and_naan.jpg,keep,
+268,daal,daal/Dal_tadka_and_chapati.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+269,daal,daal/Dal_Tadka_01__36779549481_.jpg,keep,
+270,daal,daal/Dal_Fry_Tadka__Cumin_Rice__Roasted_Papad_on_the_side.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+271,daal,daal/A_thali_with_daal_roti_bhindi_ki_sabzi_and_mango_pickle.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+272,daal,daal/3_types_of_lentil.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+659,donut,donut/Zeppula.jpg,keep,
+660,donut,donut/Yumyums-Plate.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+661,donut,donut/Timbits2.jpg,keep,
+662,donut,donut/Sufganiot.jpg,keep,
+663,donut,donut/Shakoy_doughnut.jpg,keep,
+664,donut,donut/Rosquillas.jpg,keep,
+665,donut,donut/Pon_de_wreath_strawberry_flavor_of_Mister_Donut_in_Japan.jpg,keep,
+666,donut,donut/Polskie_pączki.jpg,keep,
+667,donut,donut/Philippine_buñuelo__bunwelo__doughnuts_with_ube_filling.jpg,keep,
+668,donut,donut/Pampushky.jpg,keep,
+669,donut,donut/Oliebollen.jpg,keep,
+670,donut,donut/Lihapiirakka.jpg,keep,
+671,donut,donut/Krispykremesbeingmade.jpg,keep,
+484,falooda,falooda/Rose_Falooda_Dessert.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+485,falooda,falooda/Falooda_of_salem.jpg,keep,
+486,falooda,falooda/Falooda_big.jpg,keep,
+487,falooda,falooda/芒市百思特美食城_-_泡鲁达_-_2024-10-18.jpg,keep,
+488,falooda,falooda/Royal_Falooda.jpg,keep,
+489,falooda,falooda/Phaluda.jpg,keep,
+490,falooda,falooda/Faluda_at_Juhu_Beach__Mumbai.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+491,falooda,falooda/Faluda_Special_.jpg,keep,
+492,falooda,falooda/Faluda.jpg,keep,
+493,falooda,falooda/Falooda-The_Original_Juice_Factory_Chennai-Tamilnadu-DSC0005.jpg,keep,
+580,french_fries,french_fries/Fries_2.jpg,keep,
+581,french_fries,french_fries/Friescookingbigrest.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+582,french_fries,french_fries/French_fried_potatoes.jpg,keep,
+583,french_fries,french_fries/Flickr_adactio_164930387--Fish_and_chips.jpg,keep,
+584,french_fries,french_fries/CurlyFriesatHooters.jpg,keep,
+585,french_fries,french_fries/Bartley_s.jpg,keep,
+586,french_fries,french_fries/AnimalFries.jpg,keep,
+587,french_fries,french_fries/Tornadofries.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+588,french_fries,french_fries/The_Hat__chili_cheese_fries.jpg,keep,
+589,french_fries,french_fries/Sweet_Potato_Fries.jpg,keep,
+590,french_fries,french_fries/Steak_frites.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+591,french_fries,french_fries/Shoestring_fries__garlic__homemade_blue_cheese_dressing__with_some_spicy_sauce.jpg,keep,
+592,french_fries,french_fries/Pommes_VI__20006982466_.jpg,keep,
+593,french_fries,french_fries/Nepomuk_Altenkunstadt_Currywurst_Pommes.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+594,french_fries,french_fries/La_Banquise_Poutine.jpg,keep,
+622,fried_chicken,fried_chicken/Spanishsmokedpaprika.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+623,fried_chicken,fried_chicken/Princes_hot_chicken.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+624,fried_chicken,fried_chicken/Karaage_frittiertes_Hühnchen.jpg,keep,
+625,fried_chicken,fried_chicken/Homelard.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+626,fried_chicken,fried_chicken/HK_Fried_Chicken_Leg.jpg,keep,
+627,fried_chicken,fried_chicken/Chickenjf.jpg,keep,
+628,fried_chicken,fried_chicken/Chicken_65__Dish_.jpg,keep,
+629,fried_chicken,fried_chicken/Paschal_s_fried_chicken.jpg,keep,
+630,fried_chicken,fried_chicken/Fried_chicken__fried_okra_and_mac___cheese_from_Mary_Mac_s_Tea_Room_in_Atlanta.jpg,keep,
+631,fried_chicken,fried_chicken/Fried-Chicken-Set.jpg,keep,
+632,fried_chicken,fried_chicken/Deep_frying_chicken_upper_wing.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+633,fried_chicken,fried_chicken/Angel_Chicken_Cutlet_Ruifeng_Store__2026__04_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+228,fried_fish,fried_fish/カニクリームコロッケをウーバーで.jpg,keep,
+229,fried_fish,fried_fish/Whitebait_Fritter.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+230,fried_fish,fried_fish/Tempura_01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+231,fried_fish,fried_fish/Satsumaage.jpg,keep,
+232,fried_fish,fried_fish/Pomfret_fry_MA01.jpg,keep,
+233,fried_fish,fried_fish/Okacic_saso.jpg,keep,
+234,fried_fish,fried_fish/MACHHA_HALADI.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+235,fried_fish,fried_fish/Lekkerbekje.jpg,keep,
+236,fried_fish,fried_fish/Gurame_Goreng_Kipas_3.jpg,keep,
+237,fried_fish,fried_fish/Gambas_a_la_gabardina-2009.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+238,fried_fish,fried_fish/Frito_gaditano-_2009.jpg,keep,
+239,fried_fish,fried_fish/Fried_Rohu_in_Bangladesh.jpg,keep,
+240,fried_fish,fried_fish/Fried_Fish_and_French_Fries.jpg,keep,
+241,fried_fish,fried_fish/Fishfinger1.jpg,keep,
+242,fried_fish,fried_fish/Fishcake_on_salad.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+595,fried_rice,fried_rice/ထမင_က_.jpg,keep,
+596,fried_rice,fried_rice/Yeung_Chow_Fried_Rice_in_Hong_Kong_Fast_Food_Shop.jpg,keep,
+597,fried_rice,fried_rice/Thaifriedrice.jpg,keep,
+598,fried_rice,fried_rice/Taiwanese_Fried_Rice.jpg,keep,
+599,fried_rice,fried_rice/SplitcomboYinYoengCantonesecuisine.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+600,fried_rice,fried_rice/Singapore_Beef_Fried_Rice_by_Banej.jpg,keep,
+601,fried_rice,fried_rice/Sinangag.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+602,fried_rice,fried_rice/Phnom_Penh_-_Fried_Rice__16632084938_.jpg,keep,
+603,fried_rice,fried_rice/Omurice_by_Taimeiken.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+604,fried_rice,fried_rice/Nasigroni_Rice.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+605,fried_rice,fried_rice/Nasi_goreng_pattaya_20231028_120535.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+606,fried_rice,fried_rice/Nasi_Goreng_Trafasie.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+607,fried_rice,fried_rice/Nasi_Goreng_Sosis_Breakfast_Savoy_Homann_Hotel.jpg,keep,
+432,gajar_halwa,gajar_halwa/Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_01.jpg,keep,
+433,gajar_halwa,gajar_halwa/Carrot_pudding.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+434,gajar_halwa,gajar_halwa/Halva1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+435,gajar_halwa,gajar_halwa/Cuisine__268__44.jpg,keep,
+436,gajar_halwa,gajar_halwa/Carrot_gajar_halwa_with_kheer_India_Sweets.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+321,ghiya,ghiya/Calabash_Seedlings.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+322,ghiya,ghiya/Bottle_gourd_skin_stir_fried_with_poppy_seeds_2016-10-22_140236.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+323,ghiya,ghiya/స_రక_య_ప_ప__క_ర__2_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+324,ghiya,ghiya/ল_উশ_ক_র_প_স_ত__কলক_ত_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+325,ghiya,ghiya/Wang_Li_playing_an_hulusi__calabash_flute__-_2012_Richmond_Folk_Festival.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+326,ghiya,ghiya/Upojf.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+327,ghiya,ghiya/Toumani_Diabaté.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+328,ghiya,ghiya/Tipos_de_mate__recipiente_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+329,ghiya,ghiya/Srivani_veena.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+330,ghiya,ghiya/Sitar3.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+331,ghiya,ghiya/Shubha_Mudgal_in_playing_the_Tanpura__2527339532_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+332,ghiya,ghiya/Salakots_and_women_s_hats__1900_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+333,ghiya,ghiya/Refreshing_palm_wine.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+334,ghiya,ghiya/Leiden_University_Library_-_Seikei_Zusetsu_vol._26__page_006_-_苦瓠__懸瓠_-_Lagenaria_siceraria__Molina__Standl.__1804.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+335,ghiya,ghiya/Lagenaria_siceraria_mate_fruits_from_accesion.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+136,gol_gappay,gol_gappay/Gol_Guppa.jpg,keep,
+137,gol_gappay,gol_gappay/Pani-Puri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+138,gol_gappay,gol_gappay/Pani-Puri-Mix.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+139,gol_gappay,gol_gappay/Golgappe_Puchka_3.jpg,keep,
+140,gol_gappay,gol_gappay/Pani_puri_the_pani_puri_effect.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+141,gol_gappay,gol_gappay/Pani_puri_shots.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+142,gol_gappay,gol_gappay/Rava_Pani_Puri.jpg,keep,
+143,gol_gappay,gol_gappay/Potato_Stuffing.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+144,gol_gappay,gol_gappay/Indian_cuisine-Panipuri-01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+145,gol_gappay,gol_gappay/Cream_wala_Gol-Gappa.jpg,keep,
+146,gol_gappay,gol_gappay/ফ_সক_সহ_প_ল_ট.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+147,gol_gappay,gol_gappay/Indian_cuisine-Ragda_contained_in_panipuri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+408,gulab_jamun,gulab_jamun/Bowl_of_Gulab_Jamun.jpg,keep,
+409,gulab_jamun,gulab_jamun/Gulab_jamun_photographed_in_Kolkata__West_Bengal__India.jpg,keep,
+410,gulab_jamun,gulab_jamun/Gulaab_Jamun..jpg,keep,
+411,gulab_jamun,gulab_jamun/চমচম.jpg,keep,
+412,gulab_jamun,gulab_jamun/Pantua_-_Kolkata_2011-09-20_5431.jpg,keep,
+413,gulab_jamun,gulab_jamun/Mini_Gulab_Jamun.jpg,keep,
+414,gulab_jamun,gulab_jamun/KalaJamoon.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+415,gulab_jamun,gulab_jamun/Gulabjamun_op.jpg,keep,
+416,gulab_jamun,gulab_jamun/Gulab_jamun___chenna_payesh.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+417,gulab_jamun,gulab_jamun/Gulab_Jamun_Delhi.jpg,keep,
+418,gulab_jamun,gulab_jamun/Gulab_Jamun2.jpg,keep,
+419,gulab_jamun,gulab_jamun/Gulab-jamun-wallpaper-1.jpg,keep,
+194,haleem,haleem/ন_হ_র__হ_ল_ম.jpg,keep,
+195,haleem,haleem/Pakistani_Haleem_served_with_garnish.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+196,haleem,haleem/Khichra.jpg,keep,
+197,haleem,haleem/Haleem_hyderabadi.jpg,keep,
+198,haleem,haleem/Haleem_Dalls_and_Grains.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+199,haleem,haleem/Bangladeshi_style_Shahi_Haleem.jpg,keep,
+98,halwa_puri,halwa_puri/Halva_Poori.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+99,halwa_puri,halwa_puri/Chole_Bhature_on_the_street.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+100,halwa_puri,halwa_puri/Chola_bhatura.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+101,halwa_puri,halwa_puri/Punjabi_Chhole_bhature.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+102,halwa_puri,halwa_puri/Hilsha_fish_curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+103,halwa_puri,halwa_puri/A_Plate_of_Chole_Bhature.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+104,halwa_puri,halwa_puri/Kwality_on_Park_Street__14839540155_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+105,halwa_puri,halwa_puri/Chole_Bhature_from_Nagpur.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+648,hot_dog,hot_dog/NCI_Visuals_Food_Hot_Dog.jpg,keep,
+649,hot_dog,hot_dog/Hotdogamsterdam.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+650,hot_dog,hot_dog/HillbillyHotDogs.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+651,hot_dog,hot_dog/わさびぬき__3559517214_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+652,hot_dog,hot_dog/Thai_hot_dogs.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+653,hot_dog,hot_dog/Spiral_hot_dogs.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+654,hot_dog,hot_dog/Sigh_and_Elaine_Bell_Catering_Pop-Up__Sonoma__California_07.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+655,hot_dog,hot_dog/Salami_aka.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+656,hot_dog,hot_dog/Khanom_Tokiao.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+657,hot_dog,hot_dog/Indoor_Sports_-_Listening_to_Two_Gay_Dogs_Kid_One_Another_about_Their_First_Frankfurter_at_the_Six_Day_Race.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+658,hot_dog,hot_dog/Hotdogs.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+672,ice_cream,ice_cream/StrawberryIce.jpg,keep,
+673,ice_cream,ice_cream/Purple_potato_icecream__7770116656_.jpg,keep,
+674,ice_cream,ice_cream/Caramel_Nut_Ice_Cream_01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+675,ice_cream,ice_cream/Ice_Cream_dessert_02.jpg,keep,
+676,ice_cream,ice_cream/Ice_Cream_dessert_01.jpg,keep,
+677,ice_cream,ice_cream/Vanilla_Ice_Cream_Cone_at_Camp_Manitoulin.jpg,keep,
+678,ice_cream,ice_cream/Sydney_markets__by_Rex_Hazlewood__c._1911-1916__9909471825___2_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+679,ice_cream,ice_cream/Mystic_Ice_Cream_flavor_selection_sign.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+680,ice_cream,ice_cream/Magnum_ice_cream.jpg,keep,
+681,ice_cream,ice_cream/Italian_ice_cream.jpg,keep,
+682,ice_cream,ice_cream/Indonesia_bike34.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+683,ice_cream,ice_cream/IceCreamSandwich.jpg,keep,
+420,jalebi,jalebi/Jalebi-red.jpg,keep,
+421,jalebi,jalebi/Jalebiyan.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+422,jalebi,jalebi/Jalebi__sweet_.jpg,keep,
+423,jalebi,jalebi/জ_ল_প_.jpg,keep,
+424,jalebi,jalebi/Local_Famous_Jaleebi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+425,jalebi,jalebi/Jilapi_kept_in_brass_plate_4.jpg,keep,
+426,jalebi,jalebi/Jilapi_2.jpg,keep,
+427,jalebi,jalebi/Jilapi.jpg,keep,
+428,jalebi,jalebi/Crispy_Jalebi_served_on_a_plate_on_the_day_of_Rathyatra_festival_in_Howrah__West_Bengal__India.jpg,keep,
+429,jalebi,jalebi/Zoolbia_Bamieh.jpg,keep,
+430,jalebi,jalebi/Jilapi1.jpg,keep,
+431,jalebi,jalebi/Jalebis_for_sale_at_a_shop_during_Ratha_Yatra_festival_in_Jagadishpur_Hat__Howrah.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+377,kachumber_salad,kachumber_salad/Kachumber_Salad.jpg,keep,
+277,kadhi_pakora,kadhi_pakora/Kadhi_Chawal_from_India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+278,kadhi_pakora,kadhi_pakora/Indian_vegan_curry_in_Bangalore.jpg,keep,
+279,kadhi_pakora,kadhi_pakora/Kadhi_with_red_chilli_as_garnish.jpg,keep,
+280,kadhi_pakora,kadhi_pakora/Singhrian_jo_Raabro_Khaatiyo_.jpg,keep,
+281,kadhi_pakora,kadhi_pakora/Obstjoghurt01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+282,kadhi_pakora,kadhi_pakora/Kadhipakora.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+283,kadhi_pakora,kadhi_pakora/Divali_meal.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+162,karahi,karahi/Punjabi_Chicken_Karahi.jpg,keep,
+336,karela,karela/Bittermelonman.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+337,karela,karela/Bitter_gourd_Curry_02.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+338,karela,karela/Bitter_gourd-_bitter_melon_plant.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+339,karela,karela/Ampalayajf.jpg,keep,
+340,karela,karela/Momardic.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+341,karela,karela/Karlyaacha_vel.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+342,karela,karela/White_bitter_gourd.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+343,karela,karela/ম_ছ_র_ড_ম_দ_য__উচ_ছ__ভ_জ_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+344,karela,karela/Momordica_charantia_new_02.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+345,karela,karela/Momordica_charantia_3.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+346,karela,karela/Momordica_charantia_006.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+347,karela,karela/Momordica_charantia_004.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+348,karela,karela/Momordica_charantia_003.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+349,karela,karela/Momordica_charantia_-_Immature_fruit.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+350,karela,karela/Momordica_charantia__7_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+207,keema,keema/01-hepojauheliha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+208,keema,keema/Keema_Pao_with_Hari_Chutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+209,keema,keema/Фарш.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+210,keema,keema/Sausage_making-H-1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+211,keema,keema/Plateau_van_zeevruchten.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+212,keema,keema/Ground_beef_USDA.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+213,keema,keema/FoodMeat.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+462,kheer,kheer/Manabasa_Kheer.jpg,keep,
+463,kheer,kheer/Shevayachi_kheer_-_02.jpg,keep,
+464,kheer,kheer/DSC01422Gajar_Kheer.jpg,keep,
+465,kheer,kheer/Suji_Ki_Kheer.jpg,keep,
+466,kheer,kheer/Sagu_khiri.jpg,keep,
+467,kheer,kheer/Making_of_Kheer.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+468,kheer,kheer/Khejur_gurer_payes.jpg,keep,
+469,kheer,kheer/Kheer_Benazir__Karim_s__01_.jpg,keep,
+470,kheer,kheer/IMG_20180114_213319_Payesh_প_য_স.jpg,keep,
+471,kheer,kheer/Firni_Or_Phirni.jpg,keep,
+472,kheer,kheer/Semiya_Payasam_Vermicelli_Kheer.jpg,keep,
+473,kheer,kheer/Rice_pudding_also_called_payasam_or_kheer.jpg,keep,
+474,kheer,kheer/Paal_payasam.jpg,keep,
+475,kheer,kheer/Mixed_Dry_Fruit_Kheer_-_Home_-_Chandigarh_-_India_-_00011.jpg,keep,
+476,kheer,kheer/Milk_kheer.jpg,keep,
+214,kofta,kofta/Gehaktballetjes.jpg,keep,
+215,kofta,kofta/Paneer_Kofta_Curry_-_Kolkata_2011-09-20_5425.jpg,keep,
+216,kofta,kofta/Kofte_persian_vegetarian.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+217,kofta,kofta/Fish_Kofta..jpg,keep,
+218,kofta,kofta/EgFoodKofta.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+219,kofta,kofta/Akcaabatkofte.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+220,kofta,kofta/Orkh-Oruq.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+221,kofta,kofta/NargisiKofta.jpg,keep,
+222,kofta,kofta/Mixed_grill_-_Khan_el-Khalili_-_Cairo__Egypt.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+223,kofta,kofta/Mercimekkoftesi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+224,kofta,kofta/MalaiKofta.jpg,keep,
+225,kofta,kofta/Koofteh_tabrizi.jpg,keep,
+226,kofta,kofta/Kofte_Chawal_from_India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+227,kofta,kofta/Cuisine_arménienne_-_Sini_Kofte__à_gauche__et_deux_Mitchougov_Kofte__à_droite_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+163,korma,korma/Potol___pointed_gourd__Korma.jpg,keep,
+164,korma,korma/Navratan_Korma__Mughal_Kitchen_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+165,korma,korma/Chicken_White_Qorma__Korma_.jpg,keep,
+166,korma,korma/Chicken_Korma.jpg,keep,
+477,kulfi,kulfi/Desi_Milk_s_Kulfi.jpg,keep,
+478,kulfi,kulfi/জ_ফর_ন_ও_আম_র_স_ব_দয_ক_ত_ক_লফ_.jpg,keep,
+479,kulfi,kulfi/Matkakulfi.jpg,keep,
+480,kulfi,kulfi/A_matka_full_of_frozen_Saffron_Basundi.jpg,keep,
+481,kulfi,kulfi/Matka_kulfi.jpg,keep,
+482,kulfi,kulfi/Kulfi_Faluda.jpg,keep,
+483,kulfi,kulfi/Kulfi__1_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+179,kunna,kunna/Pakistani_gobi_aloo__seekh_kebab__and_beef_karahi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+180,kunna,kunna/Rasoi_de_Bhande_-_Traditoinal_Kitchen_utensils_of_Punjab.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+181,kunna,kunna/Punjabi_Thali.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+182,kunna,kunna/Punjab_in_India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+183,kunna,kunna/Panjeeri..jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+184,kunna,kunna/Panir_Paneer_Indian_cheese_fresh.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+185,kunna,kunna/Pakistani_Food_Karahi_Beef.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+186,kunna,kunna/New_Punjab_Club_food_spread.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+187,kunna,kunna/MörserPflanzenmaterial.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+188,kunna,kunna/Indian_Spices.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+189,kunna,kunna/Golden_Temple__Harmandir_Sahib__in_Amritsar__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+190,kunna,kunna/Gajar_Ka_Halwa.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+191,kunna,kunna/Chulla_and_Bharroli.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+524,lassi,lassi/Lassi_shop.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+525,lassi,lassi/Lassi_in_Varanasi.jpg,keep,
+526,lassi,lassi/Bhang_shop_in_Jaisalmer__Rajasthan__India_on_November_15__2008.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+527,lassi,lassi/Punjabi_Lassi.jpg,keep,
+528,lassi,lassi/Lassi_at_Old_Dhaka01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+529,lassi,lassi/Salt_lassi.jpg,keep,
+530,lassi,lassi/Odia_style_Lassi-Puri-Odisha-IMG_9776.jpg,keep,
+531,lassi,lassi/Mangoes-left.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+532,lassi,lassi/Fatfreelassi.jpg,keep,
+533,lassi,lassi/Bhang_lassi__3304878869_.jpg,keep,
+534,lassi,lassi/Banaras-ki-Lassi.jpg,keep,
+535,lemonade,lemonade/Lime_Soda_preparation.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+536,lemonade,lemonade/Mug_of_Lemonade.jpg,keep,
+537,lemonade,lemonade/Koh_Mak__Thailand__Lime_juice_with_ice__Lemonade__Limeade.jpg,keep,
+538,lemonade,lemonade/R_Whites_lemonade__2_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+539,lemonade,lemonade/Pink_Lemonade.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+540,lemonade,lemonade/Orange_juice_1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+541,lemonade,lemonade/No_Name_Frozen_Juice_Concentrate__Lemonade_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+542,lemonade,lemonade/Mint_lemonade.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+543,lemonade,lemonade/Liquidity.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+544,lemonade,lemonade/Lemonade_-_27682817724.jpg,keep,
+545,lemonade,lemonade/Lemon___Mint.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+546,lemonade,lemonade/Jackie_Stewart_drinkt_een_flesje_limonade__Bestanddeelnr_922-5447.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+547,lemonade,lemonade/Citron_pressé.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+548,lemonade,lemonade/Children_selling_lemonade_to_an_adult_in_La_Canada__California__1960.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+250,malai_boti,malai_boti/Chicken_Tikka_Masala_KellySue.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+251,malai_boti,malai_boti/Chicken_tikka_masala.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+549,milk_soda,milk_soda/Doodh_Soda.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+351,mixed_sabzi,mixed_sabzi/แกงฮ_งเล_ท__หล_ลำ.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+352,mixed_sabzi,mixed_sabzi/แกงร_ญจวน_บ_านยาหอม.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+353,mixed_sabzi,mixed_sabzi/Vatch_kaeng_phet.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+354,mixed_sabzi,mixed_sabzi/Tom_jued_tahoo.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+355,mixed_sabzi,mixed_sabzi/Thai_style_Otah.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+356,mixed_sabzi,mixed_sabzi/Thai_Seafood_Curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+357,mixed_sabzi,mixed_sabzi/Red_roast_duck_curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+358,mixed_sabzi,mixed_sabzi/Khua_kling.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+359,mixed_sabzi,mixed_sabzi/Kaeng_tai_pla34.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+360,mixed_sabzi,mixed_sabzi/Kaeng_phak_lueat.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+361,mixed_sabzi,mixed_sabzi/Kaeng_kradang.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+362,mixed_sabzi,mixed_sabzi/HAT_YAI_MARKET_2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+363,mixed_sabzi,mixed_sabzi/Green_curry_ingredients.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+364,mixed_sabzi,mixed_sabzi/Curry_pastes_Thailand__cropped_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+365,mixed_sabzi,mixed_sabzi/Curry_paste_fried_with_coco_cream.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+13,naan,naan/Vegetarian_Curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+14,naan,naan/Taj_Lepeshki.jpg,keep,
+15,naan,naan/Naan_bya_with_mutton_soup.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+16,naan,naan/KashgarNaan.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+17,naan,naan/二道桥_馕店2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+18,naan,naan/نان_مزاری.jpg,keep,
+19,naan,naan/Taftan_nan_01.jpg,keep,
+20,naan,naan/Peshawari_Roti__Pakistan.jpg,keep,
+21,naan,naan/Nanbya.jpg,keep,
+22,naan,naan/Naan_in_Afghanistan.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+23,naan,naan/Naan_Sangak.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+24,naan,naan/Naan_Bakery__Iran__Qajar_era__circa_1850_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+25,naan,naan/Iranian_Bread_1.jpg,keep,
+26,naan,naan/Indian_naan_bread.jpg,keep,
+27,naan,naan/Fresh_made_bread_05.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+175,nihari,nihari/Nihari_at_Karim_s__Jama_Masjid__Old_Delhi.jpg,keep,
+176,nihari,nihari/Nihari.jpg,keep,
+177,nihari,nihari/Nalli_Nihari_India.jpg,keep,
+178,nihari,nihari/Beef_Nihari__made_by_Saleha_Atif__Pakistan.jpg,keep,
+608,omelette,omelette/Omelette.jpg,keep,
+609,omelette,omelette/Kurokabe_museum05s3000.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+610,omelette,omelette/FoodOmelete.jpg,keep,
+611,omelette,omelette/鳥焼き居酒屋__39394233682_.jpg,keep,
+612,omelette,omelette/Veggie_Omelette_upside_down.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+613,omelette,omelette/Tortilla_patatas.jpg,keep,
+614,omelette,omelette/Tortilla_de_patata_-_San_Sebastián.jpg,keep,
+615,omelette,omelette/Tortang_sardinas__Philippines__-_Canned_sardines_omelet_03.jpg,keep,
+616,omelette,omelette/Tortang_carne_norte__Corned_beef_omelet__-_Philippines_03.jpg,keep,
+617,omelette,omelette/Tortang_Kalabasa__Calabaza_omelet_-_Philippines__02.jpg,keep,
+618,omelette,omelette/Oyster_omelette_-_Singapore_style.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+619,omelette,omelette/Omlette-fold.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+620,omelette,omelette/Omelet_de_la_Mere_Poulard.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+621,omelette,omelette/Omelet_With_Fixings.jpg,keep,
+123,pakora,pakora/Chilli_Bites__Bhaji_.jpg,keep,
+124,pakora,pakora/Kuttu_Pakoras_from_India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+125,pakora,pakora/Groundnut_fries.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+126,pakora,pakora/2013_Sechseläuten_-_Pakora_mit_Kartoffeln_und_Joghurt-Curry-Sauce_-_Limmatquai_2013-04-15_13-27-15.jpg,keep,
+127,pakora,pakora/Taste_of_the_Himalayas_at_farmers_market_-_May_2018_-_Stierch_07.jpg,keep,
+128,pakora,pakora/Palak_Pakoras.jpg,keep,
+129,pakora,pakora/Pakoras_in_Jaipur.jpg,keep,
+130,pakora,pakora/Pakora__6005558506_.jpg,keep,
+131,pakora,pakora/Onion_pakora_-_a.jpg,keep,
+132,pakora,pakora/Kadhipakora_Rayagada_Odisha_0017.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+133,pakora,pakora/Kadhi_Pakora.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+134,pakora,pakora/Glazed-Donut.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+135,pakora,pakora/Food-Chicken-Pakoda.jpg,keep,
+203,palak_gosht,palak_gosht/Sarsoon_Ka_Saag_Cooked.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+204,palak_gosht,palak_gosht/Saag_Paneer.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+205,palak_gosht,palak_gosht/Punjabi_Sarsoon_Ka_Saag.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+206,palak_gosht,palak_gosht/Mutton_saag.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+41,paratha,paratha/TandooriBhaswanAloo.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+42,paratha,paratha/Paranthamumbai.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+43,paratha,paratha/Papri_chaat.jpg,keep,
+44,paratha,paratha/Paan60.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+45,paratha,paratha/NANAK_lunch_set.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+46,paratha,paratha/Mintparatha2.0.jpg,keep,
+47,paratha,paratha/Mangaloreparatha.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+48,paratha,paratha/Lunch_Thali_-_Bismi_Goldan_Fork.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+49,paratha,paratha/Lachha-paratha.jpg,keep,
+50,paratha,paratha/Indiandishes.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+51,paratha,paratha/Indian_cuisine-01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+52,paratha,paratha/Royal_Peacock_Barge_LACMA_M.82.154.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+106,paratha_roll,paratha_roll/La_Ranchera_Serving_Side.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+107,paratha_roll,paratha_roll/Kathiroll.jpg,keep,
+192,paye,paye/Paya_Curry_cooked_in_Marathi_Style.jpg,keep,
+193,paye,paye/Paya_Curry.jpg,keep,
+553,pizza,pizza/Pizza__47955860221_.jpg,keep,
+554,pizza,pizza/Pizza_med_gorgonzola__spinat_og_bacon__March_2010.jpg,keep,
+555,pizza,pizza/Eq_it-na_pizza-margherita_sep2005_sml.jpg,keep,
+556,pizza,pizza/Bengal_Style_Pizza_-_Kolkata.jpg,keep,
+557,pizza,pizza/Beautiful_homemade_pizza_02.jpg,keep,
+558,pizza,pizza/Вкусный_грузинский_хачапури.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+559,pizza,pizza/Windsor-style_pizza_with_shredded_pepperoni_and_canned_mushroom.jpg,keep,
+560,pizza,pizza/Traditional_pizza_from_Napoli.jpg,keep,
+561,pizza,pizza/Slices_of_thin-crust_New_York_style_pizza.jpg,keep,
+562,pizza,pizza/Sally_s_apizza_half_tomato_half_with_cheese__72126_.jpg,keep,
+563,pizza,pizza/Pizza_tasting_in_the_Roosevelt_Room.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+564,pizza,pizza/Pizza_quattro_formaggi_at_restaurant__Chalk_Farm_Road__London.jpg,keep,
+565,pizza,pizza/Pizza_marinara.jpg,keep,
+393,pudina_chutney,pudina_chutney/Mango_chutney_in_West_Bengal__India.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+394,pudina_chutney,pudina_chutney/Green_Mango_Chutney_of_Bengal.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+395,pudina_chutney,pudina_chutney/Chicken_chatni.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+396,pudina_chutney,pudina_chutney/TomatoChutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+397,pudina_chutney,pudina_chutney/Tiger_Chutney_label__8734620030_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+398,pudina_chutney,pudina_chutney/Pudina_Chutney.jpg,keep,
+399,pudina_chutney,pudina_chutney/Pesarattu_and_Ginger_chutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+400,pudina_chutney,pudina_chutney/Members_of_Springfield_Women_s_Institute__WI__in_Essex_make_chutney_at_a_table_set_up_in_the_garden_of_the_rectory__Augu.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+401,pudina_chutney,pudina_chutney/MangoChutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+402,pudina_chutney,pudina_chutney/Major_Grey_s_Sun_Brand_Chutney_from_1904_World_s_Fair.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+403,pudina_chutney,pudina_chutney/Fresh_coconut_chutney.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+404,pudina_chutney,pudina_chutney/DakshinChutneys.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+405,pudina_chutney,pudina_chutney/Chutneys.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+406,pudina_chutney,pudina_chutney/Chutneykarnataka.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+407,pudina_chutney,pudina_chutney/Chutney_being_hand-made.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+85,puri,puri/Dal_Puri.jpg,keep,
+86,puri,puri/Puri_Bhajji_in_Mumbai_Restaurant.jpg,keep,
+87,puri,puri/Pani_Puri_-_Perfect_Street_food.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+88,puri,puri/Poori_with_masala_at_MTR_restaurant.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+89,puri,puri/Poori_puri_sabzi_dal_India.jpg,keep,
+90,puri,puri/Poori_-_1.jpg,keep,
+91,puri,puri/Fried_Indian_Bread_-_Puri.jpg,keep,
+92,puri,puri/Puris_being_deep_fried__Varanasi.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+93,puri,puri/Puri_masala.jpg,keep,
+94,puri,puri/Poori_wih_accompaniments.jpg,keep,
+95,puri,puri/Aloo_Puri__typical_morning_snack__Varanasi.jpg,keep,
+96,puri,puri/Puri_indian_dish.jpg,keep,
+97,puri,puri/Puri.jpg,keep,
+450,rabri,rabri/Pan_Kulfi_with_Gulkand_Rabri.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+366,raita,raita/Onion_Raita.jpg,keep,
+367,raita,raita/Tawa_pulao_and_boondi_raita.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+368,raita,raita/Spring_onion_raitha.jpg,keep,
+369,raita,raita/Raita_with_cucumber_and_mint.jpg,keep,
+370,raita,raita/Pomegranate_raita.jpg,keep,
+371,raita,raita/Pomegranate_raita__cropped_.jpg,keep,
+372,raita,raita/Kheere_Ka_Raita__cropped_.jpg,keep,
+373,raita,raita/Egg_Kothu_Chapathi_with_Onion_Raitha-Thoothukudi-Tamil_Nadu-DED_010__cropped_.jpg,keep,
+374,raita,raita/Cucumber-raita.jpg,keep,
+375,raita,raita/Boondhi_raita_picture.jpg,keep,
+376,raita,raita/Beetroot_carrot_raita_picture.jpg,keep,
+451,ras_malai,ras_malai/Rasa_malai.jpg,keep,
+452,ras_malai,ras_malai/Rasmalai_Secretlondon_09.jpg,keep,
+453,ras_malai,ras_malai/RasmalaiCloseUP.jpg,keep,
+454,ras_malai,ras_malai/Rasamalai.jpg,keep,
+455,ras_malai,ras_malai/RAS_MALAI__रस_मल_ई__رس_ملائی.jpg,keep,
+456,ras_malai,ras_malai/Bengali_Rasmalai.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+457,ras_malai,ras_malai/রসম_ল_ই__চ_দপ_ড_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+458,ras_malai,ras_malai/Rasmalai_-_01.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+459,ras_malai,ras_malai/Rasmalai_Dessert.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+460,ras_malai,ras_malai/Ras_Malai_2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+461,ras_malai,ras_malai/Advertisement_of_Rosomalai.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+28,roti_chapati,roti_chapati/Tiffin_wallah_lunch.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+29,roti_chapati,roti_chapati/Tava_Roti_02.jpg,keep,
+30,roti_chapati,roti_chapati/Pilau__beans___chapati.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+31,roti_chapati,roti_chapati/Men_Ogling_a_Woman_Making_Chapati_LACMA_M.79.191.18.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+32,roti_chapati,roti_chapati/Matar_Panir_mit_Chapati_-_Mutter_Paneer_with_chapati.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+33,roti_chapati,roti_chapati/Leftover-daal-chapati-with-paneer-curry.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+34,roti_chapati,roti_chapati/Cooking_a_chapati__sp__on_open_flame.jpg,keep,
+35,roti_chapati,roti_chapati/Chuni_Roti.jpg,keep,
+36,roti_chapati,roti_chapati/Chapati_with_egg_roast.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+37,roti_chapati,roti_chapati/An_Athesthtic_Sapati.jpg,keep,
+38,roti_chapati,roti_chapati/2012__Zürcher_Theater_Spektakel__-_Chapati_2012-08-25_17-46-31__P7000_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+39,roti_chapati,roti_chapati/Woman_harvesting_wheat__Raisen_district__Madhya_Pradesh__India_ggia_version.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+40,roti_chapati,roti_chapati/Sins_of_Gluttony__Pahari_school.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+701,salad,salad/Flickr_-_cyclonebill_-_Laks_med_salat_og_brød.jpg,keep,
+702,salad,salad/Thousand_Island_dressing_on_salad.jpg,keep,
+703,salad,salad/Floris_Claesz._van_Dyck_001.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+704,salad,salad/স_ল_দ.jpg,keep,
+705,salad,salad/Tomato_salad_2.jpg,keep,
+706,salad,salad/GreenSalad.jpg,keep,
+707,salad,salad/Fruit_salad.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+708,salad,salad/Fried_Rice_and_Chicken__C_Minor_Music_Cafe.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+709,salad,salad/Treska_s_majonezou.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+710,salad,salad/Tabouleh_1.jpg,keep,
+711,salad,salad/Simple_salade_nicoise.jpg,keep,
+108,samosa,samosa/Tiny_Indian_Samosas.jpg,keep,
+109,samosa,samosa/Samosas__pakoras_street_food_Little_India_Canada.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+110,samosa,samosa/Samosa_selling.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+111,samosa,samosa/Samosa_2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+112,samosa,samosa/Samosa__partially_open_.jpg,keep,
+113,samosa,samosa/SAMOSA_making8.2__half_cooking_-Tamil_Nadu63.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+114,samosa,samosa/SAMOSA_making2_Beda_-Tamil_Nadu57.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+115,samosa,samosa/SAMOSA_making1_big_flattening_-Tamil_Nadu60.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+116,samosa,samosa/SAMOSA_making1_Beda_-Tamil_Nadu59.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+117,samosa,samosa/SAMOSA_making1_Beda_-Tamil_Nadu58.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+118,samosa,samosa/SAMOSA_finishing_.9__half_cooking_-Tamil_Nadu64.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+119,samosa,samosa/Frying_Samosas_-_Taki_-_North_24_Parganas_2015-01-13_4817.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+120,samosa,samosa/Food_-_samosa_-_India_-Tamil_word_16.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+121,samosa,samosa/Dewali_Snacks_-2.jpg,keep,
+122,samosa,samosa/Evening_Snacks_Samosa.jpg,keep,
+634,sandwich,sandwich/Croque_Monsieur.jpg,keep,
+635,sandwich,sandwich/Renaissance_Food_Group_Turkey_Club_Hoagie__40107634190_.jpg,keep,
+636,sandwich,sandwich/Prepackaged_sandwich.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+637,sandwich,sandwich/Peanut-Butter-Jelly-Sandwich.jpg,keep,
+638,sandwich,sandwich/Mmm...back_by_popular_demand___5195244765_.jpg,keep,
+639,sandwich,sandwich/Fruits_Sandwich.jpg,keep,
+640,sandwich,sandwich/Day_036_Photo365_Breakfast__98155803_.jpg,keep,
+641,sandwich,sandwich/Breakfast_roll_1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+642,sandwich,sandwich/BK_American_Chicken.jpg,keep,
+643,sandwich,sandwich/8481_boulevard_Newman_-_17.jpg,keep,
+644,sandwich,sandwich/2019-10-24_23_56_06_A_Good_Humor_Giant_Vanilla_Ice_Cream_Sandwich_in_the_Franklin_Farm_section_of_Oak_Hill__Fairfax_Coun.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+645,sandwich,sandwich/_Wicked_Deadly_Cheeseburger__at_Romer_s__10090097444_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+646,sandwich,sandwich/Smoked_meat_sandwich.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+647,sandwich,sandwich/Shawarma_Sandwich.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+550,sattu,sattu/Illustration_Hordeum_vulgare1.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+551,sattu,sattu/Sattu_prepared_for_Teejdi__or_Teej__festival_in_Tharparkar__Sindh.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+552,sattu,sattu/Litti__before_opening_it_.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+252,seekh_kebab,seekh_kebab/Rajasthanthali.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+253,seekh_kebab,seekh_kebab/Pakistani_Food_Beef_Kabobs.jpg,keep,
+254,seekh_kebab,seekh_kebab/Mutton_Seekh__9454117913_.jpg,keep,
+255,seekh_kebab,seekh_kebab/Hunza_240623_04.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+83,sheermal,sheermal/Asheanar.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+84,sheermal,sheermal/Afghan_bread.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+688,spaghetti,spaghetti/Ingredients_for_spaghetti_with_tomato_sauce.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+689,spaghetti,spaghetti/Classic-spaghetti-carbonara.jpg,keep,
+690,spaghetti,spaghetti/Spaghettoni.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+691,spaghetti,spaghetti/Spaghettizaang.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+692,spaghetti,spaghetti/Spaghettiheber-02.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+693,spaghetti,spaghetti/Spaghettiallanerano.jpg,keep,
+694,spaghetti,spaghetti/Spaghetti_measure_macro.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+695,spaghetti,spaghetti/Spaghetti_draining.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+696,spaghetti,spaghetti/Spaghetti_di_Gragnano_e_colatura_di_alici.jpg,keep,
+697,spaghetti,spaghetti/Spaghetti_alle_vongole.jpg,keep,
+698,spaghetti,spaghetti/Spaghetti2.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+699,spaghetti,spaghetti/Spaghetti-cooking.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+700,spaghetti,spaghetti/Pasta_Sheeter_built_by_Consolidated_Macaroni_Machine_Corporation__circa_1935__001.jpg,reject,"does not clearly show the labelled dish (other dish, raw ingredient/plant, scene/people, packaging, multi-dish plate, or variant not verifiable)"
+437,suji_halwa,suji_halwa/স_জ_র_হ_ল_য_.jpg,keep,
+438,suji_halwa,suji_halwa/Suuji_ka_halwa2.jpg,keep,

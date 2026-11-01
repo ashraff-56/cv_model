@@ -1,0 +1,2193 @@
+{
+  "collected": {
+    "biryani": 879,
+    "naan": 1475,
+    "roti_chapati": 1293,
+    "paratha": 344,
+    "aloo_paratha": 644,
+    "anda_paratha": 244,
+    "sheermal": 246,
+    "puri": 340,
+    "halwa_puri": 247,
+    "paratha_roll": 833,
+    "samosa": 2105,
+    "pakora": 1194,
+    "gol_gappay": 953,
+    "chana_chaat": 244,
+    "karahi": 488,
+    "korma": 487,
+    "chicken_curry": 2062,
+    "nihari": 244,
+    "kunna": 243,
+    "paye": 247,
+    "haleem": 346,
+    "aloo_gosht": 139,
+    "palak_gosht": 244,
+    "keema": 242,
+    "kofta": 906,
+    "fish_curry": 646,
+    "fried_fish": 239,
+    "chicken_tikka": 494,
+    "malai_boti": 241,
+    "seekh_kebab": 644,
+    "chapli_kebab": 244,
+    "lamb_chops": 241,
+    "chicken_roast": 247,
+    "daal": 682,
+    "chana_chole": 1587,
+    "kadhi_pakora": 237,
+    "aloo_baingan": 243,
+    "aloo_gobi": 643,
+    "aloo_methi": 369,
+    "aloo_palak": 242,
+    "aloo_shimla_mirch": 245,
+    "bhindi": 650,
+    "ghiya": 244,
+    "karela": 244,
+    "mixed_sabzi": 241,
+    "saag": 246,
+    "raita": 246,
+    "kachumber_salad": 247,
+    "achar": 244,
+    "pudina_chutney": 244,
+    "gulab_jamun": 742,
+    "jalebi": 1053,
+    "gajar_halwa": 650,
+    "suji_halwa": 297,
+    "barfi": 642,
+    "rabri": 241,
+    "ras_malai": 243,
+    "kheer": 753,
+    "kulfi": 636,
+    "falooda": 400,
+    "chai": 722,
+    "coffee": 244,
+    "lassi": 644,
+    "lemonade": 238,
+    "milk_soda": 197,
+    "sattu": 243,
+    "pizza": 4282,
+    "burger": 2809,
+    "french_fries": 2850,
+    "fried_rice": 1455,
+    "omelette": 1100,
+    "fried_chicken": 2900,
+    "sandwich": 2900,
+    "hot_dog": 2500,
+    "donut": 2500,
+    "ice_cream": 1000,
+    "chocolate_cake": 1000,
+    "spaghetti": 2000,
+    "salad": 2241,
+    "not_food": 2500
+  },
+  "excluded_after_review": 81,
+  "unreadable_or_small": {
+    "karahi": 69,
+    "korma": 146,
+    "nihari": 40,
+    "kunna": 65,
+    "paye": 55,
+    "aloo_gosht": 60,
+    "keema": 24,
+    "kofta": 26,
+    "fish_curry": 33,
+    "aloo_methi": 1,
+    "aloo_palak": 1,
+    "aloo_shimla_mirch": 2,
+    "bhindi": 1,
+    "ghiya": 1,
+    "sattu": 104,
+    "french_fries": 1,
+    "fried_chicken": 1,
+    "sandwich": 1
+  },
+  "augmentation_group_links": 2504,
+  "phash_duplicates_removed": {
+    "biryani": 69,
+    "naan": 137,
+    "roti_chapati": 168,
+    "paratha": 32,
+    "aloo_paratha": 67,
+    "anda_paratha": 64,
+    "sheermal": 20,
+    "puri": 14,
+    "halwa_puri": 80,
+    "paratha_roll": 195,
+    "samosa": 238,
+    "pakora": 155,
+    "gol_gappay": 136,
+    "chana_chaat": 62,
+    "karahi": 53,
+    "korma": 67,
+    "chicken_curry": 72,
+    "nihari": 22,
+    "kunna": 50,
+    "paye": 19,
+    "haleem": 96,
+    "aloo_gosht": 25,
+    "palak_gosht": 74,
+    "keema": 27,
+    "kofta": 385,
+    "fish_curry": 61,
+    "fried_fish": 60,
+    "chicken_tikka": 161,
+    "malai_boti": 85,
+    "seekh_kebab": 97,
+    "chapli_kebab": 88,
+    "lamb_chops": 79,
+    "chicken_roast": 75,
+    "daal": 73,
+    "chana_chole": 174,
+    "kadhi_pakora": 63,
+    "aloo_baingan": 102,
+    "aloo_gobi": 100,
+    "aloo_methi": 112,
+    "aloo_palak": 93,
+    "aloo_shimla_mirch": 73,
+    "bhindi": 134,
+    "ghiya": 81,
+    "karela": 65,
+    "mixed_sabzi": 79,
+    "saag": 55,
+    "raita": 93,
+    "kachumber_salad": 86,
+    "achar": 73,
+    "pudina_chutney": 90,
+    "gulab_jamun": 56,
+    "jalebi": 121,
+    "gajar_halwa": 74,
+    "suji_halwa": 59,
+    "barfi": 47,
+    "rabri": 36,
+    "ras_malai": 46,
+    "kheer": 20,
+    "kulfi": 18,
+    "falooda": 5,
+    "chai": 53,
+    "coffee": 0,
+    "lassi": 71,
+    "lemonade": 2,
+    "milk_soda": 53,
+    "sattu": 26,
+    "pizza": 184,
+    "burger": 47,
+    "french_fries": 446,
+    "fried_rice": 38,
+    "omelette": 15,
+    "fried_chicken": 64,
+    "sandwich": 67,
+    "hot_dog": 225,
+    "donut": 41,
+    "ice_cream": 0,
+    "chocolate_cake": 2,
+    "spaghetti": 5,
+    "salad": 76,
+    "not_food": 10
+  },
+  "embedding_duplicates_removed": {
+    "biryani": 26,
+    "naan": 53,
+    "roti_chapati": 73,
+    "paratha": 15,
+    "aloo_paratha": 8,
+    "anda_paratha": 0,
+    "sheermal": 11,
+    "puri": 5,
+    "halwa_puri": 2,
+    "paratha_roll": 33,
+    "samosa": 69,
+    "pakora": 66,
+    "gol_gappay": 42,
+    "chana_chaat": 6,
+    "karahi": 59,
+    "korma": 78,
+    "chicken_curry": 31,
+    "nihari": 43,
+    "kunna": 50,
+    "paye": 91,
+    "haleem": 6,
+    "aloo_gosht": 32,
+    "palak_gosht": 7,
+    "keema": 43,
+    "kofta": 67,
+    "fish_curry": 64,
+    "fried_fish": 1,
+    "chicken_tikka": 11,
+    "malai_boti": 12,
+    "seekh_kebab": 27,
+    "chapli_kebab": 13,
+    "lamb_chops": 4,
+    "chicken_roast": 0,
+    "daal": 23,
+    "chana_chole": 117,
+    "kadhi_pakora": 6,
+    "aloo_baingan": 8,
+    "aloo_gobi": 46,
+    "aloo_methi": 38,
+    "aloo_palak": 39,
+    "aloo_shimla_mirch": 5,
+    "bhindi": 57,
+    "ghiya": 6,
+    "karela": 1,
+    "mixed_sabzi": 3,
+    "saag": 6,
+    "raita": 15,
+    "kachumber_salad": 20,
+    "achar": 11,
+    "pudina_chutney": 24,
+    "gulab_jamun": 35,
+    "jalebi": 116,
+    "gajar_halwa": 51,
+    "suji_halwa": 7,
+    "barfi": 38,
+    "rabri": 14,
+    "ras_malai": 12,
+    "kheer": 15,
+    "kulfi": 13,
+    "falooda": 7,
+    "chai": 95,
+    "coffee": 72,
+    "lassi": 133,
+    "lemonade": 74,
+    "milk_soda": 81,
+    "sattu": 63,
+    "pizza": 146,
+    "burger": 87,
+    "french_fries": 221,
+    "fried_rice": 18,
+    "omelette": 3,
+    "fried_chicken": 46,
+    "sandwich": 54,
+    "hot_dog": 136,
+    "donut": 59,
+    "ice_cream": 0,
+    "chocolate_cake": 0,
+    "spaghetti": 343,
+    "salad": 11,
+    "not_food": 15
+  },
+  "duplicates_removed": {
+    "biryani": 95,
+    "naan": 190,
+    "roti_chapati": 241,
+    "paratha": 47,
+    "aloo_paratha": 75,
+    "anda_paratha": 64,
+    "sheermal": 31,
+    "puri": 19,
+    "halwa_puri": 82,
+    "paratha_roll": 228,
+    "samosa": 307,
+    "pakora": 221,
+    "gol_gappay": 178,
+    "chana_chaat": 68,
+    "karahi": 112,
+    "korma": 145,
+    "chicken_curry": 103,
+    "nihari": 65,
+    "kunna": 100,
+    "paye": 110,
+    "haleem": 102,
+    "aloo_gosht": 57,
+    "palak_gosht": 81,
+    "keema": 70,
+    "kofta": 452,
+    "fish_curry": 125,
+    "fried_fish": 61,
+    "chicken_tikka": 172,
+    "malai_boti": 97,
+    "seekh_kebab": 124,
+    "chapli_kebab": 101,
+    "lamb_chops": 83,
+    "chicken_roast": 75,
+    "daal": 96,
+    "chana_chole": 291,
+    "kadhi_pakora": 69,
+    "aloo_baingan": 110,
+    "aloo_gobi": 146,
+    "aloo_methi": 150,
+    "aloo_palak": 132,
+    "aloo_shimla_mirch": 78,
+    "bhindi": 191,
+    "ghiya": 87,
+    "karela": 66,
+    "mixed_sabzi": 82,
+    "saag": 61,
+    "raita": 108,
+    "kachumber_salad": 106,
+    "achar": 84,
+    "pudina_chutney": 114,
+    "gulab_jamun": 91,
+    "jalebi": 237,
+    "gajar_halwa": 125,
+    "suji_halwa": 66,
+    "barfi": 85,
+    "rabri": 50,
+    "ras_malai": 58,
+    "kheer": 35,
+    "kulfi": 31,
+    "falooda": 12,
+    "chai": 148,
+    "coffee": 72,
+    "lassi": 204,
+    "lemonade": 76,
+    "milk_soda": 134,
+    "sattu": 89,
+    "pizza": 330,
+    "burger": 134,
+    "french_fries": 667,
+    "fried_rice": 56,
+    "omelette": 18,
+    "fried_chicken": 110,
+    "sandwich": 121,
+    "hot_dog": 361,
+    "donut": 100,
+    "chocolate_cake": 2,
+    "spaghetti": 348,
+    "salad": 87,
+    "not_food": 25
+  },
+  "label_conflict_clusters": 225,
+  "label_conflict_images": {
+    "biryani": 4,
+    "naan": 25,
+    "pakora": 8,
+    "sandwich": 14,
+    "fried_chicken": 9,
+    "raita": 8,
+    "chicken_curry": 25,
+    "roti_chapati": 32,
+    "kulfi": 3,
+    "karahi": 5,
+    "chana_chole": 9,
+    "gulab_jamun": 8,
+    "gajar_halwa": 13,
+    "suji_halwa": 8,
+    "barfi": 12,
+    "rabri": 16,
+    "ras_malai": 5,
+    "kheer": 10,
+    "seekh_kebab": 5,
+    "paratha": 29,
+    "chicken_tikka": 23,
+    "puri": 41,
+    "chicken_roast": 18,
+    "sheermal": 28,
+    "fried_fish": 19,
+    "malai_boti": 4,
+    "aloo_paratha": 21,
+    "keema": 2,
+    "anda_paratha": 3,
+    "haleem": 7,
+    "halwa_puri": 23,
+    "donut": 7,
+    "gol_gappay": 12,
+    "paratha_roll": 1,
+    "samosa": 2,
+    "kadhi_pakora": 4,
+    "aloo_gobi": 5,
+    "jalebi": 6,
+    "pizza": 17,
+    "french_fries": 6,
+    "lamb_chops": 5,
+    "fish_curry": 3,
+    "bhindi": 14,
+    "nihari": 1,
+    "kofta": 1,
+    "chapli_kebab": 1,
+    "aloo_baingan": 3,
+    "aloo_methi": 6,
+    "aloo_palak": 8,
+    "mixed_sabzi": 4,
+    "spaghetti": 2,
+    "pudina_chutney": 4,
+    "kachumber_salad": 20,
+    "salad": 11,
+    "lemonade": 1,
+    "fried_rice": 1,
+    "falooda": 3,
+    "lassi": 28,
+    "chai": 1,
+    "milk_soda": 35,
+    "hot_dog": 3,
+    "burger": 18,
+    "not_food": 1,
+    "aloo_shimla_mirch": 3
+  },
+  "eval_shortfall": {
+    "chana_chaat": 3,
+    "chicken_roast": 6,
+    "pudina_chutney": 5
+  },
+  "eval_tier1": {
+    "karahi": 13,
+    "korma": 3,
+    "nihari": 9,
+    "paye": 22,
+    "keema": 6
+  },
+  "dropped_classes": {
+    "kunna": 78,
+    "aloo_gosht": 22,
+    "milk_soda": 28,
+    "sattu": 50
+  },
+  "by_source_raw": {
+    "achar|smf": 244,
+    "aloo_baingan|smf": 243,
+    "aloo_gobi|khana": 400,
+    "aloo_gobi|smf": 243,
+    "aloo_gosht|smf": 139,
+    "aloo_methi|khana": 125,
+    "aloo_methi|smf": 244,
+    "aloo_palak|smf": 242,
+    "aloo_paratha|khana": 400,
+    "aloo_paratha|smf": 244,
+    "aloo_shimla_mirch|smf": 245,
+    "anda_paratha|smf": 244,
+    "barfi|khana": 400,
+    "barfi|smf": 242,
+    "bhindi|khana": 400,
+    "bhindi|smf": 250,
+    "biryani|anshul": 229,
+    "biryani|food20": 100,
+    "biryani|khana": 400,
+    "biryani|pkdishes": 100,
+    "biryani|sourav80": 50,
+    "burger|fastfood": 1500,
+    "burger|food101": 1000,
+    "burger|l33t20": 309,
+    "chai|l33t20": 381,
+    "chai|pkdishes": 100,
+    "chai|smf": 241,
+    "chana_chaat|smf": 244,
+    "chana_chole|anshul": 326,
+    "chana_chole|khana": 800,
+    "chana_chole|l33t20": 411,
+    "chana_chole|sourav80": 50,
+    "chapli_kebab|smf": 244,
+    "chicken_curry|food101": 1000,
+    "chicken_curry|khana": 400,
+    "chicken_curry|l33t20": 412,
+    "chicken_curry|pkdishes": 100,
+    "chicken_curry|sourav80": 150,
+    "chicken_roast|smf": 247,
+    "chicken_tikka|food20": 100,
+    "chicken_tikka|pkdishes": 100,
+    "chicken_tikka|smf": 244,
+    "chicken_tikka|sourav80": 50,
+    "chocolate_cake|food101": 1000,
+    "coffee|smf": 244,
+    "daal|anshul": 261,
+    "daal|l33t20": 321,
+    "daal|sourav80": 100,
+    "donut|fastfood": 1500,
+    "donut|food101": 1000,
+    "falooda|khana": 400,
+    "fish_curry|khana": 400,
+    "fish_curry|smf": 246,
+    "french_fries|fastfood": 1500,
+    "french_fries|food101": 1000,
+    "french_fries|pkdishes": 100,
+    "french_fries|smf": 250,
+    "fried_chicken|fastfood": 1500,
+    "fried_chicken|food101": 1000,
+    "fried_chicken|khana": 400,
+    "fried_fish|smf": 239,
+    "fried_rice|food101": 1000,
+    "fried_rice|l33t20": 355,
+    "fried_rice|pkdishes": 100,
+    "gajar_halwa|khana": 357,
+    "gajar_halwa|smf": 243,
+    "gajar_halwa|sourav80": 50,
+    "ghiya|smf": 244,
+    "gol_gappay|anshul": 177,
+    "gol_gappay|khana": 400,
+    "gol_gappay|l33t20": 130,
+    "gol_gappay|smf": 246,
+    "gulab_jamun|food20": 100,
+    "gulab_jamun|khana": 400,
+    "gulab_jamun|smf": 192,
+    "gulab_jamun|sourav80": 50,
+    "haleem|pkdishes": 100,
+    "haleem|smf": 246,
+    "halwa_puri|smf": 247,
+    "hot_dog|fastfood": 1500,
+    "hot_dog|food101": 1000,
+    "ice_cream|food101": 1000,
+    "jalebi|anshul": 306,
+    "jalebi|khana": 400,
+    "jalebi|l33t20": 297,
+    "jalebi|sourav80": 50,
+    "kachumber_salad|smf": 247,
+    "kadhi_pakora|smf": 237,
+    "karahi|smf": 488,
+    "karela|smf": 244,
+    "keema|smf": 242,
+    "kheer|khana": 753,
+    "kofta|anshul": 667,
+    "kofta|smf": 239,
+    "korma|smf": 487,
+    "kulfi|khana": 400,
+    "kulfi|l33t20": 236,
+    "kunna|smf": 243,
+    "lamb_chops|smf": 241,
+    "lassi|khana": 400,
+    "lassi|smf": 244,
+    "lemonade|smf": 238,
+    "malai_boti|smf": 241,
+    "milk_soda|smf": 197,
+    "mixed_sabzi|smf": 241,
+    "naan|anshul": 353,
+    "naan|food20": 100,
+    "naan|khana": 400,
+    "naan|l33t20": 329,
+    "naan|smf": 243,
+    "naan|sourav80": 50,
+    "nihari|smf": 244,
+    "not_food|food5k": 2500,
+    "omelette|food101": 1000,
+    "omelette|pkdishes": 100,
+    "pakora|anshul": 377,
+    "pakora|khana": 292,
+    "pakora|l33t20": 278,
+    "pakora|smf": 247,
+    "palak_gosht|smf": 244,
+    "paratha|pkdishes": 100,
+    "paratha|smf": 244,
+    "paratha_roll|anshul": 340,
+    "paratha_roll|food20": 100,
+    "paratha_roll|l33t20": 293,
+    "paratha_roll|pkdishes": 100,
+    "paye|smf": 247,
+    "pizza|fastfood": 1500,
+    "pizza|food101": 1000,
+    "pizza|khana": 1521,
+    "pizza|l33t20": 261,
+    "pudina_chutney|smf": 244,
+    "puri|food20": 100,
+    "puri|smf": 240,
+    "rabri|smf": 241,
+    "raita|smf": 246,
+    "ras_malai|smf": 243,
+    "roti_chapati|food20": 100,
+    "roti_chapati|khana": 400,
+    "roti_chapati|l33t20": 413,
+    "roti_chapati|pkdishes": 100,
+    "roti_chapati|smf": 230,
+    "roti_chapati|sourav80": 50,
+    "saag|smf": 246,
+    "salad|food101": 2000,
+    "salad|smf": 241,
+    "samosa|food101": 1000,
+    "samosa|food20": 100,
+    "samosa|khana": 400,
+    "samosa|l33t20": 262,
+    "samosa|pkdishes": 100,
+    "samosa|smf": 243,
+    "sandwich|fastfood": 1500,
+    "sandwich|food101": 1000,
+    "sandwich|khana": 400,
+    "sattu|smf": 243,
+    "seekh_kebab|khana": 400,
+    "seekh_kebab|smf": 244,
+    "sheermal|smf": 246,
+    "spaghetti|food101": 2000,
+    "suji_halwa|smf": 247,
+    "suji_halwa|sourav80": 50
+  },
+  "kept_by_source": {
+    "achar|smf": 160,
+    "aloo_baingan|smf": 130,
+    "aloo_gobi|khana": 335,
+    "aloo_gobi|smf": 157,
+    "aloo_methi|khana": 84,
+    "aloo_methi|smf": 128,
+    "aloo_palak|smf": 101,
+    "aloo_paratha|khana": 394,
+    "aloo_paratha|smf": 154,
+    "aloo_shimla_mirch|smf": 162,
+    "anda_paratha|smf": 177,
+    "barfi|khana": 349,
+    "barfi|smf": 196,
+    "bhindi|khana": 276,
+    "bhindi|smf": 168,
+    "biryani|anshul": 144,
+    "biryani|food20": 76,
+    "biryani|khana": 305,
+    "biryani|pkdishes": 50,
+    "biryani|sourav80": 25,
+    "burger|fastfood": 328,
+    "burger|food101": 211,
+    "burger|l33t20": 61,
+    "chai|l33t20": 363,
+    "chai|pkdishes": 70,
+    "chai|smf": 140,
+    "chana_chaat|smf": 176,
+    "chana_chole|anshul": 99,
+    "chana_chole|khana": 292,
+    "chana_chole|l33t20": 181,
+    "chana_chole|sourav80": 28,
+    "chapli_kebab|smf": 142,
+    "chicken_curry|food101": 322,
+    "chicken_curry|khana": 118,
+    "chicken_curry|l33t20": 104,
+    "chicken_curry|pkdishes": 25,
+    "chicken_curry|sourav80": 31,
+    "chicken_roast|smf": 154,
+    "chicken_tikka|food20": 60,
+    "chicken_tikka|pkdishes": 74,
+    "chicken_tikka|smf": 144,
+    "chicken_tikka|sourav80": 21,
+    "chocolate_cake|food101": 600,
+    "coffee|smf": 172,
+    "daal|anshul": 229,
+    "daal|l33t20": 288,
+    "daal|sourav80": 69,
+    "donut|fastfood": 354,
+    "donut|food101": 246,
+    "falooda|khana": 385,
+    "fish_curry|khana": 349,
+    "fish_curry|smf": 136,
+    "french_fries|fastfood": 310,
+    "french_fries|food101": 272,
+    "french_fries|pkdishes": 18,
+    "fried_chicken|fastfood": 301,
+    "fried_chicken|food101": 207,
+    "fried_chicken|khana": 92,
+    "fried_fish|smf": 159,
+    "fried_rice|food101": 425,
+    "fried_rice|l33t20": 147,
+    "fried_rice|pkdishes": 28,
+    "gajar_halwa|khana": 294,
+    "gajar_halwa|smf": 178,
+    "gajar_halwa|sourav80": 40,
+    "ghiya|smf": 156,
+    "gol_gappay|anshul": 113,
+    "gol_gappay|khana": 331,
+    "gol_gappay|l33t20": 108,
+    "gol_gappay|smf": 48,
+    "gulab_jamun|food20": 75,
+    "gulab_jamun|khana": 361,
+    "gulab_jamun|smf": 129,
+    "gulab_jamun|sourav80": 35,
+    "haleem|pkdishes": 76,
+    "haleem|smf": 161,
+    "halwa_puri|smf": 142,
+    "hot_dog|fastfood": 339,
+    "hot_dog|food101": 261,
+    "ice_cream|food101": 600,
+    "jalebi|anshul": 142,
+    "jalebi|khana": 241,
+    "jalebi|l33t20": 200,
+    "jalebi|sourav80": 17,
+    "kachumber_salad|smf": 121,
+    "kadhi_pakora|smf": 164,
+    "karahi|smf": 302,
+    "karela|smf": 178,
+    "keema|smf": 146,
+    "kheer|khana": 600,
+    "kofta|anshul": 303,
+    "kofta|smf": 124,
+    "korma|smf": 196,
+    "kulfi|khana": 385,
+    "kulfi|l33t20": 215,
+    "lamb_chops|smf": 153,
+    "lassi|khana": 332,
+    "lassi|smf": 80,
+    "lemonade|smf": 161,
+    "malai_boti|smf": 140,
+    "mixed_sabzi|smf": 155,
+    "naan|anshul": 152,
+    "naan|food20": 44,
+    "naan|khana": 186,
+    "naan|l33t20": 157,
+    "naan|smf": 51,
+    "naan|sourav80": 10,
+    "nihari|smf": 138,
+    "not_food|food5k": 600,
+    "omelette|food101": 548,
+    "omelette|pkdishes": 52,
+    "pakora|anshul": 223,
+    "pakora|khana": 162,
+    "pakora|l33t20": 179,
+    "pakora|smf": 36,
+    "palak_gosht|smf": 163,
+    "paratha|pkdishes": 77,
+    "paratha|smf": 191,
+    "paratha_roll|anshul": 226,
+    "paratha_roll|food20": 25,
+    "paratha_roll|l33t20": 265,
+    "paratha_roll|pkdishes": 84,
+    "paye|smf": 82,
+    "pizza|fastfood": 225,
+    "pizza|food101": 142,
+    "pizza|khana": 202,
+    "pizza|l33t20": 31,
+    "pudina_chutney|smf": 126,
+    "puri|food20": 85,
+    "puri|smf": 195,
+    "rabri|smf": 175,
+    "raita|smf": 130,
+    "ras_malai|smf": 180,
+    "roti_chapati|food20": 26,
+    "roti_chapati|khana": 188,
+    "roti_chapati|l33t20": 227,
+    "roti_chapati|pkdishes": 23,
+    "roti_chapati|smf": 125,
+    "roti_chapati|sourav80": 11,
+    "saag|smf": 185,
+    "salad|food101": 584,
+    "salad|smf": 16,
+    "samosa|food101": 356,
+    "samosa|food20": 12,
+    "samosa|khana": 122,
+    "samosa|l33t20": 85,
+    "samosa|pkdishes": 25,
+    "sandwich|fastfood": 309,
+    "sandwich|food101": 208,
+    "sandwich|khana": 83,
+    "seekh_kebab|khana": 374,
+    "seekh_kebab|smf": 141,
+    "sheermal|smf": 187,
+    "spaghetti|food101": 600,
+    "suji_halwa|smf": 180,
+    "suji_halwa|sourav80": 43
+  },
+  "final": {
+    "train": {
+      "biryani": 420,
+      "naan": 420,
+      "roti_chapati": 420,
+      "paratha": 188,
+      "aloo_paratha": 384,
+      "anda_paratha": 124,
+      "sheermal": 131,
+      "puri": 196,
+      "halwa_puri": 99,
+      "paratha_roll": 420,
+      "samosa": 420,
+      "pakora": 420,
+      "gol_gappay": 420,
+      "chana_chaat": 126,
+      "karahi": 211,
+      "korma": 137,
+      "chicken_curry": 420,
+      "nihari": 97,
+      "paye": 57,
+      "haleem": 166,
+      "palak_gosht": 114,
+      "keema": 102,
+      "kofta": 299,
+      "fish_curry": 340,
+      "fried_fish": 111,
+      "chicken_tikka": 209,
+      "malai_boti": 98,
+      "seekh_kebab": 360,
+      "chapli_kebab": 99,
+      "lamb_chops": 107,
+      "chicken_roast": 114,
+      "daal": 410,
+      "chana_chole": 420,
+      "kadhi_pakora": 115,
+      "aloo_baingan": 91,
+      "aloo_gobi": 344,
+      "aloo_methi": 148,
+      "aloo_palak": 71,
+      "aloo_shimla_mirch": 113,
+      "bhindi": 311,
+      "ghiya": 109,
+      "karela": 125,
+      "mixed_sabzi": 108,
+      "saag": 130,
+      "raita": 91,
+      "kachumber_salad": 85,
+      "achar": 112,
+      "pudina_chutney": 93,
+      "gulab_jamun": 420,
+      "jalebi": 420,
+      "gajar_halwa": 358,
+      "suji_halwa": 156,
+      "barfi": 382,
+      "rabri": 122,
+      "ras_malai": 126,
+      "kheer": 420,
+      "kulfi": 420,
+      "falooda": 270,
+      "chai": 401,
+      "coffee": 120,
+      "lassi": 288,
+      "lemonade": 113,
+      "pizza": 420,
+      "burger": 420,
+      "french_fries": 420,
+      "fried_rice": 420,
+      "omelette": 420,
+      "fried_chicken": 420,
+      "sandwich": 420,
+      "hot_dog": 420,
+      "donut": 420,
+      "ice_cream": 420,
+      "chocolate_cake": 420,
+      "spaghetti": 420,
+      "salad": 420,
+      "not_food": 420
+    },
+    "val": {
+      "biryani": 90,
+      "naan": 90,
+      "roti_chapati": 90,
+      "paratha": 40,
+      "aloo_paratha": 82,
+      "anda_paratha": 26,
+      "sheermal": 28,
+      "puri": 42,
+      "halwa_puri": 21,
+      "paratha_roll": 90,
+      "samosa": 90,
+      "pakora": 90,
+      "gol_gappay": 90,
+      "chana_chaat": 25,
+      "karahi": 45,
+      "korma": 29,
+      "chicken_curry": 90,
+      "nihari": 20,
+      "paye": 12,
+      "haleem": 35,
+      "palak_gosht": 24,
+      "keema": 22,
+      "kofta": 64,
+      "fish_curry": 72,
+      "fried_fish": 24,
+      "chicken_tikka": 45,
+      "malai_boti": 21,
+      "seekh_kebab": 77,
+      "chapli_kebab": 21,
+      "lamb_chops": 23,
+      "chicken_roast": 20,
+      "daal": 88,
+      "chana_chole": 90,
+      "kadhi_pakora": 24,
+      "aloo_baingan": 19,
+      "aloo_gobi": 74,
+      "aloo_methi": 32,
+      "aloo_palak": 15,
+      "aloo_shimla_mirch": 24,
+      "bhindi": 66,
+      "ghiya": 23,
+      "karela": 26,
+      "mixed_sabzi": 23,
+      "saag": 27,
+      "raita": 19,
+      "kachumber_salad": 18,
+      "achar": 24,
+      "pudina_chutney": 16,
+      "gulab_jamun": 90,
+      "jalebi": 90,
+      "gajar_halwa": 77,
+      "suji_halwa": 33,
+      "barfi": 81,
+      "rabri": 26,
+      "ras_malai": 27,
+      "kheer": 90,
+      "kulfi": 90,
+      "falooda": 57,
+      "chai": 86,
+      "coffee": 26,
+      "lassi": 62,
+      "lemonade": 24,
+      "pizza": 90,
+      "burger": 90,
+      "french_fries": 90,
+      "fried_rice": 90,
+      "omelette": 90,
+      "fried_chicken": 90,
+      "sandwich": 90,
+      "hot_dog": 90,
+      "donut": 90,
+      "ice_cream": 90,
+      "chocolate_cake": 90,
+      "spaghetti": 90,
+      "salad": 90,
+      "not_food": 90
+    },
+    "test": {
+      "biryani": 90,
+      "naan": 90,
+      "roti_chapati": 90,
+      "paratha": 40,
+      "aloo_paratha": 82,
+      "anda_paratha": 27,
+      "sheermal": 28,
+      "puri": 42,
+      "halwa_puri": 22,
+      "paratha_roll": 90,
+      "samosa": 90,
+      "pakora": 90,
+      "gol_gappay": 90,
+      "chana_chaat": 25,
+      "karahi": 46,
+      "korma": 30,
+      "chicken_curry": 90,
+      "nihari": 21,
+      "paye": 13,
+      "haleem": 36,
+      "palak_gosht": 25,
+      "keema": 22,
+      "kofta": 64,
+      "fish_curry": 73,
+      "fried_fish": 24,
+      "chicken_tikka": 45,
+      "malai_boti": 21,
+      "seekh_kebab": 78,
+      "chapli_kebab": 22,
+      "lamb_chops": 23,
+      "chicken_roast": 20,
+      "daal": 88,
+      "chana_chole": 90,
+      "kadhi_pakora": 25,
+      "aloo_baingan": 20,
+      "aloo_gobi": 74,
+      "aloo_methi": 32,
+      "aloo_palak": 15,
+      "aloo_shimla_mirch": 25,
+      "bhindi": 67,
+      "ghiya": 24,
+      "karela": 27,
+      "mixed_sabzi": 24,
+      "saag": 28,
+      "raita": 20,
+      "kachumber_salad": 18,
+      "achar": 24,
+      "pudina_chutney": 17,
+      "gulab_jamun": 90,
+      "jalebi": 90,
+      "gajar_halwa": 77,
+      "suji_halwa": 34,
+      "barfi": 82,
+      "rabri": 27,
+      "ras_malai": 27,
+      "kheer": 90,
+      "kulfi": 90,
+      "falooda": 58,
+      "chai": 86,
+      "coffee": 26,
+      "lassi": 62,
+      "lemonade": 24,
+      "pizza": 90,
+      "burger": 90,
+      "french_fries": 90,
+      "fried_rice": 90,
+      "omelette": 90,
+      "fried_chicken": 90,
+      "sandwich": 90,
+      "hot_dog": 90,
+      "donut": 90,
+      "ice_cream": 90,
+      "chocolate_cake": 90,
+      "spaghetti": 90,
+      "salad": 90,
+      "not_food": 90
+    }
+  },
+  "errors_sample": [
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_2402.jpg",
+      "error": "too small (46x65)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_2434.jpg",
+      "error": "too small (82x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_3253.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_3451.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_4138.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_4213.jpg",
+      "error": "too small (82x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_4840.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_6172.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_758.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_7610.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_8203.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_8273.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_8392.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_843.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_9230.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_94.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_0_957.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_blur_chicken_karahi_17.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_blur_chicken_karahi_18.jpg",
+      "error": "too small (46x65)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_blur_chicken_karahi_19.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_blur_chicken_karahi_241.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_blur_chicken_karahi_344.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_12.jpg",
+      "error": "too small (69x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_17.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_241.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_242.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_243.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_292.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_344.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_396.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/aug_noisy_chicken_karahi_650.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_11.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_12.jpg",
+      "error": "too small (69x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_16.jpg",
+      "error": "too small (82x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_190.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_191.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_192.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/chicken_karahi/chicken_karahi_394.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_115.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_18.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_1881.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_281.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_2888.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_3171.jpg",
+      "error": "too small (61x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_3254.jpg",
+      "error": "too small (46x46)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_5113.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_5434.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_5604.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_6697.jpg",
+      "error": "too small (50x50)"
+    },
+    {
+      "label": "karahi",
+      "dataset": "smf",
+      "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_6894.jpg",
+      "error": "too small (50x50)"
+    }
+  ],
+  "conflicts_sample": [
+    [
+      {
+        "label": "biryani",
+        "dataset": "khana",
+        "relpath": "khana/biryani/mtl0tmejnmhfrkqbvxha"
+      },
+      {
+        "label": "naan",
+        "dataset": "khana",
+        "relpath": "khana/garlic naan/iila7xvxanlbpnbhwf0z"
+      },
+      {
+        "label": "pakora",
+        "dataset": "khana",
+        "relpath": "khana/onion pakoda/7772d9d608b4a04e1957600404001a90"
+      },
+      {
+        "label": "pakora",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/pakode/image_157_aug1_03b9.jpg"
+      }
+    ],
+    [
+      {
+        "label": "biryani",
+        "dataset": "anshul",
+        "relpath": "Biryani-resize/resize/00000059_resized.png"
+      },
+      {
+        "label": "sandwich",
+        "dataset": "khana",
+        "relpath": "khana/grilled sandwich/tbyuvauwg5mzvkwlihnz"
+      }
+    ],
+    [
+      {
+        "label": "biryani",
+        "dataset": "anshul",
+        "relpath": "Biryani-resize/resize/00000192_resized.png"
+      },
+      {
+        "label": "fried_chicken",
+        "dataset": "khana",
+        "relpath": "khana/chicken wings/rgfngczcv39kg18qvsn9"
+      }
+    ],
+    [
+      {
+        "label": "biryani",
+        "dataset": "anshul",
+        "relpath": "Biryani-resize/resize/00000211_resized.png"
+      },
+      {
+        "label": "raita",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/raita/000199.jpg"
+      },
+      {
+        "label": "raita",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/raita/000239.jpg"
+      },
+      {
+        "label": "raita",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/raita/000239_aug1_b6a7.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/067.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/095.jpg"
+      },
+      {
+        "label": "chicken_curry",
+        "dataset": "sourav80",
+        "relpath": "Indian Food Images/Indian Food Images/butter_chicken/1d5733d73e.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/butter_naan/187.jpg"
+      },
+      {
+        "label": "chicken_curry",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/kadai_paneer/094.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000008_aug1.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000008_aug2.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000008_aug3.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000010.jpg"
+      },
+      {
+        "label": "kulfi",
+        "dataset": "khana",
+        "relpath": "khana/kulfi/jmvtvx2xj57lshofdoz4"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000029.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000029.png"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000029_aug1.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000029_aug2.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000029_aug3.jpg"
+      },
+      {
+        "label": "karahi",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/beef_mutton_karahi/aug_0_6305.jpg"
+      },
+      {
+        "label": "chana_chole",
+        "dataset": "khana",
+        "relpath": "khana/chana masala/c1cf39a69d767a6a7259e6f5c2ead11f"
+      },
+      {
+        "label": "kulfi",
+        "dataset": "khana",
+        "relpath": "khana/kulfi/frocotrmyagqduxdqfn6"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000031.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000031_aug1.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000031_aug3.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "l33t20",
+        "relpath": "Food Classification/chapati/155.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000076.jpg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000112.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000080.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000115.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000033.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000222.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000029.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/000230.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000201.jpg"
+      }
+    ],
+    [
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/IMG_0189-12_25_58.jpeg"
+      },
+      {
+        "label": "naan",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/naan/IMG_0189-12_25_58_aug1.jpg"
+      },
+      {
+        "label": "gulab_jamun",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/gulab_jamun/IMG_0189-12_22_52.jpeg"
+      },
+      {
+        "label": "gajar_halwa",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/gajar_halwa/IMG_0189-12_25_25.jpeg"
+      },
+      {
+        "label": "suji_halwa",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/suji_halwa/IMG_0189-12_25_14.jpeg"
+      },
+      {
+        "label": "barfi",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/barfi/IMG_0189-12_24_11.jpeg"
+      },
+      {
+        "label": "rabri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/rabri/IMG_0189-12_25_1.jpeg"
+      },
+      {
+        "label": "ras_malai",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/ras_malai/IMG_0189-12_23_44.jpeg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "khana",
+        "relpath": "khana/chapati/kp6krx1kugwgm2zzhylx"
+      },
+      {
+        "label": "gajar_halwa",
+        "dataset": "khana",
+        "relpath": "khana/gajar ka halwa/x7k0zalotkcy4qgfuc7j"
+      },
+      {
+        "label": "ras_malai",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/ras_malai/000251.jpg"
+      },
+      {
+        "label": "kheer",
+        "dataset": "khana",
+        "relpath": "khana/kheer/sl8ofr6qtpnnpyp9kkhl"
+      },
+      {
+        "label": "kheer",
+        "dataset": "khana",
+        "relpath": "khana/phirni/lozcbqbx1fi6w5p5yah5"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "khana",
+        "relpath": "khana/chapati/cipx1q2okn9xua1cnoy3"
+      },
+      {
+        "label": "kulfi",
+        "dataset": "khana",
+        "relpath": "khana/kulfi/msuuq8bao8fusyrdvmfe"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "khana",
+        "relpath": "khana/chapati/ajbciaa1dncfn40ladix"
+      },
+      {
+        "label": "chicken_curry",
+        "dataset": "khana",
+        "relpath": "khana/paneer masala/e0d312471293df5580fe641093077c2a"
+      },
+      {
+        "label": "chana_chole",
+        "dataset": "khana",
+        "relpath": "khana/chana masala/bioscazaahs6d7qrbki6"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "khana",
+        "relpath": "khana/chapati/hon7zd2vteiftufjmmcp"
+      },
+      {
+        "label": "seekh_kebab",
+        "dataset": "khana",
+        "relpath": "khana/seekh kebab/8262dc73dab2904e561ac89fbb940179"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000012.jpg"
+      },
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000012.png"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000122.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000019.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha80.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha94.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000025.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000100.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000028.jpg"
+      },
+      {
+        "label": "rabri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/rabri/000283.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000045.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000103.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000171.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000071.jpg"
+      },
+      {
+        "label": "chicken_tikka",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/chicken_tikka/000263_aug1.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000081.jpg"
+      },
+      {
+        "label": "puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/puri/000203.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000092.jpg"
+      },
+      {
+        "label": "chicken_roast",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/chicken_roast/000088_aug1.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000116.jpg"
+      },
+      {
+        "label": "sheermal",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/sheermal/000064.jpg"
+      },
+      {
+        "label": "gajar_halwa",
+        "dataset": "khana",
+        "relpath": "khana/gajar ka halwa/js4wh6xojo8mq2bjmx8m"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000160.jpg"
+      },
+      {
+        "label": "fried_fish",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/fish/000308_aug2.jpg"
+      },
+      {
+        "label": "malai_boti",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/malai_boti/000111.jpg"
+      },
+      {
+        "label": "malai_boti",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/malai_boti/000111_aug2.jpg"
+      },
+      {
+        "label": "barfi",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/barfi/000272.jpg"
+      },
+      {
+        "label": "rabri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/rabri/000226.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000163.jpg"
+      },
+      {
+        "label": "fried_fish",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/fish/000277_aug1.jpg"
+      },
+      {
+        "label": "barfi",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/barfi/000282.jpg"
+      },
+      {
+        "label": "rabri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/rabri/000136.jpg"
+      },
+      {
+        "label": "ras_malai",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/ras_malai/000269.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000208.jpg"
+      },
+      {
+        "label": "barfi",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/barfi/000011.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000215.jpg"
+      },
+      {
+        "label": "sheermal",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/sheermal/000276.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000217.jpg"
+      },
+      {
+        "label": "ras_malai",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/ras_malai/000270.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000220.jpg"
+      },
+      {
+        "label": "rabri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/rabri/000204.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000235.jpg"
+      },
+      {
+        "label": "fried_fish",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/fish/000300.jpg"
+      }
+    ],
+    [
+      {
+        "label": "roti_chapati",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/roti/000237.jpg"
+      },
+      {
+        "label": "chicken_roast",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/chicken_roast/000085.jpg"
+      },
+      {
+        "label": "chicken_roast",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/chicken_roast/000085_aug1.jpg"
+      },
+      {
+        "label": "chicken_roast",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/chicken_roast/000085_aug2.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha107.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha29.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000019.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_107_aug1_93c8.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_107_aug2_5c80.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_107_aug3_b365.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha50.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_175.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/paratha/paratha66.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000117.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_94.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000008.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_88.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_88_aug1_cf2f.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000023.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_91.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000033.jpg"
+      },
+      {
+        "label": "keema",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/keema/aug_blur_keema_168.jpg"
+      },
+      {
+        "label": "keema",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/keema/aug_noisy_keema_168.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000054.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000054.png"
+      },
+      {
+        "label": "anda_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/anda_paratha/image_145.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000079.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "khana",
+        "relpath": "khana/aloo paratha/dzrgjdozqncmz4m5anou"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000092.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000139.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_115_aug2_4242.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000120.jpg"
+      },
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000173.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "khana",
+        "relpath": "khana/aloo paratha/loh4wzc49mjfg8ikf61s"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000141.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_29.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_29_aug1_dd38.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_29_aug2_1037.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_29_aug3_f3e1.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000146.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_119.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_119_aug2_3ed2.jpg"
+      }
+    ],
+    [
+      {
+        "label": "paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/paratha/000155.jpg"
+      },
+      {
+        "label": "haleem",
+        "dataset": "pkdishes",
+        "relpath": "dataset/dataset/haleem/haleem84.jpg"
+      }
+    ],
+    [
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_144_aug2_6c9a.jpg"
+      },
+      {
+        "label": "aloo_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks/image_144_aug3_8bba.jpg"
+      },
+      {
+        "label": "anda_paratha",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/anda_paratha/image_279.jpg"
+      }
+    ],
+    [
+      {
+        "label": "sheermal",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/sheermal/000099.jpg"
+      },
+      {
+        "label": "puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/puri/000069.jpg"
+      },
+      {
+        "label": "halwa_puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/halwa_puri/image_72.jpg"
+      },
+      {
+        "label": "halwa_puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/halwa_puri/image_73_aug1_9c8a.jpg"
+      },
+      {
+        "label": "halwa_puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/halwa_puri/image_73_aug2_6a31.jpg"
+      },
+      {
+        "label": "halwa_puri",
+        "dataset": "smf",
+        "relpath": "SMF-DataSet-Flat/halwa_puri/image_73_aug3_f456.jpg"
+      }
+    ]
+  ]
+}

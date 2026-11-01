@@ -1,0 +1,25 @@
+# Portion (mass) regression on Nutrition5k overhead RGB (smartbite_cv.portion).
+seed: 20261031
+data:
+  metadata_dir: data/raw/nutrition5k            # metadata/dish_metadata_cafe*.csv + dish_ids/splits (official, from GCS)
+  local_root: data/raw/nutrition5k              # contains imagery/realsense_overhead/<dish>/rgb.png
+  marker: imagery/realsense_overhead            # Kaggle: gillesokhin/nutrition5k-dataset
+  train_ids: depth_train_ids.txt                # depth split = dishes with an overhead capture
+  test_ids: depth_test_ids.txt
+  val_fraction: 0.10
+model:
+  name: efficientnet_b0.ra_in1k
+  drop_rate: 0.2
+  drop_path_rate: 0.1
+img_hw: [240, 320]          # keeps the 4:3 overhead frame; no crop, no rescale augmentation
+batch_size: 32
+num_workers: 4
+epochs: 40
+lr: 3.0e-4
+min_lr: 1.0e-6
+weight_decay: 0.05
+warmup_epochs: 1
+grad_clip: 1.0
+early_stop_patience: 8      # epochs without val MAE (grams) improvement
+aug:
+  color_jitter: [0.15, 0.15, 0.1, 0.02]

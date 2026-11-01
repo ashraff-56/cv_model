@@ -22,6 +22,7 @@ import glob
 import hashlib
 import json
 import os
+import re
 import sys
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
@@ -31,12 +32,22 @@ from .config import REPO_ROOT, load_classes, load_config, resolve_path
 from .imageio import load_rgb
 from .phash import cluster, near_duplicate_pairs, phash_pair
 
-MANIFEST_FIELDS = ["md5", "label", "split", "dataset", "relpath", "width", "height", "phash", "cluster_size"]
+MANIFEST_FIELDS = ["md5", "label", "split", "dataset", "relpath", "width", "height", "phash", "cluster_size", "tier"]
 
 
 # ---------------------------------------------------------------- dataset roots
+KAGGLE_EXTRACTED = Path("/kaggle/working/extracted")   # private uploads that stayed zipped are unpacked here
+
+
 def find_kaggle_root(marker: str, search_root: Path = Path("/kaggle/input"), max_depth: int = 4) -> Path | None:
-    """Return the directory under /kaggle/input that contains `marker` (mount layout varies)."""
+    """Return the directory under /kaggle/input (or the unpacked-zip area) that contains `marker`."""
+    found = _search(marker, search_root, max_depth)
+    if found is None and search_root == Path("/kaggle/input") and KAGGLE_EXTRACTED.exists():
+        found = _search(marker, KAGGLE_EXTRACTED, max_depth)
+    return found
+
+
+def _search(marker: str, search_root: Path, max_depth: int) -> Path | None:
     frontier = [search_root]
     for _ in range(max_depth + 1):
         nxt = []
@@ -68,7 +79,12 @@ def dataset_roots(cfg: dict, profile: str) -> dict[str, Path]:
 
 
 # ---------------------------------------------------------------- collection
-def collect(classes: list[dict], roots: dict[str, Path], exts: set[str]) -> list[dict]:
+def collect(classes: list[dict], roots: dict[str, Path], exts: set[str], datasets: dict | None = None,
+            seed: int = 0, exclude: set[tuple[str, str]] | None = None) -> list[dict]:
+    """Image files per class. A dataset may set `max_per_folder` (seeded random sample per folder, for very
+    large sources whose surplus the per-class cap would discard anyway); `exclude` holds reviewed
+    (dataset, relpath) pairs to skip."""
+    datasets, exclude = datasets or {}, exclude or set()
     records = []
     for cls in classes:
         for source in cls["sources"]:
@@ -76,12 +92,26 @@ def collect(classes: list[dict], roots: dict[str, Path], exts: set[str]) -> list
             if ds_id not in roots:
                 continue
             root = roots[ds_id]
+            limit = datasets.get(ds_id, {}).get("max_per_folder")
+            # some datasets (Khana) name files by content hash with no extension; decoding validates them later
+            any_ext = datasets.get(ds_id, {}).get("any_extension", False)
             for folder in sorted(glob.glob(str(root / pattern))):
-                for name in sorted(os.listdir(folder)):
-                    if Path(name).suffix.lower() in exts:
-                        rel = Path(folder, name).relative_to(root).as_posix()
-                        records.append({"label": cls["slug"], "dataset": ds_id, "relpath": rel})
+                rels = [Path(folder, name).relative_to(root).as_posix() for name in sorted(os.listdir(folder))
+                        if Path(name).suffix.lower() in exts or (any_ext and Path(folder, name).is_file())]
+                rels = [r for r in rels if (ds_id, r) not in exclude]
+                if limit and len(rels) > limit:
+                    rels = sorted(rels, key=lambda r: seeded_key(seed, r))[:limit]
+                records += [{"label": cls["slug"], "dataset": ds_id, "relpath": r} for r in rels]
     return records
+
+
+def load_exclusions(cfg: dict) -> set[tuple[str, str]]:
+    """Reviewed files to leave out (CSV with dataset, relpath, reason)."""
+    path = cfg.get("exclude")
+    if not path:
+        return set()
+    with open(resolve_path(path), encoding="utf-8") as f:
+        return {(r["dataset"], r["relpath"]) for r in csv.DictReader(f)}
 
 
 def _inspect(args: tuple[str, int]) -> dict:
@@ -98,6 +128,38 @@ def _inspect(args: tuple[str, int]) -> dict:
         return {"retry": True}
     except Exception as exc:  # corrupt/unsupported file: record and skip
         return {"error": f"{type(exc).__name__}: {exc}"[:200]}
+
+
+def inspect_files(jobs: list[tuple[str, int]], workers: int, cache_file: Path | None = None) -> list[dict]:
+    """_inspect every file in parallel. With `cache_file`, results are reused for files whose size and
+    modification time are unchanged, so a re-run after a crash skips the slow decode + pHash pass."""
+    cache: dict[str, list] = {}
+    if cache_file is not None and cache_file.exists():
+        cache = json.loads(cache_file.read_text(encoding="utf-8"))
+    stamps = []
+    for path, _ in jobs:
+        st = os.stat(path)
+        stamps.append([st.st_size, st.st_mtime_ns])
+    todo = [i for i, (path, _) in enumerate(jobs) if cache.get(path, [None])[:2] != stamps[i]]
+    pending = set(todo)
+    results: list[dict | None] = [None if i in pending else cache[jobs[i][0]][2] for i in range(len(jobs))]
+    if todo:
+        with ProcessPoolExecutor(max_workers=workers) as pool:
+            for i, res in zip(todo, pool.map(_inspect, [jobs[i] for i in todo], chunksize=64)):
+                results[i] = res
+    for i, res in enumerate(results):
+        if res.get("retry"):
+            results[i] = _inspect(jobs[i])
+            if results[i].get("retry"):
+                results[i] = {"error": "MemoryError (image too large to decode)"}
+    if cache_file is not None:
+        cache.update({path: [*stamps[i], results[i]] for i, (path, _) in enumerate(jobs)})
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        tmp = cache_file.with_suffix(".tmp")
+        tmp.write_text(json.dumps(cache), encoding="utf-8")
+        tmp.replace(cache_file)
+    print(f"inspected {len(todo)} files ({len(jobs) - len(todo)} reused from cache)")
+    return results
 
 
 def seeded_key(seed: int, md5: str) -> str:
@@ -118,29 +180,86 @@ def _reduce_clusters(items: list[dict], cluster_ids: list[int]) -> tuple[list[di
         if len({items[i]["label"] for i in idxs}) > 1:  # same picture filed under different dishes
             conflicts.append([_ref(items[i]) for i in idxs])
             continue
-        # largest image wins; ties broken by content hash so the choice never depends on file order
-        rep = max(idxs, key=lambda i: (items[i]["width"] * items[i]["height"], items[i]["md5"]))
+        # an original beats its augmented copies; then the largest image; ties broken by content hash so
+        # the choice never depends on file order
+        rep = max(idxs, key=lambda i: (-items[i].get("tier", 0), not items[i].get("augmented", False),
+                                       items[i]["width"] * items[i]["height"], items[i]["md5"]))
         removed[items[rep]["label"]] += len(idxs) - 1
         kept.append({**items[rep], "cluster_size": sum(items[i]["cluster_size"] for i in idxs)})
     return kept, conflicts, removed
 
 
+def photo_key(name: str, strip: list) -> tuple[str, bool]:
+    """File stem with augmentation markers removed, and whether any marker was found.
+
+    e.g. with SMF's rules: aug_blur_aug_0_1303.jpg -> ("1303", True), 000005_aug1_cfc6.jpg -> ("000005", True)
+    """
+    stem = orig = name.rsplit(".", 1)[0]
+    while True:
+        new = stem
+        for pat in strip:
+            new = pat.sub("", new)
+        if new == stem:
+            return stem, stem != orig
+        stem = new
+
+
+def annotate_copies(items: list[dict], datasets: dict) -> list[tuple[int, int]]:
+    """Edges joining files that a dataset marks as copies of one photo, plus each item's evaluation tier.
+
+    `group_strip` (regexes) removes augmentation markers from a file stem; files in one folder that reduce
+    to the same stem are copies of one photo (000005.jpg, 000005_aug1_cfc6.jpg, aug_blur_000005.jpg) and land
+    in one duplicate cluster, so a photo and its augmentations can never be split across train/val/test even
+    when the augmentation defeats pHash and embeddings. `tier_rules` ([regex, tier], first match wins) rate
+    how far a file is from an untouched photo: 0 untouched (default), 1 mildly altered (allowed in val/test
+    only when a class has too few untouched photos), 2 heavily altered (train only).
+    """
+    rules = {d: ([re.compile(p) for p in spec.get("group_strip", [])],
+                 [(re.compile(p), int(t)) for p, t in spec.get("tier_rules", [])])
+             for d, spec in datasets.items()}
+    first: dict[tuple, int] = {}
+    edges = []
+    for i, it in enumerate(items):
+        strip, tiers = rules.get(it["dataset"], ([], []))
+        folder, _, name = it["relpath"].rpartition("/")
+        it["tier"] = next((t for pat, t in tiers if pat.search(name)), 0)
+        if not strip:
+            continue
+        stem, it["augmented"] = photo_key(name, strip)
+        key = (it["dataset"], folder, stem)
+        if key in first:
+            edges.append((first[key], i))
+        else:
+            first[key] = i
+    return edges
+
+
+def assign_splits(rows: list[dict], seed: int, fractions: dict, cap: int) -> tuple[list[dict], int]:
+    """Deterministic per-class split. Val/test take tier-0 photos first, then tier 1; tier 2 is train only.
+
+    Returns the rows with "split" set and how many val/test places could not be filled.
+    """
+    order = sorted(rows, key=lambda r: (r.get("tier", 0) >= 2, seeded_key(seed, r["md5"])))[:cap]
+    n = len(order)
+    n_eval = n - round(n * fractions["train"])
+    candidates = sorted((r for r in order if r.get("tier", 0) < 2),
+                        key=lambda r: (r.get("tier", 0), seeded_key(seed, r["md5"])))[:n_eval]
+    chosen = {r["md5"]: ("test" if i % 2 == 0 else "val") for i, r in enumerate(candidates)}
+    return [{**r, "split": chosen.get(r["md5"], "train")} for r in order], n_eval - len(candidates)
+
+
 # ---------------------------------------------------------------- main pipeline
 def build_manifest(cfg: dict, classes: list[dict], roots: dict[str, Path], workers: int) -> tuple[list[dict], dict]:
     seed = cfg["seed"]
-    records = collect(classes, roots, {e.lower() for e in cfg["image_exts"]})
-    stats: dict = {"collected": Counter(r["label"] for r in records)}
+    exclude = load_exclusions(cfg)
+    records = collect(classes, roots, {e.lower() for e in cfg["image_exts"]}, cfg.get("datasets", {}), seed, exclude)
+    stats_excluded = len(exclude)
+    stats: dict = {"collected": Counter(r["label"] for r in records), "excluded_after_review": stats_excluded}
     by_source = Counter((r["label"], r["dataset"]) for r in records)
     print(f"collected {len(records)} files from {len(roots)} datasets")
 
     jobs = [(str(roots[r["dataset"]] / r["relpath"]), cfg["min_side"]) for r in records]
-    with ProcessPoolExecutor(max_workers=workers) as pool:
-        results = list(pool.map(_inspect, jobs, chunksize=64))
-    for i, res in enumerate(results):
-        if res.get("retry"):
-            results[i] = _inspect(jobs[i])
-            if results[i].get("retry"):
-                results[i] = {"error": "MemoryError (image too large to decode)"}
+    results = inspect_files(jobs, workers, resolve_path(cfg["inspect_cache"]) if cfg.get("inspect_cache") else None)
 
     good, errors = [], []
     for rec, res in zip(records, results):
@@ -156,7 +275,9 @@ def build_manifest(cfg: dict, classes: list[dict], roots: dict[str, Path], worke
         g["cluster_size"] = 1
     pairs = near_duplicate_pairs([g["phash"] for g in good], [g["phash_flip"] for g in good],
                                  cfg["dedupe"]["max_hamming"])
-    kept, conflicts, dup_removed = _reduce_clusters(good, cluster(len(good), pairs))
+    grouped = annotate_copies(good, cfg.get("datasets", {}))
+    stats["augmentation_group_links"] = len(grouped)
+    kept, conflicts, dup_removed = _reduce_clusters(good, cluster(len(good), list(pairs) + grouped))
     stats["phash_duplicates_removed"] = dup_removed
     print(f"pHash pass: {len(kept)} unique images; {len(conflicts)} label-conflict clusters dropped")
 
@@ -165,7 +286,8 @@ def build_manifest(cfg: dict, classes: list[dict], roots: dict[str, Path], worke
     if emb_cfg.get("enabled", False):
         from .embed_dedupe import embed, similar_pairs
 
-        emb = embed([roots[k["dataset"]] / k["relpath"] for k in kept], emb_cfg["model"], workers=min(workers, 4),
+        emb = embed([roots[k["dataset"]] / k["relpath"] for k in kept], emb_cfg["model"],
+                    batch_size=emb_cfg.get("batch_size", 64), workers=min(workers, emb_cfg.get("workers", 4)),
                     cache_file=resolve_path(emb_cfg["cache_file"]), keys=[k["md5"] for k in kept])
         audit_min = emb_cfg.get("audit_min_cosine", emb_cfg["min_cosine"])
         sim = list(similar_pairs(emb, min(audit_min, emb_cfg["min_cosine"])))
@@ -186,20 +308,18 @@ def build_manifest(cfg: dict, classes: list[dict], roots: dict[str, Path], worke
     for row in kept:
         per_class[row["label"]].append(row)
 
-    manifest, dropped_classes = [], {}
-    fr = cfg["split"]
+    manifest, dropped_classes, shortfall = [], {}, {}
     for cls in classes:
-        rows = sorted(per_class.get(cls["slug"], []), key=lambda r: seeded_key(seed, r["md5"]))
+        rows = per_class.get(cls["slug"], [])
         if len(rows) < cfg["min_per_class"]:
             dropped_classes[cls["slug"]] = len(rows)
             continue
-        rows = rows[: cfg["cap_per_class"]]
-        n = len(rows)
-        n_train = round(n * fr["train"])
-        n_val = round(n * fr["val"])
-        for i, row in enumerate(rows):
-            split = "train" if i < n_train else "val" if i < n_train + n_val else "test"
-            manifest.append({**row, "split": split, "phash": f"{row['phash']:016x}"})
+        split_rows_, missing = assign_splits(rows, seed, cfg["split"], cfg["cap_per_class"])
+        if missing:
+            shortfall[cls["slug"]] = missing
+        manifest += [{**r, "phash": f"{r['phash']:016x}"} for r in split_rows_]
+    stats["eval_shortfall"] = shortfall
+    stats["eval_tier1"] = Counter(m["label"] for m in manifest if m["split"] != "train" and m.get("tier", 0) == 1)
     stats["dropped_classes"] = dropped_classes
 
     stats["by_source_raw"] = {f"{k[0]}|{k[1]}": v for k, v in sorted(by_source.items())}

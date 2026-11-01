@@ -1,0 +1,26 @@
+{
+  "imgHW": [
+    240,
+    320
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "interpolation": "bicubic",
+  "sigmaScale": 2.2395894527435303,
+  "priorSigmaLog": 0.829714877672668,
+  "trainedOn": "Nutrition5k overhead RGB (Thames et al., CVPR 2021), official depth split",
+  "testMassMAE": {
+    "mae_g": 27.296222686767578,
+    "mae_pct_of_mean": 13.73576831817627,
+    "median_ape_pct": 11.7899751663208
+  },
+  "onnxParityMaxAbsDiff": 2.1457672119140625e-06
+}

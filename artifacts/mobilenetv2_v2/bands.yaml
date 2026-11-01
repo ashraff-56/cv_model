@@ -1,0 +1,6 @@
+# Confidence-band thresholds on calibrated probability (chosen on the validation set).
+high: 0.7973154187202454
+low: 0.27385589480400085
+high_top1_target: 0.95
+low_band_max_top3: 0.5
+chosen_on: val

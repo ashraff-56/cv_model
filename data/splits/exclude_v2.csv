@@ -1,0 +1,82 @@
+dataset,relpath,reason,p_not_food
+smf,SMF-DataSet-Flat/chicken_roast/000294.jpg,illustration / graphic,0.994
+smf,SMF-DataSet-Flat/fish/000194.jpg,"market / raw fish or produce, not a dish",0.993
+smf,SMF-DataSet-Flat/salad/000099.jpg,"raw ingredient (leaf, dough, chopped herbs), not a dish",0.993
+smf,SMF-DataSet-Flat/milk_soda/aug_0_1803.jpg,"person/portrait (stock photo, not a serving)",0.993
+smf,SMF-DataSet-Flat/milk_soda/aug_0_5897.jpg,"person/portrait (stock photo, not a serving)",0.986
+smf,SMF-DataSet-Flat/milk_soda/aug_0_581.jpg,"person/portrait (stock photo, not a serving)",0.986
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_0_8201.jpg,"person/portrait (stock photo, not a serving)",0.986
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_0_8201.jpg,"person/portrait (stock photo, not a serving)",0.985
+smf,SMF-DataSet-Flat/milk_soda/aug_0_7663.jpg,"milk bottles on a production line, not a drink serving",0.984
+smf,SMF-DataSet-Flat/barfi/000152.jpg,unrelated / abstract (not this dish),0.984
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_blur_milk_soda_drink_gUiYHFKPrnw.jpg,"person/portrait (stock photo, not a serving)",0.983
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_blur_milk_soda_drink_gUiYHFKPrnw.jpg,"person/portrait (stock photo, not a serving)",0.983
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_noisy_milk_soda_drink_gUiYHFKPrnw.jpg,"person/portrait (stock photo, not a serving)",0.983
+smf,SMF-DataSet-Flat/coffee/aug_0_823.jpg,unrelated / abstract (not this dish),0.982
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_milk_soda_drink_gUiYHFKPrnw.jpg,"person/portrait (stock photo, not a serving)",0.980
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_noisy_milk_soda_top_view_P7MkoYvSnLI.jpg,"milk bottles on a production line, not a drink serving",0.980
+smf,SMF-DataSet-Flat/lemonade/summer_lemonade_glass_9w5T19x1Y74.jpg,unrelated / abstract (not this dish),0.980
+smf,SMF-DataSet-Flat/milk_soda/aug_0_3096.jpg,"person/portrait (stock photo, not a serving)",0.979
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_0_7175.jpg,"person/portrait (stock photo, not a serving)",0.978
+smf,SMF-DataSet-Flat/milk_soda/aug_0_625.jpg,"milk bottles on a production line, not a drink serving",0.976
+smf,SMF-DataSet-Flat/milk_soda/aug_0_9781.jpg,"milk bottles on a production line, not a drink serving",0.976
+smf,SMF-DataSet-Flat/roti/000241.jpg,"cooking process / people at work, not a dish",0.975
+smf,SMF-DataSet-Flat/milk_soda/aug_0_8343.jpg,"milk bottles on a production line, not a drink serving",0.975
+smf,SMF-DataSet-Flat/milk_soda/aug_0_9826.jpg,"person/portrait (stock photo, not a serving)",0.974
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_milk_soda_top_view_P7MkoYvSnLI.jpg,"milk bottles on a production line, not a drink serving",0.974
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_noisy_milk_soda_top_view_P7MkoYvSnLI.jpg,"milk bottles on a production line, not a drink serving",0.973
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_0_2333.jpg,"person/portrait (stock photo, not a serving)",0.973
+smf,SMF-DataSet-Flat/naan/000240.jpg,"text, signboard or recipe page",0.972
+smf,SMF-DataSet-Flat/roti/000146.jpg,"raw ingredient (leaf, dough, chopped herbs), not a dish",0.971
+smf,SMF-DataSet-Flat/milk_soda/aug_0_2886.jpg,"milk bottles on a production line, not a drink serving",0.969
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_0_2333.jpg,"person/portrait (stock photo, not a serving)",0.969
+smf,SMF-DataSet-Flat/milk_soda/aug_0_3117.jpg,"milk bottles on a production line, not a drink serving",0.968
+smf,SMF-DataSet-Flat/milk_soda/aug_0_828.jpg,"milk bottles on a production line, not a drink serving",0.968
+smf,SMF-DataSet-Flat/milk_soda/aug_0_2333.jpg,"person/portrait (stock photo, not a serving)",0.967
+smf,SMF-DataSet-Flat/milk_soda/aug_0_1194.jpg,"milk bottles on a production line, not a drink serving",0.966
+smf,SMF-DataSet-Flat/milk_soda/aug_0_7543.jpg,"person/portrait (stock photo, not a serving)",0.966
+smf,SMF-DataSet-Flat/milk_soda/aug_0_2567.jpg,"person/portrait (stock photo, not a serving)",0.965
+smf,SMF-DataSet-Flat/milk_soda/aug_0_8437.jpg,"person/portrait (stock photo, not a serving)",0.961
+smf,SMF-DataSet-Flat/milk_soda/aug_0_5542.jpg,"milk bottles on a production line, not a drink serving",0.959
+smf,SMF-DataSet-Flat/fish/000043.jpg,"market / raw fish or produce, not a dish",0.957
+smf,SMF-DataSet-Flat/milk_soda/aug_0_7083.jpg,"milk bottles on a production line, not a drink serving",0.954
+smf,SMF-DataSet-Flat/lassi/aug_0_6836.jpg,unrelated / abstract (not this dish),0.951
+smf,SMF-DataSet-Flat/puri/000248.jpg,"place named Puri (temple, festival, beach), not the bread",0.950
+smf,SMF-DataSet-Flat/barfi/000107.jpg,unrelated / abstract (not this dish),0.943
+smf,SMF-DataSet-Flat/roti/000190.jpg,"raw ingredient (leaf, dough, chopped herbs), not a dish",0.939
+smf,SMF-DataSet-Flat/lassi/aug_noisy_aug_0_2349.jpg,unrelated / abstract (not this dish),0.933
+smf,SMF-DataSet-Flat/milk_soda/aug_0_501.jpg,"milk bottles on a production line, not a drink serving",0.929
+smf,SMF-DataSet-Flat/milk_soda/aug_noisy_aug_0_501.jpg,"milk bottles on a production line, not a drink serving",0.928
+smf,SMF-DataSet-Flat/naan/000249.jpg,illustration / graphic,0.927
+smf,SMF-DataSet-Flat/salad/000255.jpg,"market / raw fish or produce, not a dish",0.922
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_0_501.jpg,"milk bottles on a production line, not a drink serving",0.920
+smf,SMF-DataSet-Flat/milk_soda/aug_0_9011.jpg,"person/portrait (stock photo, not a serving)",0.916
+smf,SMF-DataSet-Flat/roti/000026.jpg,"cooking process / people at work, not a dish",0.912
+smf,SMF-DataSet-Flat/naan/000235.jpg,illustration / graphic,0.910
+smf,SMF-DataSet-Flat/roti/000244.jpg,"cooking process / people at work, not a dish",0.902
+smf,SMF-DataSet-Flat/sheermal/000041.jpg,wrong dish (kheer-like dessert filed under sheermal),0.900
+smf,SMF-DataSet-Flat/milk_soda/aug_0_1327.jpg,"milk bottles on a production line, not a drink serving",0.899
+smf,SMF-DataSet-Flat/milk_soda/aug_blur_aug_0_1327.jpg,"milk bottles on a production line, not a drink serving",0.891
+smf,SMF-DataSet-Flat/coffee/aug_0_1058.jpg,unrelated / abstract (not this dish),0.857
+smf,SMF-DataSet-Flat/puri/000266.jpg,"place named Puri (temple, festival, beach), not the bread",0.832
+smf,SMF-DataSet-Flat/puri/000230.jpg,"place named Puri (temple, festival, beach), not the bread",0.826
+smf,SMF-DataSet-Flat/fish/000257.jpg,illustration / graphic,0.816
+smf,SMF-DataSet-Flat/roti/000183.jpg,illustration / graphic,0.809
+smf,SMF-DataSet-Flat/milk_soda/aug_0_3320.jpg,"person/portrait (stock photo, not a serving)",0.796
+smf,SMF-DataSet-Flat/naan/000066.jpg,"cooking process / people at work, not a dish",0.786
+smf,SMF-DataSet-Flat/coffee/aug_0_4165.jpg,unrelated / abstract (not this dish),0.764
+smf,SMF-DataSet-Flat/aloo_palak/image_226.jpg,"text, signboard or recipe page",0.744
+smf,SMF-DataSet-Flat/fish/000262.jpg,"market / raw fish or produce, not a dish",0.694
+smf,SMF-DataSet-Flat/aloo_palak/image_271.jpg,"raw ingredient (leaf, dough, chopped herbs), not a dish",0.667
+smf,SMF-DataSet-Flat/lemonade/traditional_lemonade_psUIADT8Wyc.jpg,unrelated / abstract (not this dish),0.663
+smf,SMF-DataSet-Flat/lassi/aug_0_8367.jpg,unrelated / abstract (not this dish),0.662
+smf,SMF-DataSet-Flat/saag/image_117.jpg,"raw ingredient (leaf, dough, chopped herbs), not a dish",0.652
+smf,SMF-DataSet-Flat/lemonade/aug_0_3170.jpg,unrelated / abstract (not this dish),0.644
+smf,SMF-DataSet-Flat/lemonade/aug_0_9047.jpg,unrelated / abstract (not this dish),0.588
+smf,SMF-DataSet-Flat/puri/000262.jpg,"place named Puri (temple, festival, beach), not the bread",0.583
+smf,SMF-DataSet-Flat/rabri/000078.jpg,illustration / graphic,0.575
+smf,SMF-DataSet-Flat/rabri/000218.jpg,illustration / graphic,0.575
+smf,SMF-DataSet-Flat/milk_soda/aug_0_9615.jpg,unrelated / abstract (not this dish),0.569
+smf,SMF-DataSet-Flat/rabri/000229.jpg,illustration / graphic,0.537
+smf,SMF-DataSet-Flat/lemonade/aug_0_68.jpg,unrelated / abstract (not this dish),0.526
+smf,SMF-DataSet-Flat/fish/000009.jpg,"market / raw fish or produce, not a dish",0.512

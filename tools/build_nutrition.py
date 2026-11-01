@@ -7,10 +7,12 @@ Inputs (download first; see nutrition/README.md):
   data/nutrition_src/cofid_2021.xlsx                                   UK CoFID 2021
   data/nutrition_src/indb/INDB.xlsx, recipes_servingsize.xlsx          Indian Nutrient Databank
 
-    python tools/build_nutrition.py
+    python tools/build_nutrition.py                                     # v1: 31 classes -> nutrition/nutrition.csv
+    python tools/build_nutrition.py --classes configs/classes_v2.yaml         --sources nutrition/sources_v2.yaml --out nutrition/nutrition_v2.csv   # v2: 79 foods
 """
 from __future__ import annotations
 
+import argparse
 import csv
 import sys
 from pathlib import Path
@@ -104,26 +106,58 @@ def lookup(db: Databases, name: str, food_id) -> dict:
     raise ValueError(f"unknown database {name!r}")
 
 
+def serving_of(db: Databases, s: dict) -> tuple[float, str]:
+    """Default serving grams from a database portion named in the spec (never typed by hand)."""
+    if "serving" in s:
+        return db.fndds_portion(int(s["id"]), s["serving"])
+    if "serving_fndds" in s:
+        return db.fndds_portion(int(s["serving_fndds"]["id"]), s["serving_fndds"]["portion"])
+    return db.indb_portion(s["serving_indb"]["code"])
+
+
+def composite(db: Databases, parts: list[dict]) -> tuple[dict, float, str]:
+    """A plated dish with no database entry (e.g. halwa puri): components with database values per 100 g and
+    database portions; per-100 g values are the gram-weighted mean, the serving is the sum of the portions."""
+    total, acc, desc, serv = 0.0, {"kcal": 0.0, "protein": 0.0, "carbs": 0.0, "fat": 0.0}, [], []
+    for part in parts:
+        v = lookup(db, part["db"], part["id"])
+        grams, label = serving_of(db, part)
+        grams *= part.get("count", 1)
+        total += grams
+        for k in acc:
+            acc[k] += float(v[k]) * grams
+        desc.append(f"{part.get('count', 1)} x {v['description']}")
+        serv.append(f"{part.get('count', 1)} x {label}")
+    values = {k: acc[k] / total for k in acc}
+    values.update({"description": "Composite: " + " + ".join(desc), "source": "Composite of database rows (see notes)",
+                   "url": ""})
+    return values, round(total, 1), " + ".join(serv)
+
+
 def main() -> None:
-    spec = yaml.safe_load((ROOT / "nutrition" / "sources.yaml").read_text(encoding="utf-8"))["foods"]
-    classes = [c for c in load_classes() if c["slug"] != "not_food"]
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--classes", default=str(ROOT / "configs" / "classes.yaml"))
+    ap.add_argument("--sources", default=str(ROOT / "nutrition" / "sources.yaml"))
+    ap.add_argument("--out", default=str(ROOT / "nutrition" / "nutrition.csv"))
+    args = ap.parse_args()
+    spec = yaml.safe_load(Path(args.sources).read_text(encoding="utf-8"))["foods"]
+    classes = [c for c in load_classes(args.classes) if c["slug"] != "not_food"]
     missing = [c["slug"] for c in classes if c["slug"] not in spec]
     if missing:
-        raise SystemExit(f"nutrition/sources.yaml lacks: {missing}")
+        raise SystemExit(f"{args.sources} lacks: {missing}")
     db = Databases()
     rows = []
     for c in classes:
         s = spec[c["slug"]]
-        values = lookup(db, s["db"], s["id"])
+        if "composite" in s:
+            values, grams, serving = composite(db, s["composite"])
+            s = {**s, "id": "composite"}
+        else:
+            values = lookup(db, s["db"], s["id"])
+            grams, serving = serving_of(db, s)
         cross = lookup(db, s["crosscheck"]["db"], s["crosscheck"]["id"]) if "crosscheck" in s else None
         disagreement = abs(cross["kcal"] - values["kcal"]) / values["kcal"] * 100 if cross else None
         approximate = bool(s["approximate"]) or (disagreement is not None and disagreement > DISAGREEMENT_FLAG_PCT)
-        if "serving" in s:
-            grams, serving = db.fndds_portion(int(s["id"]), s["serving"])
-        elif "serving_fndds" in s:
-            grams, serving = db.fndds_portion(int(s["serving_fndds"]["id"]), s["serving_fndds"]["portion"])
-        else:
-            grams, serving = db.indb_portion(s["serving_indb"]["code"])
         rows.append({
             "label": c["slug"], "display_name": c["display"],
             "kcal_per_100g": round(float(values["kcal"]), 1), "protein_g_per_100g": round(float(values["protein"]), 2),
@@ -137,7 +171,7 @@ def main() -> None:
             "kcal_disagreement_pct": round(disagreement, 1) if cross else "",
             "notes": s.get("note", ""),
         })
-    out = ROOT / "nutrition" / "nutrition.csv"
+    out = Path(args.out)
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()

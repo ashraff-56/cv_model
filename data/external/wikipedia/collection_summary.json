@@ -1,0 +1,318 @@
+{
+  "biryani": {
+    "article": "Biryani",
+    "images": 15
+  },
+  "naan": {
+    "article": "Naan",
+    "images": 15
+  },
+  "roti_chapati": {
+    "article": "Chapati",
+    "images": 15
+  },
+  "paratha": {
+    "article": "Paratha",
+    "images": 15
+  },
+  "aloo_paratha": {
+    "article": "Paratha",
+    "images": 15
+  },
+  "anda_paratha": {
+    "article": "Paratha",
+    "images": 15
+  },
+  "sheermal": {
+    "article": "Sheermal",
+    "images": 4
+  },
+  "puri": {
+    "article": "Puri (food)",
+    "images": 15
+  },
+  "halwa_puri": {
+    "article": "Chole bhature",
+    "images": 10
+  },
+  "paratha_roll": {
+    "article": "Kati roll",
+    "images": 4
+  },
+  "samosa": {
+    "article": "Samosa",
+    "images": 15
+  },
+  "pakora": {
+    "article": "Pakora",
+    "images": 13
+  },
+  "gol_gappay": {
+    "article": "Panipuri",
+    "images": 14
+  },
+  "chana_chaat": {
+    "article": "Chaat",
+    "images": 14
+  },
+  "karahi": {
+    "article": "Chicken karahi",
+    "images": 2
+  },
+  "korma": {
+    "article": "Korma",
+    "images": 4
+  },
+  "chicken_curry": {
+    "article": "Chicken curry",
+    "images": 8
+  },
+  "nihari": {
+    "article": "Nihari",
+    "images": 4
+  },
+  "kunna": {
+    "article": "Punjabi cuisine",
+    "images": 13
+  },
+  "paye": {
+    "article": "Paya (food)",
+    "images": 2
+  },
+  "haleem": {
+    "article": "Haleem",
+    "images": 8
+  },
+  "aloo_gosht": {
+    "article": "Aloo gosht",
+    "images": 3
+  },
+  "palak_gosht": {
+    "article": "Saag",
+    "images": 4
+  },
+  "keema": {
+    "article": "Ground meat",
+    "images": 7
+  },
+  "kofta": {
+    "article": "Kofta",
+    "images": 14
+  },
+  "fish_curry": {
+    "article": "Fish curry",
+    "images": 0
+  },
+  "fried_fish": {
+    "article": "Fried fish",
+    "images": 15
+  },
+  "chicken_tikka": {
+    "article": "Chicken tikka",
+    "images": 7
+  },
+  "malai_boti": {
+    "article": "Chicken tikka masala",
+    "images": 2
+  },
+  "seekh_kebab": {
+    "article": "Seekh kebab",
+    "images": 4
+  },
+  "chapli_kebab": {
+    "article": "Chapli kebab",
+    "images": 2
+  },
+  "lamb_chops": {
+    "article": "Lamb chop",
+    "images": 0
+  },
+  "chicken_roast": {
+    "article": "Chargha",
+    "images": 1
+  },
+  "daal": {
+    "article": "Dal",
+    "images": 14
+  },
+  "chana_chole": {
+    "article": "Chana masala",
+    "images": 4
+  },
+  "kadhi_pakora": {
+    "article": "Kadhi",
+    "images": 7
+  },
+  "aloo_baingan": {
+    "article": "Aloo mutter",
+    "images": 1
+  },
+  "aloo_gobi": {
+    "article": "Aloo gobhi",
+    "images": 3
+  },
+  "aloo_methi": {
+    "article": "Fenugreek",
+    "images": 14
+  },
+  "aloo_palak": {
+    "article": "Saag",
+    "images": 0
+  },
+  "aloo_shimla_mirch": {
+    "article": "List of Indian dishes",
+    "images": 15
+  },
+  "bhindi": {
+    "article": "Bhindi fry",
+    "images": 4
+  },
+  "ghiya": {
+    "article": "Calabash",
+    "images": 15
+  },
+  "karela": {
+    "article": "Momordica charantia",
+    "images": 15
+  },
+  "mixed_sabzi": {
+    "article": "Thai curry",
+    "images": 15
+  },
+  "saag": {
+    "article": "Saag",
+    "images": 0
+  },
+  "raita": {
+    "article": "Raita",
+    "images": 11
+  },
+  "kachumber_salad": {
+    "article": "Kachumber",
+    "images": 1
+  },
+  "achar": {
+    "article": "South Asian pickle",
+    "images": 15
+  },
+  "pudina_chutney": {
+    "article": "Chutney",
+    "images": 15
+  },
+  "gulab_jamun": {
+    "article": "Gulab jamun",
+    "images": 15
+  },
+  "jalebi": {
+    "article": "Jalebi",
+    "images": 15
+  },
+  "gajar_halwa": {
+    "article": "Gajar ka halwa",
+    "images": 6
+  },
+  "suji_halwa": {
+    "article": "Suji ka halwa",
+    "images": 3
+  },
+  "barfi": {
+    "article": "Barfi",
+    "images": 11
+  },
+  "rabri": {
+    "article": "Rabri",
+    "images": 2
+  },
+  "ras_malai": {
+    "article": "Ras malai",
+    "images": 11
+  },
+  "kheer": {
+    "article": "Kheer",
+    "images": 15
+  },
+  "kulfi": {
+    "article": "Kulfi",
+    "images": 10
+  },
+  "falooda": {
+    "article": "Falooda",
+    "images": 10
+  },
+  "chai": {
+    "article": "Masala chai",
+    "images": 15
+  },
+  "coffee": {
+    "article": "Coffee",
+    "images": 15
+  },
+  "lassi": {
+    "article": "Lassi",
+    "images": 11
+  },
+  "lemonade": {
+    "article": "Lemonade",
+    "images": 14
+  },
+  "milk_soda": {
+    "article": "Doodh soda",
+    "images": 1
+  },
+  "sattu": {
+    "article": "Sattu",
+    "images": 3
+  },
+  "pizza": {
+    "article": "Pizza",
+    "images": 13
+  },
+  "burger": {
+    "article": "Hamburger",
+    "images": 14
+  },
+  "french_fries": {
+    "article": "French fries",
+    "images": 15
+  },
+  "fried_rice": {
+    "article": "Fried rice",
+    "images": 13
+  },
+  "omelette": {
+    "article": "Omelette",
+    "images": 14
+  },
+  "fried_chicken": {
+    "article": "Fried chicken",
+    "images": 12
+  },
+  "sandwich": {
+    "article": "Sandwich",
+    "images": 14
+  },
+  "hot_dog": {
+    "article": "Hot dog",
+    "images": 12
+  },
+  "donut": {
+    "article": "Doughnut",
+    "images": 13
+  },
+  "ice_cream": {
+    "article": "Ice cream",
+    "images": 12
+  },
+  "chocolate_cake": {
+    "article": "Chocolate cake",
+    "images": 4
+  },
+  "spaghetti": {
+    "article": "Spaghetti",
+    "images": 13
+  },
+  "salad": {
+    "article": "Salad",
+    "images": 11
+  }
+}

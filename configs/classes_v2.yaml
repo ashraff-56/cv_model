@@ -1,0 +1,510 @@
+# v2 visual classes: every usable dish of the Pakistani SMF dataset + the v1 classes + not_food.
+# List order = label index; do not reorder after training. `slug` is the stable ID (Phase 2 maps slug -> foodID).
+# `variants` are what the user picks after a match (look-alikes merged into one visual class).
+# `sources`: one-key maps {dataset_id: folder glob relative to that dataset's root} (see data_v2.yaml).
+# Merges: only near-identical meat variants (karahi, korma). SMF falooda/kulfi (1 image each) are not usable
+# as sources; those dishes come from Khana / v1 data. v1 `halwa` was split into gajar/suji halwa (food20's
+# mixed `halwa` folder dropped); v1 `curry_karahi` became `chicken_curry` now that karahi has its own class.
+classes:
+  # ---------------- rice, breads, savoury snacks ----------------
+  - slug: biryani
+    display: Biryani
+    variants: [Chicken biryani, Beef/mutton biryani, Vegetable biryani]
+    sources:
+      - khana: khana/biryani
+      - sourav80: Indian Food Images/Indian Food Images/biryani
+      - anshul: Biryani-resize/resize
+      - pkdishes: dataset/dataset/biryani
+      - food20: food20dataset/*/biriyani
+  - slug: naan
+    display: Naan
+    variants: [Plain naan, Butter naan, Garlic naan]
+    sources:
+      - khana: khana/garlic naan
+      - sourav80: Indian Food Images/Indian Food Images/naan
+      - anshul: Naan-Resized/Naan-Resized
+      - l33t20: Food Classification/butter_naan
+      - food20: food20dataset/*/butternaan
+      - smf: SMF-DataSet-Flat/naan
+  - slug: roti_chapati
+    display: Roti / Chapati
+    variants: [Roti, Chapati, Phulka]
+    sources:
+      - khana: khana/chapati
+      - sourav80: Indian Food Images/Indian Food Images/chapati
+      - pkdishes: dataset/dataset/chapati
+      - l33t20: Food Classification/chapati
+      - food20: food20dataset/*/chappati
+      - smf: SMF-DataSet-Flat/roti
+  - slug: paratha
+    display: Paratha
+    variants: [Plain paratha, Lachha paratha]
+    sources:
+      - pkdishes: dataset/dataset/paratha
+      - smf: SMF-DataSet-Flat/paratha
+  - slug: aloo_paratha
+    display: Aloo paratha
+    variants: [Aloo paratha]
+    sources:
+      - khana: khana/aloo paratha
+      - smf: SMF-DataSet-Flat/aloo_vanda_aloo_wale_parathe___aloo_snacks
+  - slug: anda_paratha
+    display: Anda paratha
+    variants: [Egg paratha]
+    sources:
+      - smf: SMF-DataSet-Flat/anda_paratha
+  - slug: sheermal
+    display: Sheermal
+    variants: [Sheermal, Taftan]
+    sources:
+      - smf: SMF-DataSet-Flat/sheermal
+  - slug: puri
+    display: Puri
+    variants: [Puri]
+    sources:
+      - smf: SMF-DataSet-Flat/puri
+      - food20: food20dataset/*/poori
+  - slug: halwa_puri
+    display: Halwa puri
+    variants: [Halwa puri with chanay]
+    sources:
+      - smf: SMF-DataSet-Flat/halwa_puri
+  - slug: paratha_roll
+    display: Paratha roll
+    variants: [Chicken paratha roll, Kathi roll]
+    sources:
+      - pkdishes: dataset/dataset/paratha_roll
+      - anshul: kathi-resize/kathi-resize
+      - l33t20: Food Classification/kaathi_rolls
+      - food20: food20dataset/*/kathi roll
+  - slug: samosa
+    display: Samosa
+    variants: [Aloo samosa, Chicken/keema samosa]
+    sources:
+      - khana: khana/samosa
+      - food101: images/samosa
+      - pkdishes: dataset/dataset/samosa
+      - l33t20: Food Classification/samosa
+      - food20: food20dataset/*/samosa
+      - smf: SMF-DataSet-Flat/samosa
+  - slug: pakora
+    display: Pakora
+    variants: [Mixed pakora, Onion pakora, Aloo pakora]
+    sources:
+      - khana: khana/onion pakoda
+      - anshul: pakora-resize/pakora-resize
+      - l33t20: Food Classification/pakode
+      - smf: SMF-DataSet-Flat/pakode
+  - slug: gol_gappay
+    display: Gol gappay
+    variants: [Gol gappay / pani puri]
+    sources:
+      - khana: khana/pani puri
+      - anshul: Pani-Puri-resize/resize
+      - l33t20: Food Classification/paani_puri
+      - smf: SMF-DataSet-Flat/gol_gappe_pani_puri
+  - slug: chana_chaat
+    display: Chana chaat
+    variants: [Chana chaat]
+    sources:
+      - smf: SMF-DataSet-Flat/chana_chaat
+  # ---------------- meat & curries ----------------
+  - slug: karahi
+    display: Karahi
+    variants: [Chicken karahi, Mutton karahi, Beef karahi]
+    sources:
+      - smf: SMF-DataSet-Flat/chicken_karahi
+      - smf: SMF-DataSet-Flat/beef_mutton_karahi
+  - slug: korma
+    display: Korma
+    variants: [Chicken korma, Mutton korma, Beef korma]
+    sources:
+      - smf: SMF-DataSet-Flat/chicken_korma
+      - smf: SMF-DataSet-Flat/mutton_beef_korma
+  - slug: chicken_curry
+    display: Chicken curry / Butter chicken
+    variants: [Chicken curry (salan), Butter chicken, Chicken tikka masala, Kadai/paneer masala]
+    sources:
+      - khana: khana/paneer masala
+      - food101: images/chicken_curry
+      - sourav80: Indian Food Images/Indian Food Images/butter_chicken
+      - sourav80: Indian Food Images/Indian Food Images/chicken_tikka_masala
+      - sourav80: Indian Food Images/Indian Food Images/kadai_paneer
+      - pkdishes: dataset/dataset/butter_chicken
+      - l33t20: Food Classification/kadai_paneer
+  - slug: nihari
+    display: Nihari
+    variants: [Beef nihari, Mutton nihari]
+    sources:
+      - smf: SMF-DataSet-Flat/nihari
+  - slug: kunna
+    display: Kunna
+    variants: [Mutton kunna]
+    sources:
+      - smf: SMF-DataSet-Flat/kunna
+  - slug: paye
+    display: Paye
+    variants: [Paye]
+    sources:
+      - smf: SMF-DataSet-Flat/paye
+  - slug: haleem
+    display: Haleem
+    variants: [Beef haleem, Chicken haleem]
+    sources:
+      - pkdishes: dataset/dataset/haleem
+      - smf: SMF-DataSet-Flat/haleem
+  - slug: aloo_gosht
+    display: Aloo gosht
+    variants: [Aloo gosht]
+    sources:
+      - smf: SMF-DataSet-Flat/aloo_gosht
+  - slug: palak_gosht
+    display: Palak gosht
+    variants: [Palak gosht]
+    sources:
+      - smf: SMF-DataSet-Flat/palak_gosht
+  - slug: keema
+    display: Keema
+    variants: [Beef keema, Chicken keema, Keema matar]
+    sources:
+      - smf: SMF-DataSet-Flat/keema
+  - slug: kofta
+    display: Kofta
+    variants: [Kofta curry, Malai kofta]
+    sources:
+      - smf: SMF-DataSet-Flat/kofta
+      - anshul: Kofta-Resized/Kofta-Resized
+  - slug: fish_curry
+    display: Fish curry
+    variants: [Fish curry]
+    sources:
+      - khana: khana/fish curry
+      - smf: SMF-DataSet-Flat/fish_curry
+  - slug: fried_fish
+    display: Fried / grilled fish
+    variants: [Fried fish, Grilled fish]
+    sources:
+      - smf: SMF-DataSet-Flat/fish
+  - slug: chicken_tikka
+    display: Chicken tikka
+    variants: [Chicken tikka, Tandoori chicken]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/chicken_tikka
+      - pkdishes: dataset/dataset/chicken_tikka
+      - food20: food20dataset/*/tandoori chicken
+      - smf: SMF-DataSet-Flat/chicken_tikka
+  - slug: malai_boti
+    display: Malai boti
+    variants: [Malai boti]
+    sources:
+      - smf: SMF-DataSet-Flat/malai_boti
+  - slug: seekh_kebab
+    display: Seekh kebab
+    variants: [Beef seekh kebab, Chicken seekh kebab]
+    sources:
+      - khana: khana/seekh kebab
+      - smf: SMF-DataSet-Flat/seekh_kebab
+  - slug: chapli_kebab
+    display: Chapli kebab
+    variants: [Chapli kebab]
+    sources:
+      - smf: SMF-DataSet-Flat/chapli_kebab
+  - slug: lamb_chops
+    display: Lamb chops
+    variants: [Mutton chops]
+    sources:
+      - smf: SMF-DataSet-Flat/lamb_chops
+  - slug: chicken_roast
+    display: Chicken roast / chargha
+    variants: [Chicken roast, Chargha]
+    sources:
+      - smf: SMF-DataSet-Flat/chicken_roast
+  # ---------------- daal & vegetables ----------------
+  - slug: daal
+    display: Daal
+    variants: [Daal chana, Daal mash, Daal masoor, Daal makhani]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/dal_makhani
+      - sourav80: Indian Food Images/Indian Food Images/dal_tadka
+      - anshul: dal_resized/dal_resized
+      - l33t20: Food Classification/dal_makhani
+  - slug: chana_chole
+    display: Chana / Chole
+    variants: [Chana masala, Chole]
+    sources:
+      - khana: khana/chana masala
+      - khana: khana/chole bhature
+      - sourav80: Indian Food Images/Indian Food Images/chana_masala
+      - anshul: Chole-Bhature-Resized/Chole-Bhature-Resized
+      - l33t20: Food Classification/chole_bhature
+  - slug: kadhi_pakora
+    display: Kadhi pakora
+    variants: [Kadhi pakora]
+    sources:
+      - smf: SMF-DataSet-Flat/kadhi_pakora
+  - slug: aloo_baingan
+    display: Aloo baingan
+    variants: [Aloo baingan]
+    sources:
+      - smf: SMF-DataSet-Flat/aloo_baingan
+  - slug: aloo_gobi
+    display: Aloo gobi
+    variants: [Aloo gobi]
+    sources:
+      - khana: khana/aloo gobi
+      - smf: SMF-DataSet-Flat/aloo_gobi
+  - slug: aloo_methi
+    display: Aloo methi
+    variants: [Aloo methi]
+    sources:
+      - khana: khana/aloo methi
+      - smf: SMF-DataSet-Flat/aloo_methi
+  - slug: aloo_palak
+    display: Aloo palak
+    variants: [Aloo palak]
+    sources:
+      - smf: SMF-DataSet-Flat/aloo_palak
+  - slug: aloo_shimla_mirch
+    display: Aloo shimla mirch
+    variants: [Aloo shimla mirch]
+    sources:
+      - smf: SMF-DataSet-Flat/aloo_shimla_mirch
+  - slug: bhindi
+    display: Bhindi
+    variants: [Bhindi masala]
+    sources:
+      - khana: khana/bhindi masala
+      - smf: SMF-DataSet-Flat/bhindi
+  - slug: ghiya
+    display: Ghiya / lauki
+    variants: [Ghiya (bottle gourd)]
+    sources:
+      - smf: SMF-DataSet-Flat/ghiya_bottle_gourd
+  - slug: karela
+    display: Karela
+    variants: [Karela (bitter gourd)]
+    sources:
+      - smf: SMF-DataSet-Flat/karela_bitter_gourd
+  - slug: mixed_sabzi
+    display: Mixed sabzi
+    variants: [Mixed vegetables]
+    sources:
+      - smf: SMF-DataSet-Flat/mixed_sabzi
+  - slug: saag
+    display: Saag
+    variants: [Sarson ka saag, Palak saag]
+    sources:
+      - smf: SMF-DataSet-Flat/saag
+  # ---------------- sides ----------------
+  - slug: raita
+    display: Raita
+    variants: [Raita]
+    sources:
+      - smf: SMF-DataSet-Flat/raita
+  - slug: kachumber_salad
+    display: Kachumber salad
+    variants: [Kachumber salad]
+    sources:
+      - smf: SMF-DataSet-Flat/kachumber_salad
+  - slug: achar
+    display: Achar
+    variants: [Mixed achar (pickle)]
+    sources:
+      - smf: SMF-DataSet-Flat/achar_pickle
+  - slug: pudina_chutney
+    display: Pudina chutney
+    variants: [Mint chutney]
+    sources:
+      - smf: SMF-DataSet-Flat/pudina_chutney_mint_chutney
+  # ---------------- sweets ----------------
+  - slug: gulab_jamun
+    display: Gulab jamun
+    variants: [Gulab jamun]
+    sources:
+      - khana: khana/gulab jamun
+      - sourav80: Indian Food Images/Indian Food Images/gulab_jamun
+      - food20: food20dataset/*/gulab jamun
+      - smf: SMF-DataSet-Flat/gulab_jamun
+  - slug: jalebi
+    display: Jalebi
+    variants: [Jalebi]
+    sources:
+      - khana: khana/jalebi
+      - sourav80: Indian Food Images/Indian Food Images/jalebi
+      - anshul: Jalebi-Resize/Jalebi-Resize
+      - l33t20: Food Classification/jalebi
+  - slug: gajar_halwa
+    display: Gajar halwa
+    variants: [Gajar ka halwa]
+    sources:
+      - khana: khana/gajar ka halwa
+      - sourav80: Indian Food Images/Indian Food Images/gajar_ka_halwa
+      - smf: SMF-DataSet-Flat/gajar_halwa
+  - slug: suji_halwa
+    display: Suji halwa
+    variants: [Suji halwa (sooji ka halwa)]
+    sources:
+      - sourav80: Indian Food Images/Indian Food Images/sheera
+      - smf: SMF-DataSet-Flat/suji_halwa
+  - slug: barfi
+    display: Barfi
+    variants: [Milk barfi, Kaju katli]
+    sources:
+      - khana: khana/kaju katli
+      - smf: SMF-DataSet-Flat/barfi
+  - slug: rabri
+    display: Rabri
+    variants: [Rabri]
+    sources:
+      - smf: SMF-DataSet-Flat/rabri
+  - slug: ras_malai
+    display: Ras malai
+    variants: [Ras malai]
+    sources:
+      - smf: SMF-DataSet-Flat/ras_malai
+  - slug: kheer
+    display: Kheer
+    variants: [Kheer, Phirni]
+    sources:
+      - khana: khana/kheer
+      - khana: khana/phirni
+  - slug: kulfi
+    display: Kulfi
+    variants: [Kulfi]
+    sources:
+      - khana: khana/kulfi
+      - l33t20: Food Classification/kulfi
+  - slug: falooda
+    display: Falooda
+    variants: [Falooda]
+    sources:
+      - khana: khana/falooda
+  # ---------------- drinks ----------------
+  - slug: chai
+    display: Chai
+    variants: [Doodh patti, Chai with milk]
+    sources:
+      - pkdishes: dataset/dataset/chai
+      - l33t20: Food Classification/chai
+      - smf: SMF-DataSet-Flat/chai_tea
+  - slug: coffee
+    display: Coffee
+    variants: [Coffee, Cappuccino]
+    sources:
+      - smf: SMF-DataSet-Flat/coffee
+  - slug: lassi
+    display: Lassi
+    variants: [Sweet lassi, Salty lassi, Chaas]
+    sources:
+      - khana: khana/chaas
+      - smf: SMF-DataSet-Flat/lassi
+  - slug: lemonade
+    display: Lemonade / nimbu pani
+    variants: [Lemonade, Nimbu pani]
+    sources:
+      - smf: SMF-DataSet-Flat/lemonade
+  - slug: milk_soda
+    display: Milk / doodh soda
+    variants: [Doodh soda, Milk]
+    sources:
+      - smf: SMF-DataSet-Flat/milk_soda
+  - slug: sattu
+    display: Sattu sharbat
+    variants: [Sattu drink]
+    sources:
+      - smf: SMF-DataSet-Flat/sattu
+  # ---------------- international ----------------
+  - slug: pizza
+    display: Pizza
+    variants: [Pizza]
+    sources:
+      - khana: khana/chicken pizza
+      - khana: khana/margherita pizza
+      - khana: khana/paneer pizza
+      - khana: khana/pepperoni pizza
+      - food101: images/pizza
+      - l33t20: Food Classification/pizza
+      - fastfood: Fast Food Classification V2/Train/Pizza
+  - slug: burger
+    display: Burger
+    variants: [Beef burger, Chicken burger, Zinger burger]
+    sources:
+      - food101: images/hamburger
+      - l33t20: Food Classification/burger
+      - fastfood: Fast Food Classification V2/Train/Burger
+  - slug: french_fries
+    display: French fries
+    variants: [French fries]
+    sources:
+      - food101: images/french_fries
+      - pkdishes: dataset/dataset/french_fries
+      - fastfood: Fast Food Classification V2/Train/Fries
+      - smf: SMF-DataSet-Flat/fries
+  - slug: fried_rice
+    display: Fried rice
+    variants: [Chicken fried rice, Egg fried rice]
+    sources:
+      - food101: images/fried_rice
+      - pkdishes: dataset/dataset/fried_rice
+      - l33t20: Food Classification/fried_rice
+  - slug: omelette
+    display: Omelette
+    variants: [Omelette, Fried egg]
+    sources:
+      - food101: images/omelette
+      - pkdishes: dataset/dataset/omelette
+  - slug: fried_chicken
+    display: Fried chicken
+    variants: [Fried chicken, Chicken wings]
+    sources:
+      - khana: khana/chicken wings
+      - food101: images/chicken_wings
+      - fastfood: Fast Food Classification V2/Train/Crispy Chicken
+  - slug: sandwich
+    display: Sandwich
+    variants: [Club sandwich, Grilled sandwich]
+    sources:
+      - khana: khana/grilled sandwich
+      - food101: images/club_sandwich
+      - fastfood: Fast Food Classification V2/Train/Sandwich
+  - slug: hot_dog
+    display: Hot dog
+    variants: [Hot dog]
+    sources:
+      - food101: images/hot_dog
+      - fastfood: Fast Food Classification V2/Train/Hot Dog
+  - slug: donut
+    display: Donut
+    variants: [Donut]
+    sources:
+      - food101: images/donuts
+      - fastfood: Fast Food Classification V2/Train/Donut
+  - slug: ice_cream
+    display: Ice cream
+    variants: [Ice cream]
+    sources:
+      - food101: images/ice_cream
+  - slug: chocolate_cake
+    display: Chocolate cake
+    variants: [Chocolate cake]
+    sources:
+      - food101: images/chocolate_cake
+  - slug: spaghetti
+    display: Spaghetti / pasta
+    variants: [Spaghetti bolognese, Spaghetti carbonara]
+    sources:
+      - food101: images/spaghetti_bolognese
+      - food101: images/spaghetti_carbonara
+  - slug: salad
+    display: Salad
+    variants: [Green salad, Greek salad, Caesar salad]
+    sources:
+      - food101: images/greek_salad
+      - food101: images/caesar_salad
+      - smf: SMF-DataSet-Flat/salad
+  # ---------------- not food ----------------
+  - slug: not_food
+    display: Not food
+    variants: []
+    sources:
+      - food5k: "*/non_food"

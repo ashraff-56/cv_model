@@ -4,10 +4,12 @@ Layout: <folder>/<class_slug>/*.jpg  (slugs from configs/classes.yaml). Uses the
 path the app will use (predict.FoodRecognizer), including EXIF rotation and calibration.
 
     python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0 --folder eval_phone_photos
+    python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0_v2 --folder data/external/wikipedia         --exclude data/external/wikipedia/excluded.csv     # duplicates of training images + rejected labels
 """
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -25,7 +27,12 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--model-dir", required=True, type=Path)
     ap.add_argument("--folder", required=True, type=Path)
     ap.add_argument("--out", type=Path)
+    ap.add_argument("--exclude", type=Path, help="CSV with a `file` column (paths relative to --folder) to skip")
     args = ap.parse_args(argv)
+    excluded = set()
+    if args.exclude:
+        with open(args.exclude, encoding="utf-8") as f:
+            excluded = {r["file"] for r in csv.DictReader(f)}
 
     rec = FoodRecognizer(args.model_dir)
     probs, ys, skipped = [], [], []
@@ -34,7 +41,7 @@ def main(argv: list[str] | None = None) -> None:
             skipped.append(f"{cls_dir.name}/ (not a model class)")
             continue
         for f in sorted(cls_dir.iterdir()):
-            if f.suffix.lower() in EXTS:
+            if f.suffix.lower() in EXTS and f.relative_to(args.folder).as_posix() not in excluded:
                 try:
                     probs.append(rec.probabilities(f))
                     ys.append(rec.classes.index(cls_dir.name))
@@ -49,7 +56,7 @@ def main(argv: list[str] | None = None) -> None:
               "macro_f1_over_present_classes": s["macro_f1"], "ece": reliability(p, y)["ece"],
               "bands": band_report(p, y, rec.classes, rec.bands),
               "per_class": {k: v for k, v in s["per_class"].items() if v["support"]},
-              "worst_confused_pairs": s["worst_confused_pairs"], "skipped": skipped}
+              "worst_confused_pairs": s["worst_confused_pairs"], "excluded": len(excluded), "skipped": skipped}
     text = json.dumps(result, indent=2)
     print(text)
     if args.out:

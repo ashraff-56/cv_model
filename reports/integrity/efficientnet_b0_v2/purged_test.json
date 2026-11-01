@@ -1,0 +1,97 @@
+{
+  "method": "test images whose most similar TRAIN image (MobileNetV2 ImageNet embedding, not used for dedupe) exceeds the cosine threshold are removed; visual check of the 12 closest pairs: 11 are re-cropped copies of one photo",
+  "results": {
+    "efficientnet_b0_v2": {
+      "<1.01": {
+        "n": 4290,
+        "removed": 0,
+        "top1": 0.8261,
+        "top3": 0.9289,
+        "macro_f1": 0.7692,
+        "top1_ci95": [
+          0.8149,
+          0.8371
+        ]
+      },
+      "<0.88": {
+        "n": 4271,
+        "removed": 19,
+        "top1": 0.8256,
+        "top3": 0.9286,
+        "macro_f1": 0.7684,
+        "top1_ci95": [
+          0.8146,
+          0.8366
+        ]
+      },
+      "<0.85": {
+        "n": 4218,
+        "removed": 72,
+        "top1": 0.825,
+        "top3": 0.9282,
+        "macro_f1": 0.766,
+        "top1_ci95": [
+          0.8134,
+          0.8359
+        ]
+      },
+      "<0.8": {
+        "n": 3947,
+        "removed": 343,
+        "top1": 0.8219,
+        "top3": 0.9265,
+        "macro_f1": 0.7574,
+        "top1_ci95": [
+          0.81,
+          0.8338
+        ]
+      }
+    },
+    "mobilenetv2_v2": {
+      "<1.01": {
+        "n": 4290,
+        "removed": 0,
+        "top1": 0.7991,
+        "top3": 0.9175,
+        "macro_f1": 0.7436,
+        "top1_ci95": [
+          0.7867,
+          0.8107
+        ]
+      },
+      "<0.88": {
+        "n": 4271,
+        "removed": 19,
+        "top1": 0.7986,
+        "top3": 0.9171,
+        "macro_f1": 0.7431,
+        "top1_ci95": [
+          0.7867,
+          0.8106
+        ]
+      },
+      "<0.85": {
+        "n": 4218,
+        "removed": 72,
+        "top1": 0.7971,
+        "top3": 0.9163,
+        "macro_f1": 0.7392,
+        "top1_ci95": [
+          0.7847,
+          0.8089
+        ]
+      },
+      "<0.8": {
+        "n": 3947,
+        "removed": 343,
+        "top1": 0.7928,
+        "top3": 0.9136,
+        "macro_f1": 0.7314,
+        "top1_ci95": [
+          0.7801,
+          0.8059
+        ]
+      }
+    }
+  }
+}

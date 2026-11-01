@@ -69,3 +69,88 @@ def test_bundle_end_to_end(tiny_bundle, photo, tmp_path):
     assert np.allclose(rec.probabilities(path), ref, atol=1e-4)
     n = rec.nutrition_for("biryani", 200)
     assert n["grams"] == 200 and n["kcal"] > 0
+
+
+@pytest.fixture
+def tiny_portion_bundle(tmp_path):
+    """A real exported portion bundle from a random-weight PortionNet (no download, no training)."""
+    import torch
+
+    from smartbite_cv.portion import PortionNet, export_onnx as export_portion
+
+    run = tmp_path / "portion_run"
+    (run / "eval").mkdir(parents=True)
+    model_cfg = {"name": "mobilenetv2_050", "init_log_mass": float(np.log(200.0))}
+    torch.save({"model": PortionNet(model_cfg, pretrained=False).state_dict(), "model_cfg": model_cfg,
+                "img_hw": [60, 80]}, run / "best.pt")
+    (run / "eval" / "portion_metrics.json").write_text(json.dumps({
+        "uncertainty": {"sigma_scale_fitted_on_val": 1.0},
+        "prior_used_for_fusion_eval": {"sigma_log": 0.6},
+        "model": {"mae_g": 40.0, "mae_pct_of_mean": 19.0, "median_ape_pct": 15.0}}))
+    export_portion(run, tmp_path / "portion")
+    return tmp_path / "portion"
+
+
+def test_quantity_combines_photo_estimate_with_typical_serving(tiny_bundle, tiny_portion_bundle, photo, tmp_path):
+    from smartbite_cv.nutrition import NutritionInfo
+
+    class Provider:
+        def get(self, label):
+            return NutritionInfo(label, label.title(), 150.0, 10.0, 15.0, 5.0, 300.0, "test", "1", "", "", False, "")
+
+    bundle, _ = tiny_bundle
+    rec = FoodRecognizer(bundle, nutrition=Provider(), portion_dir=tiny_portion_bundle)
+    img = photo(7)
+    q = rec.quantity_for(img, "biryani")
+    # zero-initialised head: photo estimate = exp(init) = 200 g; typical serving 300 g; both enter the result
+    assert abs(q["photoEstimateG"] - 200.0) < 1.0 and q["typicalServingG"] == 300.0
+    assert 200.0 < q["grams"] < 300.0
+    assert q["rangeG"][0] < q["grams"] < q["rangeG"][1]
+    portrait = img.rotate(90, expand=True)
+    assert abs(rec.quantity_for(portrait, "biryani")["photoEstimateG"] - 200.0) < 1.0
+    n = rec.nutrition_for("biryani", q["grams"])
+    assert abs(n["kcal"] - 150.0 * q["grams"] / 100) < 0.6
+
+
+def test_quantity_without_portion_model_uses_typical_serving(tiny_bundle, photo):
+    bundle, _ = tiny_bundle
+    from smartbite_cv.nutrition import NutritionInfo
+
+    class Provider:
+        def get(self, label):
+            return NutritionInfo(label, label.title(), 150.0, 10.0, 15.0, 5.0, 300.0, "test", "1", "", "", False, "")
+
+    q = FoodRecognizer(bundle, nutrition=Provider()).quantity_for(photo(1), "daal")
+    assert q["grams"] == 300.0 and "typical serving" in q["method"]
+
+
+def test_plate_path_is_used_first_and_falls_back_without_a_plate(tiny_bundle, tiny_portion_bundle, photo):
+    import cv2
+
+    from smartbite_cv.nutrition import NutritionInfo
+    from smartbite_cv.plate import Plate, border_fraction, mask_geometry
+
+    class Provider:
+        def get(self, label):
+            return NutritionInfo(label, label.title(), 150.0, 10.0, 15.0, 5.0, 300.0, "test", "1", "", "", False, "")
+
+    class FakeDetector:   # stands in for OWLv2 + SAM 2.1
+        found = True
+
+        def detect(self, img):
+            if not self.found:
+                return None
+            m = np.zeros((img.height, img.width), np.uint8)
+            cv2.ellipse(m, (img.width // 2, img.height // 2), (img.width // 3, img.height // 4), 0, 0, 360, 1, -1)
+            m = m.astype(bool)
+            return Plate("plate", "a plate", 0.9, (0, 0, img.width, img.height), m, mask_geometry(m), border_fraction(m))
+
+    bundle, _ = tiny_bundle
+    det = FakeDetector()
+    rec = FoodRecognizer(bundle, nutrition=Provider(), portion_dir=tiny_portion_bundle,
+                         plate_portion_dir=tiny_portion_bundle, plate_detector=det)
+    q = rec.quantity_for(photo(3), "biryani")
+    assert q["method"].startswith("plate-relative") and q["plate"]["inFrame"] and "warning" not in q
+    det.found = False
+    q = rec.quantity_for(photo(3), "biryani")
+    assert q["method"] == "photo estimate combined with typical serving (no plate found)"

@@ -1,0 +1,94 @@
+# Data preparation settings, v2: Pakistani dishes from SMF + Khana added (smartbite_cv.prepare).
+# Paths are relative to the repo root.
+seed: 20261031
+image_exts: [.jpg, .jpeg, .png, .webp, .jfif, .bmp]
+min_side: 96               # px; smaller images are dropped as unusable
+
+dedupe:
+  max_hamming: 6           # 64-bit pHash distance counted as a near-duplicate (also vs mirror image)
+  embedding:               # second pass: catches re-cropped copies that pHash misses
+    enabled: true
+    model: efficientnet_b0.ra_in1k   # ImageNet features only (no food training)
+    min_cosine: 0.85       # visual audit (tools/audit_embedding_pairs.py): >=0.90 almost all re-crops of one photo;
+                           # 0.85-0.90 still has some; below 0.85 mostly distinct photos. False merges only cost an image.
+    audit_min_cosine: 0.85 # pairs above this are saved for the audit
+    cache_file: data/cache/embeddings_effb0.npz
+    batch_size: 32         # small CPU batches + 2 loader processes: fits a 16 GB laptop
+    workers: 2
+
+split: {train: 0.70, val: 0.15, test: 0.15}   # applied per class, after dedupe, before any augmentation
+cap_per_class: 600         # random (seeded) subset of de-duplicated images when a class has more
+min_per_class: 80          # classes below this after dedupe are dropped with a warning
+exclude: data/splits/exclude_v2.csv   # reviewed junk files (dataset, relpath, reason)
+inspect_cache: data/cache/inspect_v2.json   # per-file decode/pHash results, reused on re-runs
+
+manifest: data/splits/manifest_v2.csv
+report_dir: reports/data_v2
+cache:                     # resized copies used for training (speed); originals stay untouched
+  dir: data/cache/s288
+  short_side: 288
+  quality: 92
+
+# Where each source dataset lives. `local` is the path on this machine; on Kaggle the
+# directory under /kaggle/input that contains `marker` is used.
+datasets:
+  food101:
+    title: Food-101
+    kaggle_ref: kmader/food41
+    url: https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
+    local: data/raw/food101
+    marker: images/samosa
+  sourav80:
+    title: Indian Food Images Dataset (80 classes)
+    kaggle_ref: iamsouravbanerjee/indian-food-images-dataset
+    local: data/raw/iamsouravbanerjee_indian-food-images-dataset
+    marker: Indian Food Images/Indian Food Images/biryani
+  anshul:
+    title: The-massive-Indian-Food-Dataset
+    kaggle_ref: anshulmehtakaggl/themassiveindianfooddataset
+    local: data/raw/anshulmehtakaggl_themassiveindianfooddataset
+    marker: Biryani-resize/resize
+  pkdishes:
+    title: Pakistani Dishes Dataset (original 100/class folder only)
+    kaggle_ref: useractivated/dataset
+    local: data/raw/useractivated_dataset
+    marker: dataset/dataset/haleem
+  l33t20:
+    title: Indian Food Classification (20 classes)
+    kaggle_ref: l33tc0d3r/indian-food-classification
+    local: data/raw/l33tc0d3r_indian-food-classification
+    marker: Food Classification/chai
+  food20:
+    title: food20 dataset (Indian food)
+    kaggle_ref: cdart99/food20dataset
+    local: data/raw/cdart99_food20dataset
+    marker: food20dataset/train_set/halwa
+  fastfood:
+    title: Fast Food Classification Dataset - V2
+    kaggle_ref: utkarshsaxenadn/fast-food-classification-dataset
+    local: data/raw/utkarshsaxenadn__fast-food-classification-dataset
+    marker: "Fast Food Classification V2/Train/Crispy Chicken"
+  food5k:
+    title: Food-5K (non-food images only)
+    kaggle_ref: trolukovich/food5k-image-dataset
+    url: https://www.epfl.ch/labs/mmspg/downloads/food-image-datasets/
+    local: data/raw/trolukovich__food5k
+    marker: training/non_food
+  smf:
+    title: SmartFoodAnalyzer-Dataset (Pakistani cuisine), Farooq et al., Nutrients 2026
+    kaggle_ref: alishba7800/smf-dataset
+    local: data/raw/alishba7800_smf-dataset/SMF-DataSet-Flat
+    marker: SMF-DataSet-Flat/nihari
+    # The dataset ships augmented copies next to originals under several naming schemes
+    # (000005_aug1_cfc6.jpg, image_12_aug2_9dd2.jpg, aug_0_1023.jpg, aug_blur_nihari_113.jpg, ...).
+    # Copies of one photo are grouped (never split across train/val/test); altered files stay out of test.
+    group_strip: ['^(?:aug_blur_)+', '^aug_\d+_', '_aug\d+(?:_[0-9a-f]{4})?$']
+    tier_rules: [['_aug\d+', 2], ['^aug_', 1]]   # 2: heavy noise/rotation, train only; 1: blur/rotation, eval fallback
+  khana:
+    title: "Khana: A Comprehensive Indian Cuisine Dataset (Prabhu, 2025), subset of dishes mapped to SmartBite classes"
+    kaggle_ref: null          # not on Kaggle; the used images are uploaded as a private dataset (see tools/build_kaggle.py)
+    url: https://khana.omkarprabhu.in/
+    local: data/raw/khana
+    marker: khana/biryani
+    max_per_folder: 400       # seeded sample per dish folder (folders hold 125-7,884 images; class cap is 600)
+    any_extension: true       # files are named by content hash without an extension

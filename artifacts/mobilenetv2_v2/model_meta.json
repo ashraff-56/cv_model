@@ -1,0 +1,503 @@
+{
+  "modelName": "mobilenetv2_100.ra_in1k",
+  "classes": [
+    {
+      "slug": "biryani",
+      "displayName": "Biryani",
+      "variants": [
+        "Chicken biryani",
+        "Beef/mutton biryani",
+        "Vegetable biryani"
+      ]
+    },
+    {
+      "slug": "naan",
+      "displayName": "Naan",
+      "variants": [
+        "Plain naan",
+        "Butter naan",
+        "Garlic naan"
+      ]
+    },
+    {
+      "slug": "roti_chapati",
+      "displayName": "Roti / chapati",
+      "variants": [
+        "Chapati",
+        "Tandoori roti"
+      ]
+    },
+    {
+      "slug": "paratha",
+      "displayName": "Paratha",
+      "variants": [
+        "Plain paratha",
+        "Aloo paratha"
+      ]
+    },
+    {
+      "slug": "aloo_paratha",
+      "displayName": "aloo_paratha",
+      "variants": []
+    },
+    {
+      "slug": "anda_paratha",
+      "displayName": "anda_paratha",
+      "variants": []
+    },
+    {
+      "slug": "sheermal",
+      "displayName": "sheermal",
+      "variants": []
+    },
+    {
+      "slug": "puri",
+      "displayName": "puri",
+      "variants": []
+    },
+    {
+      "slug": "halwa_puri",
+      "displayName": "halwa_puri",
+      "variants": []
+    },
+    {
+      "slug": "paratha_roll",
+      "displayName": "Paratha roll / kathi roll",
+      "variants": [
+        "Chicken paratha roll",
+        "Seekh kabab roll"
+      ]
+    },
+    {
+      "slug": "samosa",
+      "displayName": "Samosa",
+      "variants": [
+        "Aloo samosa",
+        "Chicken/keema samosa"
+      ]
+    },
+    {
+      "slug": "pakora",
+      "displayName": "Pakora",
+      "variants": [
+        "Vegetable pakora",
+        "Onion pakora"
+      ]
+    },
+    {
+      "slug": "gol_gappay",
+      "displayName": "Gol gappay / pani puri",
+      "variants": [
+        "Gol gappay"
+      ]
+    },
+    {
+      "slug": "chana_chaat",
+      "displayName": "chana_chaat",
+      "variants": []
+    },
+    {
+      "slug": "karahi",
+      "displayName": "karahi",
+      "variants": []
+    },
+    {
+      "slug": "korma",
+      "displayName": "korma",
+      "variants": []
+    },
+    {
+      "slug": "chicken_curry",
+      "displayName": "chicken_curry",
+      "variants": []
+    },
+    {
+      "slug": "nihari",
+      "displayName": "nihari",
+      "variants": []
+    },
+    {
+      "slug": "paye",
+      "displayName": "paye",
+      "variants": []
+    },
+    {
+      "slug": "haleem",
+      "displayName": "Haleem",
+      "variants": [
+        "Beef haleem",
+        "Chicken haleem"
+      ]
+    },
+    {
+      "slug": "palak_gosht",
+      "displayName": "palak_gosht",
+      "variants": []
+    },
+    {
+      "slug": "keema",
+      "displayName": "keema",
+      "variants": []
+    },
+    {
+      "slug": "kofta",
+      "displayName": "kofta",
+      "variants": []
+    },
+    {
+      "slug": "fish_curry",
+      "displayName": "fish_curry",
+      "variants": []
+    },
+    {
+      "slug": "fried_fish",
+      "displayName": "fried_fish",
+      "variants": []
+    },
+    {
+      "slug": "chicken_tikka",
+      "displayName": "Chicken tikka / tandoori",
+      "variants": [
+        "Chicken tikka",
+        "Tandoori chicken",
+        "Chicken boti"
+      ]
+    },
+    {
+      "slug": "malai_boti",
+      "displayName": "malai_boti",
+      "variants": []
+    },
+    {
+      "slug": "seekh_kebab",
+      "displayName": "seekh_kebab",
+      "variants": []
+    },
+    {
+      "slug": "chapli_kebab",
+      "displayName": "chapli_kebab",
+      "variants": []
+    },
+    {
+      "slug": "lamb_chops",
+      "displayName": "lamb_chops",
+      "variants": []
+    },
+    {
+      "slug": "chicken_roast",
+      "displayName": "chicken_roast",
+      "variants": []
+    },
+    {
+      "slug": "daal",
+      "displayName": "Daal",
+      "variants": [
+        "Daal chana",
+        "Daal masoor",
+        "Daal mash",
+        "Daal makhani"
+      ]
+    },
+    {
+      "slug": "chana_chole",
+      "displayName": "Chanay / chole",
+      "variants": [
+        "Chana masala",
+        "Chole with puri/bhatura"
+      ]
+    },
+    {
+      "slug": "kadhi_pakora",
+      "displayName": "kadhi_pakora",
+      "variants": []
+    },
+    {
+      "slug": "aloo_baingan",
+      "displayName": "aloo_baingan",
+      "variants": []
+    },
+    {
+      "slug": "aloo_gobi",
+      "displayName": "aloo_gobi",
+      "variants": []
+    },
+    {
+      "slug": "aloo_methi",
+      "displayName": "aloo_methi",
+      "variants": []
+    },
+    {
+      "slug": "aloo_palak",
+      "displayName": "aloo_palak",
+      "variants": []
+    },
+    {
+      "slug": "aloo_shimla_mirch",
+      "displayName": "aloo_shimla_mirch",
+      "variants": []
+    },
+    {
+      "slug": "bhindi",
+      "displayName": "bhindi",
+      "variants": []
+    },
+    {
+      "slug": "ghiya",
+      "displayName": "ghiya",
+      "variants": []
+    },
+    {
+      "slug": "karela",
+      "displayName": "karela",
+      "variants": []
+    },
+    {
+      "slug": "mixed_sabzi",
+      "displayName": "mixed_sabzi",
+      "variants": []
+    },
+    {
+      "slug": "saag",
+      "displayName": "saag",
+      "variants": []
+    },
+    {
+      "slug": "raita",
+      "displayName": "raita",
+      "variants": []
+    },
+    {
+      "slug": "kachumber_salad",
+      "displayName": "kachumber_salad",
+      "variants": []
+    },
+    {
+      "slug": "achar",
+      "displayName": "achar",
+      "variants": []
+    },
+    {
+      "slug": "pudina_chutney",
+      "displayName": "pudina_chutney",
+      "variants": []
+    },
+    {
+      "slug": "gulab_jamun",
+      "displayName": "Gulab jamun",
+      "variants": [
+        "Gulab jamun"
+      ]
+    },
+    {
+      "slug": "jalebi",
+      "displayName": "Jalebi",
+      "variants": [
+        "Jalebi"
+      ]
+    },
+    {
+      "slug": "gajar_halwa",
+      "displayName": "gajar_halwa",
+      "variants": []
+    },
+    {
+      "slug": "suji_halwa",
+      "displayName": "suji_halwa",
+      "variants": []
+    },
+    {
+      "slug": "barfi",
+      "displayName": "barfi",
+      "variants": []
+    },
+    {
+      "slug": "rabri",
+      "displayName": "rabri",
+      "variants": []
+    },
+    {
+      "slug": "ras_malai",
+      "displayName": "ras_malai",
+      "variants": []
+    },
+    {
+      "slug": "kheer",
+      "displayName": "kheer",
+      "variants": []
+    },
+    {
+      "slug": "kulfi",
+      "displayName": "Kulfi",
+      "variants": [
+        "Kulfi"
+      ]
+    },
+    {
+      "slug": "falooda",
+      "displayName": "falooda",
+      "variants": []
+    },
+    {
+      "slug": "chai",
+      "displayName": "Chai (milk tea)",
+      "variants": [
+        "Doodh patti chai",
+        "Chai with sugar"
+      ]
+    },
+    {
+      "slug": "coffee",
+      "displayName": "coffee",
+      "variants": []
+    },
+    {
+      "slug": "lassi",
+      "displayName": "lassi",
+      "variants": []
+    },
+    {
+      "slug": "lemonade",
+      "displayName": "lemonade",
+      "variants": []
+    },
+    {
+      "slug": "pizza",
+      "displayName": "Pizza",
+      "variants": [
+        "Chicken pizza",
+        "Cheese pizza"
+      ]
+    },
+    {
+      "slug": "burger",
+      "displayName": "Burger",
+      "variants": [
+        "Beef burger",
+        "Chicken burger"
+      ]
+    },
+    {
+      "slug": "french_fries",
+      "displayName": "French fries",
+      "variants": [
+        "French fries"
+      ]
+    },
+    {
+      "slug": "fried_rice",
+      "displayName": "Fried rice",
+      "variants": [
+        "Chicken fried rice",
+        "Egg fried rice"
+      ]
+    },
+    {
+      "slug": "omelette",
+      "displayName": "Omelette",
+      "variants": [
+        "Plain omelette",
+        "Masala omelette"
+      ]
+    },
+    {
+      "slug": "fried_chicken",
+      "displayName": "Fried chicken / wings",
+      "variants": [
+        "Broast / fried chicken",
+        "Chicken wings"
+      ]
+    },
+    {
+      "slug": "sandwich",
+      "displayName": "Sandwich",
+      "variants": [
+        "Club sandwich",
+        "Chicken sandwich"
+      ]
+    },
+    {
+      "slug": "hot_dog",
+      "displayName": "Hot dog",
+      "variants": [
+        "Hot dog"
+      ]
+    },
+    {
+      "slug": "donut",
+      "displayName": "Donut",
+      "variants": [
+        "Glazed donut",
+        "Chocolate donut"
+      ]
+    },
+    {
+      "slug": "ice_cream",
+      "displayName": "Ice cream",
+      "variants": [
+        "Ice cream"
+      ]
+    },
+    {
+      "slug": "chocolate_cake",
+      "displayName": "Chocolate cake",
+      "variants": [
+        "Chocolate cake"
+      ]
+    },
+    {
+      "slug": "spaghetti",
+      "displayName": "Spaghetti / pasta",
+      "variants": [
+        "Spaghetti bolognese",
+        "Spaghetti carbonara"
+      ]
+    },
+    {
+      "slug": "salad",
+      "displayName": "Salad",
+      "variants": [
+        "Greek salad",
+        "Caesar salad"
+      ]
+    },
+    {
+      "slug": "not_food",
+      "displayName": "Not food",
+      "variants": []
+    }
+  ],
+  "notFoodLabel": "not_food",
+  "imgSize": 224,
+  "resizeShortSide": 256,
+  "interpolation": "bicubic",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "temperature": 0.776752828278709,
+  "onnxOpset": 17,
+  "onnxParityMaxAbsDiff": 8.58306884765625e-06,
+  "checkpoint": {
+    "stage": 2,
+    "epoch": 15,
+    "val": {
+      "stage": 2,
+      "epoch": 15,
+      "lr": 0.00013098633426310231,
+      "train_loss": 1.0480795693703187,
+      "train_top1": 0.9460637019230769,
+      "val_loss": 0.8474437594413757,
+      "val_top1": 0.8058616647127784,
+      "val_top3": 0.9118405627198124,
+      "val_macro_f1": 0.7437337847831523,
+      "seconds": 85.9
+    }
+  },
+  "exportedAt": "2026-10-31T23:46:09+00:00"
+}

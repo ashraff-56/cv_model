@@ -55,3 +55,18 @@ def test_disagreeing_sources_are_flagged():
         for row in csv.DictReader(f):
             if row["kcal_disagreement_pct"] and float(row["kcal_disagreement_pct"]) > 30:
                 assert row["approximate"] == "true", row["label"]
+
+
+def test_v2_table_covers_every_v2_food_with_sane_values():
+    from smartbite_cv.config import REPO_ROOT
+    provider = CsvNutritionProvider(REPO_ROOT / "nutrition" / "nutrition_v2.csv")
+    foods = [c["slug"] for c in load_classes(REPO_ROOT / "configs" / "classes_v2.yaml") if c["slug"] != "not_food"]
+    assert sorted(provider.labels()) == sorted(foods)
+    for label in foods:
+        info = provider.get(label)
+        assert info.kcal_per_100g > 0 and info.default_serving_g > 0, label
+        atwater = 4 * info.protein_g_per_100g + 4 * info.carbs_g_per_100g + 9 * info.fat_g_per_100g
+        assert math.isclose(atwater, info.kcal_per_100g, rel_tol=0.25), label
+        if not info.source.startswith("USDA"):
+            assert info.approximate, f"{label}: non-USDA rows must be flagged approximate"
+        assert info.fat_g_per_100g < 60, f"{label}: implausible fat (INDB deep-fry rows must not be used)"

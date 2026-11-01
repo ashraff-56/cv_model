@@ -1,11 +1,17 @@
-"""Inference with the exported ONNX bundle: image in -> top-3 calibrated suggestions + band.
+"""Inference with the exported ONNX bundles: photo in -> top-3 dishes, estimated grams, nutrients.
 
 No PyTorch needed at inference time (onnxruntime + Pillow + numpy). The result is a
 SUGGESTION for the verification screen; `autoLogged` is always False.
 
-    python -m smartbite_cv.predict photo.jpg                      # top-3 + default serving
-    python -m smartbite_cv.predict photo.jpg --grams 250          # calories for 250 g of the top guess
-    python -m smartbite_cv.predict photo.jpg --grams 250 --label daal   # user picked another dish
+With a portion bundle, grams come from the photo: the estimate is combined with the dish's typical serving
+according to the model's own uncertainty, and a ~68% range is reported. --plate-portion-dir uses the plate as the
+ruler (plate found, tilt undone, plate-relative model; needs torch + transformers); when no plate is found it
+falls back to --portion-dir (fixed overhead camera model), then to the typical serving.
+
+    python -m smartbite_cv.predict photo.jpg --portion-dir artifacts/portion   # dish + grams + nutrients
+    python -m smartbite_cv.predict photo.jpg --plate-portion-dir artifacts/plate_portion --portion-dir artifacts/portion
+    python -m smartbite_cv.predict photo.jpg --grams 250                       # user-entered grams
+    python -m smartbite_cv.predict photo.jpg --label daal                      # user picked another dish
 """
 from __future__ import annotations
 
@@ -19,7 +25,7 @@ from PIL import Image
 from .bands import BandThresholds, assign_band
 from .config import REPO_ROOT
 from .imageio import ImageSource, load_rgb
-from .nutrition import NutritionProvider, default_provider, nutrients_for
+from .nutrition import CsvNutritionProvider, NutritionProvider, default_provider, nutrients_for
 
 DEFAULT_MODEL_DIR = REPO_ROOT / "artifacts" / "efficientnet_b0"
 MESSAGES = {
@@ -49,7 +55,8 @@ def preprocess(img: Image.Image, img_size: int, resize_short: int, mean, std,
 
 class FoodRecognizer:
     def __init__(self, model_dir: str | Path = DEFAULT_MODEL_DIR, nutrition: NutritionProvider | None = None,
-                 threads: int | None = None):
+                 threads: int | None = None, portion_dir: str | Path | None = None,
+                 plate_portion_dir: str | Path | None = None, plate_detector=None):
         import onnxruntime as ort
 
         self.model_dir = Path(model_dir)
@@ -65,6 +72,14 @@ class FoodRecognizer:
         self.session = ort.InferenceSession(str(self.model_dir / "model.onnx"), opts,
                                             providers=["CPUExecutionProvider"])
         self.nutrition = nutrition
+        self.portion = None
+        if portion_dir:
+            from .portion import PortionEstimator
+            self.portion = PortionEstimator(portion_dir, threads)
+        self.plate_portion = None
+        if plate_portion_dir:
+            from .plate_portion import PlatePortionEstimator
+            self.plate_portion = PlatePortionEstimator(plate_portion_dir, plate_detector, threads)
 
     def probabilities(self, image: ImageSource | Image.Image) -> np.ndarray:
         img = image if isinstance(image, Image.Image) else load_rgb(image)
@@ -107,6 +122,27 @@ class FoodRecognizer:
             grams = info.default_serving_g
         return nutrients_for(label, grams, provider)
 
+    def quantity_for(self, image: ImageSource | Image.Image, label: str) -> dict:
+        """Estimated grams of `label` in the photo (portion model + typical serving), with a ~68% range."""
+        provider = self.nutrition or default_provider()
+        info = provider.get(label)
+        if info is None:
+            raise KeyError(f"no nutrition data for label {label!r}")
+        img = image if isinstance(image, Image.Image) else load_rgb(image)
+        if self.plate_portion is not None:
+            q = self.plate_portion.estimate(img, info.default_serving_g)
+            if q is not None:
+                q["method"] = "plate-relative photo estimate combined with typical serving"
+                return q
+        if self.portion is None:
+            return {"grams": info.default_serving_g, "method": "typical serving (no plate found, no portion model)"
+                    if self.plate_portion is not None else "typical serving (no portion model loaded)",
+                    "typicalServingG": info.default_serving_g}
+        q = self.portion.estimate(img, info.default_serving_g)
+        q["method"] = "photo estimate combined with typical serving" + (
+            " (no plate found)" if self.plate_portion is not None else "")
+        return q
+
 
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description="Recognise a food photo (top-3 + calories)")
@@ -114,20 +150,35 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--model-dir", default=str(DEFAULT_MODEL_DIR))
     ap.add_argument("--grams", type=float, help="portion in grams (default: the dish's default serving)")
     ap.add_argument("--label", help="dish the user picked (default: top suggestion)")
+    ap.add_argument("--portion-dir", help="ONNX portion bundle: estimate grams from the photo")
+    ap.add_argument("--plate-portion-dir", help="plate-relative ONNX portion bundle (plate as the ruler)")
+    ap.add_argument("--nutrition-csv", help="nutrition table matching the model's classes (e.g. nutrition/nutrition_v2.csv)")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args(argv)
 
-    rec = FoodRecognizer(args.model_dir)
-    result = rec.predict(args.image)
+    provider = CsvNutritionProvider(args.nutrition_csv) if args.nutrition_csv else None
+    rec = FoodRecognizer(args.model_dir, nutrition=provider, portion_dir=args.portion_dir,
+                         plate_portion_dir=args.plate_portion_dir)
+    img = load_rgb(args.image)
+    result = rec.predict(img)
     label = args.label or (result["suggestions"][0]["label"] if result["suggestions"] else None)
     if label:
-        result["nutrition"] = rec.nutrition_for(label, args.grams)
+        if args.grams is None:
+            result["quantity"] = rec.quantity_for(img, label)
+        grams = args.grams if args.grams is not None else result["quantity"]["grams"]
+        result["nutrition"] = rec.nutrition_for(label, grams)
     if args.json:
         print(json.dumps(result, indent=2))
         return
     print(f"[{result['band']}] {result['message']}")
     for i, s in enumerate(result["suggestions"], 1):
         print(f"  {i}. {s['displayName']:<28} {s['confidence']:.1%}")
+    if result.get("quantity"):
+        q = result["quantity"]
+        rng = f" (likely {q['rangeG'][0]:g}-{q['rangeG'][1]:g} g)" if "rangeG" in q else ""
+        print(f"\nEstimated amount: {q['grams']:g} g{rng}  [{q['method']}]")
+        if q.get("warning"):
+            print(f"  ! {q['warning']}")
     if result.get("nutrition"):
         n = result["nutrition"]
         approx = " (approximate)" if n["approximate"] else ""

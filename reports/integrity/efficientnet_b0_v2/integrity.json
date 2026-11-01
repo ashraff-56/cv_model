@@ -1,0 +1,1643 @@
+{
+  "run": "efficientnet_b0_v2",
+  "model": "efficientnet_b0.ra_in1k",
+  "temperature": 0.8103537874279084,
+  "reproduction": {
+    "max_abs_logit_diff": 1.7642974853515625e-05,
+    "argmax_agreement": 1.0
+  },
+  "overfitting": {
+    "splits": {
+      "train_clean": {
+        "top1": 0.999750012499375,
+        "top3": 1.0,
+        "macro_f1": 0.9997566898473698,
+        "nll": 0.020737724378705025
+      },
+      "val": {
+        "top1": 0.8279015240328254,
+        "top3": 0.9254396248534584,
+        "macro_f1": 0.7681222700464213,
+        "nll": 0.7229260802268982
+      },
+      "test": {
+        "top1": 0.8261072261072261,
+        "top3": 0.9289044289044289,
+        "macro_f1": 0.7692383856938734,
+        "nll": 0.6786112785339355
+      }
+    },
+    "gap_train_test_top1": 0.17364278639214892,
+    "gap_val_test_top1": 0.0017942979255992642,
+    "stage2_epochs_run": 25,
+    "best_epoch_stage2": 21,
+    "val_loss_min_epoch": 23,
+    "val_loss_min": 0.7725839018821716,
+    "val_loss_final": 0.7762482166290283,
+    "val_loss_rise_after_min": 0.0036643147468566895
+  },
+  "leakage": {
+    "efficientnet_b0 ImageNet (used for de-duplication)": {
+      "max_sim_quantiles": {
+        "0.5": 0.64947509765625,
+        "0.9": 0.7556461095809937,
+        "0.99": 0.8368823528289795,
+        "1.0": 0.8495675325393677
+      },
+      "nn1_top1_all": 0.6291375291375292,
+      "bins": [
+        {
+          "range": "0.0-0.5",
+          "n": 178,
+          "model_top1": 0.7471910112359551,
+          "nn1_top1": 0.550561797752809
+        },
+        {
+          "range": "0.5-0.6",
+          "n": 920,
+          "model_top1": 0.7989130434782609,
+          "nn1_top1": 0.5293478260869565
+        },
+        {
+          "range": "0.6-0.7",
+          "n": 2072,
+          "model_top1": 0.819015444015444,
+          "nn1_top1": 0.611003861003861
+        },
+        {
+          "range": "0.7-0.8",
+          "n": 964,
+          "model_top1": 0.8672199170124482,
+          "nn1_top1": 0.7282157676348547
+        },
+        {
+          "range": "0.8-1.0",
+          "n": 156,
+          "model_top1": 0.9166666666666666,
+          "nn1_top1": 0.9358974358974359
+        }
+      ],
+      "model_top1_far_lt_0.6": 0.7905282331511839,
+      "n_far_lt_0.6": 1098,
+      "closest_pairs": [
+        {
+          "test": "f55fbc4a153654a6408a7271e04d3c68",
+          "train": "7e343bc9150e8b2febff47e8d27f5000",
+          "cosine": 0.8495675325393677
+        },
+        {
+          "test": "165845269f396f60481b6d4869259942",
+          "train": "79d0b69f87bde9362b175c2ccd51f6a5",
+          "cosine": 0.8492627143859863
+        },
+        {
+          "test": "47752118f9613ce6c91e92b88d44e12e",
+          "train": "33e87854514b55856cd57c8b3202a3af",
+          "cosine": 0.8488344550132751
+        },
+        {
+          "test": "1d3f7e285fd99c4c53a220615678348e",
+          "train": "1d870de80c7ef5d5d273883b53ff7aca",
+          "cosine": 0.8488266468048096
+        },
+        {
+          "test": "7b5ef2f3f08fe518b25e3dba9f5a5bcf",
+          "train": "37e941a96135fb9643cb5ea58bad592a",
+          "cosine": 0.8480934500694275
+        },
+        {
+          "test": "59838da65092cfe28f1f73c2b3799e70",
+          "train": "cbd473f0f0fc2743b60d918953759a3f",
+          "cosine": 0.8477985858917236
+        },
+        {
+          "test": "d112da33235999c7031ef2cf55c74882",
+          "train": "7112af9584e7da6f0f745dbaba0a8e8b",
+          "cosine": 0.8475781679153442
+        },
+        {
+          "test": "f327d5762e998228a45209045a6d76c8",
+          "train": "e7652617fff9c8dc66f48d7485cf359e",
+          "cosine": 0.8475537896156311
+        },
+        {
+          "test": "7027a03864806628a36b04f79bdab192",
+          "train": "2eb4fc4dd60ca4f1dfc3f8febb40da9b",
+          "cosine": 0.8473835587501526
+        },
+        {
+          "test": "95d178ccc5ddc9cb7f8f6d94df0ca7a1",
+          "train": "8bb5a1d0b40c4574d1ce6a07e1f1389d",
+          "cosine": 0.8473483324050903
+        },
+        {
+          "test": "7a04a1e30426f2e0ce23df881ae1502a",
+          "train": "1ab998935296c575e90783f0c3ae5b39",
+          "cosine": 0.8467355966567993
+        },
+        {
+          "test": "3a217c8e50dea2fe7d5d0bb686f08ede",
+          "train": "db65f6ac8ea875839a9549fd3f3349b6",
+          "cosine": 0.8465176224708557
+        }
+      ]
+    },
+    "mobilenetv2_100.ra_in1k ImageNet (independent)": {
+      "max_sim_quantiles": {
+        "0.5": 0.6998077630996704,
+        "0.9": 0.7929189205169678,
+        "0.99": 0.8606817126274109,
+        "1.0": 0.9331328272819519
+      },
+      "nn1_top1_all": 0.562004662004662,
+      "bins": [
+        {
+          "range": "0.0-0.5",
+          "n": 46,
+          "model_top1": 0.7391304347826086,
+          "nn1_top1": 0.43478260869565216
+        },
+        {
+          "range": "0.5-0.6",
+          "n": 398,
+          "model_top1": 0.7763819095477387,
+          "nn1_top1": 0.4899497487437186
+        },
+        {
+          "range": "0.6-0.7",
+          "n": 1707,
+          "model_top1": 0.8195664909197422,
+          "nn1_top1": 0.5330990041007616
+        },
+        {
+          "range": "0.7-0.8",
+          "n": 1796,
+          "model_top1": 0.8363028953229399,
+          "nn1_top1": 0.5785077951002228
+        },
+        {
+          "range": "0.8-1.0",
+          "n": 343,
+          "model_top1": 0.8746355685131195,
+          "nn1_top1": 0.7201166180758017
+        }
+      ],
+      "model_top1_far_lt_0.6": 0.7725225225225225,
+      "n_far_lt_0.6": 444,
+      "closest_pairs": [
+        {
+          "test": "5508e5826c842c29d4532e5644308774",
+          "train": "fa3cd990e9de287693bc7c97d80f2163",
+          "cosine": 0.9331328272819519
+        },
+        {
+          "test": "b647a5b0373fca8e095cb6189cd3871e",
+          "train": "a06e9934bc48df59c7dd1cc5819d1c00",
+          "cosine": 0.9330630302429199
+        },
+        {
+          "test": "0a2413e26bd5de336a5e18d1cbea3fa2",
+          "train": "09865b77ebdf2ccdac177cf9578f9b82",
+          "cosine": 0.927632749080658
+        },
+        {
+          "test": "e8f67e0eb47afd53b17b96444c1ed880",
+          "train": "bbe66048d0b5c001b94191d833f501a3",
+          "cosine": 0.9226540923118591
+        },
+        {
+          "test": "6cb3306d76ba4012ca9e3baa25c93952",
+          "train": "e46cf978fee87b3f1da5cb779b8717de",
+          "cosine": 0.9170304536819458
+        },
+        {
+          "test": "f45586ca705cb6dd5a3cae9ea228ffef",
+          "train": "f3dee161b0bb86ccabef5bb37ff08bd4",
+          "cosine": 0.9120595455169678
+        },
+        {
+          "test": "fae13470db3cc318a344b8f524250c64",
+          "train": "f453fa3b4bd38ac6425616dd1299cc7b",
+          "cosine": 0.9050986766815186
+        },
+        {
+          "test": "36bfec3d109fbb1d3a8322aba2292485",
+          "train": "ee4404bbf4bf2d4aaa1a389654cf6141",
+          "cosine": 0.9037519693374634
+        },
+        {
+          "test": "78dbae4ae6856c6c623b02187181c407",
+          "train": "03dfcf615543d61e6b67e87bca4df120",
+          "cosine": 0.8996625542640686
+        },
+        {
+          "test": "47752118f9613ce6c91e92b88d44e12e",
+          "train": "33e87854514b55856cd57c8b3202a3af",
+          "cosine": 0.8937492370605469
+        },
+        {
+          "test": "1e51b5d7afbea9eafea08220190e7a4c",
+          "train": "aeebbc0761317249b81349b092b0d59d",
+          "cosine": 0.8888562917709351
+        },
+        {
+          "test": "4ec359d69c602496251953537dd161cd",
+          "train": "a2f45f1c3c5dc81676fa47eb9be81726",
+          "cosine": 0.8846707940101624
+        }
+      ]
+    }
+  },
+  "sources": {
+    "per_source": {
+      "anshul": {
+        "n": 270,
+        "top1": 0.9259259259259259
+      },
+      "fastfood": {
+        "n": 311,
+        "top1": 0.9196141479099679
+      },
+      "food101": {
+        "n": 853,
+        "top1": 0.8886283704572099
+      },
+      "food20": {
+        "n": 63,
+        "top1": 0.8888888888888888
+      },
+      "food5k": {
+        "n": 90,
+        "top1": 0.9555555555555556
+      },
+      "khana": {
+        "n": 1092,
+        "top1": 0.8836996336996337
+      },
+      "l33t20": {
+        "n": 394,
+        "top1": 0.8781725888324873
+      },
+      "pkdishes": {
+        "n": 102,
+        "top1": 0.7450980392156863
+      },
+      "smf": {
+        "n": 1056,
+        "top1": 0.6373106060606061
+      },
+      "sourav80": {
+        "n": 59,
+        "top1": 0.8135593220338984
+      }
+    },
+    "single_source_classes": [
+      "achar",
+      "aloo_baingan",
+      "aloo_palak",
+      "aloo_shimla_mirch",
+      "anda_paratha",
+      "chana_chaat",
+      "chapli_kebab",
+      "chicken_roast",
+      "chocolate_cake",
+      "coffee",
+      "falooda",
+      "fried_fish",
+      "ghiya",
+      "halwa_puri",
+      "ice_cream",
+      "kachumber_salad",
+      "kadhi_pakora",
+      "karahi",
+      "karela",
+      "keema",
+      "kheer",
+      "korma",
+      "lamb_chops",
+      "lassi",
+      "lemonade",
+      "malai_boti",
+      "mixed_sabzi",
+      "nihari",
+      "not_food",
+      "palak_gosht",
+      "paye",
+      "pudina_chutney",
+      "rabri",
+      "raita",
+      "ras_malai",
+      "saag",
+      "sheermal",
+      "spaghetti"
+    ],
+    "per_class_source": [
+      {
+        "class": "aloo_gobi",
+        "source": "khana",
+        "n": 63,
+        "top1": 0.8412698412698413
+      },
+      {
+        "class": "aloo_gobi",
+        "source": "smf",
+        "n": 11,
+        "top1": 1.0
+      },
+      {
+        "class": "aloo_methi",
+        "source": "khana",
+        "n": 18,
+        "top1": 0.8888888888888888
+      },
+      {
+        "class": "aloo_methi",
+        "source": "smf",
+        "n": 14,
+        "top1": 0.6428571428571429
+      },
+      {
+        "class": "aloo_paratha",
+        "source": "khana",
+        "n": 68,
+        "top1": 0.8382352941176471
+      },
+      {
+        "class": "aloo_paratha",
+        "source": "smf",
+        "n": 14,
+        "top1": 0.5714285714285714
+      },
+      {
+        "class": "barfi",
+        "source": "khana",
+        "n": 52,
+        "top1": 1.0
+      },
+      {
+        "class": "barfi",
+        "source": "smf",
+        "n": 30,
+        "top1": 0.7666666666666667
+      },
+      {
+        "class": "bhindi",
+        "source": "khana",
+        "n": 55,
+        "top1": 0.9090909090909091
+      },
+      {
+        "class": "bhindi",
+        "source": "smf",
+        "n": 12,
+        "top1": 0.9166666666666666
+      },
+      {
+        "class": "biryani",
+        "source": "anshul",
+        "n": 21,
+        "top1": 0.9523809523809523
+      },
+      {
+        "class": "biryani",
+        "source": "food20",
+        "n": 14,
+        "top1": 0.7857142857142857
+      },
+      {
+        "class": "biryani",
+        "source": "khana",
+        "n": 42,
+        "top1": 0.9761904761904762
+      },
+      {
+        "class": "biryani",
+        "source": "pkdishes",
+        "n": 8,
+        "top1": 0.75
+      },
+      {
+        "class": "biryani",
+        "source": "sourav80",
+        "n": 5,
+        "top1": 0.8
+      },
+      {
+        "class": "burger",
+        "source": "fastfood",
+        "n": 41,
+        "top1": 0.9512195121951219
+      },
+      {
+        "class": "burger",
+        "source": "food101",
+        "n": 41,
+        "top1": 0.9024390243902439
+      },
+      {
+        "class": "burger",
+        "source": "l33t20",
+        "n": 8,
+        "top1": 0.625
+      },
+      {
+        "class": "chai",
+        "source": "l33t20",
+        "n": 73,
+        "top1": 0.9178082191780822
+      },
+      {
+        "class": "chai",
+        "source": "pkdishes",
+        "n": 12,
+        "top1": 1.0
+      },
+      {
+        "class": "chai",
+        "source": "smf",
+        "n": 1,
+        "top1": 1.0
+      },
+      {
+        "class": "chana_chole",
+        "source": "anshul",
+        "n": 11,
+        "top1": 0.9090909090909091
+      },
+      {
+        "class": "chana_chole",
+        "source": "khana",
+        "n": 52,
+        "top1": 0.8653846153846154
+      },
+      {
+        "class": "chana_chole",
+        "source": "l33t20",
+        "n": 25,
+        "top1": 0.88
+      },
+      {
+        "class": "chana_chole",
+        "source": "sourav80",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "chicken_curry",
+        "source": "food101",
+        "n": 49,
+        "top1": 0.7142857142857143
+      },
+      {
+        "class": "chicken_curry",
+        "source": "khana",
+        "n": 18,
+        "top1": 0.6666666666666666
+      },
+      {
+        "class": "chicken_curry",
+        "source": "l33t20",
+        "n": 15,
+        "top1": 1.0
+      },
+      {
+        "class": "chicken_curry",
+        "source": "pkdishes",
+        "n": 3,
+        "top1": 0.6666666666666666
+      },
+      {
+        "class": "chicken_curry",
+        "source": "sourav80",
+        "n": 5,
+        "top1": 0.2
+      },
+      {
+        "class": "chicken_tikka",
+        "source": "food20",
+        "n": 11,
+        "top1": 0.9090909090909091
+      },
+      {
+        "class": "chicken_tikka",
+        "source": "pkdishes",
+        "n": 16,
+        "top1": 0.625
+      },
+      {
+        "class": "chicken_tikka",
+        "source": "smf",
+        "n": 9,
+        "top1": 0.8888888888888888
+      },
+      {
+        "class": "chicken_tikka",
+        "source": "sourav80",
+        "n": 9,
+        "top1": 0.5555555555555556
+      },
+      {
+        "class": "daal",
+        "source": "anshul",
+        "n": 38,
+        "top1": 0.9210526315789473
+      },
+      {
+        "class": "daal",
+        "source": "l33t20",
+        "n": 37,
+        "top1": 0.8648648648648649
+      },
+      {
+        "class": "daal",
+        "source": "sourav80",
+        "n": 13,
+        "top1": 1.0
+      },
+      {
+        "class": "donut",
+        "source": "fastfood",
+        "n": 48,
+        "top1": 0.9583333333333334
+      },
+      {
+        "class": "donut",
+        "source": "food101",
+        "n": 42,
+        "top1": 0.7619047619047619
+      },
+      {
+        "class": "fish_curry",
+        "source": "khana",
+        "n": 65,
+        "top1": 0.8153846153846154
+      },
+      {
+        "class": "fish_curry",
+        "source": "smf",
+        "n": 8,
+        "top1": 0.875
+      },
+      {
+        "class": "french_fries",
+        "source": "fastfood",
+        "n": 39,
+        "top1": 0.9743589743589743
+      },
+      {
+        "class": "french_fries",
+        "source": "food101",
+        "n": 49,
+        "top1": 0.8979591836734694
+      },
+      {
+        "class": "french_fries",
+        "source": "pkdishes",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "fried_chicken",
+        "source": "fastfood",
+        "n": 49,
+        "top1": 0.8163265306122449
+      },
+      {
+        "class": "fried_chicken",
+        "source": "food101",
+        "n": 18,
+        "top1": 0.8888888888888888
+      },
+      {
+        "class": "fried_chicken",
+        "source": "khana",
+        "n": 23,
+        "top1": 0.4782608695652174
+      },
+      {
+        "class": "fried_rice",
+        "source": "food101",
+        "n": 69,
+        "top1": 0.8985507246376812
+      },
+      {
+        "class": "fried_rice",
+        "source": "l33t20",
+        "n": 18,
+        "top1": 0.8888888888888888
+      },
+      {
+        "class": "fried_rice",
+        "source": "pkdishes",
+        "n": 3,
+        "top1": 0.6666666666666666
+      },
+      {
+        "class": "gajar_halwa",
+        "source": "khana",
+        "n": 46,
+        "top1": 0.9347826086956522
+      },
+      {
+        "class": "gajar_halwa",
+        "source": "smf",
+        "n": 25,
+        "top1": 0.92
+      },
+      {
+        "class": "gajar_halwa",
+        "source": "sourav80",
+        "n": 6,
+        "top1": 0.8333333333333334
+      },
+      {
+        "class": "gol_gappay",
+        "source": "anshul",
+        "n": 15,
+        "top1": 1.0
+      },
+      {
+        "class": "gol_gappay",
+        "source": "khana",
+        "n": 44,
+        "top1": 0.9318181818181818
+      },
+      {
+        "class": "gol_gappay",
+        "source": "l33t20",
+        "n": 20,
+        "top1": 0.95
+      },
+      {
+        "class": "gol_gappay",
+        "source": "smf",
+        "n": 11,
+        "top1": 0.7272727272727273
+      },
+      {
+        "class": "gulab_jamun",
+        "source": "food20",
+        "n": 10,
+        "top1": 0.9
+      },
+      {
+        "class": "gulab_jamun",
+        "source": "khana",
+        "n": 49,
+        "top1": 0.9795918367346939
+      },
+      {
+        "class": "gulab_jamun",
+        "source": "smf",
+        "n": 24,
+        "top1": 0.9166666666666666
+      },
+      {
+        "class": "gulab_jamun",
+        "source": "sourav80",
+        "n": 7,
+        "top1": 1.0
+      },
+      {
+        "class": "haleem",
+        "source": "pkdishes",
+        "n": 19,
+        "top1": 0.8947368421052632
+      },
+      {
+        "class": "haleem",
+        "source": "smf",
+        "n": 17,
+        "top1": 1.0
+      },
+      {
+        "class": "hot_dog",
+        "source": "fastfood",
+        "n": 52,
+        "top1": 0.9423076923076923
+      },
+      {
+        "class": "hot_dog",
+        "source": "food101",
+        "n": 38,
+        "top1": 0.8157894736842105
+      },
+      {
+        "class": "jalebi",
+        "source": "anshul",
+        "n": 23,
+        "top1": 1.0
+      },
+      {
+        "class": "jalebi",
+        "source": "khana",
+        "n": 36,
+        "top1": 0.9444444444444444
+      },
+      {
+        "class": "jalebi",
+        "source": "l33t20",
+        "n": 29,
+        "top1": 0.9310344827586207
+      },
+      {
+        "class": "jalebi",
+        "source": "sourav80",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "kofta",
+        "source": "anshul",
+        "n": 56,
+        "top1": 0.875
+      },
+      {
+        "class": "kofta",
+        "source": "smf",
+        "n": 8,
+        "top1": 0.5
+      },
+      {
+        "class": "kulfi",
+        "source": "khana",
+        "n": 54,
+        "top1": 0.7777777777777778
+      },
+      {
+        "class": "kulfi",
+        "source": "l33t20",
+        "n": 36,
+        "top1": 0.8055555555555556
+      },
+      {
+        "class": "naan",
+        "source": "anshul",
+        "n": 29,
+        "top1": 0.9310344827586207
+      },
+      {
+        "class": "naan",
+        "source": "food20",
+        "n": 9,
+        "top1": 0.7777777777777778
+      },
+      {
+        "class": "naan",
+        "source": "khana",
+        "n": 26,
+        "top1": 0.9615384615384616
+      },
+      {
+        "class": "naan",
+        "source": "l33t20",
+        "n": 20,
+        "top1": 0.8
+      },
+      {
+        "class": "naan",
+        "source": "smf",
+        "n": 5,
+        "top1": 0.6
+      },
+      {
+        "class": "naan",
+        "source": "sourav80",
+        "n": 1,
+        "top1": 1.0
+      },
+      {
+        "class": "omelette",
+        "source": "food101",
+        "n": 81,
+        "top1": 0.9012345679012346
+      },
+      {
+        "class": "omelette",
+        "source": "pkdishes",
+        "n": 9,
+        "top1": 0.7777777777777778
+      },
+      {
+        "class": "pakora",
+        "source": "anshul",
+        "n": 39,
+        "top1": 0.8461538461538461
+      },
+      {
+        "class": "pakora",
+        "source": "khana",
+        "n": 19,
+        "top1": 0.9473684210526315
+      },
+      {
+        "class": "pakora",
+        "source": "l33t20",
+        "n": 25,
+        "top1": 0.88
+      },
+      {
+        "class": "pakora",
+        "source": "smf",
+        "n": 7,
+        "top1": 0.7142857142857143
+      },
+      {
+        "class": "paratha",
+        "source": "pkdishes",
+        "n": 11,
+        "top1": 0.5454545454545454
+      },
+      {
+        "class": "paratha",
+        "source": "smf",
+        "n": 29,
+        "top1": 0.4827586206896552
+      },
+      {
+        "class": "paratha_roll",
+        "source": "anshul",
+        "n": 38,
+        "top1": 1.0
+      },
+      {
+        "class": "paratha_roll",
+        "source": "food20",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "paratha_roll",
+        "source": "l33t20",
+        "n": 41,
+        "top1": 0.8780487804878049
+      },
+      {
+        "class": "paratha_roll",
+        "source": "pkdishes",
+        "n": 9,
+        "top1": 0.7777777777777778
+      },
+      {
+        "class": "pizza",
+        "source": "fastfood",
+        "n": 41,
+        "top1": 0.926829268292683
+      },
+      {
+        "class": "pizza",
+        "source": "food101",
+        "n": 17,
+        "top1": 0.8823529411764706
+      },
+      {
+        "class": "pizza",
+        "source": "khana",
+        "n": 25,
+        "top1": 0.96
+      },
+      {
+        "class": "pizza",
+        "source": "l33t20",
+        "n": 7,
+        "top1": 1.0
+      },
+      {
+        "class": "puri",
+        "source": "food20",
+        "n": 13,
+        "top1": 1.0
+      },
+      {
+        "class": "puri",
+        "source": "smf",
+        "n": 29,
+        "top1": 0.3793103448275862
+      },
+      {
+        "class": "roti_chapati",
+        "source": "food20",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "roti_chapati",
+        "source": "khana",
+        "n": 28,
+        "top1": 0.8928571428571429
+      },
+      {
+        "class": "roti_chapati",
+        "source": "l33t20",
+        "n": 28,
+        "top1": 0.7857142857142857
+      },
+      {
+        "class": "roti_chapati",
+        "source": "pkdishes",
+        "n": 7,
+        "top1": 0.2857142857142857
+      },
+      {
+        "class": "roti_chapati",
+        "source": "smf",
+        "n": 23,
+        "top1": 0.34782608695652173
+      },
+      {
+        "class": "roti_chapati",
+        "source": "sourav80",
+        "n": 2,
+        "top1": 0.5
+      },
+      {
+        "class": "salad",
+        "source": "food101",
+        "n": 88,
+        "top1": 0.9318181818181818
+      },
+      {
+        "class": "salad",
+        "source": "smf",
+        "n": 2,
+        "top1": 0.5
+      },
+      {
+        "class": "samosa",
+        "source": "food101",
+        "n": 54,
+        "top1": 0.8703703703703703
+      },
+      {
+        "class": "samosa",
+        "source": "food20",
+        "n": 2,
+        "top1": 1.0
+      },
+      {
+        "class": "samosa",
+        "source": "khana",
+        "n": 19,
+        "top1": 0.8947368421052632
+      },
+      {
+        "class": "samosa",
+        "source": "l33t20",
+        "n": 12,
+        "top1": 0.9166666666666666
+      },
+      {
+        "class": "samosa",
+        "source": "pkdishes",
+        "n": 3,
+        "top1": 1.0
+      },
+      {
+        "class": "sandwich",
+        "source": "fastfood",
+        "n": 41,
+        "top1": 0.8780487804878049
+      },
+      {
+        "class": "sandwich",
+        "source": "food101",
+        "n": 37,
+        "top1": 0.972972972972973
+      },
+      {
+        "class": "sandwich",
+        "source": "khana",
+        "n": 12,
+        "top1": 1.0
+      },
+      {
+        "class": "seekh_kebab",
+        "source": "khana",
+        "n": 68,
+        "top1": 0.8088235294117647
+      },
+      {
+        "class": "seekh_kebab",
+        "source": "smf",
+        "n": 10,
+        "top1": 0.9
+      },
+      {
+        "class": "suji_halwa",
+        "source": "smf",
+        "n": 27,
+        "top1": 0.9259259259259259
+      },
+      {
+        "class": "suji_halwa",
+        "source": "sourav80",
+        "n": 7,
+        "top1": 1.0
+      }
+    ]
+  },
+  "food5k_food_probe": {
+    "n": 2500,
+    "predicted_not_food": 0.0092,
+    "mean_p_not_food": 0.008977985940873623,
+    "bands": {
+      "high": 0.3356,
+      "medium": 0.5784,
+      "low": 0.086
+    }
+  },
+  "gradcam": [
+    {
+      "index": 1168,
+      "kind": "correct",
+      "md5": "8e634a9f0f1913a8238b60ab57f36c73"
+    },
+    {
+      "index": 2723,
+      "kind": "correct",
+      "md5": "bf3a788496fb5c6f8c2b986ba476c202"
+    },
+    {
+      "index": 2155,
+      "kind": "correct",
+      "md5": "01805a0707b056205f71d23299df9ee6"
+    },
+    {
+      "index": 1319,
+      "kind": "correct",
+      "md5": "4723a269c01895c33a3f740cefcd7344"
+    },
+    {
+      "index": 185,
+      "kind": "correct",
+      "md5": "404f2dee669c279ea8b94e11e17bcb04"
+    },
+    {
+      "index": 3658,
+      "kind": "correct",
+      "md5": "803cc4ae06a6c04fb7c4b26f4e348285"
+    },
+    {
+      "index": 867,
+      "kind": "error",
+      "md5": "2e38d1584afbc3e341d11b54cdb9075d"
+    },
+    {
+      "index": 2855,
+      "kind": "error",
+      "md5": "001190e96a63009d423e81bf8fa477bd"
+    },
+    {
+      "index": 3866,
+      "kind": "error",
+      "md5": "e3ac9e14ab5c4817cdc71c2c68afe44b"
+    },
+    {
+      "index": 3581,
+      "kind": "error",
+      "md5": "997d536c1f00c6fb3522e2af9afa95b9"
+    },
+    {
+      "index": 198,
+      "kind": "error",
+      "md5": "68fe878c5f8665460c0ac19dd51ce5e6"
+    },
+    {
+      "index": 1524,
+      "kind": "error",
+      "md5": "06ae4e3b421546c7230ec67c32d5c235"
+    }
+  ],
+  "robustness": {
+    "clean": {
+      "top1": 0.8261072261072261,
+      "top3": 0.9289044289044289,
+      "bands": {
+        "high": 0.6748251748251748,
+        "medium": 0.28601398601398603,
+        "low": 0.039160839160839164
+      },
+      "high_band_accuracy": 0.9589502018842531
+    },
+    "gaussian_blur": {
+      "top1": 0.6125874125874126,
+      "top3": 0.786013986013986,
+      "bands": {
+        "high": 0.38974358974358975,
+        "medium": 0.5351981351981352,
+        "low": 0.07505827505827506
+      },
+      "high_band_accuracy": 0.8853130485664131
+    },
+    "motion_blur": {
+      "top1": 0.7902097902097902,
+      "top3": 0.906060606060606,
+      "bands": {
+        "high": 0.5972027972027972,
+        "medium": 0.3531468531468531,
+        "low": 0.04965034965034965
+      },
+      "high_band_accuracy": 0.9468085106382979
+    },
+    "jpeg_q15": {
+      "top1": 0.6631701631701632,
+      "top3": 0.8298368298368298,
+      "bands": {
+        "high": 0.44522144522144524,
+        "medium": 0.5011655011655012,
+        "low": 0.053613053613053616
+      },
+      "high_band_accuracy": 0.9023136246786633
+    },
+    "gaussian_noise": {
+      "top1": 0.6438228438228438,
+      "top3": 0.8076923076923077,
+      "bands": {
+        "high": 0.3610722610722611,
+        "medium": 0.5363636363636364,
+        "low": 0.10256410256410256
+      },
+      "high_band_accuracy": 0.9143920595533499
+    },
+    "low_light": {
+      "top1": 0.7897435897435897,
+      "top3": 0.9079254079254079,
+      "bands": {
+        "high": 0.6053613053613054,
+        "medium": 0.3459207459207459,
+        "low": 0.04871794871794872
+      },
+      "high_band_accuracy": 0.9476439790575916
+    },
+    "overexposed": {
+      "top1": 0.7944055944055944,
+      "top3": 0.9123543123543123,
+      "bands": {
+        "high": 0.6247086247086248,
+        "medium": 0.33146853146853145,
+        "low": 0.04382284382284382
+      },
+      "high_band_accuracy": 0.9441016333938294
+    },
+    "low_resolution": {
+      "top1": 0.5766899766899767,
+      "top3": 0.7561771561771562,
+      "bands": {
+        "high": 0.35384615384615387,
+        "medium": 0.5675990675990676,
+        "low": 0.07855477855477855
+      },
+      "high_band_accuracy": 0.862475442043222
+    },
+    "tight_crop": {
+      "top1": 0.765034965034965,
+      "top3": 0.8918414918414919,
+      "bands": {
+        "high": 0.6097902097902098,
+        "medium": 0.3487179487179487,
+        "low": 0.04149184149184149
+      },
+      "high_band_accuracy": 0.9292628443782577
+    },
+    "rotated_90": {
+      "top1": 0.7454545454545455,
+      "top3": 0.8913752913752914,
+      "bands": {
+        "high": 0.5564102564102564,
+        "medium": 0.38997668997669,
+        "low": 0.053613053613053616
+      },
+      "high_band_accuracy": 0.9327354260089686
+    }
+  },
+  "open_set": {
+    "n": 3300,
+    "dishes": 66,
+    "bands": {
+      "high": 0.27484848484848484,
+      "medium": 0.6333333333333333,
+      "low": 0.09181818181818181
+    },
+    "in_distribution_test_bands": {
+      "high": 0.6748251748251748,
+      "medium": 0.28601398601398603,
+      "low": 0.039160839160839164
+    },
+    "per_dish": [
+      {
+        "dish": "bhindi_masala",
+        "n": 50,
+        "high": 0.88,
+        "top_prediction": "bhindi"
+      },
+      {
+        "dish": "ledikeni",
+        "n": 50,
+        "high": 0.82,
+        "top_prediction": "gulab_jamun"
+      },
+      {
+        "dish": "imarti",
+        "n": 50,
+        "high": 0.72,
+        "top_prediction": "jalebi"
+      },
+      {
+        "dish": "sohan_papdi",
+        "n": 50,
+        "high": 0.72,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "mysore_pak",
+        "n": 50,
+        "high": 0.66,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "aloo_methi",
+        "n": 50,
+        "high": 0.6,
+        "top_prediction": "aloo_methi"
+      },
+      {
+        "dish": "aloo_gobi",
+        "n": 50,
+        "high": 0.58,
+        "top_prediction": "aloo_gobi"
+      },
+      {
+        "dish": "kadhi_pakoda",
+        "n": 50,
+        "high": 0.48,
+        "top_prediction": "kadhi_pakora"
+      },
+      {
+        "dish": "ras_malai",
+        "n": 50,
+        "high": 0.46,
+        "top_prediction": "ras_malai"
+      },
+      {
+        "dish": "bhatura",
+        "n": 50,
+        "high": 0.44,
+        "top_prediction": "chana_chole"
+      },
+      {
+        "dish": "lyangcha",
+        "n": 50,
+        "high": 0.44,
+        "top_prediction": "gulab_jamun"
+      },
+      {
+        "dish": "daal_puri",
+        "n": 50,
+        "high": 0.42,
+        "top_prediction": "puri"
+      },
+      {
+        "dish": "kalakand",
+        "n": 50,
+        "high": 0.42,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "basundi",
+        "n": 50,
+        "high": 0.4,
+        "top_prediction": "rabri"
+      },
+      {
+        "dish": "kofta",
+        "n": 50,
+        "high": 0.4,
+        "top_prediction": "kofta"
+      },
+      {
+        "dish": "lassi",
+        "n": 50,
+        "high": 0.4,
+        "top_prediction": "lassi"
+      },
+      {
+        "dish": "rabri",
+        "n": 50,
+        "high": 0.38,
+        "top_prediction": "rabri"
+      },
+      {
+        "dish": "unni_appam",
+        "n": 50,
+        "high": 0.38,
+        "top_prediction": "gulab_jamun"
+      },
+      {
+        "dish": "dum_aloo",
+        "n": 50,
+        "high": 0.36,
+        "top_prediction": "kofta"
+      },
+      {
+        "dish": "kajjikaya",
+        "n": 50,
+        "high": 0.34,
+        "top_prediction": "samosa"
+      },
+      {
+        "dish": "aloo_shimla_mirch",
+        "n": 50,
+        "high": 0.32,
+        "top_prediction": "aloo_shimla_mirch"
+      },
+      {
+        "dish": "doodhpak",
+        "n": 50,
+        "high": 0.32,
+        "top_prediction": "rabri"
+      },
+      {
+        "dish": "phirni",
+        "n": 50,
+        "high": 0.32,
+        "top_prediction": "kheer"
+      },
+      {
+        "dish": "paneer_butter_masala",
+        "n": 50,
+        "high": 0.3,
+        "top_prediction": "chicken_curry"
+      },
+      {
+        "dish": "poha",
+        "n": 50,
+        "high": 0.3,
+        "top_prediction": "fried_rice"
+      },
+      {
+        "dish": "sohan_halwa",
+        "n": 50,
+        "high": 0.3,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "maach_jhol",
+        "n": 50,
+        "high": 0.28,
+        "top_prediction": "fish_curry"
+      },
+      {
+        "dish": "kachori",
+        "n": 50,
+        "high": 0.26,
+        "top_prediction": "puri"
+      },
+      {
+        "dish": "palak_paneer",
+        "n": 50,
+        "high": 0.26,
+        "top_prediction": "saag"
+      },
+      {
+        "dish": "poornalu",
+        "n": 50,
+        "high": 0.24,
+        "top_prediction": "pakora"
+      },
+      {
+        "dish": "chhena_kheeri",
+        "n": 50,
+        "high": 0.22,
+        "top_prediction": "kheer"
+      },
+      {
+        "dish": "pootharekulu",
+        "n": 50,
+        "high": 0.22,
+        "top_prediction": "sandwich"
+      },
+      {
+        "dish": "anarsa",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "karela_bharta",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "karela"
+      },
+      {
+        "dish": "makki_di_roti_sarson_da_saag",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "saag"
+      },
+      {
+        "dish": "misi_roti",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "aloo_paratha"
+      },
+      {
+        "dish": "sandesh",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "shankarpali",
+        "n": 50,
+        "high": 0.2,
+        "top_prediction": "french_fries"
+      },
+      {
+        "dish": "adhirasam",
+        "n": 50,
+        "high": 0.18,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "aloo_matar",
+        "n": 50,
+        "high": 0.18,
+        "top_prediction": "aloo_gobi"
+      },
+      {
+        "dish": "ghevar",
+        "n": 50,
+        "high": 0.18,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "kakinada_khaja",
+        "n": 50,
+        "high": 0.18,
+        "top_prediction": "jalebi"
+      },
+      {
+        "dish": "cham_cham",
+        "n": 50,
+        "high": 0.16,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "gavvalu",
+        "n": 50,
+        "high": 0.16,
+        "top_prediction": "fried_chicken"
+      },
+      {
+        "dish": "malapua",
+        "n": 50,
+        "high": 0.16,
+        "top_prediction": "fried_chicken"
+      },
+      {
+        "dish": "ariselu",
+        "n": 50,
+        "high": 0.14,
+        "top_prediction": "sheermal"
+      },
+      {
+        "dish": "bandar_laddu",
+        "n": 50,
+        "high": 0.14,
+        "top_prediction": "gulab_jamun"
+      },
+      {
+        "dish": "boondi",
+        "n": 50,
+        "high": 0.14,
+        "top_prediction": "chana_chaat"
+      },
+      {
+        "dish": "chikki",
+        "n": 50,
+        "high": 0.14,
+        "top_prediction": "barfi"
+      },
+      {
+        "dish": "modak",
+        "n": 50,
+        "high": 0.14,
+        "top_prediction": "samosa"
+      },
+      {
+        "dish": "aloo_tikki",
+        "n": 50,
+        "high": 0.12,
+        "top_prediction": "pakora"
+      },
+      {
+        "dish": "chicken_razala",
+        "n": 50,
+        "high": 0.12,
+        "top_prediction": "fish_curry"
+      },
+      {
+        "dish": "dharwad_pedha",
+        "n": 50,
+        "high": 0.12,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "rasgulla",
+        "n": 50,
+        "high": 0.12,
+        "top_prediction": "gol_gappay"
+      },
+      {
+        "dish": "sheer_korma",
+        "n": 50,
+        "high": 0.12,
+        "top_prediction": "rabri"
+      },
+      {
+        "dish": "chak_hao_kheer",
+        "n": 50,
+        "high": 0.1,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "kuzhi_paniyaram",
+        "n": 50,
+        "high": 0.1,
+        "top_prediction": "puri"
+      },
+      {
+        "dish": "pithe",
+        "n": 50,
+        "high": 0.1,
+        "top_prediction": "donut"
+      },
+      {
+        "dish": "double_ka_meetha",
+        "n": 50,
+        "high": 0.08,
+        "top_prediction": "suji_halwa"
+      },
+      {
+        "dish": "litti_chokha",
+        "n": 50,
+        "high": 0.08,
+        "top_prediction": "puri"
+      },
+      {
+        "dish": "sutar_feni",
+        "n": 50,
+        "high": 0.08,
+        "top_prediction": "omelette"
+      },
+      {
+        "dish": "misti_doi",
+        "n": 50,
+        "high": 0.06,
+        "top_prediction": "chai"
+      },
+      {
+        "dish": "qubani_ka_meetha",
+        "n": 50,
+        "high": 0.06,
+        "top_prediction": "gulab_jamun"
+      },
+      {
+        "dish": "shrikhand",
+        "n": 50,
+        "high": 0.06,
+        "top_prediction": "kheer"
+      },
+      {
+        "dish": "daal_baati_churma",
+        "n": 50,
+        "high": 0.04,
+        "top_prediction": "puri"
+      },
+      {
+        "dish": "navrattan_korma",
+        "n": 50,
+        "high": 0.04,
+        "top_prediction": "daal"
+      }
+    ]
+  },
+  "comparison": {
+    "other": "mobilenetv2_v2",
+    "top1_this": 0.8261072261072261,
+    "top1_other": 0.799067599067599,
+    "diff_ci95": [
+      0.017249417249417198,
+      0.03706876456876453
+    ],
+    "mcnemar": {
+      "a_right_b_wrong": 301,
+      "a_wrong_b_right": 185,
+      "p_value": 1.6019446570642111e-07
+    },
+    "top1_ci95_this": [
+      0.8149184149184149,
+      0.8370629370629371
+    ]
+  }
+}

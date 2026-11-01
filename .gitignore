@@ -24,3 +24,12 @@ eval_phone_photos/*/
 # local smoke-test bundle
 artifacts/sanity_cpu/
 data/*.log
+# v2: external test photos (rebuild with tools/collect_wikipedia.py; manifests/review CSVs are kept)
+data/external/*/*/*.jpg
+data/external/*/review/*.jpg
+reports/integrity/*/cache/
+reports/integrity_run.log
+data/*.txt
+data/*.log
+kaggle_out/
+reports/integrity_v2.log

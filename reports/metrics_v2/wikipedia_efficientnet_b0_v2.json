@@ -1,0 +1,500 @@
+{
+  "n": 313,
+  "top1": 0.5686900958466453,
+  "top1_ci95": [
+    0.5143769968051118,
+    0.6261980830670927
+  ],
+  "top3": 0.744408945686901,
+  "top3_ci95": [
+    0.6932907348242812,
+    0.792332268370607
+  ],
+  "macro_f1_over_present_classes": 0.4788163589313904,
+  "ece": 0.13089040420078887,
+  "bands": {
+    "high": {
+      "fraction": 0.3961661341853035,
+      "count": 124,
+      "top1": 0.8548387096774194,
+      "top3": 0.9032258064516129
+    },
+    "medium": {
+      "fraction": 0.5431309904153354,
+      "count": 170,
+      "top1": 0.4176470588235294,
+      "top3": 0.6823529411764706
+    },
+    "low": {
+      "fraction": 0.06070287539936102,
+      "count": 19,
+      "top1": 0.05263157894736842,
+      "top3": 0.2631578947368421
+    }
+  },
+  "per_class": {
+    "biryani": {
+      "precision": 1.0,
+      "recall": 0.6363636363636364,
+      "f1": 0.7777777777777778,
+      "support": 11
+    },
+    "naan": {
+      "precision": 0.5,
+      "recall": 0.2857142857142857,
+      "f1": 0.36363636363636365,
+      "support": 7
+    },
+    "roti_chapati": {
+      "precision": 0.2857142857142857,
+      "recall": 0.5,
+      "f1": 0.36363636363636365,
+      "support": 4
+    },
+    "paratha": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "anda_paratha": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "puri": {
+      "precision": 0.5714285714285714,
+      "recall": 0.8,
+      "f1": 0.6666666666666666,
+      "support": 10
+    },
+    "paratha_roll": {
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "support": 1
+    },
+    "samosa": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "support": 4
+    },
+    "pakora": {
+      "precision": 0.7,
+      "recall": 0.875,
+      "f1": 0.7777777777777777,
+      "support": 8
+    },
+    "gol_gappay": {
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "support": 4
+    },
+    "karahi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "korma": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "chicken_curry": {
+      "precision": 0.08333333333333333,
+      "recall": 0.25,
+      "f1": 0.125,
+      "support": 4
+    },
+    "nihari": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "paye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "haleem": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "kofta": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 6
+    },
+    "fried_fish": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1": 0.25,
+      "support": 10
+    },
+    "chicken_tikka": {
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "f1": 0.5454545454545454,
+      "support": 4
+    },
+    "seekh_kebab": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 2
+    },
+    "chapli_kebab": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 2
+    },
+    "chicken_roast": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "daal": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444445,
+      "support": 4
+    },
+    "chana_chole": {
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1": 0.3333333333333333,
+      "support": 3
+    },
+    "kadhi_pakora": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "aloo_gobi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "bhindi": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "support": 1
+    },
+    "karela": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "raita": {
+      "precision": 0.7142857142857143,
+      "recall": 0.5,
+      "f1": 0.588235294117647,
+      "support": 10
+    },
+    "kachumber_salad": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "achar": {
+      "precision": 0.75,
+      "recall": 0.42857142857142855,
+      "f1": 0.5454545454545454,
+      "support": 7
+    },
+    "pudina_chutney": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "gulab_jamun": {
+      "precision": 0.8181818181818182,
+      "recall": 0.9,
+      "f1": 0.8571428571428572,
+      "support": 10
+    },
+    "jalebi": {
+      "precision": 0.6666666666666666,
+      "recall": 0.8888888888888888,
+      "f1": 0.761904761904762,
+      "support": 9
+    },
+    "gajar_halwa": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "support": 2
+    },
+    "suji_halwa": {
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "f1": 0.25,
+      "support": 2
+    },
+    "barfi": {
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1": 0.7,
+      "support": 10
+    },
+    "ras_malai": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "support": 5
+    },
+    "kheer": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.4,
+      "support": 14
+    },
+    "kulfi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2857142857142857,
+      "f1": 0.30769230769230765,
+      "support": 7
+    },
+    "falooda": {
+      "precision": 0.8571428571428571,
+      "recall": 0.75,
+      "f1": 0.7999999999999999,
+      "support": 8
+    },
+    "chai": {
+      "precision": 0.2222222222222222,
+      "recall": 0.6666666666666666,
+      "f1": 0.3333333333333333,
+      "support": 3
+    },
+    "coffee": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "support": 5
+    },
+    "lassi": {
+      "precision": 1.0,
+      "recall": 0.42857142857142855,
+      "f1": 0.6,
+      "support": 7
+    },
+    "lemonade": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    "pizza": {
+      "precision": 1.0,
+      "recall": 0.8181818181818182,
+      "f1": 0.9,
+      "support": 11
+    },
+    "burger": {
+      "precision": 0.75,
+      "recall": 0.9,
+      "f1": 0.8181818181818182,
+      "support": 10
+    },
+    "french_fries": {
+      "precision": 0.8,
+      "recall": 0.7272727272727273,
+      "f1": 0.761904761904762,
+      "support": 11
+    },
+    "fried_rice": {
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143,
+      "f1": 0.7142857142857143,
+      "support": 7
+    },
+    "omelette": {
+      "precision": 0.8571428571428571,
+      "recall": 0.6666666666666666,
+      "f1": 0.75,
+      "support": 9
+    },
+    "fried_chicken": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.4615384615384615,
+      "support": 7
+    },
+    "sandwich": {
+      "precision": 0.8,
+      "recall": 0.5,
+      "f1": 0.6153846153846154,
+      "support": 8
+    },
+    "hot_dog": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "support": 1
+    },
+    "donut": {
+      "precision": 0.8571428571428571,
+      "recall": 0.5,
+      "f1": 0.631578947368421,
+      "support": 12
+    },
+    "ice_cream": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6666666666666665,
+      "support": 8
+    },
+    "chocolate_cake": {
+      "precision": 0.36363636363636365,
+      "recall": 1.0,
+      "f1": 0.5333333333333333,
+      "support": 4
+    },
+    "spaghetti": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "support": 4
+    },
+    "salad": {
+      "precision": 0.6,
+      "recall": 0.42857142857142855,
+      "f1": 0.5,
+      "support": 7
+    }
+  },
+  "worst_confused_pairs": [
+    {
+      "a": "rabri",
+      "b": "kheer",
+      "a_as_b": 0,
+      "b_as_a": 5,
+      "total": 5
+    },
+    {
+      "a": "naan",
+      "b": "sheermal",
+      "a_as_b": 3,
+      "b_as_a": 0,
+      "total": 3
+    },
+    {
+      "a": "pakora",
+      "b": "fried_chicken",
+      "a_as_b": 1,
+      "b_as_a": 2,
+      "total": 3
+    },
+    {
+      "a": "chicken_curry",
+      "b": "achar",
+      "a_as_b": 0,
+      "b_as_a": 3,
+      "total": 3
+    },
+    {
+      "a": "chai",
+      "b": "coffee",
+      "a_as_b": 0,
+      "b_as_a": 3,
+      "total": 3
+    },
+    {
+      "a": "paratha",
+      "b": "omelette",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "puri",
+      "b": "chana_chole",
+      "a_as_b": 1,
+      "b_as_a": 1,
+      "total": 2
+    },
+    {
+      "a": "puri",
+      "b": "donut",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "samosa",
+      "b": "fried_fish",
+      "a_as_b": 1,
+      "b_as_a": 1,
+      "total": 2
+    },
+    {
+      "a": "chicken_curry",
+      "b": "aloo_gobi",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "daal",
+      "b": "kadhi_pakora",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "raita",
+      "b": "kheer",
+      "a_as_b": 1,
+      "b_as_a": 1,
+      "total": 2
+    },
+    {
+      "a": "gulab_jamun",
+      "b": "donut",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "suji_halwa",
+      "b": "kheer",
+      "a_as_b": 0,
+      "b_as_a": 2,
+      "total": 2
+    },
+    {
+      "a": "kheer",
+      "b": "kulfi",
+      "a_as_b": 1,
+      "b_as_a": 1,
+      "total": 2
+    }
+  ],
+  "excluded": 430,
+  "skipped": [
+    "aloo_gosht/ (not a model class)",
+    "kunna/ (not a model class)",
+    "milk_soda/ (not a model class)",
+    "review/ (not a model class)",
+    "sattu/ (not a model class)"
+  ]
+}
