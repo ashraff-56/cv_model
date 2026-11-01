@@ -39,11 +39,11 @@ def build_recognizer() -> FoodRecognizer:
         from smartbite_cv.plate import PlateDetector
         detector = PlateDetector(owl_id=f"{folder}/owlv2", sam_id=f"{folder}/sam2")
     threads = int(os.environ["SMARTBITE_THREADS"]) if os.environ.get("SMARTBITE_THREADS") else None
-    return FoodRecognizer("artifacts/efficientnet_b0_v2",
+    return FoodRecognizer("models/food_name_finder.onnx",
                           nutrition=CsvNutritionProvider("nutrition/nutrition_v2.csv"),
                           threads=threads,
-                          portion_dir="artifacts/portion",
-                          plate_portion_dir="artifacts/plate_portion",
+                          portion_dir="models/food_weight_finder_no_plate.onnx",
+                          plate_portion_dir="models/food_weight_finder_with_plate.onnx",
                           plate_detector=detector)
 
 

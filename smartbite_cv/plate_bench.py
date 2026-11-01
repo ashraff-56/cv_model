@@ -182,7 +182,8 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--n5k", type=Path, required=True, help="Nutrition5k root with imagery/realsense_overhead")
     ap.add_argument("--side", type=Path, help="directory from tools/fetch_side_frames.py (with frames.csv)")
     ap.add_argument("--meta", type=Path, default=Path("data/raw/nutrition5k"))
-    ap.add_argument("--portion", type=Path, default=Path("artifacts/portion"))
+    ap.add_argument("--portion", type=Path, default=Path("models/food_weight_finder_no_plate.onnx"),
+                    help="first portion model (.onnx file or export folder)")
     ap.add_argument("--out", type=Path, default=Path("reports/plate_bench"))
     ap.add_argument("--ref-train", type=int, default=600, help="training dishes sampled for the reference plate size")
     ap.add_argument("--limit", type=int, help="test dishes (smoke runs only)")

@@ -26,9 +26,9 @@ from smartbite_cv.predict import FoodRecognizer  # noqa: E402
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("images", nargs="+", type=Path)
-    ap.add_argument("--model-dir", default="artifacts/efficientnet_b0_v2")
-    ap.add_argument("--portion-dir", default="artifacts/portion")
-    ap.add_argument("--plate-portion-dir", default="artifacts/plate_portion")
+    ap.add_argument("--model-dir", default="models/food_name_finder.onnx")
+    ap.add_argument("--portion-dir", default="models/food_weight_finder_no_plate.onnx")
+    ap.add_argument("--plate-portion-dir", default="models/food_weight_finder_with_plate.onnx")
     ap.add_argument("--nutrition-csv", default="nutrition/nutrition_v2.csv")
     ap.add_argument("--out", type=Path, default=Path("reports/plate/demo"))
     args = ap.parse_args(argv)

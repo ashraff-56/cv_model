@@ -346,12 +346,13 @@ class PortionEstimator:
     def __init__(self, model_dir: str | Path, threads: int | None = None):
         import onnxruntime as ort
 
-        self.model_dir = Path(model_dir)
-        self.meta = json.loads((self.model_dir / "portion_meta.json").read_text(encoding="utf-8"))
+        from .model_files import model_files
+        self.files = model_files(model_dir, "portion_meta.json")
+        self.meta = json.loads(self.files.settings.read_text(encoding="utf-8"))
         opts = ort.SessionOptions()
         if threads:
             opts.intra_op_num_threads = threads
-        self.session = ort.InferenceSession(str(self.model_dir / "model.onnx"), opts, providers=["CPUExecutionProvider"])
+        self.session = ort.InferenceSession(str(self.files.onnx), opts, providers=["CPUExecutionProvider"])
 
     def preprocess(self, img) -> np.ndarray:
         from PIL import Image

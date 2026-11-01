@@ -23,7 +23,7 @@ photo -> OWLv2 "plate / bowl" box -> SAM 2.1 mask -> filled outline -> shape mom
 | Mask | `plate.PlateDetector.segment` | SAM 2.1 tiny [2] prompted with the box; of its 3 masks, the one whose filled outline fits the box |
 | Tilt and size | `plate.mask_geometry` | A round plate seen at an angle is an ellipse, a square plate a parallelogram. Both have isotropic second moments head-on, so the moments give the tilt (short/long spread) and the size (long-axis spread, not foreshortened). Works for the rounded-square plates Nutrition5k uses, not only circles. |
 | Plate-only view | `plate.plate_only_view` | Affine warp to top-down, plate drawn at a fixed size, everything off the plate grey, so no background can act as a ruler (Nutrition5k's scanning rig has fixed-size QR codes) |
-| Grams | `plate_portion.PlatePortionEstimator` | ONNX model `artifacts/plate_portion`, then `fuse_with_serving` with the dish's typical serving |
+| Grams | `plate_portion.PlatePortionEstimator` | ONNX model `models/food_weight_finder_with_plate.onnx`, then `fuse_with_serving` with the dish's typical serving |
 | App call | `predict.FoodRecognizer(..., plate_portion_dir=...)` | Plate path first; no plate -> first portion model -> typical serving. A plate partly out of frame returns a "retake with the whole plate in view" warning |
 
 ![plate-only views](plate/figures/plate_only_views.jpg)
@@ -166,12 +166,12 @@ Kaggle with 960-px images.
 
 ## 8. What this means for the app
 
-Use `FoodRecognizer("artifacts/efficientnet_b0_v2", nutrition=CsvNutritionProvider("nutrition/nutrition_v2.csv"), portion_dir="artifacts/portion", plate_portion_dir="artifacts/plate_portion")`. Show
+Use `FoodRecognizer("models/food_name_finder.onnx", nutrition=CsvNutritionProvider("nutrition/nutrition_v2.csv"), portion_dir="models/food_weight_finder_no_plate.onnx", plate_portion_dir="models/food_weight_finder_with_plate.onnx")` (step by step: `INTEGRATION.md`). Show
 the returned range, show the retake warning when the plate is cut off, and keep the user's confirm step. Advise users
 to photograph the whole plate, from above or at an angle.
 
 ```powershell
-python -m smartbite_cv.predict meal.jpg --model-dir artifacts/efficientnet_b0_v2 --plate-portion-dir artifacts/plate_portion --portion-dir artifacts/portion --nutrition-csv nutrition/nutrition_v2.csv
+python -m smartbite_cv.predict meal.jpg                                 # uses models/ by default
 python tools/build_kaggle.py --user <kaggle-user> --version plate      # the Kaggle run behind these numbers
 python tools/demo_plate.py photo1.jpg photo2.jpg --out reports/plate/demo
 ```

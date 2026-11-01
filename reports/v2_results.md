@@ -13,8 +13,7 @@ Photo → **dish** (76-class EfficientNet-B0) → **grams** (portion model, comb
 Nothing is logged automatically: the result is a suggestion for the confirm screen (`autoLogged: false`).
 
 ```
-python -m smartbite_cv.predict meal.jpg --model-dir artifacts/efficientnet_b0_v2 \
-    --portion-dir artifacts/portion --nutrition-csv nutrition/nutrition_v2.csv
+python -m smartbite_cv.predict meal.jpg --no-plate   # dish classifier + fixed-camera portion model (models/)
 ```
 
 ## 2. Data

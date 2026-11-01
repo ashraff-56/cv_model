@@ -1,6 +1,6 @@
 """CPU latency of the ONNX bundle, single image (batch 1): decode+preprocess and model separately.
 
-    python -m smartbite_cv.latency --model-dir artifacts/efficientnet_b0 --image some.jpg
+    python -m smartbite_cv.latency --model-dir models/food_name_finder.onnx --image some.jpg
 """
 from __future__ import annotations
 
@@ -41,7 +41,7 @@ def benchmark(model_dir: Path, image: Path, runs: int = 100, warmup: int = 10, t
             model.append((t2 - t1) * 1e3)
             total.append((t2 - t0) * 1e3)
     return {
-        "model": m["modelName"], "onnx_mb": round((model_dir / "model.onnx").stat().st_size / 1e6, 2),
+        "model": m["modelName"], "onnx_mb": round(rec.files.onnx.stat().st_size / 1e6, 2),
         "image": str(image), "image_size": list(load_rgb(raw).size),
         "decode_preprocess": _stats(pre), "inference": _stats(model), "total": _stats(total),
         "machine": {"processor": platform.processor(), "cpu_count": os.cpu_count(), "system": platform.system(),

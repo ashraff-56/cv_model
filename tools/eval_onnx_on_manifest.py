@@ -3,7 +3,7 @@
 Training-time evaluation reads resized cache copies; this checks that the shipped inference path on
 the original files gives the same accuracy.
 
-    python tools/eval_onnx_on_manifest.py --model-dir artifacts/efficientnet_b0 --out reports/metrics/onnx_test_efficientnet_b0.json
+    python tools/eval_onnx_on_manifest.py --model-dir models/food_name_finder.onnx --out reports/metrics/onnx_test_efficientnet_b0.json
 """
 from __future__ import annotations
 

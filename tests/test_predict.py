@@ -154,3 +154,29 @@ def test_plate_path_is_used_first_and_falls_back_without_a_plate(tiny_bundle, ti
     det.found = False
     q = rec.quantity_for(photo(3), "biryani")
     assert q["method"] == "photo estimate combined with typical serving (no plate found)"
+
+
+def test_models_load_from_named_files_as_in_the_models_folder(tiny_bundle, tiny_portion_bundle, photo, tmp_path):
+    import shutil
+
+    from smartbite_cv.nutrition import NutritionInfo
+
+    class Provider:
+        def get(self, label):
+            return NutritionInfo(label, label.title(), 150.0, 10.0, 15.0, 5.0, 300.0, "test", "1", "", "", False, "")
+
+    bundle, _ = tiny_bundle
+    models = tmp_path / "models"
+    models.mkdir()
+    shutil.copy(bundle / "model.onnx", models / "food_name_finder.onnx")
+    shutil.copy(bundle / "model_meta.json", models / "food_name_finder_settings.json")
+    shutil.copy(bundle / "bands.yaml", models / "food_name_finder_how_sure.yaml")
+    shutil.copy(tiny_portion_bundle / "model.onnx", models / "food_weight_finder_no_plate.onnx")
+    shutil.copy(tiny_portion_bundle / "portion_meta.json", models / "food_weight_finder_no_plate_settings.json")
+    rec = FoodRecognizer(models / "food_name_finder.onnx", nutrition=Provider(),
+                         portion_dir=models / "food_weight_finder_no_plate.onnx")
+    assert rec.predict(photo(2))["autoLogged"] is False
+    assert abs(rec.quantity_for(photo(2), "biryani")["photoEstimateG"] - 200.0) < 1.0
+    (models / "food_name_finder_how_sure.yaml").unlink()
+    with pytest.raises(FileNotFoundError):
+        FoodRecognizer(models / "food_name_finder.onnx")

@@ -3,15 +3,15 @@
 No PyTorch needed at inference time (onnxruntime + Pillow + numpy). The result is a
 SUGGESTION for the verification screen; `autoLogged` is always False.
 
-With a portion bundle, grams come from the photo: the estimate is combined with the dish's typical serving
-according to the model's own uncertainty, and a ~68% range is reported. --plate-portion-dir uses the plate as the
-ruler (plate found, tilt undone, plate-relative model; needs torch + transformers); when no plate is found it
-falls back to --portion-dir (fixed overhead camera model), then to the typical serving.
+Grams come from the photo: the estimate is combined with the dish's typical serving according to the model's own
+uncertainty, and a ~68% range is reported. The plate model (models/food_weight_finder_with_plate.onnx) uses the plate
+as the ruler (needs torch + transformers for the plate detector); when no plate is found it falls back to
+models/food_weight_finder_no_plate.onnx, then to the typical serving. Models can also be export folders.
 
-    python -m smartbite_cv.predict photo.jpg --portion-dir artifacts/portion   # dish + grams + nutrients
-    python -m smartbite_cv.predict photo.jpg --plate-portion-dir artifacts/plate_portion --portion-dir artifacts/portion
-    python -m smartbite_cv.predict photo.jpg --grams 250                       # user-entered grams
-    python -m smartbite_cv.predict photo.jpg --label daal                      # user picked another dish
+    python -m smartbite_cv.predict photo.jpg                  # dish + grams + nutrients (models/ by default)
+    python -m smartbite_cv.predict photo.jpg --no-plate       # skip the plate detector (faster, less accurate)
+    python -m smartbite_cv.predict photo.jpg --grams 250      # user-entered grams
+    python -m smartbite_cv.predict photo.jpg --label daal     # user picked another dish
 """
 from __future__ import annotations
 
@@ -25,9 +25,12 @@ from PIL import Image
 from .bands import BandThresholds, assign_band
 from .config import REPO_ROOT
 from .imageio import ImageSource, load_rgb
+from .model_files import model_files
 from .nutrition import CsvNutritionProvider, NutritionProvider, default_provider, nutrients_for
 
-DEFAULT_MODEL_DIR = REPO_ROOT / "artifacts" / "efficientnet_b0"
+MODELS = REPO_ROOT / "models"
+DEFAULT_MODEL_DIR = MODELS / "food_name_finder.onnx"
+DEFAULT_NUTRITION_CSV = REPO_ROOT / "nutrition" / "nutrition_v2.csv"   # matches food_name_finder's 76 dishes
 MESSAGES = {
     "high": "Looks like {name}. Please confirm or change it.",
     "medium": "Is it one of these?",
@@ -59,17 +62,19 @@ class FoodRecognizer:
                  plate_portion_dir: str | Path | None = None, plate_detector=None):
         import onnxruntime as ort
 
-        self.model_dir = Path(model_dir)
-        with open(self.model_dir / "model_meta.json", encoding="utf-8") as f:
+        self.files = model_files(model_dir, "model_meta.json")
+        with open(self.files.settings, encoding="utf-8") as f:
             self.meta = json.load(f)
-        self.bands = BandThresholds.load(self.model_dir / "bands.yaml")
+        if self.files.how_sure is None:
+            raise FileNotFoundError(f"confidence thresholds missing next to {self.files.onnx}")
+        self.bands = BandThresholds.load(self.files.how_sure)
         self.classes = [c["slug"] for c in self.meta["classes"]]
         self.display = {c["slug"]: c["displayName"] for c in self.meta["classes"]}
         self.not_food = self.meta.get("notFoodLabel", "not_food")
         opts = ort.SessionOptions()
         if threads:
             opts.intra_op_num_threads = threads
-        self.session = ort.InferenceSession(str(self.model_dir / "model.onnx"), opts,
+        self.session = ort.InferenceSession(str(self.files.onnx), opts,
                                             providers=["CPUExecutionProvider"])
         self.nutrition = nutrition
         self.portion = None
@@ -147,18 +152,21 @@ class FoodRecognizer:
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description="Recognise a food photo (top-3 + calories)")
     ap.add_argument("image")
-    ap.add_argument("--model-dir", default=str(DEFAULT_MODEL_DIR))
-    ap.add_argument("--grams", type=float, help="portion in grams (default: the dish's default serving)")
+    ap.add_argument("--model-dir", default=str(DEFAULT_MODEL_DIR), help="dish model: .onnx file or export folder")
+    ap.add_argument("--grams", type=float, help="portion in grams (default: estimated from the photo)")
     ap.add_argument("--label", help="dish the user picked (default: top suggestion)")
-    ap.add_argument("--portion-dir", help="ONNX portion bundle: estimate grams from the photo")
-    ap.add_argument("--plate-portion-dir", help="plate-relative ONNX portion bundle (plate as the ruler)")
-    ap.add_argument("--nutrition-csv", help="nutrition table matching the model's classes (e.g. nutrition/nutrition_v2.csv)")
+    ap.add_argument("--portion-dir", default=str(MODELS / "food_weight_finder_no_plate.onnx"),
+                    help="grams model used when no plate is found ('' to turn off)")
+    ap.add_argument("--plate-portion-dir", default=str(MODELS / "food_weight_finder_with_plate.onnx"),
+                    help="grams model that uses the plate as a ruler")
+    ap.add_argument("--no-plate", action="store_true", help="skip the plate detector (faster, less accurate)")
+    ap.add_argument("--nutrition-csv", default=str(DEFAULT_NUTRITION_CSV), help="nutrition table matching the dish model")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args(argv)
 
     provider = CsvNutritionProvider(args.nutrition_csv) if args.nutrition_csv else None
-    rec = FoodRecognizer(args.model_dir, nutrition=provider, portion_dir=args.portion_dir,
-                         plate_portion_dir=args.plate_portion_dir)
+    rec = FoodRecognizer(args.model_dir, nutrition=provider, portion_dir=args.portion_dir or None,
+                         plate_portion_dir=None if args.no_plate else (args.plate_portion_dir or None))
     img = load_rgb(args.image)
     result = rec.predict(img)
     label = args.label or (result["suggestions"][0]["label"] if result["suggestions"] else None)

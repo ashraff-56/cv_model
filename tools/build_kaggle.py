@@ -40,7 +40,8 @@ VERSIONS = {
     "plate": {"data": "configs/data_v2.yaml", "classes": "configs/classes_v2.yaml", "manifest": "data/splits/manifest_v2.csv",
               "train_extra": "", "code_slug": "smartbite-cv-code-v3", "kernel_slug": "smartbite-plate-portion",
               "kind": "plate", "sources": ["gillesokhin/nutrition5k-dataset"],
-              "extra_files": ["data/raw/nutrition5k/metadata", "data/raw/nutrition5k/dish_ids", "artifacts/portion",
+              "extra_files": ["data/raw/nutrition5k/metadata", "data/raw/nutrition5k/dish_ids",
+                              "models/food_weight_finder_no_plate.onnx", "models/food_weight_finder_no_plate_settings.json",
                               "data/plate_cache/detections_overhead.jsonl"]},
 }
 MODELS = ["efficientnet_b0", "mobilenetv2"]
@@ -253,7 +254,7 @@ with open(f"{P}/detections.jsonl", "w") as f:
     f.writelines(json.dumps(r) + chr(10) for r in recs.values())
 print(f"detections: {len(recs)} cached ({(time.time() - t0) / 60:.1f} min)", flush=True)
 # 2. First portion model on test photos, as is and with plate scaling (reference plate from training photos).
-run(f"python -m smartbite_cv.plate_bench --n5k {N5K} --side /tmp/side_test --portion artifacts/portion "
+run(f"python -m smartbite_cv.plate_bench --n5k {N5K} --side /tmp/side_test --portion models/food_weight_finder_no_plate.onnx "
     f"--cache {P}/detections.jsonl --out {P}/bench")
 print(f"benchmark: {(time.time() - t0) / 60:.1f} min", flush=True)
 # 3. Plate-only views (detections cached), plate-relative model, test split used once, ONNX export.

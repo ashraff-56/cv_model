@@ -3,8 +3,8 @@
 Layout: <folder>/<class_slug>/*.jpg  (slugs from configs/classes.yaml). Uses the exact inference
 path the app will use (predict.FoodRecognizer), including EXIF rotation and calibration.
 
-    python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0 --folder eval_phone_photos
-    python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0_v2 --folder data/external/wikipedia         --exclude data/external/wikipedia/excluded.csv     # duplicates of training images + rejected labels
+    python -m smartbite_cv.eval_folder --model-dir models/food_name_finder.onnx --folder eval_phone_photos
+    python -m smartbite_cv.eval_folder --model-dir models/food_name_finder.onnx --folder data/external/wikipedia         --exclude data/external/wikipedia/excluded.csv     # duplicates of training images + rejected labels
 """
 from __future__ import annotations
 

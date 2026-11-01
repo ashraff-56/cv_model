@@ -27,7 +27,7 @@ and listed in the output. HEIC files from iPhones work as long as `pillow-heif` 
 ## Run
 
 ```
-python -m smartbite_cv.eval_folder --model-dir artifacts/efficientnet_b0 --folder eval_phone_photos \
+python -m smartbite_cv.eval_folder --model-dir models/food_name_finder.onnx --folder eval_phone_photos \
     --out reports/metrics/phone_eval_efficientnet_b0.json
 ```
 
