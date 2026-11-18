@@ -1,0 +1,7 @@
+# EfficientNet-B0 v3 baseline. Keep the architecture fixed for a fair comparison.
+run_name: efficientnet_b0_v3
+model:
+  name: efficientnet_b0.ra_in1k
+  pretrained: true
+  drop_rate: 0.3
+  drop_path_rate: 0.1
