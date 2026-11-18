@@ -6,49 +6,49 @@ This report identifies new taxonomy classes that do not yet have a mapped image-
 
 ## Classes with no classifier source mapping
 
-| class | category | recommended next action |
+| class | category | Find a licensed dedicated dataset or collect real phone photographs |
 |---|---|---|
-| watermelon | fruit | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| spinach | vegetable | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| peas | vegetable | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| broccoli | vegetable | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| lettuce | vegetable | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| sugar | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| salt | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| wheat_flour | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| white_rice | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| brown_rice | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| oats | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| red_lentils | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| chickpeas | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| kidney_beans | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| black_lentils | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| cooking_oil | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| ghee | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| butter | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| honey | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| peanut_butter | ingredient | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| biscuits | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| crackers | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| cookies | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| toast | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| croissant | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| cake_slice | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| potato_chips | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| popcorn | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| chocolate_bar | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| breakfast_cereal | packaged_snack | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| plain_milk | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| plain_yogurt | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| cheese | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| boiled_egg | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| beef_steak | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| orange_juice | dairy_protein_beverage | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| tacos | international_dish | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| sushi | international_dish | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| dumplings | international_dish | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| pancakes | international_dish | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
-| lasagna | international_dish | Check FoodSeg103 mask labels; use only as mask-supervised/crop-derived data after review |
+| watermelon | fruit | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| spinach | vegetable | Find a licensed dedicated dataset or collect real phone photographs |
+| peas | vegetable | Find a licensed dedicated dataset or collect real phone photographs |
+| broccoli | vegetable | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| lettuce | vegetable | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| sugar | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| salt | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| wheat_flour | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| white_rice | ingredient | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| brown_rice | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| oats | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| red_lentils | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| chickpeas | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| kidney_beans | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| black_lentils | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| cooking_oil | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| ghee | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| butter | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| honey | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| peanut_butter | ingredient | Find a licensed dedicated dataset or collect real phone photographs |
+| biscuits | packaged_snack | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| crackers | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| cookies | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| toast | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| croissant | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| cake_slice | packaged_snack | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| potato_chips | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| popcorn | packaged_snack | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| chocolate_bar | packaged_snack | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| breakfast_cereal | packaged_snack | Find a licensed dedicated dataset or collect real phone photographs |
+| plain_milk | dairy_protein_beverage | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| plain_yogurt | dairy_protein_beverage | Find a licensed dedicated dataset or collect real phone photographs |
+| cheese | dairy_protein_beverage | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| boiled_egg | dairy_protein_beverage | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| beef_steak | dairy_protein_beverage | FoodSeg103 has a corresponding mask label; verify class mapping and use for segmentation/crop supervision |
+| orange_juice | dairy_protein_beverage | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| tacos | international_dish | Find a licensed dedicated dataset or collect real phone photographs |
+| sushi | international_dish | Find a licensed dedicated dataset or collect real phone photographs |
+| dumplings | international_dish | FoodSeg103 has a broader/merged related mask label; do not treat as exact class without review |
+| pancakes | international_dish | Find a licensed dedicated dataset or collect real phone photographs |
+| lasagna | international_dish | Find a licensed dedicated dataset or collect real phone photographs |
 
 ## How to use FoodSeg103 correctly
 
