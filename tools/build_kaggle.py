@@ -332,7 +332,7 @@ def build_notebook(v: dict) -> nbformat.NotebookNode:
         setup = nbformat.v4.new_code_cell(AUDIT_SETUP.replace("@CODE_SLUG@", v["code_slug"]))
         nb.cells = [
             nbformat.v4.new_markdown_cell(
-                "# SmartBite v3: dataset source audit (CPU only)\\n"
+                "# SmartBite v3: dataset source audit (CPU only)\n"
                 "Inventories attached dataset folders against the v3 class/source mappings. "
                 "No model training or GPU is used. Review the generated per-class raw counts before building a manifest."),
             setup,
