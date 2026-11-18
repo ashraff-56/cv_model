@@ -1,0 +1,38 @@
+# v3 training defaults. Uses the audited v3 dataset and ordered class definitions.
+seed: 20261118
+data:
+  config: configs/data_v3.yaml
+  classes: configs/classes_v3.yaml
+  cache_dir: null
+  only_classes: null
+  limit_per_class: null
+  num_workers: 2
+
+img_size: 224
+crop_pct: 0.875
+batch_size: 32
+eval_batch_size: 64
+balance: sqrt
+label_smoothing: 0.1
+amp: true
+grad_clip: 1.0
+aug:
+  scale_min: 0.35
+  color_jitter: [0.2, 0.2, 0.15, 0.02]
+  rotate_deg: 15
+  rotate_p: 0.3
+  erasing_p: 0.15
+
+stage1:
+  epochs: 3
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  warmup_epochs: 0
+  min_lr: 1.0e-4
+stage2:
+  epochs: 25
+  lr: 3.0e-4
+  weight_decay: 0.05
+  warmup_epochs: 1
+  min_lr: 1.0e-6
+early_stop_patience: 6
