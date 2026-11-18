@@ -44,4 +44,10 @@ def resolve_path(path: str | Path, base: Path = REPO_ROOT) -> Path:
 def load_classes(path: str | Path = REPO_ROOT / "configs" / "classes.yaml") -> list[dict]:
     """Class definitions in their canonical order (this order defines the label index)."""
     with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)["classes"]
+        data = yaml.safe_load(f)
+    # Support both legacy mapping format (classes: [...]) and v3 list format.
+    if isinstance(data, dict):
+        return data["classes"]
+    if isinstance(data, list):
+        return data
+    raise ValueError(f"Unsupported classes YAML format in {path}: expected a list or a mapping with a 'classes' key")
