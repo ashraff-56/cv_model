@@ -57,6 +57,30 @@ Review:
 
 This audit only counts raw files. It does not establish that images are valid, unique, correctly labelled, licensed or representative.
 
+## Optional: run the source audit on Kaggle (CPU only)
+
+If your existing v2 source datasets are already attached/available in Kaggle, generate a CPU-only audit notebook and metadata from your local repository checkout:
+
+```powershell
+python tools/build_kaggle.py --user YOUR_KAGGLE_USERNAME --version audit
+```
+
+This creates:
+
+- `kaggle_out/bundle_audit/code/` — private code dataset bundle
+- `kaggle_out/bundle_audit/kernel/` — Kaggle notebook and metadata
+
+Create the private code dataset (first run only), then push the notebook:
+
+```powershell
+kaggle datasets create -p kaggle_out/bundle_audit/code
+kaggle kernels push -p kaggle_out/bundle_audit/kernel
+```
+
+The generated kernel attaches the datasets declared in `configs/data_v3.yaml`, including Fruits-360 and the existing v2 sources. It does not enable a GPU and does not train any model. If your private Khana subset has not already been uploaded to Kaggle, create it using the repository's existing `tools/make_upload_subset.py` workflow before pushing the kernel.
+
+The notebook writes `smartbite_v3_source_audit.zip` to its output. Download that archive and inspect the per-class counts before proceeding.
+
 ## Build the v3 manifest only after source audit
 
 Once the folder audit and contact sheets have been reviewed:
