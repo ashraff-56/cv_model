@@ -886,3 +886,8 @@ classes:
     category: international_dish
     target_images: 400
     sources: []
+  - slug: not_food
+    display: Not food
+    variants: []
+    sources:
+      - food5k: "*/non_food"
