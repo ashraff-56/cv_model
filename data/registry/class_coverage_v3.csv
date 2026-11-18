@@ -83,7 +83,7 @@ banana,"Banana",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_
 orange,"Orange",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 mango,"Mango",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 grapes,"Grapes",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
-watermelon,"Watermelon",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
+watermelon,"Watermelon",fruit,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 strawberry,"Strawberry",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 guava,"Guava",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 dates,"Dates",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
@@ -111,7 +111,7 @@ eggplant,"Eggplant",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;loca
 capsicum,"Capsicum",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 garlic,"Garlic",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 ginger,"Ginger",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
-broccoli,"Broccoli",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
+broccoli,"Broccoli",vegetable,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 lettuce,"Lettuce",vegetable,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 sugar,"Sugar",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 salt,"Salt",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
