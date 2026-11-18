@@ -65,12 +65,20 @@ def main(argv: list[str] | None = None) -> None:
     with open(eval_dir / "calibration.json", encoding="utf-8") as f:
         temperature = json.load(f)["temperature"]
     shutil.copy(eval_dir / "bands.yaml", args.out / "bands.yaml")
-    display = {c["slug"]: c for c in load_classes()}
+    # New checkpoints carry the exact class definitions used during training. Keep the
+    # fallback for older checkpoints that predate this metadata.
+    display = {c["slug"]: c for c in meta.get("class_metadata", [])}
+    if not display:
+        display = {c["slug"]: c for c in load_classes()}
     ckpt = torch.load(args.run / "best.pt", map_location="cpu", weights_only=False)
     bundle = {
         "modelName": meta["model_cfg"]["name"],
         "classes": [{"slug": s, "displayName": display.get(s, {}).get("display", s),
-                     "variants": display.get(s, {}).get("variants", [])} for s in meta["classes"]],
+                     "variants": display.get(s, {}).get("variants", []),
+                     **({"category": display[s]["category"]} if display.get(s, {}).get("category") else {})}
+                    for s in meta["classes"]],
+        "classConfig": meta.get("class_config"),
+        "classConfigSha256": meta.get("class_config_sha256"),
         "notFoodLabel": "not_food",
         "imgSize": meta["img_size"],
         "resizeShortSide": eval_resize(meta["img_size"], meta["crop_pct"]),
