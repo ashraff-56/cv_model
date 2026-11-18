@@ -53,15 +53,19 @@ def embed(paths: list[Path], model_name: str = "efficientnet_b0.ra_in1k", batch_
     keys = keys or [str(p) for p in paths]
     todo = [i for i, k in enumerate(keys) if k not in cached]
     if todo:
-        model = timm.create_model(model_name, pretrained=True, num_classes=0).eval()
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f"embedding device={device}; images_to_embed={len(todo)}", flush=True)
+        model = timm.create_model(model_name, pretrained=True, num_classes=0).to(device).eval()
         tf = T.Compose([T.Resize(224, interpolation=T.InterpolationMode.BICUBIC), T.CenterCrop(224), T.ToTensor(),
                         T.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
-        loader = DataLoader(_Files([paths[i] for i in todo], tf), batch_size=batch_size, num_workers=workers)
+        loader = DataLoader(_Files([paths[i] for i in todo], tf), batch_size=batch_size, num_workers=workers,
+                            pin_memory=(device.type == "cuda"))
         torch.set_num_threads(max(1, torch.get_num_threads()))
         done = 0
         with torch.inference_mode():
             for x, idx in loader:
-                feats = torch.nn.functional.normalize(model(x), dim=1).numpy().astype(np.float32)
+                x = x.to(device, non_blocking=(device.type == "cuda"))
+                feats = torch.nn.functional.normalize(model(x), dim=1).cpu().numpy().astype(np.float32)
                 for j, f in zip(idx.tolist(), feats):
                     cached[keys[todo[j]]] = f
                 done += len(idx)
