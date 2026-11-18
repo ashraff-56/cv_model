@@ -86,7 +86,10 @@ def collect(classes: list[dict], roots: dict[str, Path], exts: set[str], dataset
     (dataset, relpath) pairs to skip."""
     datasets, exclude = datasets or {}, exclude or set()
     records = []
-    for cls in classes:
+    total_classes = len(classes)
+    print(f"Starting source collection: {total_classes} classes across {len(roots)} available datasets", flush=True)
+    for class_idx, cls in enumerate(classes, 1):
+        class_added = 0
         for source in cls["sources"]:
             (ds_id, pattern), = source.items()
             if ds_id not in roots:
@@ -95,13 +98,26 @@ def collect(classes: list[dict], roots: dict[str, Path], exts: set[str], dataset
             limit = datasets.get(ds_id, {}).get("max_per_folder")
             # some datasets (Khana) name files by content hash with no extension; decoding validates them later
             any_ext = datasets.get(ds_id, {}).get("any_extension", False)
-            for folder in sorted(glob.glob(str(root / pattern))):
-                rels = [Path(folder, name).relative_to(root).as_posix() for name in sorted(os.listdir(folder))
-                        if Path(name).suffix.lower() in exts or (any_ext and Path(folder, name).is_file())]
+            matched_folders = sorted(glob.glob(str(root / pattern)))
+            for folder_idx, folder in enumerate(matched_folders, 1):
+                # scandir avoids building an intermediate list of every directory entry.
+                rels = []
+                with os.scandir(folder) as entries:
+                    for entry in entries:
+                        if not entry.is_file():
+                            continue
+                        suffix = Path(entry.name).suffix.lower()
+                        if suffix in exts or any_ext:
+                            rels.append(Path(folder, entry.name).relative_to(root).as_posix())
                 rels = [r for r in rels if (ds_id, r) not in exclude]
                 if limit and len(rels) > limit:
                     rels = sorted(rels, key=lambda r: seeded_key(seed, r))[:limit]
-                records += [{"label": cls["slug"], "dataset": ds_id, "relpath": r} for r in rels]
+                records.extend({"label": cls["slug"], "dataset": ds_id, "relpath": r} for r in rels)
+                class_added += len(rels)
+                print(f"  [{class_idx}/{total_classes}] {cls['slug']} <- {ds_id}: {len(rels):,} files", flush=True)
+        if class_idx % 10 == 0 or class_idx == total_classes:
+            print(f"Collection progress: {class_idx}/{total_classes} classes; {len(records):,} files found", flush=True)
+    print(f"Collection complete: {len(records):,} files", flush=True)
     return records
 
 
@@ -144,9 +160,31 @@ def inspect_files(jobs: list[tuple[str, int]], workers: int, cache_file: Path | 
     pending = set(todo)
     results: list[dict | None] = [None if i in pending else cache[jobs[i][0]][2] for i in range(len(jobs))]
     if todo:
+        print(f"Inspecting {len(todo):,} new/changed images; {len(jobs) - len(todo):,} reused from cache", flush=True)
+        # Work in bounded chunks and checkpoint after each one. A runtime reset no longer
+        # discards an entire multi-hour inspection pass.
+        chunk_size = 256
         with ProcessPoolExecutor(max_workers=workers) as pool:
-            for i, res in zip(todo, pool.map(_inspect, [jobs[i] for i in todo], chunksize=64)):
-                results[i] = res
+            for start in range(0, len(todo), chunk_size):
+                batch_ids = todo[start:start + chunk_size]
+                batch_jobs = [jobs[i] for i in batch_ids]
+                batch_results = list(pool.map(_inspect, batch_jobs, chunksize=8))
+                for i, res in zip(batch_ids, batch_results):
+                    if res.get("retry"):
+                        res = _inspect(jobs[i])
+                        if res.get("retry"):
+                            res = {"error": "MemoryError (image too large to decode)"}
+                    results[i] = res
+                if cache_file is not None:
+                    for i in batch_ids:
+                        cache[jobs[i][0]] = [*stamps[i], results[i]]
+                    cache_file.parent.mkdir(parents=True, exist_ok=True)
+                    tmp = cache_file.with_suffix(".tmp")
+                    tmp.write_text(json.dumps(cache), encoding="utf-8")
+                    tmp.replace(cache_file)
+                done = min(start + len(batch_ids), len(todo))
+                print(f"  inspected {done:,}/{len(todo):,} new images; cache checkpoint saved", flush=True)
+    # Re-check any cached retry markers (older cache versions may contain them).
     for i, res in enumerate(results):
         if res.get("retry"):
             results[i] = _inspect(jobs[i])
@@ -158,7 +196,7 @@ def inspect_files(jobs: list[tuple[str, int]], workers: int, cache_file: Path | 
         tmp = cache_file.with_suffix(".tmp")
         tmp.write_text(json.dumps(cache), encoding="utf-8")
         tmp.replace(cache_file)
-    print(f"inspected {len(todo)} files ({len(jobs) - len(todo)} reused from cache)")
+    print(f"Inspection complete: inspected {len(todo):,} files ({len(jobs) - len(todo):,} reused from cache)", flush=True)
     return results
 
 
