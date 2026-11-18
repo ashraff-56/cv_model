@@ -1,0 +1,151 @@
+slug,display,category,origin,training_status,legacy_train,legacy_val,legacy_test,legacy_total,target_images,priority,source_candidates,license_status
+biryani,"Biryani",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+naan,"Naan",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+roti_chapati,"Roti / Chapati",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+paratha,"Paratha",south_asian_dish,legacy,existing_active,188,40,40,268,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_paratha,"Aloo paratha",south_asian_dish,legacy,existing_active,384,82,82,548,400,P2,existing_legacy_sources,pending_per-source_license_review
+anda_paratha,"Anda paratha",south_asian_dish,legacy,existing_active,124,26,27,177,400,P2,existing_legacy_sources,pending_per-source_license_review
+sheermal,"Sheermal",south_asian_dish,legacy,existing_active,131,28,28,187,400,P2,existing_legacy_sources,pending_per-source_license_review
+puri,"Puri",south_asian_dish,legacy,existing_active,196,42,42,280,400,P2,existing_legacy_sources,pending_per-source_license_review
+halwa_puri,"Halwa puri",south_asian_dish,legacy,existing_active,99,21,22,142,400,P2,existing_legacy_sources,pending_per-source_license_review
+paratha_roll,"Paratha roll",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+samosa,"Samosa",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+pakora,"Pakora",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+gol_gappay,"Gol gappay",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+chana_chaat,"Chana chaat",south_asian_dish,legacy,existing_active,126,25,25,176,400,P2,existing_legacy_sources,pending_per-source_license_review
+karahi,"Karahi",south_asian_dish,legacy,existing_active,211,45,46,302,400,P2,existing_legacy_sources,pending_per-source_license_review
+korma,"Korma",south_asian_dish,legacy,existing_active,137,29,30,196,400,P2,existing_legacy_sources,pending_per-source_license_review
+chicken_curry,"Chicken curry / Butter chicken",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+nihari,"Nihari",south_asian_dish,legacy,existing_active,97,20,21,138,400,P2,existing_legacy_sources,pending_per-source_license_review
+kunna,"Kunna",south_asian_dish,legacy,needs_data,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+paye,"Paye",south_asian_dish,legacy,existing_active,57,12,13,82,400,P2,existing_legacy_sources,pending_per-source_license_review
+haleem,"Haleem",south_asian_dish,legacy,existing_active,166,35,36,237,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_gosht,"Aloo gosht",south_asian_dish,legacy,needs_data,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+palak_gosht,"Palak gosht",south_asian_dish,legacy,existing_active,114,24,25,163,400,P2,existing_legacy_sources,pending_per-source_license_review
+keema,"Keema",south_asian_dish,legacy,existing_active,102,22,22,146,400,P2,existing_legacy_sources,pending_per-source_license_review
+kofta,"Kofta",south_asian_dish,legacy,existing_active,299,64,64,427,400,P2,existing_legacy_sources,pending_per-source_license_review
+fish_curry,"Fish curry",south_asian_dish,legacy,existing_active,340,72,73,485,400,P2,existing_legacy_sources,pending_per-source_license_review
+fried_fish,"Fried / grilled fish",south_asian_dish,legacy,existing_active,111,24,24,159,400,P2,existing_legacy_sources,pending_per-source_license_review
+chicken_tikka,"Chicken tikka",south_asian_dish,legacy,existing_active,209,45,45,299,400,P2,existing_legacy_sources,pending_per-source_license_review
+malai_boti,"Malai boti",south_asian_dish,legacy,existing_active,98,21,21,140,400,P2,existing_legacy_sources,pending_per-source_license_review
+seekh_kebab,"Seekh kebab",south_asian_dish,legacy,existing_active,360,77,78,515,400,P2,existing_legacy_sources,pending_per-source_license_review
+chapli_kebab,"Chapli kebab",south_asian_dish,legacy,existing_active,99,21,22,142,400,P2,existing_legacy_sources,pending_per-source_license_review
+lamb_chops,"Lamb chops",south_asian_dish,legacy,existing_active,107,23,23,153,400,P2,existing_legacy_sources,pending_per-source_license_review
+chicken_roast,"Chicken roast / chargha",south_asian_dish,legacy,existing_active,114,20,20,154,400,P2,existing_legacy_sources,pending_per-source_license_review
+daal,"Daal",south_asian_dish,legacy,existing_active,410,88,88,586,400,P2,existing_legacy_sources,pending_per-source_license_review
+chana_chole,"Chana / Chole",south_asian_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+kadhi_pakora,"Kadhi pakora",south_asian_dish,legacy,existing_active,115,24,25,164,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_baingan,"Aloo baingan",south_asian_dish,legacy,existing_active,91,19,20,130,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_gobi,"Aloo gobi",south_asian_dish,legacy,existing_active,344,74,74,492,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_methi,"Aloo methi",south_asian_dish,legacy,existing_active,148,32,32,212,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_palak,"Aloo palak",south_asian_dish,legacy,existing_active,71,15,15,101,400,P2,existing_legacy_sources,pending_per-source_license_review
+aloo_shimla_mirch,"Aloo shimla mirch",south_asian_dish,legacy,existing_active,113,24,25,162,400,P2,existing_legacy_sources,pending_per-source_license_review
+bhindi,"Bhindi",south_asian_dish,legacy,existing_active,311,66,67,444,400,P2,existing_legacy_sources,pending_per-source_license_review
+ghiya,"Ghiya / lauki",south_asian_dish,legacy,existing_active,109,23,24,156,400,P2,existing_legacy_sources,pending_per-source_license_review
+karela,"Karela",south_asian_dish,legacy,existing_active,125,26,27,178,400,P2,existing_legacy_sources,pending_per-source_license_review
+mixed_sabzi,"Mixed sabzi",south_asian_dish,legacy,existing_active,108,23,24,155,400,P2,existing_legacy_sources,pending_per-source_license_review
+saag,"Saag",south_asian_dish,legacy,existing_active,130,27,28,185,400,P2,existing_legacy_sources,pending_per-source_license_review
+raita,"Raita",ingredient_side,legacy,existing_active,91,19,20,130,400,P2,existing_legacy_sources,pending_per-source_license_review
+kachumber_salad,"Kachumber salad",ingredient_side,legacy,existing_active,85,18,18,121,400,P2,existing_legacy_sources,pending_per-source_license_review
+achar,"Achar",ingredient_side,legacy,existing_active,112,24,24,160,400,P2,existing_legacy_sources,pending_per-source_license_review
+pudina_chutney,"Pudina chutney",ingredient_side,legacy,existing_active,93,16,17,126,400,P2,existing_legacy_sources,pending_per-source_license_review
+gulab_jamun,"Gulab jamun",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+jalebi,"Jalebi",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+gajar_halwa,"Gajar halwa",south_asian_dish,legacy,existing_active,358,77,77,512,400,P2,existing_legacy_sources,pending_per-source_license_review
+suji_halwa,"Suji halwa",south_asian_dish,legacy,existing_active,156,33,34,223,400,P2,existing_legacy_sources,pending_per-source_license_review
+barfi,"Barfi",packaged_snack,legacy,existing_active,382,81,82,545,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+rabri,"Rabri",packaged_snack,legacy,existing_active,122,26,27,175,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+ras_malai,"Ras malai",packaged_snack,legacy,existing_active,126,27,27,180,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+kheer,"Kheer",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+kulfi,"Kulfi",packaged_snack,legacy,existing_active,420,90,90,600,400,P2,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+falooda,"Falooda",dairy_protein_beverage,legacy,existing_active,270,57,58,385,400,P2,existing_legacy_sources,pending_per-source_license_review
+chai,"Chai",dairy_protein_beverage,legacy,existing_active,401,86,86,573,400,P2,existing_legacy_sources,pending_per-source_license_review
+coffee,"Coffee",dairy_protein_beverage,legacy,existing_active,120,26,26,172,400,P2,existing_legacy_sources,pending_per-source_license_review
+lassi,"Lassi",dairy_protein_beverage,legacy,existing_active,288,62,62,412,400,P2,existing_legacy_sources,pending_per-source_license_review
+lemonade,"Lemonade / nimbu pani",dairy_protein_beverage,legacy,existing_active,113,24,24,161,400,P2,existing_legacy_sources,pending_per-source_license_review
+milk_soda,"Milk / doodh soda",dairy_protein_beverage,legacy,needs_data,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+sattu,"Sattu sharbat",dairy_protein_beverage,legacy,needs_data,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+pizza,"Pizza",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+burger,"Burger",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+french_fries,"French fries",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+fried_rice,"Fried rice",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+omelette,"Omelette",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+fried_chicken,"Fried chicken",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+sandwich,"Sandwich",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+hot_dog,"Hot dog",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+donut,"Donut",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+ice_cream,"Ice cream",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+chocolate_cake,"Chocolate cake",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+spaghetti,"Spaghetti / pasta",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+salad,"Salad",international_dish,legacy,existing_active,420,90,90,600,400,P2,existing_legacy_sources,pending_per-source_license_review
+apple,"Apple",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+banana,"Banana",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+orange,"Orange",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+mango,"Mango",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+grapes,"Grapes",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+watermelon,"Watermelon",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+strawberry,"Strawberry",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+guava,"Guava",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+dates,"Dates",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+pomegranate,"Pomegranate",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+pear,"Pear",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+peach,"Peach",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+pineapple,"Pineapple",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+papaya,"Papaya",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+avocado,"Avocado",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+lemon,"Lemon",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+coconut,"Coconut",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+kiwi,"Kiwi",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+plum,"Plum",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+apricot,"Apricot",fruit,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+potato,"Potato",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+tomato,"Tomato",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+onion,"Onion",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+cucumber,"Cucumber",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+carrot,"Carrot",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+spinach,"Spinach",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+cauliflower,"Cauliflower",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+cabbage,"Cabbage",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+peas,"Peas",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+eggplant,"Eggplant",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+capsicum,"Capsicum",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+garlic,"Garlic",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+ginger,"Ginger",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+broccoli,"Broccoli",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+lettuce,"Lettuce",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;openimages;local_phone_collection,pending_per-source_license_review
+sugar,"Sugar",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+salt,"Salt",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+wheat_flour,"Wheat Flour",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+white_rice,"White Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+brown_rice,"Brown Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+oats,"Oats",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+red_lentils,"Red Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+chickpeas,"Chickpeas",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+kidney_beans,"Kidney Beans",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+black_lentils,"Black Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+cooking_oil,"Cooking Oil",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+ghee,"Ghee",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+butter,"Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+honey,"Honey",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+peanut_butter,"Peanut Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+biscuits,"Biscuits",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+crackers,"Crackers",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+cookies,"Cookies",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+toast,"Toast",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+croissant,"Croissant",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+cake_slice,"Cake Slice",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+potato_chips,"Potato Chips",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+popcorn,"Popcorn",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+chocolate_bar,"Chocolate Bar",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+breakfast_cereal,"Breakfast Cereal",packaged_snack,new,needs_collection,0,0,0,0,400,P1,foodseg103;openimages;local_phone_collection,pending_per-source_license_review
+plain_milk,"Plain Milk",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+plain_yogurt,"Plain Yogurt",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+cheese,"Cheese",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+boiled_egg,"Boiled Egg",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+beef_steak,"Beef Steak",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+orange_juice,"Orange Juice",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+tacos,"Tacos",international_dish,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+sushi,"Sushi",international_dish,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+dumplings,"Dumplings",international_dish,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+pancakes,"Pancakes",international_dish,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
+lasagna,"Lasagna",international_dish,new,needs_collection,0,0,0,0,400,P1,foodseg103;fruits360;local_phone_collection,pending_per-source_license_review
