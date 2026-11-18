@@ -103,49 +103,49 @@ tomato,"Tomato",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_ph
 onion,"Onion",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 cucumber,"Cucumber",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 carrot,"Carrot",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
-spinach,"Spinach",vegetable,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+spinach,"Spinach",vegetable,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 cauliflower,"Cauliflower",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 cabbage,"Cabbage",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
-peas,"Peas",vegetable,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+peas,"Peas",vegetable,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
 eggplant,"Eggplant",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 capsicum,"Capsicum",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 garlic,"Garlic",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 ginger,"Ginger",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
 broccoli,"Broccoli",vegetable,new,needs_collection,0,0,0,0,400,P1,fruits360;local_phone_collection,pending_per-source_license_review
-lettuce,"Lettuce",vegetable,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-sugar,"Sugar",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-salt,"Salt",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-wheat_flour,"Wheat Flour",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-white_rice,"White Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-brown_rice,"Brown Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-oats,"Oats",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-red_lentils,"Red Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-chickpeas,"Chickpeas",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-kidney_beans,"Kidney Beans",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-black_lentils,"Black Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-cooking_oil,"Cooking Oil",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-ghee,"Ghee",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-butter,"Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-honey,"Honey",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-peanut_butter,"Peanut Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-biscuits,"Biscuits",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-crackers,"Crackers",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-cookies,"Cookies",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-toast,"Toast",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-croissant,"Croissant",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-cake_slice,"Cake Slice",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-potato_chips,"Potato Chips",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-popcorn,"Popcorn",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-chocolate_bar,"Chocolate Bar",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-breakfast_cereal,"Breakfast Cereal",packaged_snack,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-plain_milk,"Plain Milk",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-plain_yogurt,"Plain Yogurt",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-cheese,"Cheese",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-boiled_egg,"Boiled Egg",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-beef_steak,"Beef Steak",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-orange_juice,"Orange Juice",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-tacos,"Tacos",international_dish,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-sushi,"Sushi",international_dish,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-dumplings,"Dumplings",international_dish,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-pancakes,"Pancakes",international_dish,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
-lasagna,"Lasagna",international_dish,new,needs_collection,0,0,0,0,400,P1,existing_legacy_sources,pending_per-source_license_review
+lettuce,"Lettuce",vegetable,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+sugar,"Sugar",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+salt,"Salt",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+wheat_flour,"Wheat Flour",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+white_rice,"White Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+brown_rice,"Brown Rice",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+oats,"Oats",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+red_lentils,"Red Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+chickpeas,"Chickpeas",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+kidney_beans,"Kidney Beans",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+black_lentils,"Black Lentils",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+cooking_oil,"Cooking Oil",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+ghee,"Ghee",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+butter,"Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+honey,"Honey",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+peanut_butter,"Peanut Butter",ingredient,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+biscuits,"Biscuits",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+crackers,"Crackers",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+cookies,"Cookies",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+toast,"Toast",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+croissant,"Croissant",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+cake_slice,"Cake Slice",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+potato_chips,"Potato Chips",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+popcorn,"Popcorn",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+chocolate_bar,"Chocolate Bar",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+breakfast_cereal,"Breakfast Cereal",packaged_snack,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+plain_milk,"Plain Milk",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+plain_yogurt,"Plain Yogurt",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+cheese,"Cheese",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+boiled_egg,"Boiled Egg",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+beef_steak,"Beef Steak",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+orange_juice,"Orange Juice",dairy_protein_beverage,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+tacos,"Tacos",international_dish,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+sushi,"Sushi",international_dish,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+dumplings,"Dumplings",international_dish,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+pancakes,"Pancakes",international_dish,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
+lasagna,"Lasagna",international_dish,new,needs_collection,0,0,0,0,400,P1,custom_source_needed;local_phone_collection,pending_per-source_license_review
