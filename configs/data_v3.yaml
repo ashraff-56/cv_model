@@ -88,8 +88,8 @@ datasets:
     title: Fruits-360 original-size (fruits, vegetables, nuts and seeds)
     kaggle_ref: moltean/fruits
     url: https://github.com/fruits-360/fruits-360-original-size
-    local: data/raw/fruits360
-    marker: fruits-360_original-size/Training/Apple
+    local: data/raw/fruits360/fruits-360-original-size
+    marker: Training/Apple
     max_per_folder: 250
   khana:
     title: "Khana: A Comprehensive Indian Cuisine Dataset (Prabhu, 2025), subset of dishes mapped to SmartBite classes"
