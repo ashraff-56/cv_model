@@ -1,8 +1,3 @@
-# v3 class definitions. Order is the output-index order for a future v3 model.
-# Legacy v2 food classes remain in their original relative order. New classes follow them.
-# not_food is last. Freeze this file and its SHA with each trained checkpoint/ONNX export.
-# categories and target_images are metadata; smartbite_cv.prepare ignores unknown keys.
-classes:
   - slug: biryani
     display: Biryani
     variants: [Chicken biryani, Beef/mutton biryani, Vegetable biryani]
@@ -504,151 +499,161 @@ classes:
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Apple*"
+      - fruits360: "fruits-360_original-size/Training/Apple*"
+      - fruits360: "fruits-360_original-size/Training/apple_*"
   - slug: banana
     display: Banana
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Banana*"
+      - fruits360: "fruits-360_original-size/Training/Banana*"
   - slug: orange
     display: Orange
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Orange*"
+      - fruits360: "fruits-360_original-size/Training/Orange*"
   - slug: mango
     display: Mango
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Mango*"
+      - fruits360: "fruits-360_original-size/Training/Mango*"
+      - fruits360: "fruits-360_100x100/Training/Mango*"
   - slug: grapes
     display: Grapes
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Grape*"
+      - fruits360: "fruits-360_original-size/Training/Grape*"
   - slug: watermelon
     display: Watermelon
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Watermelon*"
+      - fruits360: "fruits-360_original-size/Training/Watermelon*"
   - slug: strawberry
     display: Strawberry
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Strawberry*"
+      - fruits360: "fruits-360_original-size/Training/Strawberry*"
   - slug: guava
     display: Guava
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Guava*"
+      - fruits360: "fruits-360_original-size/Training/Guava*"
+      - fruits360: "fruits-360_100x100/Training/Guava*"
   - slug: dates
     display: Dates
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Dates*"
+      - fruits360: "fruits-360_original-size/Training/Dates*"
   - slug: pomegranate
     display: Pomegranate
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Pomegranate*"
+      - fruits360: "fruits-360_original-size/Training/Pomegranate*"
+      - fruits360: "fruits-360_100x100/Training/Pomegranate*"
   - slug: pear
     display: Pear
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Pear*"
+      - fruits360: "fruits-360_original-size/Training/Pear*"
   - slug: peach
     display: Peach
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Peach*"
+      - fruits360: "fruits-360_original-size/Training/Peach*"
   - slug: pineapple
     display: Pineapple
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Pineapple*"
+      - fruits360: "fruits-360_original-size/Training/Pineapple*"
+      - fruits360: "fruits-360_100x100/Training/Pineapple*"
   - slug: papaya
     display: Papaya
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Papaya*"
+      - fruits360: "fruits-360_original-size/Training/Papaya*"
   - slug: avocado
     display: Avocado
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Avocado*"
+      - fruits360: "fruits-360_original-size/Training/Avocado*"
   - slug: lemon
     display: Lemon
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Lemon*"
+      - fruits360: "fruits-360_original-size/Training/Lemon*"
+      - fruits360: "fruits-360_100x100/Training/Lemon*"
   - slug: coconut
     display: Coconut
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Cocos*"
+      - fruits360: "fruits-360_original-size/Training/Cocos*"
+      - fruits360: "fruits-360_100x100/Training/Cocos*"
   - slug: kiwi
     display: Kiwi
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Kiwi*"
+      - fruits360: "fruits-360_original-size/Training/Kiwi*"
+      - fruits360: "fruits-360_original-size/Training/kiwi*"
   - slug: plum
     display: Plum
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Plum*"
+      - fruits360: "fruits-360_original-size/Training/Plum*"
   - slug: apricot
     display: Apricot
     category: fruit
     target_images: 400
     sources:
-      - fruits360: "Training/Apricot*"
+      - fruits360: "fruits-360_original-size/Training/Apricot*"
+      - fruits360: "fruits-360_100x100/Training/Apricot*"
   - slug: potato
     display: Potato
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Potato*"
+      - fruits360: "fruits-360_original-size/Training/Potato*"
+      - fruits360: "fruits-360_100x100/Training/Potato*"
   - slug: tomato
     display: Tomato
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Tomato*"
+      - fruits360: "fruits-360_original-size/Training/Tomato*"
   - slug: onion
     display: Onion
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Onion*"
+      - fruits360: "fruits-360_original-size/Training/Onion*"
   - slug: cucumber
     display: Cucumber
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Cucumber*"
+      - fruits360: "fruits-360_original-size/Training/Cucumber*"
   - slug: carrot
     display: Carrot
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Carrot*"
+      - fruits360: "fruits-360_original-size/Training/Carrot*"
   - slug: spinach
     display: Spinach
     category: vegetable
@@ -659,13 +664,15 @@ classes:
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Cauliflower*"
+      - fruits360: "fruits-360_original-size/Training/Cauliflower*"
+      - fruits360: "fruits-360_100x100/Training/Cauliflower*"
   - slug: cabbage
     display: Cabbage
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Cabbage*"
+      - fruits360: "fruits-360_original-size/Training/Cabbage*"
+      - fruits360: "fruits-360_original-size/Training/cabbage_*"
   - slug: peas
     display: Peas
     category: vegetable
@@ -676,31 +683,35 @@ classes:
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Eggplant*"
+      - fruits360: "fruits-360_original-size/Training/Eggplant*"
+      - fruits360: "fruits-360_100x100/Training/Eggplant*"
+      - fruits360: "fruits-360_original-size/Training/eggplant*"
   - slug: capsicum
     display: Capsicum
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Pepper*"
+      - fruits360: "fruits-360_original-size/Training/Pepper*"
   - slug: garlic
     display: Garlic
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Garlic*"
+      - fruits360: "fruits-360_original-size/Training/Garlic*"
+      - fruits360: "fruits-360_original-size/Training/garlic*"
   - slug: ginger
     display: Ginger
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Ginger Root*"
+      - fruits360: "fruits-360_original-size/Training/Ginger Root*"
+      - fruits360: "fruits-360_original-size/Training/Ginger*"
   - slug: broccoli
     display: Broccoli
     category: vegetable
     target_images: 400
     sources:
-      - fruits360: "Training/Broccoli*"
+      - fruits360: "fruits-360_original-size/Training/Broccoli*"
   - slug: lettuce
     display: Lettuce
     category: vegetable
