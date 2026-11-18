@@ -530,8 +530,7 @@
     display: Watermelon
     category: fruit
     target_images: 400
-    sources:
-      - fruits360: "fruits-360_original-size/Training/Watermelon*"
+    sources: []
   - slug: strawberry
     display: Strawberry
     category: fruit
@@ -710,8 +709,7 @@
     display: Broccoli
     category: vegetable
     target_images: 400
-    sources:
-      - fruits360: "fruits-360_original-size/Training/Broccoli*"
+    sources: []
   - slug: lettuce
     display: Lettuce
     category: vegetable
