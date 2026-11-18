@@ -32,6 +32,11 @@ VERSIONS = {
            "kernel_slug": "smartbite-food-train-v2",
            # Nutrition5k metadata + official splits (small) travel with the code for the portion notebook
            "extra_files": ["data/raw/nutrition5k/metadata", "data/raw/nutrition5k/dish_ids"]},
+    # v3 data audit only: no GPU training; inventories attached source folders and writes CSV/Markdown reports.
+    "audit": {"data": "configs/data_v3.yaml", "classes": "configs/classes_v3.yaml",
+              "manifest": "data/splits/exclude_v3.csv", "train_extra": "",
+              "code_slug": "smartbite-cv-code-v3-audit", "kernel_slug": "smartbite-dataset-audit-v3",
+              "kind": "audit", "enable_gpu": False},
     # portion (grams) model: reuses the v2 code dataset; images come from a Kaggle mirror of Nutrition5k
     "portion": {"data": "configs/data_v2.yaml", "classes": "configs/classes_v2.yaml", "manifest": "data/splits/manifest_v2.csv",
                 "train_extra": "", "code_slug": "smartbite-cv-code-v2", "kernel_slug": "smartbite-portion-train",
@@ -283,9 +288,57 @@ print(open(f"{P}/eval/summary.md").read())
 '''
 
 
+AUDIT_SETUP = r'''# SmartBite v3 dataset source audit (CPU only; no model training)
+import os, sys, glob, shutil, subprocess, zipfile
+CODE_SLUG = "@CODE_SLUG@"
+WORK = "/kaggle/working/SmartBite"
+
+def run(cmd):
+    print("$", cmd, flush=True)
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                         text=True, cwd=WORK)
+    for line in p.stdout:
+        print(line, end="", flush=True)
+    if p.wait() != 0:
+        raise RuntimeError(f"command failed ({p.returncode}): {cmd}")
+
+if not os.path.exists(f"{WORK}/smartbite_cv"):
+    mounts = glob.glob(f"/kaggle/input/{CODE_SLUG}") + glob.glob(f"/kaggle/input/*/*/{CODE_SLUG}")
+    inits = [i for m in mounts for i in glob.glob(f"{m}/**/smartbite_cv/__init__.py", recursive=True)]
+    if inits:
+        shutil.copytree(os.path.dirname(os.path.dirname(inits[0])), WORK, dirs_exist_ok=True)
+    else:
+        zips = [z for m in mounts for z in glob.glob(f"{m}/**/smartbite_code.zip", recursive=True)]
+        assert zips, "Attach the generated private code dataset to this Kaggle notebook."
+        zipfile.ZipFile(zips[0]).extractall(WORK)
+
+run("python -m pip install -q pyyaml numpy scipy pillow pillow-heif")
+run("python -c \"import yaml, numpy, scipy, PIL; print('dataset audit dependencies ready')\"")
+'''
+
+AUDIT_RUN = r'''# Inventory configured source folders. This does not decode, deduplicate, or train on images.
+run("python tools/audit_v3_sources.py --profile kaggle --config configs/data_v3.yaml "
+    "--classes configs/classes_v3.yaml --taxonomy configs/taxonomy_v3.yaml")
+print(open(f"{WORK}/reports/data_v3/source_audit.md", encoding="utf-8").read())
+shutil.make_archive("/kaggle/working/smartbite_v3_source_audit", "zip",
+                    root_dir=f"{WORK}/reports/data_v3")
+print("Download smartbite_v3_source_audit.zip from the notebook output.")
+'''
+
 def build_notebook(v: dict) -> nbformat.NotebookNode:
     nb = nbformat.v4.new_notebook()
     nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
+    if v.get("kind") == "audit":
+        setup = nbformat.v4.new_code_cell(AUDIT_SETUP.replace("@CODE_SLUG@", v["code_slug"]))
+        nb.cells = [
+            nbformat.v4.new_markdown_cell(
+                "# SmartBite v3: dataset source audit (CPU only)\\n"
+                "Inventories attached dataset folders against the v3 class/source mappings. "
+                "No model training or GPU is used. Review the generated per-class raw counts before building a manifest."),
+            setup,
+            nbformat.v4.new_code_cell(AUDIT_RUN),
+        ]
+        return nb
     setup = nbformat.v4.new_code_cell(SETUP.replace("@CODE_SLUG@", v["code_slug"]).replace("@DATA_CFG@", v["data"])
                                       .replace("@CLASSES_CFG@", v["classes"]).replace("@TRAIN_EXTRA@", v["train_extra"]))
     if v.get("kind") == "plate":
@@ -352,7 +405,8 @@ def main() -> None:
 
     nb = build_notebook(v)
     suffix = "" if args.version == "v1" else f"_{args.version}"
-    nb_name = {"portion": "smartbite_portion_train.ipynb", "plate": "smartbite_plate_portion.ipynb"}.get(
+    nb_name = {"portion": "smartbite_portion_train.ipynb", "plate": "smartbite_plate_portion.ipynb",
+                "audit": "smartbite_dataset_audit_v3.ipynb"}.get(
         v.get("kind"), f"smartbite_food_train{suffix}.ipynb")
     nbformat.write(nb, ROOT / "notebooks" / nb_name)
     nbformat.write(nb, kernel_dir / f"{KERNEL_SLUG}.ipynb")
@@ -363,7 +417,7 @@ def main() -> None:
     sources = sources + [f"{args.user}/{CODE_SLUG}"]
     (kernel_dir / "kernel-metadata.json").write_text(json.dumps({
         "id": f"{args.user}/{KERNEL_SLUG}", "title": KERNEL_SLUG, "code_file": f"{KERNEL_SLUG}.ipynb",
-        "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True,
+        "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": v.get("enable_gpu", True),
         "enable_internet": True, "dataset_sources": sources, "competition_sources": [], "kernel_sources": []},
         indent=2))
     size = f"code zip {(code_dir / 'smartbite_code.zip').stat().st_size / 1e6:.1f} MB; " if code_dir else ""
