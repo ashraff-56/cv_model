@@ -7,7 +7,9 @@ Checked against the current upstream GitHub `Training/` directory listings on 20
 - License stated by upstream README: CC BY-SA 4.0 for both repositories.
 - Mapped taxonomy classes: 30
 - Mapped classes with at least one matching upstream folder: 30
-- Mapped classes with no matching upstream folder: 0
+- Mapped classes with no matching upstream folder: 0 (unmatched mappings were removed before this report)
+- Fruit/vegetable classes intentionally left without a Fruits-360 mapping: watermelon and broccoli
+- Other new taxonomy classes without a classifier source mapping are listed as collection gaps in `data/registry/class_coverage_v3.csv`
 
 This verifies folder-name existence only. It does not count images, decode them, deduplicate them, or prove the labels are visually separable in phone photos.
 
