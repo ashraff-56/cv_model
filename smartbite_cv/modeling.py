@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import hashlib
 
 import numpy as np
 import timm
@@ -37,9 +38,31 @@ def build_model(model_cfg: dict, num_classes: int, pretrained: bool | None = Non
 
 
 def checkpoint_meta(cfg: dict, classes: list[str]) -> dict:
-    return {"model_cfg": cfg["model"], "classes": classes, "img_size": cfg["img_size"],
-            "crop_pct": cfg.get("crop_pct", 0.875), "mean": list(cfg.get("mean", (0.485, 0.456, 0.406))),
-            "std": list(cfg.get("std", (0.229, 0.224, 0.225))), "interpolation": "bicubic"}
+    """Store the exact ordered class definitions used by this run, not just their slugs."""
+    class_path = resolve_path(cfg["data"]["classes"])
+    definitions = load_classes(class_path)
+    by_slug = {item["slug"]: item for item in definitions}
+    class_metadata = []
+    for slug in classes:
+        item = by_slug.get(slug, {"slug": slug})
+        class_metadata.append({
+            "slug": slug,
+            "display": item.get("display", slug),
+            "variants": item.get("variants", []),
+            "category": item.get("category"),
+        })
+    return {
+        "model_cfg": cfg["model"],
+        "classes": classes,
+        "class_metadata": class_metadata,
+        "class_config": str(class_path),
+        "class_config_sha256": hashlib.sha256(class_path.read_bytes()).hexdigest(),
+        "img_size": cfg["img_size"],
+        "crop_pct": cfg.get("crop_pct", 0.875),
+        "mean": list(cfg.get("mean", (0.485, 0.456, 0.406))),
+        "std": list(cfg.get("std", (0.229, 0.224, 0.225))),
+        "interpolation": "bicubic",
+    }
 
 
 def load_trained(path: str | Path, device: str = "cpu") -> tuple[torch.nn.Module, dict]:
