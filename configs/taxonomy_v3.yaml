@@ -1,0 +1,1450 @@
+# SmartBite CV taxonomy v3 — planning taxonomy, not a trained model label map.
+# Contains 150 food classes plus the separate not_food rejection label.
+# Never use this file to interpret an existing ONNX output index. Existing production indices
+# are defined by the exact training manifest/checkpoint that produced that ONNX model.
+# Unknown food is an inference outcome, not a supervised food class.
+version: 3
+food_class_count: 150
+special_labels:
+  - id: not_food
+    display: Not food
+    purpose: Reject non-food images; keep separate from unknown food.
+unknown_policy:
+  output: unknown_food
+  is_trained_class: false
+  action: Ask user to choose or retake image; never force nearest known class.
+class_id_policy: Stable IDs use food.<slug>; output indices are assigned only when a specific training manifest is frozen.
+classes:
+  - id: food.biryani
+    slug: biryani
+    display: "Biryani"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken biryani", "Beef/mutton biryani", "Vegetable biryani"]
+    legacy_sources: [slug, khana, sourav80, anshul, pkdishes, food20]
+    legacy_config_index: 0
+  - id: food.naan
+    slug: naan
+    display: "Naan"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Plain naan", "Butter naan", "Garlic naan"]
+    legacy_sources: [slug, khana, sourav80, anshul, l33t20, food20, smf]
+    legacy_config_index: 1
+  - id: food.roti_chapati
+    slug: roti_chapati
+    display: "Roti / Chapati"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Roti", "Chapati", "Phulka"]
+    legacy_sources: [slug, khana, sourav80, pkdishes, l33t20, food20, smf]
+    legacy_config_index: 2
+  - id: food.paratha
+    slug: paratha
+    display: "Paratha"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Plain paratha", "Lachha paratha"]
+    legacy_sources: [slug, pkdishes, smf]
+    legacy_config_index: 3
+  - id: food.aloo_paratha
+    slug: aloo_paratha
+    display: "Aloo paratha"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo paratha"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 4
+  - id: food.anda_paratha
+    slug: anda_paratha
+    display: "Anda paratha"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Egg paratha"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 5
+  - id: food.sheermal
+    slug: sheermal
+    display: "Sheermal"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Sheermal", "Taftan"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 6
+  - id: food.puri
+    slug: puri
+    display: "Puri"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Puri"]
+    legacy_sources: [slug, smf, food20]
+    legacy_config_index: 7
+  - id: food.halwa_puri
+    slug: halwa_puri
+    display: "Halwa puri"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Halwa puri with chanay"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 8
+  - id: food.paratha_roll
+    slug: paratha_roll
+    display: "Paratha roll"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken paratha roll", "Kathi roll"]
+    legacy_sources: [slug, pkdishes, anshul, l33t20, food20]
+    legacy_config_index: 9
+  - id: food.samosa
+    slug: samosa
+    display: "Samosa"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo samosa", "Chicken/keema samosa"]
+    legacy_sources: [slug, khana, food101, pkdishes, l33t20, food20, smf]
+    legacy_config_index: 10
+  - id: food.pakora
+    slug: pakora
+    display: "Pakora"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Mixed pakora", "Onion pakora", "Aloo pakora"]
+    legacy_sources: [slug, khana, anshul, l33t20, smf]
+    legacy_config_index: 11
+  - id: food.gol_gappay
+    slug: gol_gappay
+    display: "Gol gappay"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Gol gappay / pani puri"]
+    legacy_sources: [slug, khana, anshul, l33t20, smf]
+    legacy_config_index: 12
+  - id: food.chana_chaat
+    slug: chana_chaat
+    display: "Chana chaat"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chana chaat"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 13
+  - id: food.karahi
+    slug: karahi
+    display: "Karahi"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken karahi", "Mutton karahi", "Beef karahi"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 14
+  - id: food.korma
+    slug: korma
+    display: "Korma"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken korma", "Mutton korma", "Beef korma"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 15
+  - id: food.chicken_curry
+    slug: chicken_curry
+    display: "Chicken curry / Butter chicken"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken curry (salan)", "Butter chicken", "Chicken tikka masala", "Kadai/paneer masala"]
+    legacy_sources: [slug, khana, food101, sourav80, pkdishes, l33t20]
+    legacy_config_index: 16
+  - id: food.nihari
+    slug: nihari
+    display: "Nihari"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Beef nihari", "Mutton nihari"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 17
+  - id: food.kunna
+    slug: kunna
+    display: "Kunna"
+    category: south_asian_dish
+    origin: legacy
+    training_status: needs_data
+    target_images: 400
+    variants: ["Mutton kunna"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 18
+    blocker: "Dropped by v2 preparation for failing min_per_class=80; collect and audit before enabling."
+  - id: food.paye
+    slug: paye
+    display: "Paye"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Paye"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 19
+  - id: food.haleem
+    slug: haleem
+    display: "Haleem"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Beef haleem", "Chicken haleem"]
+    legacy_sources: [slug, pkdishes, smf]
+    legacy_config_index: 20
+  - id: food.aloo_gosht
+    slug: aloo_gosht
+    display: "Aloo gosht"
+    category: south_asian_dish
+    origin: legacy
+    training_status: needs_data
+    target_images: 400
+    variants: ["Aloo gosht"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 21
+    blocker: "Dropped by v2 preparation for failing min_per_class=80; collect and audit before enabling."
+  - id: food.palak_gosht
+    slug: palak_gosht
+    display: "Palak gosht"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Palak gosht"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 22
+  - id: food.keema
+    slug: keema
+    display: "Keema"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Beef keema", "Chicken keema", "Keema matar"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 23
+  - id: food.kofta
+    slug: kofta
+    display: "Kofta"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Kofta curry", "Malai kofta"]
+    legacy_sources: [slug, smf, anshul]
+    legacy_config_index: 24
+  - id: food.fish_curry
+    slug: fish_curry
+    display: "Fish curry"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Fish curry"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 25
+  - id: food.fried_fish
+    slug: fried_fish
+    display: "Fried / grilled fish"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Fried fish", "Grilled fish"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 26
+  - id: food.chicken_tikka
+    slug: chicken_tikka
+    display: "Chicken tikka"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken tikka", "Tandoori chicken"]
+    legacy_sources: [slug, sourav80, pkdishes, food20, smf]
+    legacy_config_index: 27
+  - id: food.malai_boti
+    slug: malai_boti
+    display: "Malai boti"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Malai boti"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 28
+  - id: food.seekh_kebab
+    slug: seekh_kebab
+    display: "Seekh kebab"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Beef seekh kebab", "Chicken seekh kebab"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 29
+  - id: food.chapli_kebab
+    slug: chapli_kebab
+    display: "Chapli kebab"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chapli kebab"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 30
+  - id: food.lamb_chops
+    slug: lamb_chops
+    display: "Lamb chops"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Mutton chops"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 31
+  - id: food.chicken_roast
+    slug: chicken_roast
+    display: "Chicken roast / chargha"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken roast", "Chargha"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 32
+  - id: food.daal
+    slug: daal
+    display: "Daal"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Daal chana", "Daal mash", "Daal masoor", "Daal makhani"]
+    legacy_sources: [slug, sourav80, anshul, l33t20]
+    legacy_config_index: 33
+  - id: food.chana_chole
+    slug: chana_chole
+    display: "Chana / Chole"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chana masala", "Chole"]
+    legacy_sources: [slug, khana, sourav80, anshul, l33t20]
+    legacy_config_index: 34
+  - id: food.kadhi_pakora
+    slug: kadhi_pakora
+    display: "Kadhi pakora"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Kadhi pakora"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 35
+  - id: food.aloo_baingan
+    slug: aloo_baingan
+    display: "Aloo baingan"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo baingan"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 36
+  - id: food.aloo_gobi
+    slug: aloo_gobi
+    display: "Aloo gobi"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo gobi"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 37
+  - id: food.aloo_methi
+    slug: aloo_methi
+    display: "Aloo methi"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo methi"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 38
+  - id: food.aloo_palak
+    slug: aloo_palak
+    display: "Aloo palak"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo palak"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 39
+  - id: food.aloo_shimla_mirch
+    slug: aloo_shimla_mirch
+    display: "Aloo shimla mirch"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Aloo shimla mirch"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 40
+  - id: food.bhindi
+    slug: bhindi
+    display: "Bhindi"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Bhindi masala"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 41
+  - id: food.ghiya
+    slug: ghiya
+    display: "Ghiya / lauki"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Ghiya (bottle gourd)"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 42
+  - id: food.karela
+    slug: karela
+    display: "Karela"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Karela (bitter gourd)"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 43
+  - id: food.mixed_sabzi
+    slug: mixed_sabzi
+    display: "Mixed sabzi"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Mixed vegetables"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 44
+  - id: food.saag
+    slug: saag
+    display: "Saag"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Sarson ka saag", "Palak saag"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 45
+  - id: food.raita
+    slug: raita
+    display: "Raita"
+    category: ingredient_side
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Raita"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 46
+  - id: food.kachumber_salad
+    slug: kachumber_salad
+    display: "Kachumber salad"
+    category: ingredient_side
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Kachumber salad"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 47
+  - id: food.achar
+    slug: achar
+    display: "Achar"
+    category: ingredient_side
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Mixed achar (pickle)"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 48
+  - id: food.pudina_chutney
+    slug: pudina_chutney
+    display: "Pudina chutney"
+    category: ingredient_side
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Mint chutney"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 49
+  - id: food.gulab_jamun
+    slug: gulab_jamun
+    display: "Gulab jamun"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Gulab jamun"]
+    legacy_sources: [slug, khana, sourav80, food20, smf]
+    legacy_config_index: 50
+  - id: food.jalebi
+    slug: jalebi
+    display: "Jalebi"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Jalebi"]
+    legacy_sources: [slug, khana, sourav80, anshul, l33t20]
+    legacy_config_index: 51
+  - id: food.gajar_halwa
+    slug: gajar_halwa
+    display: "Gajar halwa"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Gajar ka halwa"]
+    legacy_sources: [slug, khana, sourav80, smf]
+    legacy_config_index: 52
+  - id: food.suji_halwa
+    slug: suji_halwa
+    display: "Suji halwa"
+    category: south_asian_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Suji halwa (sooji ka halwa)"]
+    legacy_sources: [slug, sourav80, smf]
+    legacy_config_index: 53
+  - id: food.barfi
+    slug: barfi
+    display: "Barfi"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Milk barfi", "Kaju katli"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 54
+  - id: food.rabri
+    slug: rabri
+    display: "Rabri"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Rabri"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 55
+  - id: food.ras_malai
+    slug: ras_malai
+    display: "Ras malai"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Ras malai"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 56
+  - id: food.kheer
+    slug: kheer
+    display: "Kheer"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Kheer", "Phirni"]
+    legacy_sources: [slug, khana]
+    legacy_config_index: 57
+  - id: food.kulfi
+    slug: kulfi
+    display: "Kulfi"
+    category: packaged_snack
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Kulfi"]
+    legacy_sources: [slug, khana, l33t20]
+    legacy_config_index: 58
+  - id: food.falooda
+    slug: falooda
+    display: "Falooda"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Falooda"]
+    legacy_sources: [slug, khana]
+    legacy_config_index: 59
+  - id: food.chai
+    slug: chai
+    display: "Chai"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Doodh patti", "Chai with milk"]
+    legacy_sources: [slug, pkdishes, l33t20, smf]
+    legacy_config_index: 60
+  - id: food.coffee
+    slug: coffee
+    display: "Coffee"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Coffee", "Cappuccino"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 61
+  - id: food.lassi
+    slug: lassi
+    display: "Lassi"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Sweet lassi", "Salty lassi", "Chaas"]
+    legacy_sources: [slug, khana, smf]
+    legacy_config_index: 62
+  - id: food.lemonade
+    slug: lemonade
+    display: "Lemonade / nimbu pani"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Lemonade", "Nimbu pani"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 63
+  - id: food.milk_soda
+    slug: milk_soda
+    display: "Milk / doodh soda"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: needs_data
+    target_images: 400
+    variants: ["Doodh soda", "Milk"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 64
+    blocker: "Dropped by v2 preparation for failing min_per_class=80; collect and audit before enabling."
+  - id: food.sattu
+    slug: sattu
+    display: "Sattu sharbat"
+    category: dairy_protein_beverage
+    origin: legacy
+    training_status: needs_data
+    target_images: 400
+    variants: ["Sattu drink"]
+    legacy_sources: [slug, smf]
+    legacy_config_index: 65
+    blocker: "Dropped by v2 preparation for failing min_per_class=80; collect and audit before enabling."
+  - id: food.pizza
+    slug: pizza
+    display: "Pizza"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Pizza"]
+    legacy_sources: [slug, khana, food101, l33t20, fastfood]
+    legacy_config_index: 66
+  - id: food.burger
+    slug: burger
+    display: "Burger"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Beef burger", "Chicken burger", "Zinger burger"]
+    legacy_sources: [slug, food101, l33t20, fastfood]
+    legacy_config_index: 67
+  - id: food.french_fries
+    slug: french_fries
+    display: "French fries"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["French fries"]
+    legacy_sources: [slug, food101, pkdishes, fastfood, smf]
+    legacy_config_index: 68
+  - id: food.fried_rice
+    slug: fried_rice
+    display: "Fried rice"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chicken fried rice", "Egg fried rice"]
+    legacy_sources: [slug, food101, pkdishes, l33t20]
+    legacy_config_index: 69
+  - id: food.omelette
+    slug: omelette
+    display: "Omelette"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Omelette", "Fried egg"]
+    legacy_sources: [slug, food101, pkdishes]
+    legacy_config_index: 70
+  - id: food.fried_chicken
+    slug: fried_chicken
+    display: "Fried chicken"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Fried chicken", "Chicken wings"]
+    legacy_sources: [slug, khana, food101, fastfood]
+    legacy_config_index: 71
+  - id: food.sandwich
+    slug: sandwich
+    display: "Sandwich"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Club sandwich", "Grilled sandwich"]
+    legacy_sources: [slug, khana, food101, fastfood]
+    legacy_config_index: 72
+  - id: food.hot_dog
+    slug: hot_dog
+    display: "Hot dog"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Hot dog"]
+    legacy_sources: [slug, food101, fastfood]
+    legacy_config_index: 73
+  - id: food.donut
+    slug: donut
+    display: "Donut"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Donut"]
+    legacy_sources: [slug, food101, fastfood]
+    legacy_config_index: 74
+  - id: food.ice_cream
+    slug: ice_cream
+    display: "Ice cream"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Ice cream"]
+    legacy_sources: [slug, food101]
+    legacy_config_index: 75
+  - id: food.chocolate_cake
+    slug: chocolate_cake
+    display: "Chocolate cake"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Chocolate cake"]
+    legacy_sources: [slug, food101]
+    legacy_config_index: 76
+  - id: food.spaghetti
+    slug: spaghetti
+    display: "Spaghetti / pasta"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Spaghetti bolognese", "Spaghetti carbonara"]
+    legacy_sources: [slug, food101]
+    legacy_config_index: 77
+  - id: food.salad
+    slug: salad
+    display: "Salad"
+    category: international_dish
+    origin: legacy
+    training_status: existing_active
+    target_images: 400
+    variants: ["Green salad", "Greek salad", "Caesar salad"]
+    legacy_sources: [slug, food101, smf]
+    legacy_config_index: 78
+  - id: food.apple
+    slug: apple
+    display: "Apple"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.banana
+    slug: banana
+    display: "Banana"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.orange
+    slug: orange
+    display: "Orange"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.mango
+    slug: mango
+    display: "Mango"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.grapes
+    slug: grapes
+    display: "Grapes"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.watermelon
+    slug: watermelon
+    display: "Watermelon"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.strawberry
+    slug: strawberry
+    display: "Strawberry"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.guava
+    slug: guava
+    display: "Guava"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.dates
+    slug: dates
+    display: "Dates"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.pomegranate
+    slug: pomegranate
+    display: "Pomegranate"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.pear
+    slug: pear
+    display: "Pear"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.peach
+    slug: peach
+    display: "Peach"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.pineapple
+    slug: pineapple
+    display: "Pineapple"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.papaya
+    slug: papaya
+    display: "Papaya"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.avocado
+    slug: avocado
+    display: "Avocado"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.lemon
+    slug: lemon
+    display: "Lemon"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.coconut
+    slug: coconut
+    display: "Coconut"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.kiwi
+    slug: kiwi
+    display: "Kiwi"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.plum
+    slug: plum
+    display: "Plum"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.apricot
+    slug: apricot
+    display: "Apricot"
+    category: fruit
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.potato
+    slug: potato
+    display: "Potato"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.tomato
+    slug: tomato
+    display: "Tomato"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.onion
+    slug: onion
+    display: "Onion"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cucumber
+    slug: cucumber
+    display: "Cucumber"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.carrot
+    slug: carrot
+    display: "Carrot"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.spinach
+    slug: spinach
+    display: "Spinach"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cauliflower
+    slug: cauliflower
+    display: "Cauliflower"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cabbage
+    slug: cabbage
+    display: "Cabbage"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.peas
+    slug: peas
+    display: "Peas"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.eggplant
+    slug: eggplant
+    display: "Eggplant"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.capsicum
+    slug: capsicum
+    display: "Capsicum"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.garlic
+    slug: garlic
+    display: "Garlic"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.ginger
+    slug: ginger
+    display: "Ginger"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.broccoli
+    slug: broccoli
+    display: "Broccoli"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.lettuce
+    slug: lettuce
+    display: "Lettuce"
+    category: vegetable
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.sugar
+    slug: sugar
+    display: "Sugar"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.salt
+    slug: salt
+    display: "Salt"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.wheat_flour
+    slug: wheat_flour
+    display: "Wheat Flour"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.white_rice
+    slug: white_rice
+    display: "White Rice"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.brown_rice
+    slug: brown_rice
+    display: "Brown Rice"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.oats
+    slug: oats
+    display: "Oats"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.red_lentils
+    slug: red_lentils
+    display: "Red Lentils"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.chickpeas
+    slug: chickpeas
+    display: "Chickpeas"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.kidney_beans
+    slug: kidney_beans
+    display: "Kidney Beans"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.black_lentils
+    slug: black_lentils
+    display: "Black Lentils"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cooking_oil
+    slug: cooking_oil
+    display: "Cooking Oil"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.ghee
+    slug: ghee
+    display: "Ghee"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.butter
+    slug: butter
+    display: "Butter"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.honey
+    slug: honey
+    display: "Honey"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.peanut_butter
+    slug: peanut_butter
+    display: "Peanut Butter"
+    category: ingredient
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.biscuits
+    slug: biscuits
+    display: "Biscuits"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.crackers
+    slug: crackers
+    display: "Crackers"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cookies
+    slug: cookies
+    display: "Cookies"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.toast
+    slug: toast
+    display: "Toast"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.croissant
+    slug: croissant
+    display: "Croissant"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cake_slice
+    slug: cake_slice
+    display: "Cake Slice"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.potato_chips
+    slug: potato_chips
+    display: "Potato Chips"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.popcorn
+    slug: popcorn
+    display: "Popcorn"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.chocolate_bar
+    slug: chocolate_bar
+    display: "Chocolate Bar"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.breakfast_cereal
+    slug: breakfast_cereal
+    display: "Breakfast Cereal"
+    category: packaged_snack
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.plain_milk
+    slug: plain_milk
+    display: "Plain Milk"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.plain_yogurt
+    slug: plain_yogurt
+    display: "Plain Yogurt"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.cheese
+    slug: cheese
+    display: "Cheese"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.boiled_egg
+    slug: boiled_egg
+    display: "Boiled Egg"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.beef_steak
+    slug: beef_steak
+    display: "Beef Steak"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.orange_juice
+    slug: orange_juice
+    display: "Orange Juice"
+    category: dairy_protein_beverage
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.tacos
+    slug: tacos
+    display: "Tacos"
+    category: international_dish
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.sushi
+    slug: sushi
+    display: "Sushi"
+    category: international_dish
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.dumplings
+    slug: dumplings
+    display: "Dumplings"
+    category: international_dish
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.pancakes
+    slug: pancakes
+    display: "Pancakes"
+    category: international_dish
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
+  - id: food.lasagna
+    slug: lasagna
+    display: "Lasagna"
+    category: international_dish
+    origin: new
+    training_status: needs_collection
+    target_images: 400
+    dataset_candidates: [foodseg103, fruits360_original, local_phone_collection]
+    notes: "Candidate class; verify visual separability and source licensing before inclusion."
