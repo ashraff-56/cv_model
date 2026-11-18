@@ -18,22 +18,32 @@ FoodSeg103 is kept separate from classifier image folders. Its images contain mu
 
 ## Local setup
 
-Download/extract the Fruits-360 original-size branch into:
+The recommended source is the **original-size** Fruits-360 repository. It contains original captured resolutions and its top-level folders are `Training`, `Validation`, and `Test`. We use only `Training` as a source pool; our own deterministic split is created later.
+
+On Windows PowerShell, from the repository root:
+
+```powershell
+New-Item -ItemType Directory -Force data/raw/fruits360 | Out-Null
+git clone --depth 1 --filter=blob:none --sparse https://github.com/fruits-360/fruits-360-original-size.git data/raw/fruits360/fruits-360-original-size
+git -C data/raw/fruits360/fruits-360-original-size sparse-checkout set Training
+```
+
+Expected layout:
 
 ```
 data/raw/fruits360/fruits-360-original-size/
-└── fruits-360-original-size/
-    └── Training/
-        ├── Apple.../
-        ├── Banana.../
-        └── ...
+└── Training/
+    ├── Apple/
+    ├── Apple Braeburn/
+    ├── Banana/
+    └── ...
 ```
 
-The expected root marker is `fruits-360_original-size/Training/Apple`. If your downloaded archive uses a different top-level folder, update only the `fruits360.marker` and matching source patterns after inspecting the actual folder names.
+The repository README describes the original-size release as 119,807 images across 164 classes in the currently documented release family; the exact branch version may change. The data is licensed CC BY-SA 4.0: retain attribution and comply with ShareAlike when redistributing adapted dataset material. The source's isolated-object, plain-background capture style is a domain limitation, not a reason to omit it.
 
-Then run a raw source audit:
+Then run the raw source audit:
 
-```bash
+```powershell
 python tools/audit_v3_sources.py --profile local
 ```
 
