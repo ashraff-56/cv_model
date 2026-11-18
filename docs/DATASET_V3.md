@@ -18,28 +18,31 @@ FoodSeg103 is kept separate from classifier image folders. Its images contain mu
 
 ## Local setup
 
-The recommended source is the **original-size** Fruits-360 repository. It contains original captured resolutions and its top-level folders are `Training`, `Validation`, and `Test`. We use only `Training` as a source pool; our own deterministic split is created later.
+The recommended source is the **Fruits-360 original-size** repository, supplemented by the 100x100 branch only for fruit/vegetable classes absent from original-size. Both are CC BY-SA 4.0 and require attribution plus ShareAlike compliance when redistributing adapted material. Their images are isolated specimens captured against a white background, so they are supplemental training data, not a phone-photo benchmark.
 
-On Windows PowerShell, from the repository root:
+From the repository root in Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force data/raw/fruits360 | Out-Null
-git clone --depth 1 --filter=blob:none --sparse https://github.com/fruits-360/fruits-360-original-size.git data/raw/fruits360/fruits-360-original-size
-git -C data/raw/fruits360/fruits-360-original-size sparse-checkout set Training
+
+git clone --depth 1 --filter=blob:none --sparse https://github.com/fruits-360/fruits-360-original-size.git data/raw/fruits360/fruits-360_original-size
+git -C data/raw/fruits360/fruits-360_original-size sparse-checkout set Training
+
+git clone --depth 1 --filter=blob:none --sparse https://github.com/fruits-360/fruits-360-100x100.git data/raw/fruits360/fruits-360_100x100
+git -C data/raw/fruits360/fruits-360_100x100 sparse-checkout set Training
 ```
 
 Expected layout:
 
 ```
-data/raw/fruits360/fruits-360-original-size/
-└── Training/
-    ├── Apple/
-    ├── Apple Braeburn/
-    ├── Banana/
-    └── ...
+data/raw/fruits360/
+├── fruits-360_original-size/
+│   └── Training/
+└── fruits-360_100x100/
+    └── Training/
 ```
 
-The repository README describes the original-size release as 119,807 images across 164 classes in the currently documented release family; the exact branch version may change. The data is licensed CC BY-SA 4.0: retain attribution and comply with ShareAlike when redistributing adapted dataset material. The source's isolated-object, plain-background capture style is a domain limitation, not a reason to omit it.
+The current original-size README reports 119,807 images, 164 classes and original captured resolutions. The 100x100 release is a lower-resolution supplemental source with many more class folders. We use only the Training folders as source pools; the project's own deduplication and split pipeline creates the v3 train/validation/test partitions. The 100x100 data is used only where an original-size folder is missing, reducing unnecessary near-duplicate mixing.
 
 Then run the raw source audit:
 
