@@ -21,8 +21,8 @@ FoodSeg103 is kept separate from classifier image folders. Its images contain mu
 Download/extract the Fruits-360 original-size branch into:
 
 ```
-data/raw/fruits360/
-└── fruits-360_original-size/
+data/raw/fruits360/fruits-360-original-size/
+└── fruits-360-original-size/
     └── Training/
         ├── Apple.../
         ├── Banana.../
